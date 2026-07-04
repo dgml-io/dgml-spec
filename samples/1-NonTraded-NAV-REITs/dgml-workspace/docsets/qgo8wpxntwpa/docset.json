@@ -1,0 +1,13 @@
+{
+  "id": "qgo8wpxntwpa",
+  "name": "Property Rent Roll Report",
+  "description": "A rent roll report providing a summary of commercial lease details for a specific property.",
+  "key_questions": [
+    "What is the name of the property listed in the rent roll?",
+    "What is the total net area (sq.m.) for the tenants?",
+    "Who is the tenant occupying the unit/suite?",
+    "What is the lease start and end date?",
+    "What is the annual base rent amount?",
+    "What is the recovery type (e.g., NNN)?"
+  ]
+}

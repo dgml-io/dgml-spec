@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/CreditAndSecurityAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2297 2267">
+  <docset:CreditAgreementName dg:structure="section" dg:origin="1 262 258 1680 964" xml:id="creditagreementname" dg:itemprop="effectiveOn" dg:href="#agreementdate">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 1375 311" dg:style="font-weight: bold; font-size: 2em">Residential Mortgage Security Agreement</dg:chunk>
+    <dg:chunk dg:structure="p" dg:origin="1 262 567 587 599" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">DATED: <docset:AgreementDate xsi:type="date" dg:value="2026-06-26" dg:origin="1 389 567 587 599" dg:style="font-weight: normal; text-transform: none" xml:id="agreementdate">June 26, 2026</docset:AgreementDate>
+    </dg:chunk>
+    <docset:CreditCommitment dg:structure="p" dg:origin="1 262 933 1680 964" dg:style="font-size: 1.25em; color: darkslategray">BETWEEN: <docset:BorrowerParty dg:origin="1 437 933 814 964" dg:style="font-weight: bold" xml:id="borrowerparty">Pwyll Habitation Partners</docset:BorrowerParty> (the "Borrower"), and <docset:LenderParty dg:origin="1 1123 933 1470 964" dg:style="font-weight: bold" xml:id="lenderparty">Callisto Mortgage Fund</docset:LenderParty> (the "Lender").</docset:CreditCommitment>
+  </docset:CreditAgreementName>
+  <docset:CreditFacilityTerms dg:structure="section" dg:origin="1 193 1376 2297 1655">
+    <dg:chunk dg:structure="header" dg:origin="1 262 1376 878 1415" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslateblue">
+      <dg:chunk dg:structure="lim" dg:origin="1 262 1376 453 1415">ARTICLE I</dg:chunk> DEBT STRUCTURING</dg:chunk>
+    <docset:CreditCommitment dg:structure="section" dg:origin="1 193 1586 2297 1655" xml:id="creditcommitment" dg:itemprop="references" dg:href="#lenderparty" dg:value="Lender">
+      <dg:chunk dg:structure="header" dg:origin="1 193 1586 548 1612" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="1 193 1586 356 1612">Section 1.01</dg:chunk> Credit Facility</dg:chunk>
+      <docset:CreditFacilityTerms dg:structure="p" dg:origin="1 557 1586 2297 1612; 1 193 1628 344 1655" dg:style="color: darkslategray" xml:id="creditfacilityterms" dg:itemprop="references" dg:href="#geographiclocation" dg:value="location">Lender provides a <docset:CreditLineType dg:origin="1 779 1586 894 1612">credit line</docset:CreditLineType> of <docset:CreditPrincipalAmount xsi:type="integer" dg:value="340000000" dg:origin="1 932 1586 1080 1612" dg:style="font-weight: bold" xml:id="creditprincipalamount">340,000,000</docset:CreditPrincipalAmount>
+        <docset:CreditCurrency dg:origin="1 1088 1586 1144 1612" dg:style="font-weight: bold" xml:id="creditcurrency">ECU</docset:CreditCurrency> secured by first-lien mortgages over the <docset:FundedPurpose dg:origin="1 1631 1586 1891 1612">1,200 residential units</docset:FundedPurpose> located in the <docset:GeographicLocation dg:origin="1 2068 1586 2297 1612; 1 193 1628 344 1655" xml:id="geographiclocation">under-crust vault of Pwyll Crater</docset:GeographicLocation>.</docset:CreditFacilityTerms>
+    </docset:CreditCommitment>
+  </docset:CreditFacilityTerms>
+  <docset:EquipmentDepreciationCovenants dg:structure="section" dg:origin="1 193 1988 2297 2267">
+    <dg:chunk dg:structure="header" dg:origin="1 262 1988 1026 2028" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslateblue">
+      <dg:chunk dg:structure="lim" dg:origin="1 262 1988 464 2028">ARTICLE II</dg:chunk> SINKING FUND COVENANTS</dg:chunk>
+    <docset:ReserveOrEscrowRequirement dg:structure="section" dg:origin="1 193 2198 2297 2267">
+      <dg:chunk dg:structure="header" dg:origin="1 193 2198 858 2225" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="1 193 2198 360 2225">Section 2.01</dg:chunk> Radiation Glass &amp; Structural Escrow</dg:chunk>
+      <docset:ReserveOrEscrowRequirement dg:structure="p" dg:origin="1 869 2198 2297 2225; 1 193 2240 1302 2267" dg:style="color: darkslategray" xml:id="reserveorescrowrequirement" dg:itemprop="references" dg:href="#borrowerparty" dg:value="Borrower">Borrower is required to set aside <docset:ReserveMinimumBalance xsi:type="decimal" dg:value="3.0" dg:origin="1 1285 2198 1345 2225">3.0%</docset:ReserveMinimumBalance> of all gross monthly rental receipts into an escrow account. These funds are restricted for the preservation of radiation-proof viewing panes and thermal insulation systems.</docset:ReserveOrEscrowRequirement>
+    </docset:ReserveOrEscrowRequirement>
+  </docset:EquipmentDepreciationCovenants>
+</dg:chunk>

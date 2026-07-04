@@ -1,0 +1,13 @@
+{
+  "id": "b28nkyoue5hn",
+  "name": "Credit and Security Agreement",
+  "description": "A legal agreement between a borrower and a lender detailing loan amounts, interest rates, financial covenants, and default remedies.",
+  "key_questions": [
+    "Who are the borrower and lender entities?",
+    "What is the principal amount of the loan?",
+    "What is the interest rate and how is it calculated?",
+    "What are the specific financial covenants (e.g., DSCR)?",
+    "What actions constitute an event of default?",
+    "What are the lender's remedies in case of default?"
+  ]
+}

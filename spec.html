@@ -1,0 +1,1975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DGML: the Domain Native Document Format</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:0 1.5rem;line-height:1.6;color:#1a1a1a}
+h1,h2,h3,h4{line-height:1.2;margin-top:2rem}
+code{background:#f4f4f4;padding:.1em .35em;border-radius:3px;font-size:.9em}
+pre{background:#f4f4f4;padding:1rem;border-radius:5px;overflow-x:auto}
+pre code{background:none;padding:0}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{border:1px solid #ccc;padding:.5rem .75rem;text-align:left}
+th{background:#f0f0f0}
+a{color:#1a6bbf}
+hr{border:none;border-top:1px solid #ddd;margin:2rem 0}
+h1 + p + table, h1 ~ table:first-of-type {width:auto;font-size:0.85rem;color:#555;border:none;margin-top:0.5rem;}
+h1 + p + table th, h1 + p + table td, h1 ~ table:first-of-type th, h1 ~ table:first-of-type td {border:none;padding:0.2rem 1rem 0.2rem 0;background:none;font-weight:normal;}
+h1 + p + table th, h1 ~ table:first-of-type th {color:#888;font-weight:600;}
+</style>
+</head>
+<body>
+<h1 id="dgml-the-domain-native-document-format">DGML: the Domain Native Document Format</h1>
+<p><strong>Version:</strong> 0.7<br />
+<strong>Status:</strong> Draft<br />
+<strong>Specification prepared by:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Company</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jean Paoli</td>
+<td>Docugami</td>
+</tr>
+<tr>
+<td>Claudio Caldato</td>
+<td>Docugami</td>
+</tr>
+<tr>
+<td>Andrew Begun</td>
+<td>Docugami</td>
+</tr>
+<tr>
+<td>Gregory Senay</td>
+<td>Docugami</td>
+</tr>
+<tr>
+<td>Albert Berdellans</td>
+<td>Inveniam</td>
+</tr>
+<tr>
+<td>Rick Bunker</td>
+<td>Inveniam</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-overview">1. Overview</h2>
+<p><strong>DGML</strong> (Document Graph Markup Language) is a semantic XML representation of business documents. Where raw source files give you layout and pixels, DGML gives you meaning: tags that describe what each element <em>is</em> in the document's domain — a contract clause, an invoice line item, a policy definition — not how it appeared on the page.</p>
+<p>The headline feature is <strong>cross-document tag consistency</strong>: documents of the same kind share the same semantic vocabulary. This is what separates DGML from a raw extraction or a structural transcription, and what makes it suitable for reasoning over a corpus rather than a single file.</p>
+<p>A second fundamental property is <strong>complete semantic preservation</strong>. Traditional extraction pipelines make an irreversible upfront decision: choose the fields to pull, discard everything else. This works when the questions are known in advance. It fails the moment a new use case emerges — a regulatory change, a derivative product, a counterparty due diligence request — that requires a field no one thought to extract. DGML preserves the full semantic structure of the document: every element, every relationship, every typed value. Nothing is discarded. A document processed once remains fully queryable without going back to the source. This is not a feature of the tooling — it is a property of the format.</p>
+<p>A third fundamental property is <strong>document order with graph semantics</strong>. Most graph formats treat documents as unordered collections of facts. But in business documents, order is meaning: definitions precede usage, clause sequence governs interpretation, provenance depends on exact position. DGML preserves document order as a first-class property of the format, while also representing relationships across elements and documents as a graph.</p>
+<h3 id="why-existing-formats-fall-short-in-the-token-economy">Why Existing Formats Fall Short in the Token Economy</h3>
+<p>The obvious alternatives each have a fundamental problem when applied to enterprise document AI:</p>
+<p><strong>Raw text / Markdown</strong> forces the agent to re-discover structure on every call. It reads to find connections rather than traversing them, and cannot natively express the relationships inside a long business document without becoming unreadable. Structure that was implicit in the original — the containment of a liability cap inside an indemnification clause, the linkage of a payment term to an effective date — has to be reconstructed by the model from scratch, every time.</p>
+<p><strong>Raw PDF or image input</strong> burns the full document into every call with no structural leverage — the model must re-read the whole contract to answer a question about one clause.</p>
+<p><strong>Structural markup formats</strong> are a step up: they replace visual layout with generic structural tags — sections, headings, lists, tables — much like XHTML. This gives agents a navigable tree instead of a flat stream, which helps. But the tags describe <em>shape</em>, not <em>meaning</em>. A <code>&lt;section&gt;</code> containing a liability cap and a <code>&lt;section&gt;</code> containing a payment schedule are structurally identical; the agent still has to read and interpret the content to understand what it is looking at. There is no stable vocabulary to query across documents, and no typed values — every amount, date, or identifier remains buried in text.</p>
+<h3 id="a-four-layer-architecture">A Four-Layer Architecture</h3>
+<p>What DGML gives agents instead is a four-layer architecture that no flat format can replicate:</p>
+<p><strong>Semantic layer.</strong> Consistent tags across similar documents let agents reason over a corpus without per-document prompt engineering. An agent querying one contract's liability clause can query the same element across a thousand contracts using identical logic. Each tag groups many surface tokens into a single named concept and any XML element subtree can be sent in isolation to focus the model's attention precisely.</p>
+<pre><code class="language-xml">&lt;docset:LiabilityCap xsi:type=&quot;decimal&quot; dg:value=&quot;500000&quot;&gt;$500,000&lt;/docset:LiabilityCap&gt;
+&lt;docset:EffectiveDate xsi:type=&quot;date&quot;    dg:value=&quot;2024-01-01&quot;&gt;January 1, 2024&lt;/docset:EffectiveDate&gt;
+&lt;docset:VendorName&gt;MagicSoft, Inc.&lt;/docset:VendorName&gt;
+</code></pre>
+<p><strong>Spatial layer.</strong> Every element carries bounding-box coordinates back to the source page image. Extracted values are not floating assertions — they can be shown to a human as a highlighted region on the original page. This is the difference between an answer and a verifiable answer. Strip the <code>dg:origin</code> attributes before sending to a model; keep them in the file for grounding. This single step cuts token count by a further 20–40% on typical documents.</p>
+<p><strong>Attestation layer.</strong> The DGMLX package (ZIP) contains a <code>META-INF/dgml-attestation.xml</code> file that holds a cryptographic hash of the DGML document and its source page images. This makes the package tamper-evident: any alteration to the content breaks the hash. Packages are linked by their roots — each new package records the root of its predecessor — creating verifiable provenance chains across document versions.</p>
+<p>The deeper innovation is fragment-level attestation. The traditional blockchain use case is hashing an entire document and anchoring that hash on-chain as proof of origin for the whole file. DGML goes further: because the semantic tree is structured, any XML element subtree — a single data element, a payment term, a liability cap — can be hashed independently and anchored on an external chain, establishing Proof of Origin for that specific data artifact. This means a recipient can prove that a specific data element in their copy is identical to the element in the signed original, without needing to produce the entire document. Provenance is at the data-element level, not just the file level.</p>
+<p><strong>Readable layer.</strong> A DGML file is human-readable in any browser — no special viewer, no extra tooling. Elements can carry <code>dg:structure</code> to map to HTML tags and <code>dg:style</code> to express observed simple formatting as CSS. A few lines of JavaScript or Python is all it takes to render a DGML document as a styled web page, with no knowledge of the docset schema required.</p>
+<h3 id="additional-capabilities">Additional Capabilities</h3>
+<p><strong>Composable fragments across organizations.</strong> XML namespaces are globally unique and decentralized. Any organization defines its own docset namespace (<code>http://www.dgml.io/{org}/{docset-name}#</code>), and DGML fragments from different organizations can be combined into a single document without name collisions. Provenance chains make these cross-organizational assemblies verifiable end-to-end.</p>
+<p><strong>A tree and a graph.</strong> The XML hierarchy captures containment — sections contain clauses, clauses contain values. Named links across elements capture relationships — an amendment points to what it modifies, a receipt points to the obligation it fulfills. Together they form a JSON-LD-compatible graph derived directly from the XML, with no additional infrastructure.</p>
+<p>This combination — semantic tagging, spatial grounding, cryptographic attestation, and human readability — is what makes DGML suitable for enterprise document AI, where the cost of a hallucinated or unverifiable answer is not an acceptable trade-off. DGML is designed for both human operators and LLM agents: structured output, no interactive prompts.</p>
+<p><strong>DGMLX</strong> (<code>.dgmlx</code>) is the packaging format: a self-contained ZIP archive that bundles the source document, its rendered page images, the DGML XML, a formal schema, and attestation metadata. DGMLX is described in Part II.</p>
+<h3 id="design-principles">Design Principles</h3>
+<ul>
+<li><strong>Semantic, not visual.</strong> Tags describe domain meaning; layout is informational only.</li>
+<li><strong>Consistent across documents.</strong> Tag vocabularies are stable within a docset — the same field name means the same thing in every document.</li>
+<li><strong>Self-contained.</strong> Everything needed to understand, validate, and verify the document is inside the package.</li>
+<li><strong>Standard formats throughout.</strong> XML, OPC, RELAX NG, JSON-LD — no proprietary formats.</li>
+<li><strong>Apache 2.0.</strong> Explicit patent grant for all contributors; no copyleft dependencies in the toolchain.</li>
+</ul>
+<hr />
+<h2 id="dgml-at-a-glance">DGML at a Glance</h2>
+<blockquote>
+<p>A one-page technical summary. The sections that follow specify each concept in full.</p>
+</blockquote>
+<p><strong>What it is.</strong> DGML is a semantic XML format for business documents. Tags describe what elements <em>are</em> in the document's domain — <code>&lt;docset:LiabilityCap&gt;</code>, <code>&lt;docset:EffectiveDate&gt;</code> — not how they looked on the page. The full document structure is preserved; nothing is discarded.</p>
+<p><strong>Two namespaces at the core.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>URI</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dg:</code></td>
+<td><code>http://dgml.io/ns/dg#</code></td>
+<td>Core structural elements and attributes</td>
+</tr>
+<tr>
+<td><code>docset:</code></td>
+<td><code>http://www.dgml.io/{org}/{docset-name}#</code></td>
+<td>Semantic vocabulary for a document type</td>
+</tr>
+</tbody>
+</table>
+<p>Any organization can define its own <code>docset:</code> namespace. Multiple namespaces can coexist in one document without collision.</p>
+<p><strong>Core elements.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dg:chunk</code></td>
+<td>Universal structural primitive — used for all scaffolding that has no domain concept</td>
+</tr>
+<tr>
+<td><code>dg:extraction</code></td>
+<td>User-directed structured projection; always a direct child of the root <code>dg:chunk</code>. See §13.</td>
+</tr>
+</tbody>
+</table>
+<p>Every other element is a <code>docset:</code> semantic tag. A wrong semantic tag is worse than an honest <code>dg:chunk</code>.</p>
+<p><strong>Key attributes.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>What it carries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dg:structure</code></td>
+<td>Visual/layout role: <code>section</code>, <code>header</code>, <code>p</code>, <code>ol</code>, <code>ul</code>, <code>li</code>, <code>table</code>, <code>tr</code>, <code>td</code>, <code>lim</code>, <code>span</code></td>
+</tr>
+<tr>
+<td><code>dg:style</code></td>
+<td>Inline CSS declarations observed in the source (semicolon-separated; verbatim into HTML <code>style</code>)</td>
+</tr>
+<tr>
+<td><code>dg:origin</code></td>
+<td>Pixel bounding box: <code>"&lt;page&gt; &lt;x1&gt; &lt;y1&gt; &lt;x2&gt; &lt;y2&gt;"</code> — traces every element back to its source page image. Reserved value <code>"computed"</code> signals a derived field. See §7, §13.</td>
+</tr>
+<tr>
+<td><code>dg:value</code></td>
+<td>Normalized machine-readable value (accompanies <code>xsi:type</code>)</td>
+</tr>
+<tr>
+<td><code>dg:itemprop</code></td>
+<td>Named relationship predicate (JSON-LD-compatible)</td>
+</tr>
+<tr>
+<td><code>dg:href</code></td>
+<td>Relationship target: <code>#id</code> (same file), <code>fileid#id</code> (cross-file), or semicolon-separated list of targets. See §8, §13.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Four-layer architecture.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Semantic</td>
+<td><code>docset:</code> tags; consistent vocabulary within a docset; token-efficient for LLMs</td>
+</tr>
+<tr>
+<td>Spatial</td>
+<td><code>dg:origin</code> on every element; strip before sending to model, keep for verification</td>
+</tr>
+<tr>
+<td>Attestation</td>
+<td>ZIP (<code>META-INF/dgml-attestation.xml</code>): Merkle hash of XML + page images; optional on-chain staking at file or element level for Proof of Origin (§10)</td>
+</tr>
+<tr>
+<td>Readable</td>
+<td><code>dg:structure</code> maps elements to HTML tags; <code>dg:style</code> carries observed simple formatting as CSS. A few lines of JavaScript or Python renders any DGML document in a browser — no schema knowledge required.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Docsets.</strong> A docset is a named collection of same-type documents sharing one schema. Namespace: <code>http://www.dgml.io/{org}/{docset-name}#</code>. Schema defined in RELAX NG Compact Syntax (<code>schema.rnc</code>). Tag names mean the same thing in every document in the docset.</p>
+<p><strong>Packaging (DGMLX).</strong> <code>.dgmlx</code> is a ZIP (OPC convention) containing: source document, <code>dgml.xml</code>, <code>page_images/page_N.png</code>, <code>schema.rnc</code>, <code>META-INF/dgml-attestation.xml</code>, <code>[Content_Types].xml</code>, <code>_rels/.rels</code>.</p>
+<p><strong>LLM workflow (summary).</strong> (1) Classify into existing docset or create a new one. (2) Read a document sample; identify key concepts. (3) Write <code>schema.rnc</code>. (4) Tag documents, applying <code>dg:origin</code>, <code>xsi:type</code>/<code>dg:value</code>, and <code>dg:itemprop</code>/<code>dg:href</code>.</p>
+<hr />
+<h1 id="part-i-dgml">Part I — DGML</h1>
+<h2 id="2-what-dgml-is">2. What DGML Is</h2>
+<p>A DGML document is a well-formed XML file. Every element belongs to a namespace that identifies who defined it and what it means. The two foundational namespaces are:</p>
+<ul>
+<li><code>dg:</code> — core structural elements and cross-document infrastructure attributes defined by this specification</li>
+<li><code>docset:</code> — semantic vocabulary defined by an organization for a specific document type</li>
+</ul>
+<p>These are the baseline, not the limit. Because XML namespaces are globally unique and decentralized, any organization can define its own docset namespace and any DGML document can mix elements from multiple namespaces without collision — enabling fragments from different organizations, different docsets, or different time periods to be composed into a single document. Blockchain-linked provenance chains (Section 11) make such assemblies verifiable end-to-end.</p>
+<p>DGML carries no visual or layout semantics. There are no <code>&lt;bold&gt;</code>, <code>&lt;indent&gt;</code>, or <code>&lt;column&gt;</code> elements. A <code>&lt;docset:PaymentTerms&gt;</code> describes what the text <em>is</em> in the domain of the document, not how it happened to be rendered.</p>
+<h2 id="3-docsets">3. Docsets</h2>
+<p>A <strong>docset</strong> is a named collection of documents of the same type produced by a specific organization — for example, all Master Services Agreements issued by Acme Corp, or all invoices from a supplier. The docset defines the tag vocabulary: which element names exist, what they mean, and how they relate to each other.</p>
+<p>Any organization can define its own docsets. The docset namespace URI encodes both the organization and the docset name:</p>
+<pre><code>http://www.dgml.io/{org}/{docset-name}#
+</code></pre>
+<p>Examples:</p>
+<table>
+<thead>
+<tr>
+<th>Organization</th>
+<th>Docset name</th>
+<th>Namespace URI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Acme Corp</td>
+<td>master-services-agreements</td>
+<td><code>http://www.dgml.io/acme-corp/master-services-agreements#</code></td>
+</tr>
+<tr>
+<td>City of Springfield</td>
+<td>purchase-orders</td>
+<td><code>http://www.dgml.io/city-of-springfield/purchase-orders#</code></td>
+</tr>
+<tr>
+<td>MedSupply Inc.</td>
+<td>patient-intake-forms</td>
+<td><code>http://www.dgml.io/medsupply/patient-intake-forms#</code></td>
+</tr>
+</tbody>
+</table>
+<p>This namespace appears as the <code>docset:</code> prefix binding in every DGML file belonging to that docset, and as the <code>namespace docset = …</code> declaration in the accompanying <code>schema.rnc</code>. Within one docset the namespace URI is fixed — do not create per-document namespaces.</p>
+<h3 id="deciding-how-to-group-documents">Deciding How to Group Documents</h3>
+<p>Group into the <strong>same docset</strong> when documents serve the same functional purpose, share 70–80% of their semantic fields, and those fields mean the same thing across every document in the collection.</p>
+<p>Split into <strong>separate docsets</strong> when two document types have different field semantics despite similar surface structure, when one organization's documents differ systematically from another's, or when a document type has changed enough over time that old and new versions cannot be compared field-by-field (in which case version the docset name, e.g., <code>master-services-agreements-v2</code>).</p>
+<h2 id="4-namespaces">4. Namespaces</h2>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>URI</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dg:</code></td>
+<td><code>http://dgml.io/ns/dg#</code></td>
+<td>Core elements (<code>dg:chunk</code>, <code>dg:lim</code>) and attributes (<code>dg:origin</code>, <code>dg:value</code>, <code>dg:itemprop</code>, <code>dg:href</code>)</td>
+</tr>
+<tr>
+<td><code>docset:</code></td>
+<td><code>http://www.dgml.io/{org}/{docset-name}#</code></td>
+<td>Semantic element vocabulary defined by an organization for a docset</td>
+</tr>
+<tr>
+<td><code>xhtml:</code></td>
+<td><code>http://www.w3.org/1999/xhtml</code></td>
+<td>Inline XHTML content (when present)</td>
+</tr>
+<tr>
+<td><code>xsi:</code></td>
+<td><code>http://www.w3.org/2001/XMLSchema-instance</code></td>
+<td><code>xsi:type</code> for typed values</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>docset:</code> prefix is a convention used throughout this specification as a placeholder. The actual namespace URI varies per organization and docset.</p>
+<h3 id="concept-driven-naming">Concept-driven naming</h3>
+<p>Only elements that carry a domain concept (a section's topic, a named paragraph or row, an inline value) receive a semantic tag. All other structural scaffolding — headings, lists, list items, table cells, enumerators, untyped spans — is emitted as the generic <code>dg:chunk</code> element with its layout role in the <code>dg:structure</code> attribute.</p>
+<p>This is the defining rule of DGML element naming:</p>
+<table>
+<thead>
+<tr>
+<th>Element has a concept</th>
+<th>Tag used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yes</td>
+<td><code>docset:ConceptName</code> or <code>dg:ConceptName</code> (PascalCase)</td>
+</tr>
+<tr>
+<td>No</td>
+<td><code>dg:chunk</code></td>
+</tr>
+</tbody>
+</table>
+<p>A structural element (concept or generic) carries exactly one <code>dg:structure</code> value. A concept-bearing inline entity carries no <code>dg:structure</code> and sits inside a paragraph, header, or list item.</p>
+<h2 id="5-document-structure">5. Document Structure</h2>
+<h3 id="dgchunk-root-and-anonymous-container"><code>dg:chunk</code> — Root and Anonymous Container</h3>
+<p><code>&lt;dg:chunk&gt;</code> serves two roles:</p>
+<ol>
+<li><strong>Document root</strong> — the outermost element of every DGML file.</li>
+<li><strong>Anonymous structural container</strong> — used at any depth when a grouping of content has a clear structural role but no domain-specific semantic name applies.</li>
+</ol>
+<p>Using <code>dg:chunk</code> at an inner level signals "this boundary is real, the name is not." A wrong tag is worse than an honest <code>dg:chunk</code>.</p>
+<p>The root element of a DGML document is <code>&lt;dg:chunk&gt;</code> — a generic structural element, not a docset element. All document content is nested inside it. The root carries the namespace declarations.</p>
+<pre><code class="language-xml">&lt;?xml version='1.0' encoding='utf-8'?&gt;
+&lt;dg:chunk xmlns:dg=&quot;http://www.dgml.io/ns/dg#&quot;
+          xmlns:docset=&quot;http://www.dgml.io/{org}/{docset-name}#&quot;
+          xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;!-- document content --&gt;
+&lt;/dg:chunk&gt;
+</code></pre>
+<p>Like every DGML element, <code>dg:chunk</code> may carry a <code>dg:structure</code> attribute:</p>
+<pre><code class="language-xml">&lt;?xml version='1.0' encoding='utf-8'?&gt;
+&lt;dg:chunk xmlns:dg=&quot;http://dgml.io/ns/dg#&quot;
+          xmlns:docset=&quot;http://www.dgml.io/acme-corp/master-services-agreements#&quot;
+          xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;docset:IndemnificationClause&gt;
+    &lt;dg:chunk dg:structure=&quot;header&quot; dg:origin=&quot;3 460 139 2090 205&quot;&gt;EXHIBIT A&lt;/dg:chunk&gt;
+    &lt;docset:LiabilityCap xsi:type=&quot;decimal&quot; dg:value=&quot;500000.00&quot; dg:origin=&quot;3 460 220 2090 265&quot;&gt;$500,000&lt;/docset:LiabilityCap&gt;
+  &lt;/docset:IndemnificationClause&gt;
+&lt;/dg:chunk&gt;
+</code></pre>
+<h3 id="element-hierarchy">Element Hierarchy</h3>
+<p>Elements nest to reflect the document's logical structure. A fragment from a Master Services Agreement:</p>
+<pre><code class="language-xml">&lt;dg:chunk xmlns:dg=&quot;http://dgml.io/ns/dg#&quot;
+          xmlns:docset=&quot;http://www.dgml.io/acme-corp/master-services-agreements#&quot;
+          xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;docset:IndemnificationClause&gt;
+    &lt;docset:IndemnifyingParty dg:origin=&quot;2 460 310 1800 355&quot;&gt;Vendor&lt;/docset:IndemnifyingParty&gt;
+    &lt;docset:IndemnifiedParty  dg:origin=&quot;2 460 360 1800 405&quot;&gt;Client&lt;/docset:IndemnifiedParty&gt;
+    &lt;docset:LiabilityCap xsi:type=&quot;decimal&quot; dg:value=&quot;500000&quot;
+                         dg:origin=&quot;2 460 410 1800 455&quot;&gt;$500,000&lt;/docset:LiabilityCap&gt;
+    &lt;docset:EffectiveDate xsi:type=&quot;date&quot; dg:value=&quot;2024-01-01&quot;
+                          dg:origin=&quot;2 998 710 1466 755&quot;&gt;January 1, 2024&lt;/docset:EffectiveDate&gt;
+  &lt;/docset:IndemnificationClause&gt;
+  &lt;docset:PaymentTerms&gt;
+    &lt;docset:InvoiceCycle dg:origin=&quot;4 460 139 1800 184&quot;&gt;Net 30&lt;/docset:InvoiceCycle&gt;
+    &lt;docset:LatePaymentPenalty xsi:type=&quot;decimal&quot; dg:value=&quot;0.015&quot;
+                               dg:origin=&quot;4 460 190 1800 235&quot;&gt;1.5% per month&lt;/docset:LatePaymentPenalty&gt;
+  &lt;/docset:PaymentTerms&gt;
+&lt;/dg:chunk&gt;
+</code></pre>
+<h3 id="the-dgstructure-attribute">The <code>dg:structure</code> Attribute</h3>
+<p>Any element may carry a <code>dg:structure</code> attribute recording its visual role. A generic renderer maps each value to its HTML equivalent with no knowledge of the docset schema. The approved value set is:</p>
+<table>
+<thead>
+<tr>
+<th><code>dg:structure</code> value</th>
+<th>Rendered as</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>section</code></td>
+<td><code>&lt;section&gt;</code></td>
+<td>Semantic section; heading concept is hoisted to the section element name (see below).</td>
+</tr>
+<tr>
+<td><code>header</code></td>
+<td><code>&lt;header&gt;</code></td>
+<td>Heading or title line. Always <code>&lt;dg:chunk dg:structure="header"&gt;</code> — never carries a semantic tag directly.</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>&lt;p&gt;</code></td>
+<td>Body paragraph.</td>
+</tr>
+<tr>
+<td><code>ol</code></td>
+<td><code>&lt;ol&gt;</code></td>
+<td>Ordered list.</td>
+</tr>
+<tr>
+<td><code>ul</code></td>
+<td><code>&lt;ul&gt;</code></td>
+<td>Unordered list.</td>
+</tr>
+<tr>
+<td><code>li</code></td>
+<td><code>&lt;li&gt;</code></td>
+<td>List item.</td>
+</tr>
+<tr>
+<td><code>table</code></td>
+<td><code>&lt;table&gt;</code></td>
+<td>Tabular container.</td>
+</tr>
+<tr>
+<td><code>tr</code></td>
+<td><code>&lt;tr&gt;</code></td>
+<td>Table row.</td>
+</tr>
+<tr>
+<td><code>td</code></td>
+<td><code>&lt;td&gt;</code></td>
+<td>Data cell (used for both header and data cells).</td>
+</tr>
+<tr>
+<td><code>lim</code></td>
+<td>inline</td>
+<td>Verbatim enumerator or item marker (e.g. <code>1.</code>, <code>ITEM 9</code>). Always <code>&lt;dg:chunk&gt;</code>, always first child of its parent.</td>
+</tr>
+<tr>
+<td><code>span</code></td>
+<td>inline</td>
+<td>Inline run with no resolved concept name. Always <code>&lt;dg:chunk&gt;</code>. Never dropped.</td>
+</tr>
+</tbody>
+</table>
+<p>No other values are valid. In particular: <code>h1</code>–<code>h6</code> are not used (heading depth is expressed by tree nesting, not numbered values); <code>th</code>, <code>thead</code>, <code>tbody</code>, <code>blockquote</code>, <code>pre</code>, <code>div</code>, <code>form</code>, and <code>figure</code> do not appear in DGML output.</p>
+<p>Together, <code>dg:structure</code> and <code>dg:style</code> are what enable the Readable layer (§1): a few lines of JavaScript or Python map each element to its HTML tag and copy observed formatting into the <code>style</code> attribute, rendering any DGML document in a browser with no schema knowledge required. Combined with <code>dg:origin</code>, a viewer can also overlay each element's bounding box on the original page image.</p>
+<h3 id="the-dgstyle-attribute">The <code>dg:style</code> Attribute</h3>
+<p><code>dg:style</code> records visual styling that is visually evident in the source document. Its value is a semicolon-separated list of standard CSS declarations and can be copied verbatim into an HTML <code>style</code> attribute with no transformation.</p>
+<p><strong>Omit the attribute entirely when no styling is visually evident.</strong> Sparse is correct — the attribute is for observable source formatting, not for decorating output.</p>
+<p>Allowed properties and values (nothing outside this list):</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Allowed values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>font-weight</code></td>
+<td><code>bold</code> | <code>normal</code></td>
+</tr>
+<tr>
+<td><code>font-style</code></td>
+<td><code>italic</code> | <code>normal</code></td>
+</tr>
+<tr>
+<td><code>font-size</code></td>
+<td><code>0.75em</code> | <code>1em</code> | <code>1.25em</code> | <code>1.5em</code> | <code>2em</code></td>
+</tr>
+<tr>
+<td><code>text-decoration</code></td>
+<td><code>underline</code> | <code>line-through</code> | <code>none</code></td>
+</tr>
+<tr>
+<td><code>text-align</code></td>
+<td><code>left</code> | <code>center</code> | <code>right</code> | <code>justify</code></td>
+</tr>
+<tr>
+<td><code>text-transform</code></td>
+<td><code>uppercase</code> | <code>capitalize</code> | <code>none</code></td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>Any CSS named color (e.g. <code>red</code>, <code>gray</code>, <code>blue</code>) — no hex values</td>
+</tr>
+<tr>
+<td><code>background-color</code></td>
+<td>Any CSS named color — no hex values</td>
+</tr>
+<tr>
+<td><code>white-space</code></td>
+<td><code>pre</code> | <code>normal</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-xml">&lt;docset:CompanyName dg:structure=&quot;span&quot; dg:style=&quot;font-weight: bold; color: gray&quot;&gt;
+  Acme Corp
+&lt;/docset:CompanyName&gt;
+
+&lt;docset:TotalAmount dg:structure=&quot;td&quot;
+    dg:style=&quot;font-weight: bold; text-align: right; background-color: lightyellow&quot;&gt;
+  $42,000
+&lt;/docset:TotalAmount&gt;
+
+&lt;dg:chunk dg:structure=&quot;header&quot; dg:style=&quot;font-size: 1.5em; text-transform: uppercase&quot;&gt;
+  TERMS AND CONDITIONS
+&lt;/dg:chunk&gt;
+</code></pre>
+<h2 id="6-typed-values">6. Typed Values</h2>
+<p>Elements that carry a canonical machine-readable value alongside their display text use <code>xsi:type</code> and <code>dg:value</code>:</p>
+<pre><code class="language-xml">&lt;docset:EffectiveDate
+    xsi:type=&quot;date&quot;
+    dg:value=&quot;2021-06-15&quot;
+    dg:origin=&quot;2 1234 890 1890 935&quot;&gt;June 15, 2021&lt;/docset:EffectiveDate&gt;
+
+&lt;docset:InvoiceTotal
+    xsi:type=&quot;decimal&quot;
+    dg:value=&quot;12450.00&quot;
+    dg:origin=&quot;8 1400 2900 2200 2945&quot;&gt;$12,450.00&lt;/docset:InvoiceTotal&gt;
+</code></pre>
+<ul>
+<li><code>dg:value</code> holds the canonical machine-readable form.</li>
+<li>The element text content holds the display form as it appears in the source.</li>
+<li><code>xsi:type</code> uses standard XSD type names: <code>date</code>, <code>integer</code>, <code>decimal</code>, <code>boolean</code>, plus any standard XSD type.</li>
+</ul>
+<h2 id="7-the-dgorigin-attribute">7. The <code>dg:origin</code> Attribute</h2>
+<p><code>dg:origin</code> records where in the page images an element's content can be found. It may appear on any element — leaf or non-leaf. On a leaf it pins a single value; on a parent it spans the full visual extent of the XML element subtree, enabling viewers to highlight an entire clause, table, or section as well as individual fields.</p>
+<h3 id="format">Format</h3>
+<pre><code>dg:origin=&quot;&lt;page&gt; &lt;x1&gt; &lt;y1&gt; &lt;x2&gt; &lt;y2&gt;&quot;
+</code></pre>
+<p>Multiple boxes for text spanning lines or pages, separated by semicolons:</p>
+<pre><code>dg:origin=&quot;&lt;page&gt; &lt;x1&gt; &lt;y1&gt; &lt;x2&gt; &lt;y2&gt;; &lt;page&gt; &lt;x1&gt; &lt;y1&gt; &lt;x2&gt; &lt;y2&gt;&quot;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>page</code></td>
+<td>integer</td>
+<td>1-based page number matching <code>page_images/page_N.png</code></td>
+</tr>
+<tr>
+<td><code>x1</code></td>
+<td>integer</td>
+<td>Left edge of bounding box, pixels</td>
+</tr>
+<tr>
+<td><code>y1</code></td>
+<td>integer</td>
+<td>Top edge of bounding box, pixels</td>
+</tr>
+<tr>
+<td><code>x2</code></td>
+<td>integer</td>
+<td>Right edge of bounding box, pixels</td>
+</tr>
+<tr>
+<td><code>y2</code></td>
+<td>integer</td>
+<td>Bottom edge of bounding box, pixels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="coordinate-system">Coordinate System</h3>
+<pre><code>(0,0) ─────────────────► x (increases right)
+  │
+  ▼
+  y (increases down)
+</code></pre>
+<p>Origin is the top-left corner of the page image, in pixels — standard raster/screen coordinates, opposite to PDF user space.</p>
+<p>Pixel dimensions follow from the DPI declared in the package attestation:</p>
+<pre><code>pixel_width  = round(page_width_inches  × page-image-dpi)
+pixel_height = round(page_height_inches × page-image-dpi)
+</code></pre>
+<h3 id="examples">Examples</h3>
+<p>Single value:</p>
+<pre><code class="language-xml">&lt;docset:VendorAddress
+    dg:origin=&quot;1 222 2087 615 2120&quot;&gt;1648 NW Market St Suite 500&lt;/docset:VendorAddress&gt;
+</code></pre>
+<p>Multi-line span:</p>
+<pre><code class="language-xml">&lt;docset:ConfidentialityObligation
+    dg:origin=&quot;3 209 710 2341 755; 3 209 760 2341 805&quot;&gt;
+  Each party shall hold the other's confidential information in strict confidence.
+&lt;/docset:ConfidentialityObligation&gt;
+</code></pre>
+<p>Cross-page span:</p>
+<pre><code class="language-xml">&lt;docset:WarrantyDisclaimer
+    dg:origin=&quot;4 209 2800 2341 3300; 5 209 50 2341 300&quot;&gt;
+  THE SOFTWARE IS PROVIDED &quot;AS IS&quot; WITHOUT WARRANTY OF ANY KIND...
+&lt;/docset:WarrantyDisclaimer&gt;
+</code></pre>
+<p>Parent spanning a whole clause with children that have their own origins:</p>
+<pre><code class="language-xml">&lt;docset:IndemnificationClause dg:origin=&quot;3 180 400 2360 1200&quot;&gt;
+  &lt;docset:IndemnifyingParty dg:origin=&quot;3 180 450 900 490&quot;&gt;Vendor&lt;/docset:IndemnifyingParty&gt;
+  &lt;docset:LiabilityCap xsi:type=&quot;decimal&quot; dg:value=&quot;500000&quot;
+      dg:origin=&quot;3 900 450 1800 490&quot;&gt;$500,000&lt;/docset:LiabilityCap&gt;
+&lt;/docset:IndemnificationClause&gt;
+</code></pre>
+<h3 id="using-dgorigin-with-llms">Using <code>dg:origin</code> with LLMs</h3>
+<p><code>dg:origin</code> attributes are for grounding and verification — not for reasoning. Strip them before sending DGML to a language model:</p>
+<pre><code class="language-python">import re
+xml_for_llm = re.sub(r'\s+dg:origin=&quot;[^&quot;]*&quot;', '', dgml_xml)
+</code></pre>
+<p>The original file (with <code>dg:origin</code>) is kept for verification; the stripped version is sent to the model. This alone reduces token count by 20–40% on typical documents.</p>
+<h3 id="reserved-value-computed">Reserved value: <code>"computed"</code></h3>
+<p>Any element whose value is <strong>derived from other elements</strong> rather than sourced directly from the document carries:</p>
+<pre><code class="language-xml">dg:origin=&quot;computed&quot;
+</code></pre>
+<p>This is unambiguous: valid spatial values are always numeric; <code>"computed"</code> is never a valid bounding box. A computed field always pairs <code>dg:origin="computed"</code> with <code>dg:itemprop</code>/<code>dg:href</code> pointing to the source elements it derives from (see §8 for multi-target <code>dg:href</code> syntax), and always carries <code>dg:value</code> with the result. See §13 for usage in user-directed extraction.</p>
+<h3 id="rules">Rules</h3>
+<ul>
+<li>Elements for which no source match exists (synthesised labels, empty containers) omit <code>dg:origin</code>.</li>
+<li>Bounding boxes are derived from word-token bounding boxes, not character-level boxes.</li>
+<li>Coordinates are always in page-image pixel space, never in source document coordinate space.</li>
+</ul>
+<h2 id="8-semantic-links-dgitemprop-and-dghref">8. Semantic Links — <code>dg:itemprop</code> and <code>dg:href</code></h2>
+<p>The XML hierarchy captures containment. Named links across elements capture relationships — an amendment points to what it modifies, a payment points to the obligation it fulfills. Together, hierarchy plus links form a JSON-LD-compatible graph derived mechanically from the XML.</p>
+<p>Any element can express a named relationship to another element:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Borrowed from</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dg:itemprop</code></td>
+<td>XHTML Microdata</td>
+<td>Names the property (predicate) this element expresses</td>
+</tr>
+<tr>
+<td><code>dg:href</code></td>
+<td>XHTML / JSON-LD</td>
+<td>Points to the object — another element identified by <code>xml:id</code></td>
+</tr>
+</tbody>
+</table>
+<p>Together they form a subject–predicate–object triple:</p>
+<pre><code>subject   = the element carrying the attributes (its xml:id)
+predicate = dg:itemprop value
+object    = dg:href value
+</code></pre>
+<h3 id="reference-syntax">Reference Syntax</h3>
+<pre><code>dg:href=&quot;#id&quot;              ← element with xml:id=&quot;id&quot; in the same file
+dg:href=&quot;fileid#id&quot;        ← element in the file whose attestation file-id is &quot;fileid&quot;
+dg:href=&quot;#id1; #id2&quot;       ← semicolon-separated list of targets
+</code></pre>
+<p>Cross-file references are stable regardless of filename or path. The semicolon-separated form is valid in any context — semantic links, computed fields, and sourced fields in <code>dg:extraction</code> — whenever an element has a meaningful relationship to more than one target. See §13 for usage in extraction.</p>
+<h3 id="example">Example</h3>
+<pre><code class="language-xml">&lt;docset:VendorName xml:id=&quot;vendor-co&quot;
+    dg:origin=&quot;1 220 150 680 200&quot;&gt;MagicSoft, Inc.&lt;/docset:VendorName&gt;
+
+&lt;docset:SignatoryName
+    xml:id=&quot;sig-1&quot;
+    dg:itemprop=&quot;signatoryOf&quot;
+    dg:href=&quot;#vendor-co&quot;
+    dg:origin=&quot;11 460 2430 1200 2475&quot;&gt;Jane Smith&lt;/docset:SignatoryName&gt;
+</code></pre>
+<h3 id="json-ld-translation">JSON-LD Translation</h3>
+<p>See Appendix A for the complete JSON-LD export specification, including how <code>dg:itemprop</code>/<code>dg:href</code> stubs are translated to named link properties.</p>
+<p>Cross-file references resolve using the target <code>file-id</code> as the URI base. A collection of DGML files in a docset forms a traversable JSON-LD graph. The XML is the ground truth; JSON-LD is derived from it mechanically.</p>
+<h3 id="common-link-patterns">Common link patterns</h3>
+<p><strong>Amendment</strong> — an element in an amendment file references the clause it modifies:</p>
+<pre><code class="language-xml">&lt;!-- original contract --&gt;
+&lt;docset:NoticePeriod xml:id=&quot;notice-1&quot; dg:origin=&quot;6 460 800 1800 840&quot;&gt;30 days&lt;/docset:NoticePeriod&gt;
+
+&lt;!-- amendment file --&gt;
+&lt;docset:NoticePeriod
+    dg:itemprop=&quot;amends&quot; dg:href=&quot;5kqt9r5fowno#notice-1&quot;
+    dg:origin=&quot;2 460 310 1800 350&quot;&gt;45 days&lt;/docset:NoticePeriod&gt;
+</code></pre>
+<p><strong>Fulfillment</strong> — links an obligation to its completion event in a later document:</p>
+<pre><code class="language-xml">&lt;docset:DeliveryObligation xml:id=&quot;del-1&quot; dg:origin=&quot;4 460 500 1800 540&quot;&gt;
+  Vendor shall deliver by March 31.
+&lt;/docset:DeliveryObligation&gt;
+
+&lt;docset:DeliveryReceipt
+    dg:itemprop=&quot;fulfills&quot; dg:href=&quot;5kqt9r5fowno#del-1&quot;
+    dg:origin=&quot;1 460 200 1800 240&quot;&gt;Received March 28.&lt;/docset:DeliveryReceipt&gt;
+</code></pre>
+<p><strong>Incorporation by reference</strong> — a clause in one document incorporates content from another:</p>
+<pre><code class="language-xml">&lt;docset:GovernanceLaw
+    dg:itemprop=&quot;incorporates&quot; dg:href=&quot;nda-file-id#confidentiality-1&quot;
+    dg:origin=&quot;7 460 600 1800 640&quot;&gt;See Master Agreement §12.&lt;/docset:GovernanceLaw&gt;
+</code></pre>
+<h2 id="9-reserved-dg-attributes">9. Reserved <code>dg:</code> Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Applies to</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dg:origin</code></td>
+<td>Any element</td>
+<td>Pixel bounding box(es) in page images (Section 7)</td>
+</tr>
+<tr>
+<td><code>dg:value</code></td>
+<td>Any element</td>
+<td>Canonical machine-readable value</td>
+</tr>
+<tr>
+<td><code>dg:structure</code></td>
+<td>Any element</td>
+<td>Visual/layout role (Section 5); see approved value set</td>
+</tr>
+<tr>
+<td><code>dg:style</code></td>
+<td>Any element</td>
+<td>Inline CSS styling observed in the source (Section 5)</td>
+</tr>
+<tr>
+<td><code>dg:itemprop</code></td>
+<td>Any element</td>
+<td>Property name for a semantic link (Section 8)</td>
+</tr>
+<tr>
+<td><code>dg:href</code></td>
+<td>Any element</td>
+<td>Target of a semantic link; <code>#id</code> or <code>fileid#id</code></td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<pre><code class="language-xml">&lt;docset:CompanyName dg:structure=&quot;span&quot; dg:style=&quot;font-weight: bold; color: gray&quot;&gt;
+  Acme Corp
+&lt;/docset:CompanyName&gt;
+
+&lt;docset:TotalAmount dg:structure=&quot;td&quot;
+    dg:style=&quot;font-weight: bold; text-align: right; background-color: lightyellow&quot;&gt;
+  $42,000
+&lt;/docset:TotalAmount&gt;
+
+&lt;dg:chunk dg:structure=&quot;header&quot; dg:style=&quot;font-size: 1.5em; text-transform: uppercase&quot;&gt;
+  TERMS AND CONDITIONS
+&lt;/dg:chunk&gt;
+</code></pre>
+<h2 id="10-blockchain-anchoring">10. Blockchain Anchoring</h2>
+<p>DGML supports on-chain notarization at two levels of granularity: <strong>file-level</strong> (committing to the entire document) and <strong>element-level</strong> (committing to a single XML element). Only hashes, a URI, and a small JSON blob go on-chain — document content never does.</p>
+<h3 id="how-anchoring-works">How anchoring works</h3>
+<p>The anchor-precompile registry contract stores records. Every record is the same 10-field shape regardless of whether it covers a whole file or a single element:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Supplied by</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>registry</code></td>
+<td>caller</td>
+<td>Named registry on the chain</td>
+</tr>
+<tr>
+<td><code>uri</code></td>
+<td>caller</td>
+<td><code>dgmlx://</code> locator (see below)</td>
+</tr>
+<tr>
+<td><code>checksum</code></td>
+<td>caller</td>
+<td>64-char lowercase hex SHA-256</td>
+</tr>
+<tr>
+<td><code>checksum_algo</code></td>
+<td>caller</td>
+<td>Always <code>"sha256"</code></td>
+</tr>
+<tr>
+<td><code>metadata</code></td>
+<td>caller</td>
+<td>Compact JSON (see below)</td>
+</tr>
+<tr>
+<td><code>timestamp</code>, <code>status</code>, <code>record_id</code>, <code>index</code>, <code>is_latest</code></td>
+<td>chain</td>
+<td>Assigned on write</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>META-INF/dgml-attestation.xml</code> inside the DGMLX bundle is a local Merkle manifest — it is not modified by anchoring. The on-chain record is a separate artifact produced at anchoring time and identified by its URI.</p>
+<p>Each URI is versioned: anchoring the same URI again produces a new record rather than overwriting the prior one. All records for a URI remain on-chain. A prior record will no longer verify against a document that has since been regenerated; this is intentional — the chain preserves a complete audit trail of every anchored state.</p>
+<h3 id="file-level-anchoring">File-level anchoring</h3>
+<p>A file stake commits to the entire state of a document: its original bytes, every rendered page image, its docset schema, and its DGML XML. These four artifacts are called <strong>slots</strong>. Each slot is hashed independently, and the four hashes are combined into a single RFC 6962 binary Merkle root (the same construction used by Certificate Transparency logs). That root is what goes on-chain as the <code>checksum</code>.</p>
+<p><strong>URI:</strong> <code>dgmlx://&lt;file_id&gt;</code> when the file has not been assigned to a docset, or <code>dgmlx://&lt;file_id&gt;/&lt;docset_id&gt;</code> when it has.</p>
+<p><strong>Slots:</strong> the four slots are always processed in this fixed order:</p>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>What it represents</th>
+<th>What is hashed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source</code></td>
+<td>The original file as uploaded — the PDF, Word document, or other input.</td>
+<td>SHA-256 of the raw file bytes.</td>
+</tr>
+<tr>
+<td><code>page_image[N]</code></td>
+<td>The rendered page images — one PNG per page, produced by the workspace at file-add time.</td>
+<td>SHA-256 of each page PNG, one leaf per page, ordered by page number (not filename).</td>
+</tr>
+<tr>
+<td><code>schema</code></td>
+<td>The RELAX NG docset schema that governs how this file's DGML was generated. It defines the vocabulary of semantic tags used in the XML.</td>
+<td>SHA-256 of the raw <code>.rnc</code> file bytes.</td>
+</tr>
+<tr>
+<td><code>dgml</code></td>
+<td>The DGML XML document itself — the semantic representation of the file's content.</td>
+<td>RFC 6962 Merkle root of the XML element tree (the same tree used for element-level staking).</td>
+</tr>
+</tbody>
+</table>
+<p>A slot that is absent is omitted from the computation entirely — it contributes no placeholder hash. A file that has not been assigned to a docset has no <code>schema</code> or <code>dgml</code> slot; only <code>source</code> and <code>page_image[N]</code> are included. The <code>slots</code> field in metadata records how many slots were included so a verifier knows what to expect.</p>
+<p><strong>metadata:</strong> <code>{"kind": "dgmlx", "slots": &lt;count&gt;}</code></p>
+<p><strong>Verification:</strong> to verify a file stake, re-derive the Merkle root from the current workspace artifacts using the same slot order and compare it to the on-chain <code>checksum</code>. No inclusion proof is stored; the verifier recomputes the full root locally from the artifacts it has. Any byte-level change to any artifact — one character in the XML, one pixel in a page image, one field renamed in the schema — changes the root and fails verification.</p>
+<h3 id="element-level-anchoring">Element-level anchoring</h3>
+<p>An element stake commits to a single XML element, with an inclusion proof that ties it to the document root without revealing any other element.</p>
+<p><strong>URI:</strong> <code>dgmlx://&lt;file_id&gt;/&lt;docset_id&gt;#&lt;leaf_index&gt;</code></p>
+<p>The fragment <code>#&lt;leaf_index&gt;</code> is the 0-based DFS pre-order position of the element — the same integer as <code>proof.leaf_index</code>.</p>
+<p><strong>checksum:</strong> the element's canonical hash:</p>
+<pre><code>SHA-256( exclusive_C14N(element) )
+</code></pre>
+<p>Exclusive C14N (W3C XML-C14N 1.0, <code>exclusive=True, with_comments=False</code>) ensures the hash is independent of inherited namespace context — the same element hashes identically whether staked standalone or inside a full document.</p>
+<p><strong>metadata:</strong></p>
+<pre><code class="language-json">{
+  &quot;kind&quot;: &quot;dgml-element&quot;,
+  &quot;root_hash&quot;: &quot;&lt;64-char hex&gt;&quot;,
+  &quot;proof&quot;: {
+    &quot;leaf_hash&quot;:  &quot;&lt;64-char hex&gt;&quot;,
+    &quot;leaf_index&quot;: 3,
+    &quot;leaf_count&quot;: 47,
+    &quot;path&quot;: [
+      {&quot;sibling&quot;: &quot;&lt;64-char hex&gt;&quot;, &quot;side&quot;: &quot;L&quot;},
+      {&quot;sibling&quot;: &quot;&lt;64-char hex&gt;&quot;, &quot;side&quot;: &quot;R&quot;}
+    ]
+  }
+}
+</code></pre>
+<p><code>root_hash</code> is the Merkle root of the whole DGML XML element tree — the same value the DGMLX bundle records as the <code>dgml</code> slot hash. The <code>checksum</code> field on the chain record holds the leaf hash; the root sits in <code>metadata.root_hash</code>. This is the inverse of a file stake, where <code>checksum</code> is the root.</p>
+<h4 id="proof-field-definitions">Proof field definitions</h4>
+<p>A binary Merkle tree hashes data items at its bottom level. Those bottom-level items are called <strong>leaves</strong> — standard graph-theory vocabulary for terminal Merkle tree nodes, used consistently in RFC 6962 (Certificate Transparency), Bitcoin SPV, and Ethereum light clients. Internal Merkle tree nodes are computed by hashing pairs of children upward until a single <strong>root</strong> remains.</p>
+<p>The JSON field names below are defined by this specification. The underlying algorithm — binary Merkle tree construction and audit-path verification — follows RFC 6962 §2.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>RFC reference</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>leaf_hash</code></td>
+<td>64-char hex</td>
+<td>—</td>
+<td>The SHA-256 of <code>exclusive_C14N(element)</code> for the staked element. This is the element's cryptographic identity in the tree — it captures exactly what the element contains, independent of its position. It is identical to the <code>checksum</code> field on the chain record. A verifier recomputes this from the element's XML; if they differ, the element itself has changed since it was staked.</td>
+</tr>
+<tr>
+<td><code>leaf_index</code></td>
+<td>integer</td>
+<td>RFC 6962 §2.1</td>
+<td>The 0-based position of this element among all leaves, counted in DFS pre-order traversal of the full XML element tree. This is how the element is located within the tree. It is also used as the URI fragment (<code>#&lt;leaf_index&gt;</code>), so a URI of the form <code>dgmlx://&lt;file_id&gt;/&lt;docset_id&gt;#3</code> uniquely identifies this exact element within this exact file.</td>
+</tr>
+<tr>
+<td><code>leaf_count</code></td>
+<td>integer</td>
+<td>RFC 6962 §2.1.3</td>
+<td>The total number of leaves in the tree at the time the stake was created — the tree's size. A verifier uses this to detect tree-shape forgery: an attacker who knows only a root hash could in principle construct a different tree that produces the same root, but cannot do so if the expected leaf count is also checked and must match.</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>array</td>
+<td>RFC 6962 §2.1.1</td>
+<td>The ordered list of sibling hashes needed to re-derive the Merkle root starting from the leaf — called an <em>audit path</em> in RFC 6962. The verifier starts with <code>leaf_hash</code> and at each step concatenates it with the sibling hash (left or right, as indicated by <code>side</code>), then hashes the result. After all steps, the result must equal <code>root_hash</code>. Only O(log N) siblings are needed, so the full tree is never stored or transmitted. Each path entry is <code>{"sibling": "&lt;64-char hex&gt;", "side": "L"\|"R"}</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verification:</strong> given only the element's XML, the proof path, and the root hash from metadata — no other document content is required:</p>
+<pre><code>candidate = SHA-256( exclusive_C14N(element) )
+if candidate != proof.leaf_hash:
+    return False          # the element itself changed
+current = candidate
+for step in proof.path:
+    if step.side == &quot;L&quot;:
+        current = SHA-256( bytes.fromhex(step.sibling) + bytes.fromhex(current) )
+    else:
+        current = SHA-256( bytes.fromhex(current) + bytes.fromhex(step.sibling) )
+return current == root_hash
+</code></pre>
+<p>A failed verification distinguishes two cases. If the re-hashed element differs from <code>proof.leaf_hash</code>, the element itself changed. If the element hash matches but the path fails to reconstruct <code>root_hash</code>, the tree around it changed.</p>
+<h3 id="the-two-levels-compose">The two levels compose</h3>
+<p>A file stake records the <code>dgml</code> slot's Merkle root as part of the file checksum. An element stake records a single element's hash and carries that same XML Merkle root in <code>metadata.root_hash</code>. The two records are independently verifiable but cryptographically consistent: the element proof re-walks to the same root that the file bundle attests.</p>
+<h2 id="11-llm-guidance-creating-dgml">11. LLM Guidance — Creating DGML</h2>
+<p>The first decision is always <strong>docset placement</strong>: which docset does this document belong to, and does that docset already exist? Only after that question is answered does schema and tagging work begin.</p>
+<h3 id="step-1-determine-the-docset">Step 1 — Determine the Docset</h3>
+<p>Two situations arise:</p>
+<p><strong>Existing docset.</strong> A docset namespace already exists with a defined schema (<code>schema.rnc</code>). The task is classification: read the document and decide whether it fits an existing docset. If it does, proceed directly to Step 3 (tagging) using the existing schema — do not modify the schema unless the document introduces a concept genuinely absent from it. Consistent schemas across documents are the core value of DGML; schema drift destroys cross-document queryability.</p>
+<p><strong>New docset.</strong> No matching docset exists. Define a new namespace following the <code>http://www.dgml.io/{org}/{docset-name}#</code> convention, then proceed to Steps 2–4. The docset name should describe the document type, not the organization (<code>master-services-agreements</code>, not <code>acme-legal-docs</code>).</p>
+<p>To decide whether a document fits an existing docset, check:
+- Same document type (contract, invoice, lease, …)?
+- Same issuing organization or one with equivalent vocabulary?
+- Do the key fields map cleanly onto existing schema tags, with no major structural gaps?</p>
+<p>If any answer is no, create a new docset rather than forcing the document into an ill-fitting schema.</p>
+<h3 id="step-2-read-and-understand-the-documents">Step 2 — Read and Understand the Documents</h3>
+<p>Before writing any schema, read a representative sample of the docset's documents top-to-bottom as a human would. Identify:</p>
+<ol>
+<li><strong>The document type</strong> — what is it legally, commercially, or administratively?</li>
+<li><strong>The parties</strong> — who are the named entities and what roles do they play?</li>
+<li><strong>The key facts</strong> — dates, amounts, identifiers, obligations, terms.</li>
+<li><strong>The natural clusters</strong> — how are facts grouped? What are the logical containment relationships?</li>
+</ol>
+<h3 id="step-3-define-the-schema-new-docsets-only">Step 3 — Define the Schema (new docsets only)</h3>
+<p>Write a <code>schema.rnc</code> that names every recurring field, assigns it a <code>parentRole</code> group, and sets <code>siblingsShare</code> correctly. The schema is the contract between documents in the docset — it must be stable enough that every document can be tagged against it without revision.</p>
+<p>Tag names must describe <strong>what a value is</strong>, not where it appears or how it looks:</p>
+<table>
+<thead>
+<tr>
+<th>✅ Good — describes meaning</th>
+<th>❌ Bad — describes position or style</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docset:EffectiveDate</code></td>
+<td><code>docset:TopRightDate</code></td>
+</tr>
+<tr>
+<td><code>docset:LiabilityCap</code></td>
+<td><code>docset:BoldAmountInSection3</code></td>
+</tr>
+<tr>
+<td><code>docset:GovernanceLawJurisdiction</code></td>
+<td><code>docset:LastLineOfPageTwo</code></td>
+</tr>
+<tr>
+<td><code>docset:VendorTaxId</code></td>
+<td><code>docset:TableColumn2Row4</code></td>
+</tr>
+</tbody>
+</table>
+<p>Additional rules:</p>
+<ul>
+<li><strong>Be specific.</strong> <code>docset:TerminationNoticePeriod</code> is better than <code>docset:NoticePeriod</code> if the document distinguishes notice types.</li>
+<li><strong>Be stable.</strong> A tag must mean the same thing across every document in the docset. If a slot sometimes means one thing and sometimes another, split it into two tags.</li>
+<li><strong>Don't mimic layout.</strong> Nesting should reflect real containment or logical grouping.</li>
+<li><strong>Use <code>dg:chunk</code> when uncertain.</strong> A bounded block with an ambiguous semantic role is better wrapped in <code>dg:chunk dg:structure="…"</code> than forced into a wrong tag.</li>
+<li><strong><code>siblingsShare=true</code></strong> for fields meaningfully comparable across documents (dates, amounts, durations). <strong><code>siblingsShare=false</code></strong> for document-specific content (party names, free-text recitals, identifiers).</li>
+</ul>
+<h3 id="structure-and-style-conventions">Structure and style conventions</h3>
+<p>These rules govern how <code>dg:structure</code> and <code>dg:style</code> attribute values are applied when generating DGML. They are generation rules, not schema rules — the schema defines concept names; these rules define how structural scaffolding and visual presentation are expressed.</p>
+<p><strong>When to emit <code>dg:style</code>.</strong> Emit <code>dg:style</code> only when a styling property is visually evident in the source page image — bold text, a shaded cell, an uppercase heading, a centered total. Do not emit it to reflect inferred importance, hierarchy, or default rendering. When in doubt, omit it. Apply it at the most specific element where the style is observable: a bold amount goes on <code>&lt;docset:TotalAmount&gt;</code>, not on its enclosing row. Combine properties in a single attribute value rather than emitting multiple elements. Use only the allowed property/value pairs from the table in §9.</p>
+<p><strong>Heading concept hoisting.</strong> A heading is always <code>&lt;dg:chunk dg:structure="header"&gt;</code> — it never carries a semantic tag directly. The concept identified for the heading is <em>hoisted</em> to name the enclosing section element. A section whose heading concept is <code>SpecialConditions</code> becomes <code>&lt;docset:SpecialConditions dg:structure="section"&gt;</code>; a section whose heading has no resolved concept becomes <code>&lt;dg:chunk dg:structure="section"&gt;</code>.</p>
+<pre><code class="language-xml">&lt;docset:SpecialConditions dg:structure=&quot;section&quot;&gt;
+  &lt;dg:chunk dg:structure=&quot;header&quot;&gt;
+    &lt;dg:chunk dg:structure=&quot;lim&quot;&gt;ITEM 9&lt;/dg:chunk&gt;Special Conditions&lt;/dg:chunk&gt;
+  &lt;!-- section content follows --&gt;
+&lt;/docset:SpecialConditions&gt;
+</code></pre>
+<p><strong>List naming.</strong> Two patterns apply depending on item length and uniformity:</p>
+<p><em>Uniform short-item lists</em> — all items share one role and are each short (a value or phrase, not a sentence). The container takes a plural collection concept; every item takes the singular:</p>
+<pre><code class="language-xml">&lt;docset:Annexures dg:structure=&quot;ol&quot;&gt;
+  &lt;docset:Annexure dg:structure=&quot;li&quot;&gt;&lt;dg:chunk dg:structure=&quot;lim&quot;&gt;A.&lt;/dg:chunk&gt;Plan of the Premises&lt;/docset:Annexure&gt;
+  &lt;docset:Annexure dg:structure=&quot;li&quot;&gt;&lt;dg:chunk dg:structure=&quot;lim&quot;&gt;B.&lt;/dg:chunk&gt;Rules and Regulations&lt;/docset:Annexure&gt;
+&lt;/docset:Annexures&gt;
+</code></pre>
+<p><em>Prose / mixed-length lists</em> — items are sentence- or paragraph-length, or vary in length. Each item carries its own per-item concept (or none) and the container stays <code>dg:chunk</code>:</p>
+<pre><code class="language-xml">&lt;dg:chunk dg:structure=&quot;ol&quot;&gt;
+  &lt;docset:RepairObligation dg:structure=&quot;li&quot;&gt;
+    &lt;dg:chunk dg:structure=&quot;lim&quot;&gt;5.1&lt;/dg:chunk&gt;The Lessee must keep the Premises in good repair.&lt;/docset:RepairObligation&gt;
+  &lt;docset:InsuranceObligation dg:structure=&quot;li&quot;&gt;
+    &lt;dg:chunk dg:structure=&quot;lim&quot;&gt;5.2&lt;/dg:chunk&gt;The Lessee must insure the Premises for full replacement value.&lt;/docset:InsuranceObligation&gt;
+&lt;/dg:chunk&gt;
+</code></pre>
+<p><strong>Enumerators and markers (<code>lim</code>).</strong> Section numbers, list markers, and other delimiter tokens that belong to the layout but carry no domain meaning are wrapped in <code>&lt;dg:chunk dg:structure="lim"&gt;</code>. Always the first child of their parent element. Never omitted.</p>
+<pre><code class="language-xml">&lt;docset:PaymentTerms dg:structure=&quot;section&quot;&gt;
+  &lt;dg:chunk dg:structure=&quot;header&quot;&gt;
+    &lt;dg:chunk dg:structure=&quot;lim&quot;&gt;4.2&lt;/dg:chunk&gt;Payment Terms&lt;/dg:chunk&gt;
+  &lt;docset:InvoiceCycle dg:origin=&quot;4 460 139 1800 184&quot;&gt;Net 30&lt;/docset:InvoiceCycle&gt;
+&lt;/docset:PaymentTerms&gt;
+</code></pre>
+<p><strong>Tables.</strong> Tables are often messy: merged cells, rotated headers, implicit column meanings, footnotes in cells. The goal is to capture the <em>information</em> semantically, not reproduce the layout.</p>
+<p>Tables fall into two archetypes:</p>
+<p><em>Record table</em> — every row is the same kind of thing (item / price / quantity). The table takes a plural collection concept; each row takes the singular. Column concepts are specific role names (<code>ProductName</code>, <code>UnitPrice</code>), never bare generics (<code>Name</code>, <code>Amount</code>) and never structural words (<code>Item</code>, <code>Row</code>). The "Table" suffix is stripped (<code>BilledCharges</code>, not <code>BilledChargesTable</code>).</p>
+<pre><code class="language-xml">&lt;docset:BilledCharges dg:structure=&quot;table&quot;&gt;
+  &lt;docset:BilledCharge dg:structure=&quot;tr&quot;&gt;
+    &lt;docset:ProductName dg:structure=&quot;td&quot;&gt;Widget&lt;/docset:ProductName&gt;
+    &lt;docset:UnitPrice dg:structure=&quot;td&quot; xsi:type=&quot;decimal&quot; dg:value=&quot;9.95&quot;&gt;$9.95&lt;/docset:UnitPrice&gt;
+    &lt;docset:OrderedQuantity dg:structure=&quot;td&quot; xsi:type=&quot;integer&quot; dg:value=&quot;3&quot;&gt;3&lt;/docset:OrderedQuantity&gt;
+  &lt;/docset:BilledCharge&gt;
+&lt;/docset:BilledCharges&gt;
+</code></pre>
+<p><em>Key-value table</em> — each row is a different field (label cell + value cell); column position carries no shared meaning. The label cell stays <code>dg:chunk</code>; the value cell takes its own per-row concept.</p>
+<pre><code class="language-xml">&lt;docset:Premises dg:structure=&quot;tr&quot;&gt;
+  &lt;dg:chunk dg:structure=&quot;td&quot;&gt;ITEM 1 — Premises&lt;/dg:chunk&gt;
+  &lt;docset:PremisesDescription dg:structure=&quot;td&quot;&gt;Portion of the land…&lt;/docset:PremisesDescription&gt;
+&lt;/docset:Premises&gt;
+</code></pre>
+<p>The archetype is inferred: if a column's concept repeats across rows → record; if it varies → key-value. In both cases: normalize values with <code>dg:value</code>, and trace every cell with <code>dg:origin</code>.</p>
+<h3 id="step-4-tag-the-documents">Step 4 — Tag the Documents</h3>
+<p>Apply the schema to each document, producing a DGML XML file. At this stage:</p>
+<ul>
+<li>Assign <code>dg:origin</code> to every element where the source location is known.</li>
+<li>Assign <code>xsi:type</code> and <code>dg:value</code> to every element whose content can be normalized.</li>
+<li>Use <code>dg:itemprop</code> / <code>dg:href</code> to express relationships between elements.</li>
+<li>Use <code>dg:chunk</code> wherever a structural boundary is real but no schema tag applies.</li>
+</ul>
+<h2 id="12-schema-schemarnc">12. Schema — <code>schema.rnc</code></h2>
+<p>The docset vocabulary is formally defined in <strong>RELAX NG Compact Syntax</strong> (ISO/IEC 19757-2). This is the artifact generated in Step 2 of the LLM workflow (Section 12) — the schema comes first, before any document is tagged. The namespace declaration matches the <code>docset:</code> binding in all DGML files in the docset:</p>
+<pre><code class="language-rnc">namespace docset = &quot;http://www.dgml.io/acme-corp/master-services-agreements#&quot;
+</code></pre>
+<p><strong><code>parentRole</code></strong> — encoded as named pattern groups:</p>
+<pre><code class="language-rnc">ContractLevelTag = IndemnificationClause | PaymentTerms | GovernanceLaw | ...
+ClauseItemTag    = LiabilityCap | EffectiveDate | VendorName | ...
+InlineTag        = VendorTaxId | InvoiceTotal | SignatoryName | ...
+
+AnyTag = ContractLevelTag | ClauseItemTag | InlineTag
+</code></pre>
+<p><strong><code>siblingsShare</code></strong> — encoded as a fixed string literal attribute:</p>
+<pre><code class="language-rnc">siblingsShareTrue  = attribute siblingsShare { &quot;true&quot; }
+siblingsShareFalse = attribute siblingsShare { &quot;false&quot; }
+</code></pre>
+<p>Element definitions carry <code>##</code> doc comments. Three annotations are defined:</p>
+<table>
+<thead>
+<tr>
+<th>Annotation</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>## &lt;description&gt;</code></td>
+<td>Human-readable description of the element</td>
+</tr>
+<tr>
+<td><code>## Example: …</code></td>
+<td>Representative value</td>
+</tr>
+<tr>
+<td><code>## Prompt: …</code></td>
+<td>For sourced fields: guides the LLM where to find the value. For computed fields: describes the derivation rule. See §13.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-rnc">## Agreed maximum liability exposure under the contract
+## Example: $500,000
+## Prompt: Look for the dollar amount following &quot;liability&quot; or &quot;not exceed&quot; in the indemnification section
+LiabilityCap =
+  element docset:LiabilityCap {
+    siblingsShareTrue,
+    (text | AnyTag)*
+  }
+</code></pre>
+<h3 id="translation-to-json-ld">Translation to JSON-LD</h3>
+<p>See Appendix A for the schema vocabulary JSON-LD export, including the context definition and concept mapping table.</p>
+<hr />
+<h2 id="13-user-directed-schema-and-extraction">13. User-Directed Schema and Extraction</h2>
+<p>By default, an LLM tagging a docset invents its own vocabulary. User-directed extraction lets the user seed that vocabulary — naming some or all of the concepts, guiding where to find them, and optionally specifying which data elements to pull out and how to arrange them — while the LLM fills in the rest.</p>
+<h3 id="overview">Overview</h3>
+<p>User-directed extraction starts with a <code>schema.rnc</code> extended with <code>## Prompt:</code> annotations (§12). If a matching docset already exists, the LLM uses it directly — no schema writing required. For a new docset, the user provides a schema, either seeding the full vocabulary or targeting specific fields. In both cases the LLM may enrich the schema with additional tags it discovers.</p>
+<p>Output can be a full document tree, a targeted <code>dg:extraction</code> (§5), or both in the same file. The schema and its <code>## Prompt:</code> annotations drive all three forms equally.</p>
+<h3 id="always-a-proper-docset">Always a Proper Docset</h3>
+<p>Even for pure targeted extraction, the user defines a namespace URI following <code>http://www.dgml.io/{org}/{docset-name}#</code>. There are no shortcuts. The named docset is what guarantees cross-document consistency at scale: an extraction schema used against a thousand invoices produces a thousand <code>dg:extraction</code> elements with identical tag names and structure.</p>
+<h3 id="the-input-schema">The Input Schema</h3>
+<p>The input schema is a standard <code>schema.rnc</code> (§12) extended with <code>## Prompt:</code> annotations and explicit content models. For sourced fields, <code>## Prompt:</code> guides the LLM where to find the value. For computed fields, it describes the derivation rule.</p>
+<p><strong>RNC invoice example:</strong></p>
+<pre><code class="language-rnc">namespace docset = &quot;http://www.dgml.io/acme/invoices#&quot;
+
+## Invoice root
+Invoice =
+  element docset:Invoice {
+    attribute siblingsShare { &quot;false&quot; },
+    (VendorName | InvoiceDate | LineItems | InvoiceTotal)*
+  }
+
+## Legal name of the vendor
+## Example: MagicSoft, Inc.
+## Prompt: Look for the company name at the top of the invoice
+VendorName =
+  element docset:VendorName {
+    attribute siblingsShare { &quot;false&quot; },
+    text
+  }
+
+## Invoice issue date
+## Example: 2025-03-01
+## Prompt: Look for the date labeled &quot;Invoice Date&quot; or &quot;Date&quot;
+InvoiceDate =
+  element docset:InvoiceDate {
+    attribute siblingsShare { &quot;true&quot; },
+    text
+  }
+
+## Collection of line items
+LineItems =
+  element docset:LineItems {
+    attribute siblingsShare { &quot;false&quot; },
+    LineItem*
+  }
+
+## Single line item
+LineItem =
+  element docset:LineItem {
+    attribute siblingsShare { &quot;false&quot; },
+    (ProductName | Quantity | UnitPrice)*
+  }
+
+## Product or service name
+## Prompt: The description column of the line item
+ProductName =
+  element docset:ProductName {
+    attribute siblingsShare { &quot;false&quot; },
+    text
+  }
+
+## Quantity ordered
+## Prompt: The quantity column of the line item
+Quantity =
+  element docset:Quantity {
+    attribute siblingsShare { &quot;true&quot; },
+    text
+  }
+
+## Unit price
+## Prompt: The unit price column of the line item
+UnitPrice =
+  element docset:UnitPrice {
+    attribute siblingsShare { &quot;true&quot; },
+    text
+  }
+
+## Total invoice amount — computed as sum of (Quantity × UnitPrice) across all LineItems
+## Prompt: Compute as sum of Quantity × UnitPrice for each LineItem; verify against any printed total
+InvoiceTotal =
+  element docset:InvoiceTotal {
+    attribute siblingsShare { &quot;true&quot; },
+    text
+  }
+</code></pre>
+<p><strong>Equivalent JSON-LD context (A.3 form):</strong></p>
+<pre><code class="language-json">{
+  &quot;@context&quot;: {
+    &quot;docset&quot;: &quot;http://www.dgml.io/acme/invoices#&quot;,
+    &quot;xsd&quot;: &quot;http://www.w3.org/2001/XMLSchema#&quot;,
+    &quot;Tag&quot;:          &quot;docset:Tag&quot;,
+    &quot;TagGroup&quot;:     &quot;docset:TagGroup&quot;,
+    &quot;siblingsShare&quot;: { &quot;@id&quot;: &quot;docset:siblingsShare&quot;, &quot;@type&quot;: &quot;xsd:boolean&quot; },
+    &quot;members&quot;:      { &quot;@id&quot;: &quot;docset:members&quot;, &quot;@type&quot;: &quot;@id&quot;, &quot;@container&quot;: &quot;@set&quot; },
+    &quot;description&quot;:  &quot;docset:description&quot;,
+    &quot;example&quot;:      &quot;docset:example&quot;,
+    &quot;prompt&quot;:       &quot;docset:prompt&quot;,
+    &quot;children&quot;:     { &quot;@id&quot;: &quot;docset:children&quot;, &quot;@type&quot;: &quot;@id&quot;, &quot;@container&quot;: &quot;@list&quot; }
+  },
+  &quot;@graph&quot;: [
+    {
+      &quot;@id&quot;: &quot;docset:Invoice&quot;,
+      &quot;@type&quot;: &quot;docset:NonSharedTag&quot;,
+      &quot;description&quot;: &quot;Invoice root&quot;,
+      &quot;children&quot;: [&quot;docset:VendorName&quot;, &quot;docset:InvoiceDate&quot;, &quot;docset:LineItems&quot;, &quot;docset:InvoiceTotal&quot;]
+    },
+    {
+      &quot;@id&quot;: &quot;docset:VendorName&quot;,
+      &quot;@type&quot;: &quot;docset:NonSharedTag&quot;,
+      &quot;description&quot;: &quot;Legal name of the vendor&quot;,
+      &quot;example&quot;: &quot;MagicSoft, Inc.&quot;,
+      &quot;prompt&quot;: &quot;Look for the company name at the top of the invoice&quot;
+    },
+    {
+      &quot;@id&quot;: &quot;docset:InvoiceDate&quot;,
+      &quot;@type&quot;: &quot;docset:SharedTag&quot;,
+      &quot;description&quot;: &quot;Invoice issue date&quot;,
+      &quot;example&quot;: &quot;2025-03-01&quot;,
+      &quot;prompt&quot;: &quot;Look for the date labeled \&quot;Invoice Date\&quot; or \&quot;Date\&quot;&quot;
+    },
+    {
+      &quot;@id&quot;: &quot;docset:LineItems&quot;,
+      &quot;@type&quot;: &quot;docset:NonSharedTag&quot;,
+      &quot;description&quot;: &quot;Collection of line items&quot;,
+      &quot;children&quot;: [&quot;docset:LineItem&quot;]
+    },
+    {
+      &quot;@id&quot;: &quot;docset:LineItem&quot;,
+      &quot;@type&quot;: &quot;docset:NonSharedTag&quot;,
+      &quot;description&quot;: &quot;Single line item&quot;,
+      &quot;children&quot;: [&quot;docset:ProductName&quot;, &quot;docset:Quantity&quot;, &quot;docset:UnitPrice&quot;]
+    },
+    {
+      &quot;@id&quot;: &quot;docset:ProductName&quot;,
+      &quot;@type&quot;: &quot;docset:NonSharedTag&quot;,
+      &quot;description&quot;: &quot;Product or service name&quot;,
+      &quot;prompt&quot;: &quot;The description column of the line item&quot;
+    },
+    {
+      &quot;@id&quot;: &quot;docset:Quantity&quot;,
+      &quot;@type&quot;: &quot;docset:SharedTag&quot;,
+      &quot;description&quot;: &quot;Quantity ordered&quot;,
+      &quot;prompt&quot;: &quot;The quantity column of the line item&quot;
+    },
+    {
+      &quot;@id&quot;: &quot;docset:UnitPrice&quot;,
+      &quot;@type&quot;: &quot;docset:SharedTag&quot;,
+      &quot;description&quot;: &quot;Unit price&quot;,
+      &quot;prompt&quot;: &quot;The unit price column of the line item&quot;
+    },
+    {
+      &quot;@id&quot;: &quot;docset:InvoiceTotal&quot;,
+      &quot;@type&quot;: &quot;docset:SharedTag&quot;,
+      &quot;description&quot;: &quot;Total invoice amount&quot;,
+      &quot;prompt&quot;: &quot;Compute as sum of Quantity × UnitPrice for each LineItem; verify against any printed total&quot;
+    }
+  ]
+}
+</code></pre>
+<h3 id="output-modes">Output Modes</h3>
+<p>Three output modes are defined. Implementations must use these canonical identifiers.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Identifier</th>
+<th>Output</th>
+<th>Nesting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>full</code></td>
+<td>Document tree in root <code>dg:chunk</code></td>
+<td>Follows the document structure</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>full-extraction</code></td>
+<td>Document tree in root <code>dg:chunk</code> + <code>dg:extraction</code> as sibling</td>
+<td>Tree follows document; extraction follows user schema</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>extraction</code></td>
+<td><code>dg:extraction</code> inside root <code>dg:chunk</code></td>
+<td>Follows user schema</td>
+</tr>
+</tbody>
+</table>
+<p>In mode <code>full-extraction</code>, sourced fields inside <code>dg:extraction</code> carry both <code>dg:origin</code> (pointing to the page) and <code>dg:href</code> (pointing to the corresponding element in the main document tree). In mode <code>extraction</code>, <code>dg:origin</code> is the only link to the source.</p>
+<h3 id="dgextraction-placement-and-rules"><code>dg:extraction</code> Placement and Rules</h3>
+<ul>
+<li>Always a <strong>direct child</strong> of the root <code>dg:chunk</code> — never nested inside the document tree.</li>
+<li>Never carries its own <code>xmlns:docset</code> declaration — inherits from the root <code>dg:chunk</code>.</li>
+<li>Content is 100% standard DGML: <code>docset:</code> elements, <code>xsi:type</code>/<code>dg:value</code>, <code>dg:origin</code>, <code>dg:itemprop</code>/<code>dg:href</code>.</li>
+<li>Nesting inside <code>dg:extraction</code> follows the user's schema, not the document's physical structure.</li>
+</ul>
+<h3 id="computed-fields">Computed Fields</h3>
+<p>A computed field (§7) is one whose value is derived from other elements rather than read directly from the page. Rules:</p>
+<ul>
+<li>Always carries <code>dg:origin="computed"</code> (defined in §7).</li>
+<li>Always carries <code>dg:value</code> with the computed result.</li>
+<li>Always carries <code>dg:itemprop</code>/<code>dg:href</code> identifying the source elements (§8). Use semicolon-separated <code>dg:href</code> (§8) when the derivation draws from multiple elements — the same multi-target syntax that is valid in any <code>dg:href</code> context.</li>
+<li>The <code>## Prompt:</code> annotation in the schema (§12) is the authoritative description of the derivation rule.</li>
+</ul>
+<h3 id="full-example-mode-3-extraction-only">Full Example — Mode 3 (Extraction Only)</h3>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;dg:chunk xmlns:dg=&quot;http://dgml.io/ns/dg#&quot;
+          xmlns:docset=&quot;http://www.dgml.io/acme/invoices#&quot;
+          xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+
+  &lt;dg:extraction&gt;
+    &lt;docset:Invoice&gt;
+      &lt;docset:VendorName
+          dg:origin=&quot;1 220 150 680 200&quot;&gt;MagicSoft, Inc.&lt;/docset:VendorName&gt;
+      &lt;docset:InvoiceDate
+          xsi:type=&quot;date&quot; dg:value=&quot;2025-03-01&quot;
+          dg:origin=&quot;1 900 150 1300 200&quot;&gt;March 1, 2025&lt;/docset:InvoiceDate&gt;
+      &lt;docset:LineItems&gt;
+        &lt;docset:LineItem&gt;
+          &lt;docset:ProductName
+              dg:origin=&quot;2 200 400 900 440&quot;
+              xml:id=&quot;ln1-name&quot;&gt;Widget Pro&lt;/docset:ProductName&gt;
+          &lt;docset:Quantity
+              xsi:type=&quot;integer&quot; dg:value=&quot;3&quot;
+              dg:origin=&quot;2 900 400 1100 440&quot;
+              xml:id=&quot;ln1-qty&quot;&gt;3&lt;/docset:Quantity&gt;
+          &lt;docset:UnitPrice
+              xsi:type=&quot;decimal&quot; dg:value=&quot;49.95&quot;
+              dg:origin=&quot;2 1100 400 1400 440&quot;
+              xml:id=&quot;ln1-price&quot;&gt;$49.95&lt;/docset:UnitPrice&gt;
+        &lt;/docset:LineItem&gt;
+        &lt;docset:LineItem&gt;
+          &lt;docset:ProductName
+              dg:origin=&quot;2 200 450 900 490&quot;
+              xml:id=&quot;ln2-name&quot;&gt;Support Plan&lt;/docset:ProductName&gt;
+          &lt;docset:Quantity
+              xsi:type=&quot;integer&quot; dg:value=&quot;1&quot;
+              dg:origin=&quot;2 900 450 1100 490&quot;
+              xml:id=&quot;ln2-qty&quot;&gt;1&lt;/docset:Quantity&gt;
+          &lt;docset:UnitPrice
+              xsi:type=&quot;decimal&quot; dg:value=&quot;200.00&quot;
+              dg:origin=&quot;2 1100 450 1400 490&quot;
+              xml:id=&quot;ln2-price&quot;&gt;$200.00&lt;/docset:UnitPrice&gt;
+        &lt;/docset:LineItem&gt;
+      &lt;/docset:LineItems&gt;
+      &lt;docset:InvoiceTotal
+          xsi:type=&quot;decimal&quot; dg:value=&quot;349.85&quot;
+          dg:origin=&quot;computed&quot;
+          dg:itemprop=&quot;computedFrom&quot;
+          dg:href=&quot;#ln1-qty; #ln1-price; #ln2-qty; #ln2-price&quot;&gt;$349.85&lt;/docset:InvoiceTotal&gt;
+    &lt;/docset:Invoice&gt;
+  &lt;/dg:extraction&gt;
+
+&lt;/dg:chunk&gt;
+</code></pre>
+<p><code>InvoiceTotal</code> carries <code>dg:origin="computed"</code> (§7) because its value is derived — <code>(3 × $49.95) + (1 × $200.00) = $349.85</code>. The <code>dg:href</code> (§8) lists all four source elements. The derivation rule is defined by <code>## Prompt:</code> in the schema (§12).</p>
+<p><strong>Equivalent JSON-LD:</strong></p>
+<pre><code class="language-json">{
+  &quot;@context&quot;: {
+    &quot;dg&quot;:      &quot;http://dgml.io/ns/dg#&quot;,
+    &quot;docset&quot;:  &quot;http://www.dgml.io/acme/invoices#&quot;,
+    &quot;xsd&quot;:     &quot;http://www.w3.org/2001/XMLSchema#&quot;
+  },
+  &quot;@type&quot;: &quot;dg:chunk&quot;,
+  &quot;dg:extraction&quot;: {
+    &quot;@type&quot;: &quot;docset:Invoice&quot;,
+    &quot;docset:VendorName&quot;: {
+      &quot;@value&quot;: &quot;MagicSoft, Inc.&quot;,
+      &quot;dg:origin&quot;: &quot;1 220 150 680 200&quot;
+    },
+    &quot;docset:InvoiceDate&quot;: {
+      &quot;@type&quot;: &quot;xsd:date&quot;,
+      &quot;@value&quot;: &quot;2025-03-01&quot;,
+      &quot;dg:origin&quot;: &quot;1 900 150 1300 200&quot;
+    },
+    &quot;docset:LineItems&quot;: {
+      &quot;@type&quot;: &quot;docset:LineItems&quot;,
+      &quot;docset:LineItem&quot;: [
+        {
+          &quot;@id&quot;: &quot;#ln1&quot;,
+          &quot;docset:ProductName&quot;: { &quot;@value&quot;: &quot;Widget Pro&quot;,  &quot;@id&quot;: &quot;#ln1-name&quot;, &quot;dg:origin&quot;: &quot;2 200 400 900 440&quot; },
+          &quot;docset:Quantity&quot;:    { &quot;@type&quot;: &quot;xsd:integer&quot;, &quot;@value&quot;: &quot;3&quot;,       &quot;@id&quot;: &quot;#ln1-qty&quot;,   &quot;dg:origin&quot;: &quot;2 900 400 1100 440&quot; },
+          &quot;docset:UnitPrice&quot;:   { &quot;@type&quot;: &quot;xsd:decimal&quot;, &quot;@value&quot;: &quot;49.95&quot;,   &quot;@id&quot;: &quot;#ln1-price&quot;, &quot;dg:origin&quot;: &quot;2 1100 400 1400 440&quot; }
+        },
+        {
+          &quot;@id&quot;: &quot;#ln2&quot;,
+          &quot;docset:ProductName&quot;: { &quot;@value&quot;: &quot;Support Plan&quot;, &quot;@id&quot;: &quot;#ln2-name&quot;, &quot;dg:origin&quot;: &quot;2 200 450 900 490&quot; },
+          &quot;docset:Quantity&quot;:    { &quot;@type&quot;: &quot;xsd:integer&quot;, &quot;@value&quot;: &quot;1&quot;,        &quot;@id&quot;: &quot;#ln2-qty&quot;,   &quot;dg:origin&quot;: &quot;2 900 450 1100 490&quot; },
+          &quot;docset:UnitPrice&quot;:   { &quot;@type&quot;: &quot;xsd:decimal&quot;, &quot;@value&quot;: &quot;200.00&quot;,   &quot;@id&quot;: &quot;#ln2-price&quot;, &quot;dg:origin&quot;: &quot;2 1100 450 1400 490&quot; }
+        }
+      ]
+    },
+    &quot;docset:InvoiceTotal&quot;: {
+      &quot;@type&quot;: &quot;xsd:decimal&quot;,
+      &quot;@value&quot;: &quot;349.85&quot;,
+      &quot;dg:origin&quot;: &quot;computed&quot;,
+      &quot;dg:itemprop&quot;: &quot;computedFrom&quot;,
+      &quot;dg:href&quot;: &quot;#ln1-qty; #ln1-price; #ln2-qty; #ln2-price&quot;
+    }
+  }
+}
+</code></pre>
+<hr />
+<h1 id="part-ii-dgmlx">Part II — DGMLX</h1>
+<h2 id="15-what-dgmlx-is">15. What DGMLX Is</h2>
+<p>DGMLX (<code>.dgmlx</code>) is a ZIP archive that packages a DGML document together with everything needed to verify and use it:</p>
+<ul>
+<li>The source document — PDF, DOCX, PPTX, TIFF, HTML, or any format that can be rendered to page images</li>
+<li>Page images rendered from the source</li>
+<li>The DGML XML</li>
+<li>A RELAX NG schema defining the docset vocabulary</li>
+<li>OPC package relationships</li>
+<li>An attestation document with provenance metadata</li>
+</ul>
+<p>DGMLX uses OPC (Open Packaging Conventions, ECMA-376 Part 2) as its container convention.</p>
+<h2 id="16-package-structure">16. Package Structure</h2>
+<pre><code>[Content_Types].xml               ← OPC content-type registry
+_rels/.rels                       ← OPC package relationships
+META-INF/dgml-attestation.xml    ← Attestation (Merkle root, DPI, renderer, IDs)
+schema.rnc                        ← RELAX NG schema for the docset vocabulary
+&lt;Document Title&gt;.dgml.xml         ← Semantic XML (the DGML document)
+source/&lt;Document Title&gt;.&lt;ext&gt;     ← Original source document
+page_images/page_1.png            ← Rendered page image, page 1
+page_images/page_2.png
+...
+page_images/page_N.png
+</code></pre>
+<p>Rules:</p>
+<ul>
+<li>The document title (filename stem) is the same across <code>&lt;title&gt;.dgml.xml</code> and <code>source/&lt;title&gt;.&lt;ext&gt;</code>.</li>
+<li>Page image files are named <code>page_N.png</code> where N is a 1-based integer with no leading zeros.</li>
+<li><code>META-INF/</code> is reserved. Only <code>dgml-attestation.xml</code> should be placed there.</li>
+<li><code>_rels/</code> is the OPC reserved directory for relationship files.</li>
+<li>No <code>page_text/</code> directory is present — token data is an intermediate artifact, not shipped.</li>
+</ul>
+<h2 id="17-container-content_typesxml">17. Container — <code>[Content_Types].xml</code></h2>
+<p>Follows OPC §10.1. Declares the MIME type for every part in the package.</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Types xmlns=&quot;http://schemas.openxmlformats.org/package/2006/content-types&quot;&gt;
+  &lt;Default Extension=&quot;rnc&quot; ContentType=&quot;text/plain&quot;/&gt;
+  &lt;Default Extension=&quot;png&quot; ContentType=&quot;image/png&quot;/&gt;
+  &lt;Default Extension=&quot;xml&quot; ContentType=&quot;application/xml&quot;/&gt;
+  &lt;Override PartName=&quot;/_rels/.rels&quot;
+            ContentType=&quot;application/vnd.openxmlformats-package.relationships+xml&quot;/&gt;
+  &lt;Override PartName=&quot;/META-INF/dgml-attestation.xml&quot; ContentType=&quot;application/xml&quot;/&gt;
+  &lt;!-- One Override per source file and page image with exact PartName --&gt;
+&lt;/Types&gt;
+</code></pre>
+<p>Source file content types:</p>
+<table>
+<thead>
+<tr>
+<th>Source format</th>
+<th>Content type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PDF</td>
+<td><code>application/pdf</code></td>
+</tr>
+<tr>
+<td>DOCX</td>
+<td><code>application/vnd.openxmlformats-officedocument.wordprocessingml.document</code></td>
+</tr>
+<tr>
+<td>PPTX</td>
+<td><code>application/vnd.openxmlformats-officedocument.presentationml.presentation</code></td>
+</tr>
+<tr>
+<td>TIFF</td>
+<td><code>image/tiff</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="18-package-relationships-_relsrels">18. Package Relationships — <code>_rels/.rels</code></h2>
+<p>Follows OPC §9. Typed relationships from the package root to every significant part.</p>
+<table>
+<thead>
+<tr>
+<th>Type URI</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>http://dgml.io/relationships/attestation</code></td>
+<td><code>META-INF/dgml-attestation.xml</code></td>
+</tr>
+<tr>
+<td><code>http://dgml.io/relationships/source</code></td>
+<td>Source document</td>
+</tr>
+<tr>
+<td><code>http://dgml.io/relationships/semantic-xml</code></td>
+<td>DGML XML file</td>
+</tr>
+<tr>
+<td><code>http://dgml.io/relationships/schema</code></td>
+<td><code>schema.rnc</code></td>
+</tr>
+<tr>
+<td><code>http://dgml.io/relationships/page-image</code></td>
+<td>Each page PNG (one per page)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Relationships xmlns=&quot;http://schemas.openxmlformats.org/package/2006/relationships&quot;&gt;
+  &lt;Relationship Id=&quot;rId1&quot; Type=&quot;http://dgml.io/relationships/attestation&quot;
+                Target=&quot;META-INF/dgml-attestation.xml&quot;/&gt;
+  &lt;Relationship Id=&quot;rId2&quot; Type=&quot;http://dgml.io/relationships/source&quot;
+                Target=&quot;source/Acme Corp MSA 2024.pdf&quot;/&gt;
+  &lt;Relationship Id=&quot;rId3&quot; Type=&quot;http://dgml.io/relationships/semantic-xml&quot;
+                Target=&quot;Acme Corp MSA 2024.dgml.xml&quot;/&gt;
+  &lt;Relationship Id=&quot;rId4&quot; Type=&quot;http://dgml.io/relationships/schema&quot;
+                Target=&quot;schema.rnc&quot;/&gt;
+  &lt;Relationship Id=&quot;IMG1&quot; Type=&quot;http://dgml.io/relationships/page-image&quot;
+                Target=&quot;page_images/page_1.png&quot; Order=&quot;1&quot;/&gt;
+  &lt;Relationship Id=&quot;IMG2&quot; Type=&quot;http://dgml.io/relationships/page-image&quot;
+                Target=&quot;page_images/page_2.png&quot; Order=&quot;2&quot;/&gt;
+&lt;/Relationships&gt;
+</code></pre>
+<p>Page-image <code>Id</code> values are <code>IMG1</code>, <code>IMG2</code>, … matching the page number. <code>Order</code> is a DGML extension attribute. All <code>Target</code> paths are relative to the package root.</p>
+<h2 id="19-attestation-meta-infdgml-attestationxml">19. Attestation — <code>META-INF/dgml-attestation.xml</code></h2>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;dgml-attestation xmlns=&quot;http://dgml.io/ns/attestation&quot;
+                  version=&quot;1&quot;
+                  page-image-dpi=&quot;300&quot;
+                  page-image-renderer=&quot;ghostscript&quot;
+                  file-id=&quot;5kqt9r5fowno&quot;
+                  docset-id=&quot;o8vr8rs488vg&quot;&gt;
+  &lt;merkle-root&gt;62f7a978b4b1b3f1eaf400514070e827873bed8b4fb4279bb4d6e7288f79df8e&lt;/merkle-root&gt;
+&lt;/dgml-attestation&gt;
+</code></pre>
+<p>For a package that is part of a provenance chain (Section 11), the attestation also includes one <code>&lt;prior-merkle-root&gt;</code> per predecessor:</p>
+<pre><code class="language-xml">&lt;dgml-attestation xmlns=&quot;http://dgml.io/ns/attestation&quot;
+                  version=&quot;1&quot; page-image-dpi=&quot;150&quot;
+                  page-image-renderer=&quot;ghostscript&quot;
+                  file-id=&quot;amend-001&quot; docset-id=&quot;o8vr8rs488vg&quot;&gt;
+  &lt;merkle-root&gt;a3f9...&lt;/merkle-root&gt;
+  &lt;prior-merkle-root file-id=&quot;5kqt9r5fowno&quot;&gt;62f7a978...&lt;/prior-merkle-root&gt;
+&lt;/dgml-attestation&gt;
+</code></pre>
+<h3 id="fields">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute / Element</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>version</code></td>
+<td>Attestation format version (currently <code>"1"</code>)</td>
+</tr>
+<tr>
+<td><code>file-id</code></td>
+<td>Unique identifier for this document file (permanent)</td>
+</tr>
+<tr>
+<td><code>docset-id</code></td>
+<td>Identifier of the docset this file belongs to (permanent)</td>
+</tr>
+<tr>
+<td><code>page-image-dpi</code></td>
+<td>DPI at which the source was rendered. All <code>dg:origin</code> coordinates reference this. <strong>Default: 150.</strong></td>
+</tr>
+<tr>
+<td><code>page-image-renderer</code></td>
+<td>Tool used to render pages (<code>"ghostscript"</code>, <code>"libreoffice"</code>, <code>"pillow"</code>, …)</td>
+</tr>
+<tr>
+<td><code>&lt;merkle-root&gt;</code></td>
+<td>SHA-256 Merkle root over the canonical content of all page images</td>
+</tr>
+<tr>
+<td><code>&lt;prior-merkle-root&gt;</code></td>
+<td>Merkle root of a predecessor package (for provenance chains); <code>file-id</code> attribute identifies the predecessor</td>
+</tr>
+</tbody>
+</table>
+<h2 id="20-page-images-page_imagespage_npng">20. Page Images — <code>page_images/page_N.png</code></h2>
+<p>Lossless PNG renders of each page. Named <code>page_N.png</code>, 1-based, no leading zeros. Rendered at the DPI declared in attestation using the declared renderer (Ghostscript for PDF, LibreOffice for DOCX/PPTX, Pillow for raster sources, etc.).</p>
+<p>Recommended DPI values:</p>
+<table>
+<thead>
+<tr>
+<th>DPI</th>
+<th>Letter page pixel size</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>150</td>
+<td>1275 × 1650</td>
+<td>Default — sufficient for LLM grounding</td>
+</tr>
+<tr>
+<td>200</td>
+<td>1700 × 2200</td>
+<td>Higher fidelity for dense documents</td>
+</tr>
+<tr>
+<td>300</td>
+<td>2550 × 3300</td>
+<td>High quality, standard OCR DPI</td>
+</tr>
+</tbody>
+</table>
+<h2 id="20-verification">20. Verification</h2>
+<pre><code>Source document
+      │
+      ▼ (renderer at declared DPI)
+Page PNGs  ──────────────────────────────────────────────────┐
+      │                                                       │
+      ▼ (SHA-256 leaf hashes → Merkle tree)                  │ pixel coords
+Merkle root ──► META-INF/dgml-attestation.xml                │ in dg:origin
+      │                                                       │
+      │ (optional: prior-merkle-root links to predecessor)    │
+      ▼                                                  DGML XML
+Provenance chain ─────────────────────────────────────────────┘
+</code></pre>
+<ol>
+<li><strong>Integrity</strong> — re-render at declared DPI with declared renderer, recompute Merkle root, compare to attestation.</li>
+<li><strong>Origin accuracy</strong> — crop <code>dg:origin</code> rectangle from <code>page_images/page_N.png</code>, confirm it shows the element's text.</li>
+<li><strong>Schema conformance</strong> — validate <code>.dgml.xml</code> against <code>schema.rnc</code> with any RELAX NG validator (e.g., Jing).</li>
+<li><strong>Chain integrity</strong> — if <code>&lt;prior-merkle-root&gt;</code> is present, verify the predecessor package and confirm its <code>&lt;merkle-root&gt;</code> matches.</li>
+</ol>
+<hr />
+<h2 id="appendix-a-json-ld">Appendix A — JSON-LD</h2>
+<h3 id="a1-semantic-links">A.1 Semantic Links</h3>
+<p><code>dg:itemprop</code> / <code>dg:href</code> pairs form subject–predicate–object triples that map directly to JSON-LD. The subject is the element carrying the attributes (identified by its <code>xml:id</code>); the predicate is the <code>dg:itemprop</code> value; the object is the element identified by <code>dg:href</code>.</p>
+<p><strong>Input XML:</strong></p>
+<pre><code class="language-xml">&lt;docset:VendorName xml:id=&quot;vendor-co&quot;
+    dg:origin=&quot;1 220 150 680 200&quot;&gt;MagicSoft, Inc.&lt;/docset:VendorName&gt;
+
+&lt;docset:SignatoryName
+    xml:id=&quot;sig-1&quot;
+    dg:itemprop=&quot;signatoryOf&quot;
+    dg:href=&quot;#vendor-co&quot;
+    dg:origin=&quot;11 460 2430 1200 2475&quot;&gt;Jane Smith&lt;/docset:SignatoryName&gt;
+</code></pre>
+<p><strong>JSON-LD triple produced by the document instance export (A.2):</strong></p>
+<pre><code class="language-json">{
+  &quot;@id&quot;: &quot;#sig-1&quot;,
+  &quot;@type&quot;: &quot;docset:SignatoryName&quot;,
+  &quot;signatoryOf&quot;: { &quot;@id&quot;: &quot;#vendor-co&quot; }
+}
+</code></pre>
+<p>The full translation rules are defined in A.2.</p>
+<h3 id="a2-document-instance-export-xast">A.2 Document Instance Export (XAST)</h3>
+<p>The DGML XML file is the system of record. JSON-LD representations are exports derived directly from the XML, acting as delivery vehicles optimized for specific consumers and transport layers. This specification defines one export: the XAST-convention lossless export. The community may define additional exports derived directly from XML for specific consumers; those are out of scope for this specification.</p>
+<p>The XAST export follows the conventions of XAST (XML Abstract Syntax Tree), a DOM-style tree representation of XML in JSON popularized by the unified/xast ecosystem (https://github.com/syntax-tree/xast). Every node has a <code>type</code>, optional <code>children</code> array, and optional <code>attributes</code> — making the structure predictable and lossless.</p>
+<p>DGML extends this convention with JSON-LD identity and linking: <code>@context</code> for namespace mappings, <code>@type</code> for semantic tag names, <code>@id</code> for stable node identity, and named link properties derived from <code>dg:itemprop</code>/<code>dg:href</code> stubs.</p>
+<p><strong>Output shape:</strong></p>
+<pre><code class="language-json">{
+  &quot;@context&quot;: {
+    &quot;xast&quot;: &quot;http://dgml.io/ns/xast#&quot;,
+    &quot;children&quot;:   { &quot;@id&quot;: &quot;xast:children&quot;,   &quot;@container&quot;: &quot;@list&quot;  },
+    &quot;attributes&quot;: { &quot;@id&quot;: &quot;xast:attributes&quot;, &quot;@container&quot;: &quot;@index&quot; },
+    &quot;nodeType&quot;:   { &quot;@id&quot;: &quot;xast:nodeType&quot; },
+    &quot;value&quot;:      { &quot;@id&quot;: &quot;xast:value&quot; },
+    &quot;...namespace prefix mappings...&quot;
+  },
+  &quot;@graph&quot;: [ &quot;&lt;root node&gt;&quot; ]
+}
+</code></pre>
+<p>The <code>xast:</code> terms are always present, defined inline — no external fetch required. <code>@container: "@list"</code> on <code>children</code> preserves document order for JSON-LD processors. <code>@container: "@index"</code> on <code>attributes</code> makes each attribute entry individually visible to JSON-LD processors.</p>
+<p><strong>Node shape</strong> — every XML element becomes a JSON object with:</p>
+<ul>
+<li><code>"nodeType": "xast:element"</code> — always present, fixed string; distinguishes element nodes from text nodes for JSON-LD processors.</li>
+<li><code>"@type": "&lt;curie&gt;"</code> — the element tag as a CURIE (e.g. <code>"docset:LiabilityCap"</code>, <code>"dg:chunk"</code>)</li>
+<li><code>"@id": "..."</code> — only present if the element has an <code>id</code> or <code>xml:id</code> attribute. Plain local ids (no colon, slash, or leading <code>#</code>) are prefixed with <code>#</code>; URNs and full URIs are left unchanged.</li>
+<li><code>"attributes": { ... }</code> — all XML attributes except <code>id</code>/<code>xml:id</code>, <code>dg:itemprop</code>, and <code>dg:href</code>, keyed by their CURIE name, values as strings. <code>dg:origin</code>, <code>dg:structure</code>, and <code>dg:style</code> are included here as regular attributes. Omit key entirely if no attributes remain.</li>
+<li><code>"children": [ ... ]</code> — ordered array of child nodes (element nodes and text nodes), always present, always in document order, may be empty.</li>
+<li>Named link property — if the element itself carries <code>dg:itemprop</code> and <code>dg:href</code>, those become a named property on this node: <code>{ "&lt;dg:itemprop_value&gt;": {"@id": "&lt;dg:href_value&gt;"} }</code>. <code>dg:itemprop</code> and <code>dg:href</code> are never included in <code>"attributes"</code>. The element still appears in <code>children</code> normally — nothing is consumed or hidden.</li>
+</ul>
+<p><strong>Text node shape:</strong></p>
+<pre><code class="language-json">{&quot;nodeType&quot;: &quot;xast:text&quot;, &quot;value&quot;: &quot;...&quot;}
+</code></pre>
+<p><strong>Context rules:</strong></p>
+<ul>
+<li>Each <code>xmlns:prefix="uri"</code> declaration → <code>"@context"</code> entry <code>"prefix": "uri"</code></li>
+<li>Default namespace <code>xmlns="uri"</code> → <code>"@vocab": "uri"</code> in <code>@context</code></li>
+<li>No named prefixes → no <code>@vocab</code></li>
+</ul>
+<p><strong>Itemprop/href rules:</strong> If an element carries both <code>dg:itemprop</code> and <code>dg:href</code> attributes, those attributes produce a named link property on that element — <code>{ dg:itemprop_value: {"@id": dg:href_value} }</code>. The element appears in <code>children</code> in the normal position; <code>dg:itemprop</code> and <code>dg:href</code> are excluded from <code>"attributes"</code>. Nothing is consumed or re-parented.</p>
+<p><strong>Example:</strong></p>
+<p>Input XML:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;dg:chunk xmlns:dg=&quot;http://dgml.io/ns/dg#&quot;
+          xmlns:docset=&quot;http://www.dgml.io/acme-corp/master-services-agreements#&quot;
+          xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;docset:IndemnificationClause dg:origin=&quot;3 180 400 2360 1200&quot;&gt;
+    &lt;dg:chunk dg:structure=&quot;header&quot; dg:style=&quot;font-size: 1.5em; text-transform: uppercase&quot;
+              dg:origin=&quot;3 180 400 2360 450&quot;&gt;
+      &lt;dg:chunk dg:structure=&quot;lim&quot;&gt;3.1&lt;/dg:chunk&gt;
+      Indemnification
+    &lt;/dg:chunk&gt;
+    &lt;docset:LiabilityCap xsi:type=&quot;decimal&quot; dg:value=&quot;500000&quot;
+        dg:origin=&quot;3 180 500 2360 540&quot;&gt;$500,000&lt;/docset:LiabilityCap&gt;
+    &lt;docset:EffectiveDate xsi:type=&quot;date&quot; dg:value=&quot;2024-01-01&quot;
+        dg:origin=&quot;3 180 550 2360 590&quot;&gt;January 1, 2024&lt;/docset:EffectiveDate&gt;
+    &lt;docset:VendorRef dg:itemprop=&quot;docset:paidBy&quot; dg:href=&quot;#vendor-co&quot;/&gt;
+  &lt;/docset:IndemnificationClause&gt;
+  &lt;docset:VendorName xml:id=&quot;vendor-co&quot;
+      dg:origin=&quot;1 220 150 680 200&quot;&gt;MagicSoft, Inc.&lt;/docset:VendorName&gt;
+&lt;/dg:chunk&gt;
+</code></pre>
+<p>Expected JSON-LD output:</p>
+<pre><code class="language-json">{
+  &quot;@context&quot;: {
+    &quot;xast&quot;: &quot;http://dgml.io/ns/xast#&quot;,
+    &quot;children&quot;:   { &quot;@id&quot;: &quot;xast:children&quot;,   &quot;@container&quot;: &quot;@list&quot;  },
+    &quot;attributes&quot;: { &quot;@id&quot;: &quot;xast:attributes&quot;, &quot;@container&quot;: &quot;@index&quot; },
+    &quot;nodeType&quot;:   { &quot;@id&quot;: &quot;xast:nodeType&quot; },
+    &quot;value&quot;:      { &quot;@id&quot;: &quot;xast:value&quot; },
+    &quot;dg&quot;:     &quot;http://dgml.io/ns/dg#&quot;,
+    &quot;docset&quot;: &quot;http://www.dgml.io/acme-corp/master-services-agreements#&quot;,
+    &quot;xsi&quot;:    &quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+  },
+  &quot;@graph&quot;: [
+    {
+      &quot;nodeType&quot;: &quot;xast:element&quot;,
+      &quot;@type&quot;: &quot;dg:chunk&quot;,
+      &quot;children&quot;: [
+        {
+          &quot;nodeType&quot;: &quot;xast:element&quot;,
+          &quot;@type&quot;: &quot;docset:IndemnificationClause&quot;,
+          &quot;attributes&quot;: {
+            &quot;dg:origin&quot;: &quot;3 180 400 2360 1200&quot;
+          },
+          &quot;children&quot;: [
+            {
+              &quot;nodeType&quot;: &quot;xast:element&quot;,
+              &quot;@type&quot;: &quot;dg:chunk&quot;,
+              &quot;attributes&quot;: {
+                &quot;dg:structure&quot;: &quot;header&quot;,
+                &quot;dg:style&quot;: &quot;font-size: 1.5em; text-transform: uppercase&quot;,
+                &quot;dg:origin&quot;: &quot;3 180 400 2360 450&quot;
+              },
+              &quot;children&quot;: [
+                {
+                  &quot;nodeType&quot;: &quot;xast:element&quot;,
+                  &quot;@type&quot;: &quot;dg:chunk&quot;,
+                  &quot;attributes&quot;: {&quot;dg:structure&quot;: &quot;lim&quot;},
+                  &quot;children&quot;: [
+                    {&quot;nodeType&quot;: &quot;xast:text&quot;, &quot;value&quot;: &quot;3.1&quot;}
+                  ]
+                },
+                {&quot;nodeType&quot;: &quot;xast:text&quot;, &quot;value&quot;: &quot;Indemnification&quot;}
+              ]
+            },
+            {
+              &quot;nodeType&quot;: &quot;xast:element&quot;,
+              &quot;@type&quot;: &quot;docset:LiabilityCap&quot;,
+              &quot;attributes&quot;: {
+                &quot;xsi:type&quot;: &quot;decimal&quot;,
+                &quot;dg:value&quot;: &quot;500000&quot;,
+                &quot;dg:origin&quot;: &quot;3 180 500 2360 540&quot;
+              },
+              &quot;children&quot;: [
+                {&quot;nodeType&quot;: &quot;xast:text&quot;, &quot;value&quot;: &quot;$500,000&quot;}
+              ]
+            },
+            {
+              &quot;nodeType&quot;: &quot;xast:element&quot;,
+              &quot;@type&quot;: &quot;docset:EffectiveDate&quot;,
+              &quot;attributes&quot;: {
+                &quot;xsi:type&quot;: &quot;date&quot;,
+                &quot;dg:value&quot;: &quot;2024-01-01&quot;,
+                &quot;dg:origin&quot;: &quot;3 180 550 2360 590&quot;
+              },
+              &quot;children&quot;: [
+                {&quot;nodeType&quot;: &quot;xast:text&quot;, &quot;value&quot;: &quot;January 1, 2024&quot;}
+              ]
+            },
+            {
+              &quot;nodeType&quot;: &quot;xast:element&quot;,
+              &quot;@type&quot;: &quot;docset:VendorRef&quot;,
+              &quot;docset:paidBy&quot;: {&quot;@id&quot;: &quot;#vendor-co&quot;},
+              &quot;children&quot;: []
+            }
+          ]
+        },
+        {
+          &quot;nodeType&quot;: &quot;xast:element&quot;,
+          &quot;@type&quot;: &quot;docset:VendorName&quot;,
+          &quot;@id&quot;: &quot;#vendor-co&quot;,
+          &quot;attributes&quot;: {
+            &quot;dg:origin&quot;: &quot;1 220 150 680 200&quot;
+          },
+          &quot;children&quot;: [
+            {&quot;nodeType&quot;: &quot;xast:text&quot;, &quot;value&quot;: &quot;MagicSoft, Inc.&quot;}
+          ]
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+<h3 id="a3-docset-schema-json-ld-context">A.3 Docset Schema: JSON-LD Context</h3>
+<p>A docset schema (written in RELAX NG Compact syntax, <code>schema.rnc</code>) translates mechanically to a JSON-LD document that declares the vocabulary used by that docset. The result contains a fixed <code>@context</code> block and a <code>@graph</code> of tag and group definitions.</p>
+<h4 id="concept-mapping">Concept mapping</h4>
+<table>
+<thead>
+<tr>
+<th>RNC construct</th>
+<th>JSON-LD result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>namespace docset = "…"</code></td>
+<td><code>"docset": "…"</code> entry in <code>@context</code></td>
+</tr>
+<tr>
+<td>Element definition with <code>siblingsShare { "true" }</code></td>
+<td>Node with <code>"@type": "docset:SharedTag"</code></td>
+</tr>
+<tr>
+<td>Element definition with <code>siblingsShare { "false" }</code></td>
+<td>Node with <code>"@type": "docset:NonSharedTag"</code></td>
+</tr>
+<tr>
+<td>Named group (alternation of element refs)</td>
+<td>Node with <code>"@type": "docset:TagGroup"</code> and a <code>"members"</code> array</td>
+</tr>
+<tr>
+<td><code>## description line</code> doc comment</td>
+<td><code>"description"</code> property on the tag node</td>
+</tr>
+<tr>
+<td><code>## Example: …</code> doc comment line</td>
+<td><code>"example"</code> property on the tag node</td>
+</tr>
+<tr>
+<td><code>## Prompt: …</code> doc comment line</td>
+<td><code>"prompt"</code> property on the tag node</td>
+</tr>
+<tr>
+<td>Element content model (child element refs)</td>
+<td><code>"children"</code> array of tag <code>@id</code> references on the tag node</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fixed-context-shape">Fixed @context shape</h4>
+<p>Every docset schema produces a <code>@context</code> with the following fixed keys in addition to the docset namespace prefix:</p>
+<pre><code class="language-json">{
+  &quot;@context&quot;: {
+    &quot;docset&quot;: &quot;&lt;namespace URI from schema&gt;&quot;,
+    &quot;xsd&quot;: &quot;http://www.w3.org/2001/XMLSchema#&quot;,
+    &quot;Tag&quot;:          &quot;docset:Tag&quot;,
+    &quot;TagGroup&quot;:     &quot;docset:TagGroup&quot;,
+    &quot;siblingsShare&quot;: { &quot;@id&quot;: &quot;docset:siblingsShare&quot;, &quot;@type&quot;: &quot;xsd:boolean&quot; },
+    &quot;members&quot;:      { &quot;@id&quot;: &quot;docset:members&quot;, &quot;@type&quot;: &quot;@id&quot;, &quot;@container&quot;: &quot;@set&quot; },
+    &quot;description&quot;:  &quot;docset:description&quot;,
+    &quot;example&quot;:      &quot;docset:example&quot;,
+    &quot;prompt&quot;:       &quot;docset:prompt&quot;,
+    &quot;children&quot;:     { &quot;@id&quot;: &quot;docset:children&quot;, &quot;@type&quot;: &quot;@id&quot;, &quot;@container&quot;: &quot;@list&quot; }
+  },
+  &quot;@graph&quot;: [ &quot;...&quot; ]
+}
+</code></pre>
+<p><code>Tag</code>, <code>TagGroup</code>, <code>siblingsShare</code>, <code>members</code>, <code>description</code>, <code>example</code>, <code>prompt</code>, and <code>children</code> are always present. They expand against the docset namespace, so every docset gets its own copy of these terms in its namespace — they are not shared across docsets.</p>
+<h4 id="example_1">Example</h4>
+<p>The following RNC schema defines the vocabulary for the same ACME Corp Master Services Agreements docset used in the A.2 example. The tags here correspond directly to the <code>docset:</code> elements in that XML instance.</p>
+<p>Input RNC schema:</p>
+<pre><code class="language-rnc">namespace docset = &quot;http://www.dgml.io/acme-corp/master-services-agreements#&quot;
+
+ClauseItemTag = LiabilityCap | EffectiveDate | VendorName | VendorRef
+
+## Indemnification clause section
+IndemnificationClause =
+  element docset:IndemnificationClause {
+    attribute siblingsShare { &quot;false&quot; },
+    (text | ClauseItemTag)*
+  }
+
+## Agreed maximum liability exposure under the contract
+## Example: $500,000
+LiabilityCap =
+  element docset:LiabilityCap {
+    attribute siblingsShare { &quot;true&quot; },
+    (text | ClauseItemTag)*
+  }
+
+## Effective date of the contract
+## Example: January 1, 2024
+EffectiveDate =
+  element docset:EffectiveDate {
+    attribute siblingsShare { &quot;true&quot; },
+    (text | ClauseItemTag)*
+  }
+
+## Legal name of the vendor party
+## Example: MagicSoft, Inc.
+VendorName =
+  element docset:VendorName {
+    attribute siblingsShare { &quot;false&quot; },
+    (text | ClauseItemTag)*
+  }
+
+## Reference to a vendor entity
+VendorRef =
+  element docset:VendorRef {
+    attribute siblingsShare { &quot;false&quot; },
+    (text | ClauseItemTag)*
+  }
+</code></pre>
+<p>Expected JSON-LD output:</p>
+<pre><code class="language-json">{
+  &quot;@context&quot;: {
+    &quot;docset&quot;: &quot;http://www.dgml.io/acme-corp/master-services-agreements#&quot;,
+    &quot;xsd&quot;: &quot;http://www.w3.org/2001/XMLSchema#&quot;,
+    &quot;Tag&quot;:          &quot;docset:Tag&quot;,
+    &quot;TagGroup&quot;:     &quot;docset:TagGroup&quot;,
+    &quot;siblingsShare&quot;: { &quot;@id&quot;: &quot;docset:siblingsShare&quot;, &quot;@type&quot;: &quot;xsd:boolean&quot; },
+    &quot;members&quot;:      { &quot;@id&quot;: &quot;docset:members&quot;, &quot;@type&quot;: &quot;@id&quot;, &quot;@container&quot;: &quot;@set&quot; },
+    &quot;description&quot;:  &quot;docset:description&quot;,
+    &quot;example&quot;:      &quot;docset:example&quot;
+  },
+  &quot;@graph&quot;: [
+    {
+      &quot;@id&quot;: &quot;docset:ClauseItemTag&quot;,
+      &quot;@type&quot;: &quot;docset:TagGroup&quot;,
+      &quot;members&quot;: [
+        &quot;docset:LiabilityCap&quot;,
+        &quot;docset:EffectiveDate&quot;,
+        &quot;docset:VendorName&quot;,
+        &quot;docset:VendorRef&quot;
+      ]
+    },
+    {
+      &quot;@id&quot;: &quot;docset:IndemnificationClause&quot;,
+      &quot;@type&quot;: &quot;docset:NonSharedTag&quot;,
+      &quot;description&quot;: &quot;Indemnification clause section&quot;
+    },
+    {
+      &quot;@id&quot;: &quot;docset:LiabilityCap&quot;,
+      &quot;@type&quot;: &quot;docset:SharedTag&quot;,
+      &quot;description&quot;: &quot;Agreed maximum liability exposure under the contract&quot;,
+      &quot;example&quot;: &quot;$500,000&quot;
+    },
+    {
+      &quot;@id&quot;: &quot;docset:EffectiveDate&quot;,
+      &quot;@type&quot;: &quot;docset:SharedTag&quot;,
+      &quot;description&quot;: &quot;Effective date of the contract&quot;,
+      &quot;example&quot;: &quot;January 1, 2024&quot;
+    },
+    {
+      &quot;@id&quot;: &quot;docset:VendorName&quot;,
+      &quot;@type&quot;: &quot;docset:NonSharedTag&quot;,
+      &quot;description&quot;: &quot;Legal name of the vendor party&quot;,
+      &quot;example&quot;: &quot;MagicSoft, Inc.&quot;
+    },
+    {
+      &quot;@id&quot;: &quot;docset:VendorRef&quot;,
+      &quot;@type&quot;: &quot;docset:NonSharedTag&quot;,
+      &quot;description&quot;: &quot;Reference to a vendor entity&quot;
+    }
+  ]
+}
+</code></pre>
+<p>The <code>docset:</code> namespace URI here is identical to the one declared on the XML instance in A.2, so <code>@type: "docset:LiabilityCap"</code> in the XAST export expands to the same IRI as <code>@id: "docset:LiabilityCap"</code> in the schema — making the two JSON-LD documents directly joinable by a standard JSON-LD processor.</p>
+<p><code>SharedTag</code> nodes (where <code>siblingsShare</code> is <code>true</code>) identify values that can reasonably be extracted and compared across documents — e.g., a liability cap amount or an effective date. <code>NonSharedTag</code> nodes identify structural elements that are unique to a specific document instance — e.g., a vendor name or clause section. <code>TagGroup</code> nodes define named sets of tags that appear together in a given structural role, such as all tags valid inside a clause.</p>
+<hr />
+<h2 id="appendix-b-minimal-complete-example">Appendix B — Minimal Complete Example</h2>
+<p>Two-page MSA, organization <code>acme-corp</code>, docset <code>master-services-agreements</code>:</p>
+<pre><code>[Content_Types].xml
+_rels/.rels
+META-INF/dgml-attestation.xml
+schema.rnc
+Acme Corp MSA 2024.dgml.xml
+source/Acme Corp MSA 2024.pdf
+page_images/page_1.png
+page_images/page_2.png
+</code></pre>
+<h3 id="meta-infdgml-attestationxml"><code>META-INF/dgml-attestation.xml</code></h3>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;dgml-attestation xmlns=&quot;http://dgml.io/ns/attestation&quot;
+                  version=&quot;1&quot; page-image-dpi=&quot;150&quot;
+                  page-image-renderer=&quot;ghostscript&quot;
+                  file-id=&quot;abc123&quot; docset-id=&quot;xyz456&quot;&gt;
+  &lt;merkle-root&gt;deadbeef...&lt;/merkle-root&gt;
+&lt;/dgml-attestation&gt;
+</code></pre>
+<h3 id="acme-corp-msa-2024dgmlxml-excerpt"><code>Acme Corp MSA 2024.dgml.xml</code> (excerpt)</h3>
+<pre><code class="language-xml">&lt;?xml version='1.0' encoding='utf-8'?&gt;
+&lt;dg:chunk xmlns:dg=&quot;http://dgml.io/ns/dg#&quot;
+          xmlns:docset=&quot;http://www.dgml.io/acme-corp/master-services-agreements#&quot;
+          xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;docset:VendorName xml:id=&quot;vendor&quot;
+      dg:origin=&quot;1 220 150 680 200&quot;&gt;MagicSoft, Inc.&lt;/docset:VendorName&gt;
+  &lt;docset:IndemnificationClause dg:origin=&quot;2 460 300 1800 800&quot;&gt;
+    &lt;docset:LiabilityCap xsi:type=&quot;decimal&quot; dg:value=&quot;500000&quot;
+        dg:origin=&quot;2 460 310 1800 355&quot;&gt;$500,000&lt;/docset:LiabilityCap&gt;
+    &lt;docset:EffectiveDate xsi:type=&quot;date&quot; dg:value=&quot;2024-01-01&quot;
+        dg:origin=&quot;2 998 710 1466 755&quot;&gt;January 1, 2024&lt;/docset:EffectiveDate&gt;
+  &lt;/docset:IndemnificationClause&gt;
+  &lt;docset:PaymentTerms&gt;
+    &lt;docset:InvoiceCycle dg:origin=&quot;4 460 139 1800 184&quot;&gt;Net 30&lt;/docset:InvoiceCycle&gt;
+    &lt;docset:SignatoryName
+        dg:itemprop=&quot;signatoryOf&quot; dg:href=&quot;#vendor&quot;
+        dg:origin=&quot;11 460 2430 1200 2475&quot;&gt;Jane Smith&lt;/docset:SignatoryName&gt;
+  &lt;/docset:PaymentTerms&gt;
+&lt;/dg:chunk&gt;
+</code></pre>
+<hr />
+<p><em>End of DGML Format Specification v1.0</em></p>
+</body>
+</html>

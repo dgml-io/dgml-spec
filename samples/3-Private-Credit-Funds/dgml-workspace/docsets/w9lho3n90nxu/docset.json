@@ -1,0 +1,12 @@
+{
+  "id": "w9lho3n90nxu",
+  "name": "Quarterly Compliance Report",
+  "description": "A quarterly report submitted by a borrower to an administrative agent detailing operational performance and financial standing of a project against established covenants.",
+  "key_questions": [
+    "Who is the reporting entity (Borrower) and who is the recipient (Administrative Agent)?",
+    "What is the reporting period for the financial and operational data?",
+    "What are the key operational performance metrics (e.g., efficiency, production volume) reported?",
+    "What is the reported Net Operating Income (NOI) or other key financial totals for the period?",
+    "What is the current status of specific reserve funds or escrow accounts required by a credit agreement?"
+  ]
+}

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/CreditAndSecurityAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2297 2225">
+  <docset:CreditAgreementName dg:structure="section" dg:origin="1 193 258 2297 2225">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 1079 311" dg:style="font-weight: bold; font-size: 2em">Geothermal Power Utility Loan</dg:chunk>
+    <dg:chunk dg:structure="p" dg:origin="1 262 567 587 599" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">DATED: <docset:AgreementDate xsi:type="date" dg:value="2026-06-26" dg:origin="1 389 567 587 599" dg:style="font-weight: normal; text-transform: none" xml:id="agreementdate">June 26, 2026</docset:AgreementDate>
+    </dg:chunk>
+    <docset:CreditCommitment dg:structure="p" dg:origin="1 262 933 1843 964" dg:style="font-size: 1.25em; color: darkslategray" xml:id="creditcommitment" dg:itemprop="references" dg:href="#lenderparty" dg:value="Lender">BETWEEN: <docset:BorrowerParty dg:origin="1 437 933 800 964" dg:style="font-weight: bold" xml:id="borrowerparty">Taranis Energy Systems</docset:BorrowerParty> (the "Borrower"), and <docset:LenderParty dg:origin="1 1109 933 1633 964" dg:style="font-weight: bold" xml:id="lenderparty">Helios Power &amp; Infrastructure Fund</docset:LenderParty> (the "Lender").</docset:CreditCommitment>
+    <docset:CreditFacilityTerms dg:structure="section" dg:origin="1 193 1376 2241 1612" xml:id="creditfacilityterms" dg:itemprop="effectiveOn" dg:href="#agreementdate">
+      <dg:chunk dg:structure="header" dg:origin="1 262 1376 993 1415" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslateblue">ARTICLE I: UTILITY DEBT STRUCTURE</dg:chunk>
+      <docset:CreditCommitment dg:structure="section" dg:origin="1 193 1586 2241 1612" xml:id="creditcommitment-2" dg:itemprop="references" dg:href="#lenderparty" dg:value="Lender">
+        <dg:chunk dg:structure="header" dg:origin="1 193 1586 617 1612" dg:style="font-weight: bold; color: darkslategray">
+          <dg:chunk dg:structure="lim" dg:origin="1 193 1586 356 1612">Section 1.01.</dg:chunk> Credit Commitment.</dg:chunk>
+        <docset:CreditCommitment dg:structure="p" dg:origin="1 624 1586 2241 1612" dg:style="color: darkslategray" xml:id="creditcommitment-3" dg:itemprop="references" dg:href="#fundedpurpose">Lender extends a <docset:CreditLineType dg:origin="1 837 1586 1030 1612">senior credit line</docset:CreditLineType> of <docset:CreditPrincipalAmount dg:origin="1 1067 1586 1300 1612" dg:style="font-weight: bold" xml:id="creditprincipalamount">1,100,000,000 ECU</docset:CreditPrincipalAmount> to fund <docset:FundedPurpose dg:origin="1 1396 1586 2241 1612" xml:id="fundedpurpose">deep bedrock drilling, geothermal siphons, and local electric grid arrays</docset:FundedPurpose>.</docset:CreditCommitment>
+      </docset:CreditCommitment>
+    </docset:CreditFacilityTerms>
+    <docset:SeismicRiskCovenant dg:structure="section" dg:origin="1 193 1946 2297 2225">
+      <dg:chunk dg:structure="header" dg:origin="1 262 1946 1080 1985" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslateblue">ARTICLE II: SEISMIC INTEGRITY ESCROWS</dg:chunk>
+      <docset:EquipmentDepreciationCovenants dg:structure="section" dg:origin="1 193 2155 2297 2225">
+        <dg:chunk dg:structure="header" dg:origin="1 193 2155 748 2182" dg:style="font-weight: bold; color: darkslategray">
+          <dg:chunk dg:structure="lim" dg:origin="1 193 2155 356 2182">Section 2.01.</dg:chunk> Geothermal Turbine Reserves.</dg:chunk>
+        <docset:ReserveOrEscrowRequirement dg:structure="p" dg:origin="1 756 2155 2297 2182; 1 193 2198 1253 2225" dg:style="color: darkslategray" xml:id="reserveorescrowrequirement" dg:itemprop="valueFrom" dg:href="#reserveminimumbalance" dg:value="Borrower">Borrower must fund a CapEx reserve account with a minimum balance of <docset:ReserveMinimumBalance dg:origin="1 1623 2155 1819 2182" xml:id="reserveminimumbalance">80,000,000 ECU</docset:ReserveMinimumBalance> to cover repairs or replacements of core turbine turbines in the event of unforeseen local volcanic eruptions or major tectonic shifts.</docset:ReserveOrEscrowRequirement>
+      </docset:EquipmentDepreciationCovenants>
+    </docset:SeismicRiskCovenant>
+  </docset:CreditAgreementName>
+</dg:chunk>

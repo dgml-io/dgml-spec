@@ -1,0 +1,13 @@
+{
+  "id": "voc4tk803i3e",
+  "name": "Borrower Periodic Operating Statement",
+  "description": "A periodic financial reporting document submitted by a borrower to demonstrate compliance with financial covenants defined in a credit agreement.",
+  "key_questions": [
+    "What is the reporting period?",
+    "What is the Required Debt Service Coverage Ratio (DSCR)?",
+    "What is the Actual DSCR achieved for the period?",
+    "What is the Net Operating Income (NOI) for the period?",
+    "What is the total revenue for the period?",
+    "What are the total operating expenses for the period?"
+  ]
+}

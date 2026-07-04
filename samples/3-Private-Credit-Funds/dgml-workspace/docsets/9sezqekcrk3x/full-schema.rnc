@@ -1,0 +1,491 @@
+# ==========================================================================
+# DGML docset schema — Secured Credit Agreement
+# RELAX NG Compact.  Data types observed in 9 .dgml.xml file(s):
+#   element text is the RAW page text; the normalized, typed value is
+#   carried by @dg:value, described by @xsi:type (XSD built-in names).
+# `# Field: value` comments are the LOSSLESS schema.json serialization;
+#   regenerate the JSON via dgml_core.generation.rnc.rnc_to_schema_dict.
+# ==========================================================================
+
+default namespace docset = "http://dgml.io/dgml-io/SecuredCreditAgreement"
+namespace dg = "http://dgml.io/ns/dg#"
+namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = dg.chunk
+
+# --- attributes common to every DGML element ------------------------
+# dg:origin  = grounding bbox: "page x1 y1 x2 y2"
+# dg:itemprop / dg:href = semantic link (predicate + '#id' target(s))
+common.atts =
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  attribute dg:value { text }?,
+  attribute xsi:type { text }?
+
+# --- generic structural chunk (unlabeled scaffolding) ----------------
+dg.chunk = element dg:chunk { common.atts, mixed { any.docset* } }
+
+# a concept private to ONE document renders in the dg: namespace instead
+# of docset: (the shared-tag rule) — same shape, unshared vocabulary
+dg.private = element dg:* { common.atts, mixed { any.docset* } }
+
+# any docset element may appear where structure allows it
+any.docset = dg.chunk
+  | dg.private
+  | AccountingOrInterpretationRules
+  | AffirmativeCovenants
+  | AgreementEffectiveDate
+  | AgreementType
+  | BenchmarkReferenceRate
+  | BorrowerEntityName
+  | Counterparts
+  | CovenantsArticle
+  | CreditFacilityCommitment
+  | DefaultArticle
+  | DefinedTerms
+  | DocumentIdentifier
+  | EventOfDefault
+  | ExecutionDate
+  | ExtractionOrOperatingRights
+  | FacilityName
+  | GoverningLaw
+  | InterestCompoundingOrAccrualBasis
+  | InterestRateMargin
+  | LenderOrAgentEntityName
+  | MaintenanceCovenant
+  | MiscellaneousProvisions
+  | NegativeCovenants
+  | PerformanceIndexThreshold
+  | PrimaryDefaultEvent
+  | ProjectSetIdentifier
+  | RepaymentSchedule
+  | RepresentationsAndWarranties
+  | SectorDesignation
+  | Signatory
+  | SignatoryName
+  | StructuralOrEnvironmentalTolerance
+  | SystemModificationProhibition
+
+# ------------------------------------------------------------------
+# Description: "Rules governing how terms, financial calculations, and references are to be construed or applied"
+# Kind: inline
+# Parent: DefinedTerms
+# Example: "Sol System Interstellar Accounting Standards"
+# Examples: ["Sol System Interstellar Accounting Standards", "SSIAS", "Accounting Terms"]
+# Observed: 30 occurrence(s); dg:structure: section(8), p(8), li(2)
+AccountingOrInterpretationRules = element AccountingOrInterpretationRules {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Ongoing operational and maintenance obligations the borrower must perform while the facility is outstanding"
+# Kind: section
+# Parent: CovenantsArticle
+# Example: "Affirmative Covenants"
+# Examples: ["Affirmative Covenants", "Section 4.01. Affirmative Covenants.", "Maintain Pipeline Throughput: Operate the high-pressure booster stations to sust"]
+# Observed: 24 occurrence(s); dg:structure: li(15), section(9)
+# Children (from schema hierarchy): MaintenanceCovenant
+AffirmativeCovenants = element AffirmativeCovenants {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The date on which the agreement becomes fully executed and binding on all parties"
+# Kind: section
+# Parent: AgreementType
+# Example: "Dated as of the Agreement Effective Date (as defined herein)"
+# Examples: ["Dated as of the Agreement Effective Date (as defined herein)", "Agreement Effective Date", "Dated as of the Closing Date (as defined herein)"]
+# Observed: 18 occurrence(s); dg:structure: p(9), li(2)
+AgreementEffectiveDate = element AgreementEffectiveDate {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The formal classification or type of credit agreement (e.g., secured term credit, mezzanine loan) as stated in the document title"
+# Kind: section
+# Parent: FacilityName
+# Example: "DOCUMENT 1A: SECURED CREDIT AGREEMENT"
+# Examples: ["DOCUMENT 1A: SECURED CREDIT AGREEMENT", "SECURED CREDIT AGREEMENT", "DOCUMENT 7A: SECURED CREDIT AGREEMENT"]
+# Observed: 26 occurrence(s); dg:structure: section(16), p(4)
+# Children (from schema hierarchy): AgreementEffectiveDate, BorrowerEntityName, DocumentIdentifier, LenderOrAgentEntityName
+AgreementType = element AgreementType {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The named floating rate index (TIDOR) used as the base for interest rate calculations"
+# Kind: inline
+# Parent: DefinedTerms
+# Example: "TIDOR"
+# Examples: ["TIDOR", "Titan Inter-Dome Offered Rate", "\"TIDOR\" means the Titan Inter-Dome Offered Rate, which is the floating interbank"]
+# Observed: 22 occurrence(s); dg:structure: li(2)
+BenchmarkReferenceRate = element BenchmarkReferenceRate {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Legal name of the borrowing entity executing the agreement as principal obligor"
+# Kind: inline
+# Parent: AgreementType
+# Example: "KRAKEN EXTRACTION PHASE II LP"
+# Examples: ["KRAKEN EXTRACTION PHASE II LP", "LIGEIA TRANSPORT & LIQUEFACTION LP", "Ligeia Transport & Liquefaction LP"]
+# Observed: 22 occurrence(s); dg:structure: p(8)
+BorrowerEntityName = element BorrowerEntityName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Provision permitting the agreement to be executed in multiple copies each constituting an original"
+# Kind: section
+# Parent: MiscellaneousProvisions
+# Example: "Section 6.02. Counterparts."
+# Examples: ["Section 6.02. Counterparts.", "This Agreement may be executed in any number of counterparts, each of which when", "Counterparts"]
+# Observed: 8 occurrence(s); dg:structure: section(4), p(4)
+Counterparts = element Counterparts {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Article grouping all affirmative and negative ongoing obligations of the borrower"
+# Kind: section
+# Example: "COVENANTS"
+# Examples: ["COVENANTS", "ARTICLE IV: COVENANTS"]
+# Observed: 9 occurrence(s); dg:structure: section(9)
+# Children (from schema hierarchy): AffirmativeCovenants, NegativeCovenants
+CovenantsArticle = element CovenantsArticle {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The lenders' obligation to advance loan funds to the borrower under the specified conditions"
+# Kind: section
+# Example: "THE CREDIT FACILITY"
+# Examples: ["THE CREDIT FACILITY", "Commitment", "Subject to the terms and conditions set forth herein, each Lender agrees to make"]
+# Observed: 31 occurrence(s); dg:structure: section(18), p(9)
+# Children (from schema hierarchy): InterestRateMargin, RepaymentSchedule
+CreditFacilityCommitment = element CreditFacilityCommitment {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Article enumerating events of default and associated remedies available to the lenders"
+# Kind: section
+# Example: "EVENTS OF DEFAULT"
+# Examples: ["EVENTS OF DEFAULT", "ARTICLE V: DEFAULT EVENTS AND REMEDIES", "ARTICLE V: COVENANTS ON DEFAULT"]
+# Observed: 9 occurrence(s); dg:structure: section(9)
+# Children (from schema hierarchy): EventOfDefault
+DefaultArticle = element DefaultArticle {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Enumerated glossary of capitalized terms and their meanings as used throughout the agreement"
+# Kind: section
+# Example: "DEFINITIONS AND ACCOUNTING TERMS"
+# Examples: ["DEFINITIONS AND ACCOUNTING TERMS", "Defined Terms", "\"Agreement Effective Date\" means the date on which this Agreement has been fully"]
+# Observed: 74 occurrence(s); dg:structure: li(53), section(18), p(2)
+# Children (from schema hierarchy): AccountingOrInterpretationRules, BenchmarkReferenceRate, PerformanceIndexThreshold, SectorDesignation
+DefinedTerms = element DefinedTerms {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Alphanumeric label identifying the specific document within a numbered set"
+# Kind: inline
+# Parent: AgreementType
+# Example: "DOCUMENT 1A"
+# Examples: ["DOCUMENT 1A", "Schedule 2.03", "SET 7"]
+# Observed: 17 occurrence(s); dg:structure: section(1)
+DocumentIdentifier = element DocumentIdentifier {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Specified occurrences that trigger a default and allow acceleration or other remedies under the agreement"
+# Kind: section
+# Parent: DefaultArticle
+# Example: "Events of Default"
+# Examples: ["Events of Default", "Bedrock Liquefaction: Any thermal monitoring station registering bedrock water-i", "Solar Flare Abandonment: Evacuation of more than 80% of the operational workforc"]
+# Observed: 24 occurrence(s); dg:structure: li(16), section(8)
+# Children (from schema hierarchy): ExecutionDate, PrimaryDefaultEvent, Signatory, SignatoryName
+EventOfDefault = element EventOfDefault {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The calendar date on which a signatory executes the agreement"
+# Kind: inline
+# Parent: EventOfDefault
+# Example: "June 26, 2146"
+# Examples: ["June 26, 2146", "Date of Execution (the Signature Date): June 26, 2146"]
+# Observed: 18 occurrence(s); dg:structure: p(3)
+# Data type (from DGML): date(15) of 18 occurrence(s)
+ExecutionDate = element ExecutionDate {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "date" },
+    attribute dg:value { xsd:date })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The borrower's licensed or exclusive rights to extract, harvest, or operate within a designated sector or territory"
+# Kind: section
+# Parent: RepresentationsAndWarranties
+# Example: "Section 3.01. Marine Hydrocarbon Mining Rights."
+# Examples: ["Section 3.01. Marine Hydrocarbon Mining Rights.", "The Borrower holds exclusive licenses to extract, siphon, and process liquefied ", "Shoreline and Underlake Mining Rights"]
+# Observed: 14 occurrence(s); dg:structure: section(7), p(6)
+ExtractionOrOperatingRights = element ExtractionOrOperatingRights {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Proper name of the physical installation or infrastructure complex being financed"
+# Kind: section
+# Example: "SET 1: THE KRAKEN MARE HYDROCARBON EXTRACTION & REFINING DOME"
+# Examples: ["SET 1: THE KRAKEN MARE HYDROCARBON EXTRACTION & REFINING DOME", "Dome", "68.3° N, longitude 310.1° W"]
+# Observed: 24 occurrence(s); dg:structure: p(4), section(1)
+# Children (from schema hierarchy): AgreementType, ProjectSetIdentifier
+FacilityName = element FacilityName {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The legal jurisdiction and regulatory framework under which the agreement is to be construed and enforced"
+# Kind: inline
+# Parent: RepresentationsAndWarranties
+# Example: "Titan Ecological Protection Protocol (TEPP) of 2104"
+# Examples: ["Titan Ecological Protection Protocol (TEPP) of 2104", "Section 6.01. Governing Law.", "This Agreement shall be governed by, and construed in accordance with, the Admir"]
+# Observed: 9 occurrence(s); dg:structure: section(4), p(4)
+GoverningLaw = element GoverningLaw {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The method or frequency by which interest accrues or compounds on the outstanding loan"
+# Kind: inline
+# Parent: InterestRateMargin
+# Example: "compounded quarterly"
+# Examples: ["compounded quarterly", "daily"]
+# Observed: 3 occurrence(s)
+InterestCompoundingOrAccrualBasis = element InterestCompoundingOrAccrualBasis {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The spread above the benchmark reference rate (TIDOR) applied to determine the floating interest rate on the facility loans"
+# Kind: section
+# Parent: CreditFacilityCommitment
+# Example: "Interest Rates"
+# Examples: ["Interest Rates", "4.50%", "1.50% per annum"]
+# Observed: 27 occurrence(s); dg:structure: section(9)
+# Data type (from DGML): decimal(10) of 27 occurrence(s)
+# Children (from schema hierarchy): InterestCompoundingOrAccrualBasis
+InterestRateMargin = element InterestRateMargin {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Legal name of the lending entity or administrative agent executing the agreement"
+# Kind: inline
+# Parent: AgreementType
+# Example: "THE FINANCIAL INSTITUTIONS PARTY HERETO FROM TIME TO TIME"
+# Examples: ["THE FINANCIAL INSTITUTIONS PARTY HERETO FROM TIME TO TIME", "SOL-SYSTEM INFRASTRUCTURE BANK (SSIB), as Administrative Agent and Collateral Ag", "SOL-SYSTEM INFRASTRUCTURE BANK"]
+# Observed: 25 occurrence(s); dg:structure: p(16)
+LenderOrAgentEntityName = element LenderOrAgentEntityName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Affirmative covenant requiring continuous structural or operational monitoring and upkeep of the primary facility infrastructure"
+# Kind: section
+# Parent: AffirmativeCovenants
+# Example: "Maintenance of Pressurization: Maintain interior atmospheric pressure at a minim"
+# Examples: ["Maintenance of Pressurization: Maintain interior atmospheric pressure at a minim", "Environmental Shielding: Maintain and repair the active thermal-barrier pylons d", "Pipeline System Maintenance: Undertake continuous acoustic-resonance structural "]
+# Observed: 12 occurrence(s); dg:structure: li(11)
+MaintenanceCovenant = element MaintenanceCovenant {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Article containing ancillary and administrative provisions such as governing law and counterparts"
+# Kind: section
+# Example: "ARTICLE VI: MISCELLANEOUS PROVISIONS"
+# Examples: ["ARTICLE VI: MISCELLANEOUS PROVISIONS"]
+# Observed: 4 occurrence(s); dg:structure: section(4)
+# Children (from schema hierarchy): Counterparts
+MiscellaneousProvisions = element MiscellaneousProvisions {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Prohibited actions the borrower may not take without prior consent of the administrative agent"
+# Kind: section
+# Parent: CovenantsArticle
+# Example: "Negative Covenants"
+# Examples: ["Negative Covenants", "Fundamental Changes: Permit any merger, consolidation, or orbit-transfer of majo", "Section 4.02. Negative Covenants."]
+# Observed: 16 occurrence(s); dg:structure: section(8), li(8)
+# Children (from schema hierarchy): SystemModificationProhibition
+NegativeCovenants = element NegativeCovenants {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The minimum value of a facility-specific structural or operational performance index that must be maintained under affirmative covenants"
+# Kind: inline
+# Parent: DefinedTerms
+# Example: "Atmospheric Integrity Rating"
+# Examples: ["Atmospheric Integrity Rating", "5.0 Kelvin", "Grade A-"]
+# Observed: 89 occurrence(s); dg:structure: li(1)
+# Data type (from DGML): decimal(36), integer(1) of 89 occurrence(s)
+#   (mixed types observed -> datatype left unpinned)
+PerformanceIndexThreshold = element PerformanceIndexThreshold {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The first-listed and facility-specific catastrophic physical or operational failure constituting an event of default"
+# Kind: section
+# Parent: EventOfDefault
+# Example: "Atmospheric Decompression: Any sudden decompression of the main dome structure r"
+# Examples: ["Atmospheric Decompression: Any sudden decompression of the main dome structure r", "Benthic Containment Rupture: Any sudden structural piping failure leading to an ", "Section 5.01. Immediate Acceleration Event."]
+# Observed: 10 occurrence(s); dg:structure: li(7), section(1), p(1)
+PrimaryDefaultEvent = element PrimaryDefaultEvent {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Numbered set label identifying the specific industrial project complex that is the subject of the agreement"
+# Kind: inline
+# Parent: FacilityName
+# Example: "SET 1: THE KRAKEN MARE HYDROCARBON EXTRACTION & REFINING DOME"
+# Examples: ["SET 1: THE KRAKEN MARE HYDROCARBON EXTRACTION & REFINING DOME", "SET 7: THE LIGEIA MARE HYDROCARBON SUBSURFACE PIPELINE & LIQUEFACTION TERMINAL", "SET 2: THE AEGAEON RIDGE LUXURY HABITATION & RESEARCH SPIRES"]
+# Observed: 9 occurrence(s); dg:structure: section(7), header(2)
+ProjectSetIdentifier = element ProjectSetIdentifier {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The schedule and mechanism by which the borrower is required to repay outstanding principal"
+# Kind: section
+# Parent: CreditFacilityCommitment
+# Example: "Repayment of Loans"
+# Examples: ["Repayment of Loans", "The Borrower shall repay the outstanding principal amount of the Facility Loans ", "Section 2.03. Repayment and Amortization."]
+# Observed: 18 occurrence(s); dg:structure: section(8), p(8), li(2)
+RepaymentSchedule = element RepaymentSchedule {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Article containing the borrower's factual and legal representations and warranties made to the lenders"
+# Kind: section
+# Example: "REPRESENTATIONS AND WARRANTIES"
+# Examples: ["REPRESENTATIONS AND WARRANTIES", "Environmental Compliance on Titan", "The Dome operations comply in all material respects with the Titan Ecological Pr"]
+# Observed: 11 occurrence(s); dg:structure: section(10), p(1)
+# Children (from schema hierarchy): ExtractionOrOperatingRights, GoverningLaw, StructuralOrEnvironmentalTolerance
+RepresentationsAndWarranties = element RepresentationsAndWarranties {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The alphanumeric identifier for the licensed geographic or operational sector within which the borrower holds extraction or operating rights"
+# Kind: inline
+# Parent: DefinedTerms
+# Example: "Kraken Dome Sector-4"
+# Examples: ["Kraken Dome Sector-4", "Sector 27", "Sector 27-Ligeia"]
+# Observed: 14 occurrence(s)
+SectorDesignation = element SectorDesignation {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Professional title or role of the individual executing the agreement"
+# Kind: inline
+# Parent: EventOfDefault
+# Example: "Managing Director of Operations"
+# Examples: ["Managing Director of Operations", "Vice President, Outer-Rim Debt Infrastructure", "Chief Operating Officer, Pipeline Systems"]
+# Observed: 18 occurrence(s)
+Signatory = element Signatory {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Full name of the individual executing the agreement on behalf of a party"
+# Kind: inline
+# Parent: EventOfDefault
+# Example: "Tarek Vance-Vargas"
+# Examples: ["Tarek Vance-Vargas", "Elizabeth Chen", "Alistair Crane-Vance"]
+# Observed: 18 occurrence(s)
+SignatoryName = element SignatoryName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Representation that the physical infrastructure is engineered to withstand specific environmental or mechanical stress conditions"
+# Kind: section
+# Parent: RepresentationsAndWarranties
+# Example: "Gravity and Structural Tolerances"
+# Examples: ["Gravity and Structural Tolerances", "The structural foundations of the Dome are anchored into bedrock water-ice, engi", "Section 3.02. Subsurface Pressure Tolerances."]
+# Observed: 23 occurrence(s); dg:structure: section(10), p(10)
+StructuralOrEnvironmentalTolerance = element StructuralOrEnvironmentalTolerance {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Negative covenant prohibiting alteration, rerouting, or depressurization of active facility systems without agent consent"
+# Kind: section
+# Parent: NegativeCovenants
+# Example: "No Liens on Life-Support Infrastructure: Create, incur, assume, or permit to exi"
+# Examples: ["No Liens on Life-Support Infrastructure: Create, incur, assume, or permit to exi", "System Modifications: Reroute or depressurize the coolant loops of any active se", "System Modifications: Reroute or depressurize the structural pipelines of any ac"]
+# Observed: 8 occurrence(s); dg:structure: li(8)
+SystemModificationProhibition = element SystemModificationProhibition {
+  common.atts,
+  mixed { any.docset* }
+}
+

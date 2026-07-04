@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/PropertyRentRollReport" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 118 120 2346 695">
+  <docset:RentRoll dg:structure="section" dg:origin="1 118 120 2346 695">
+    <dg:chunk dg:structure="header" dg:origin="1 122 120 259 151" dg:style="font-weight: bold">Rent Roll</dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 122 206 721 331">
+      <dg:chunk dg:structure="li" dg:origin="1 122 206 721 238">
+        <dg:chunk dg:structure="header" dg:origin="1 122 206 305 238" dg:style="font-weight: bold; text-transform: uppercase">PROPERTY:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 313 206 721 238">
+          <docset:PropertyIdentifier dg:origin="1 313 206 721 238" xml:id="propertyidentifier">Elysium Dome - Sector Alpha</docset:PropertyIdentifier>
+        </dg:chunk>
+      </dg:chunk>
+      <dg:chunk dg:structure="li" dg:origin="1 122 253 563 285">
+        <dg:chunk dg:structure="header" dg:origin="1 122 253 357 285" dg:style="font-weight: bold; text-transform: uppercase">REPORT DATE:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 365 253 563 285">
+          <docset:ReportDate xsi:type="date" dg:value="2026-06-25" dg:origin="1 365 253 563 285" xml:id="reportdate">June 25, 2026</docset:ReportDate>
+        </dg:chunk>
+      </dg:chunk>
+      <dg:chunk dg:structure="li" dg:origin="1 122 300 711 331">
+        <dg:chunk dg:structure="header" dg:origin="1 122 300 449 331" dg:style="font-weight: bold; text-transform: uppercase">PORTFOLIO STATUS:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 457 300 711 331">
+          <docset:PortfolioStatus dg:origin="1 457 300 711 331">100% Pressurized</docset:PortfolioStatus>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:RentRoll dg:structure="table" dg:origin="1 118 382 2309 461">
+      <docset:RentRoll dg:structure="tr" dg:origin="1 118 382 2309 461">
+        <docset:UnitSuite dg:structure="td" dg:origin="1 118 406 281 437" dg:style="font-weight: bold">Unit / Suite</docset:UnitSuite>
+        <docset:TenantName dg:structure="td" dg:origin="1 322 406 518 437" dg:style="font-weight: bold">Tenant Name</docset:TenantName>
+        <docset:NetArea dg:structure="td" dg:origin="1 526 382 655 414; 1 526 429 629 461" dg:style="font-weight: bold">Net Area (sq.m.)</docset:NetArea>
+        <docset:LeaseStartDate dg:structure="td" dg:origin="1 730 406 899 437" dg:style="font-weight: bold">Lease Start</docset:LeaseStartDate>
+        <docset:LeaseEndDate dg:structure="td" dg:origin="1 934 406 1090 437" dg:style="font-weight: bold">Lease End</docset:LeaseEndDate>
+        <docset:MonthlyBaseRent dg:structure="td" dg:origin="1 1138 382 1341 414; 1 1138 429 1280 461" dg:style="font-weight: bold">Monthly Base Rent (M$)</docset:MonthlyBaseRent>
+        <docset:AnnualBaseRent dg:structure="td" dg:origin="1 1342 382 1531 414; 1 1342 429 1485 461" dg:style="font-weight: bold">Annual Base Rent (M$)</docset:AnnualBaseRent>
+        <docset:EscalationSchedule dg:structure="td" dg:origin="1 1546 382 1702 414; 1 1546 429 1685 461" dg:style="font-weight: bold">Escalation Structure</docset:EscalationSchedule>
+        <docset:RecoveryType dg:structure="td" dg:origin="1 1750 382 1891 414; 1 1750 429 1823 461" dg:style="font-weight: bold">Recovery Type</docset:RecoveryType>
+        <docset:RemainingConcession dg:structure="td" dg:origin="1 1954 382 2114 414; 1 1954 429 2149 461" dg:style="font-weight: bold">Remaining Concessions</docset:RemainingConcession>
+        <docset:GuarantorOrRelatedParty dg:structure="td" dg:origin="1 2158 406 2309 437" dg:style="font-weight: bold">Guarantor</docset:GuarantorOrRelatedParty>
+      </docset:RentRoll>
+    </docset:RentRoll>
+    <dg:chunk dg:structure="section" dg:origin="1 118 476 2346 695">
+      <docset:ZoneOrSector dg:structure="header" dg:origin="1 118 523 274 554" dg:style="font-weight: bold">Sector A-4</docset:ZoneOrSector>
+      <docset:RentRoll dg:structure="table" dg:origin="1 118 476 2346 695">
+        <docset:RentRoll dg:structure="tr" dg:origin="1 322 476 2346 601" xml:id="rentroll" dg:itemprop="references" dg:href="#reportdate">
+          <docset:TenantName dg:structure="td" dg:origin="1 322 476 386 507; 1 322 523 459 554; 1 322 570 390 601" xml:id="tenantname">Ares Terraform Corp</docset:TenantName>
+          <docset:NetArea dg:structure="td" xsi:type="integer" dg:value="12500" dg:origin="1 526 523 622 554">12,500</docset:NetArea>
+          <docset:LeaseStartDate dg:structure="td" xsi:type="date" dg:value="2082-12-10" dg:origin="1 730 523 887 554">10/12/2082</docset:LeaseStartDate>
+          <docset:LeaseEndDate dg:structure="td" xsi:type="date" dg:value="2097-11-10" dg:origin="1 934 523 1091 554">10/11/2097</docset:LeaseEndDate>
+          <docset:MonthlyBaseRent dg:structure="td" dg:origin="1 1138 500 1182 531; 1 1138 546 1295 578">M$ 468,750.00</docset:MonthlyBaseRent>
+          <docset:AnnualBaseRent dg:structure="td" dg:origin="1 1342 500 1386 531; 1 1342 546 1525 578" xml:id="annualbaserent">M$ 5,625,000.00</docset:AnnualBaseRent>
+          <docset:EscalationSchedule dg:structure="td" dg:origin="1 1546 500 1687 531; 1 1546 546 1741 578" xml:id="escalationschedule" dg:itemprop="escalates" dg:href="#annualbaserent">Greater of 3.5% or MCPI</docset:EscalationSchedule>
+          <docset:RecoveryType dg:structure="td" dg:origin="1 1750 523 1818 554">NNN</docset:RecoveryType>
+          <docset:RemainingConcession dg:structure="td" dg:origin="1 1954 500 2029 531; 1 1954 546 2081 578">None (Expired)</docset:RemainingConcession>
+          <docset:GuarantorOrRelatedParty dg:structure="td" dg:origin="1 2158 476 2250 507; 1 2158 523 2295 554; 1 2158 570 2346 601" xml:id="guarantororrelatedparty" dg:itemprop="guarantorOf" dg:href="#tenantname">Terran Terraform Holdings LLC</docset:GuarantorOrRelatedParty>
+        </docset:RentRoll>
+        <docset:PortfolioTotals dg:structure="tr" dg:origin="1 118 617 1525 695">
+          <dg:chunk dg:structure="td" dg:origin="1 118 640 243 671" dg:style="font-weight: bold; text-transform: uppercase">TOTALS</dg:chunk>
+          <docset:TotalNetArea dg:structure="td" xsi:type="integer" dg:value="12500" dg:origin="1 526 640 622 671" dg:style="font-weight: bold">12,500</docset:TotalNetArea>
+          <dg:chunk dg:structure="td"/>
+          <dg:chunk dg:structure="td"/>
+          <docset:TotalMonthlyBaseRent dg:structure="td" dg:origin="1 1138 617 1182 648; 1 1138 664 1295 695" dg:style="font-weight: bold">M$ 468,750.00</docset:TotalMonthlyBaseRent>
+          <docset:TotalAnnualBaseRent dg:structure="td" dg:origin="1 1342 617 1386 648; 1 1342 664 1525 695" dg:style="font-weight: bold">M$ 5,625,000.00</docset:TotalAnnualBaseRent>
+          <dg:chunk dg:structure="td"/>
+          <dg:chunk dg:structure="td"/>
+          <dg:chunk dg:structure="td"/>
+          <dg:chunk dg:structure="td"/>
+        </docset:PortfolioTotals>
+      </docset:RentRoll>
+    </dg:chunk>
+  </docset:RentRoll>
+</dg:chunk>

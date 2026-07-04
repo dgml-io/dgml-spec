@@ -1,0 +1,13 @@
+{
+  "id": "mqqd2rhudrrw",
+  "name": "Commercial Lease Agreement",
+  "description": "A formal commercial lease agreement document defining the terms, rent, and obligations between a landlord and a tenant.",
+  "key_questions": [
+    "Who are the Landlord and Tenant parties to the lease?",
+    "What are the premises being leased?",
+    "What is the lease commencement and expiration date?",
+    "What is the annual base rent amount?",
+    "What is the stated recovery type (e.g., NNN)?",
+    "Are there any specific tenant improvement allowances specified?"
+  ]
+}

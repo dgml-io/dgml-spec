@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/QuarterlyComplianceReport" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 240 235 2310 2919; 2 240 280 2247 2791; 3 240 280 2310 2930; 4 240 280 2238 1802">
+  <docset:FacilityName dg:structure="section" dg:origin="1 240 235 2310 2919; 2 240 280 2247 2791; 3 240 280 2310 2930; 4 240 280 2238 1802">
+    <dg:chunk dg:structure="header" dg:origin="1 240 235 2191 310; 1 240 347 957 422" dg:style="font-weight: bold; font-size: 2em; color: darkslategray">SET 2: <docset:FacilityName dg:origin="1 495 235 2191 310; 1 240 347 957 422" dg:style="text-transform: uppercase">THE AEGAEON RIDGE LUXURY HABITATION &amp; RESEARCH SPIRES</docset:FacilityName>
+    </dg:chunk>
+    <docset:ReportingPeriodSubject dg:structure="section" dg:origin="1 240 599 2310 1278">
+      <dg:chunk dg:structure="header" dg:origin="1 240 599 2300 653; 1 240 680 740 734" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">
+        <docset:DocumentIdentifier dg:origin="1 240 599 638 653">DOCUMENT 2B</docset:DocumentIdentifier>: BORROWER'S <docset:ReportingPeriodSubject dg:origin="1 1063 599 1271 653" dg:style="text-transform: none">Q3 2146</docset:ReportingPeriodSubject> QUARTERLY REPORTING PACKAGE &amp; VALUATION MEMO</dg:chunk>
+      <dg:chunk dg:structure="ul" dg:origin="1 240 836 2310 1278">
+        <dg:chunk dg:structure="li" dg:origin="1 240 836 1150 878">
+          <dg:chunk dg:structure="header" dg:origin="1 240 836 305 878" dg:style="font-weight: bold">To:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="1 317 836 1150 878">
+            <docset:AdministrativeAgent dg:origin="1 317 836 1150 878">Off-World Real Estate Opportunities Fund LP</docset:AdministrativeAgent>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="1 240 949 993 990">
+          <dg:chunk dg:structure="header" dg:origin="1 240 949 358 990" dg:style="font-weight: bold">From:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="1 370 949 993 990">
+            <docset:BorrowerEntity dg:origin="1 370 949 993 990">Aegaeon Habitation Partners LLC</docset:BorrowerEntity>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="1 240 1061 678 1103">
+          <dg:chunk dg:structure="header" dg:origin="1 240 1061 345 1103" dg:style="font-weight: bold">Date:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="1 356 1061 678 1103">
+            <docset:ReportingDate xsi:type="date" dg:value="2146-10-18" dg:origin="1 356 1061 678 1103">October 18, 2146</docset:ReportingDate>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="1 240 1174 2310 1278">
+          <dg:chunk dg:structure="header" dg:origin="1 240 1174 405 1215" dg:style="font-weight: bold">Subject:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="1 240 1174 2310 1278">
+            <docset:ReportingPeriodSubject dg:origin="1 426 1174 2310 1215; 1 240 1236 548 1278">Q3 2146 Financial Reporting &amp; Property Valuation Memo – Aegaeon Ridge Luxury Habitation &amp; Research Spires</docset:ReportingPeriodSubject>
+          </dg:chunk>
+        </dg:chunk>
+      </dg:chunk>
+    </docset:ReportingPeriodSubject>
+    <docset:OperationalNarrative dg:structure="section" dg:origin="1 240 1382 2310 2022">
+      <dg:chunk dg:structure="header" dg:origin="1 240 1382 994 1428" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="1 240 1382 279 1428">1.</dg:chunk> Financial Performance Narrative</dg:chunk>
+      <docset:OperationalNarrative dg:structure="p" dg:origin="1 240 1492 2310 1534; 1 240 1555 2310 1597; 1 240 1617 2310 1659; 1 240 1680 773 1722">The third quarter of 2146 was marked by a steady increase in lease revenues from corporate scientific research contracts. Physical occupancy at Spire Beta (Scientific Leases) reached <dg:chunk dg:structure="span" xsi:type="decimal" dg:value="88" dg:origin="1 1683 1555 1778 1597">88%</dg:chunk>, while Spire Alpha (Luxury Penthouses) remained at <dg:chunk dg:structure="span" xsi:type="decimal" dg:value="64" dg:origin="1 719 1617 802 1659">64%</dg:chunk> occupancy. Both sectors remain in compliance with the covenants set forth in the Mezzanine Loan Agreement.</docset:OperationalNarrative>
+      <docset:CovenantCompliance dg:structure="p" dg:origin="1 240 1792 2310 1834; 1 240 1855 2310 1897; 1 240 1917 2310 1959; 1 240 1980 585 2022" xml:id="covenantcompliance" dg:itemprop="references" dg:href="#covenantthreshold" dg:value="Occupancy Covenant Section 4.01(2) Document 2A">Specifically, we report that the weighted average occupancy exceeds the threshold of the Occupancy Covenant defined in Section 4.01(2) of the Mezzanine Loan Agreement (Document 2A), which mandates a scientific occupancy rate of not less than <docset:CovenantThreshold xsi:type="decimal" dg:value="72.5" dg:origin="1 1052 1917 1170 1959" xml:id="covenantthreshold">72.5%</docset:CovenantThreshold> (calculated via leased PVUs) and not less than <docset:CovenantThreshold xsi:type="decimal" dg:value="60.0" dg:origin="1 2124 1917 2242 1959">60.0%</docset:CovenantThreshold> for residential spaces.</docset:CovenantCompliance>
+    </docset:OperationalNarrative>
+    <docset:ConsolidatedBalanceSheet dg:structure="section" dg:origin="1 240 2125 2247 2919; 2 240 280 2247 2791; 3 240 280 2303 1656">
+      <dg:chunk dg:structure="header" dg:origin="1 240 2125 1167 2171" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="1 240 2125 279 2171">2.</dg:chunk> Financial Statements (SSIAS Compliant)</dg:chunk>
+      <dg:SegmentRevenue dg:structure="section" dg:origin="1 240 2236 2247 2919; 2 240 280 2247 1749">
+        <dg:chunk dg:structure="header" dg:origin="1 240 2236 1394 2278" dg:style="font-weight: bold">Table 2.1: Operating Statements by Spire Sector (Q3 2146)</dg:chunk>
+        <docset:ReportingCurrency dg:structure="p" dg:origin="1 240 2349 829 2383" dg:style="font-size: 0.75em; color: dimgray">All figures in Millions of Sol Credits (SC)</docset:ReportingCurrency>
+        <dg:SegmentOperating dg:structure="table" dg:origin="1 303 2678 2247 2919; 2 303 280 2247 1540">
+          <dg:chunk dg:structure="tr" dg:origin="1 303 2678 2247 2766">
+            <dg:chunk dg:structure="td" dg:origin="1 303 2704 770 2740" dg:style="font-weight: bold; font-size: 0.75em; color: white">Line Item / Sub-Sector</dg:chunk>
+            <dg:chunk dg:structure="td" dg:origin="1 1182 2678 1416 2713; 1 1289 2731 1416 2766" dg:style="font-weight: bold; font-size: 0.75em; color: white">Spire Alpha (Res.)</dg:chunk>
+            <dg:chunk dg:structure="td" dg:origin="1 1619 2678 1832 2713; 1 1704 2731 1832 2766" dg:style="font-weight: bold; font-size: 0.75em; color: white">Spire Beta (Sci.)</dg:chunk>
+            <dg:chunk dg:structure="td" dg:origin="1 2013 2678 2247 2713; 1 2056 2731 2247 2766" dg:style="font-weight: bold; font-size: 0.75em; color: white">Spire Gamma (Tourism)</dg:chunk>
+          </dg:chunk>
+          <docset:Account dg:structure="tr" dg:origin="1 303 2884 473 2919">
+            <docset:Account dg:structure="td" dg:origin="1 303 2884 473 2919" dg:style="font-weight: bold; font-size: 0.75em; text-transform: uppercase">REVENUES</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+          </docset:Account>
+          <dg:SegmentPressurizedLeaseRevenue dg:structure="tr" dg:origin="2 303 280 2247 315">
+            <docset:Account dg:structure="td" dg:origin="2 303 280 855 315">Pressurized Lease Revenues</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="112.50" dg:origin="2 1289 280 1416 315">112.50</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="145.00" dg:origin="2 1704 280 1832 315">145.00</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="85.20" dg:origin="2 2141 280 2247 315">85.20</docset:CurrentPeriodValue>
+          </dg:SegmentPressurizedLeaseRevenue>
+          <dg:SegmentAncillaryRevenue dg:structure="tr" dg:origin="2 303 433 2247 468">
+            <docset:Account dg:structure="td" dg:origin="2 303 433 983 468">Atmospheric Scrubbing Surcharges</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="15.20" dg:origin="2 1310 433 1416 468">15.20</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="22.10" dg:origin="2 1725 433 1832 468">22.10</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="18.50" dg:origin="2 2141 433 2247 468">18.50</docset:CurrentPeriodValue>
+          </dg:SegmentAncillaryRevenue>
+          <dg:SegmentSpecializedRevenue dg:structure="tr" dg:origin="2 303 586 2247 622">
+            <docset:Account dg:structure="td" dg:origin="2 303 586 855 622">Low-G Lab Utilization Fees</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="0.00" dg:origin="2 1331 586 1416 622">0.00</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="48.50" dg:origin="2 1725 586 1832 622">48.50</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="12.30" dg:origin="2 2141 586 2247 622">12.30</docset:CurrentPeriodValue>
+          </dg:SegmentSpecializedRevenue>
+          <dg:SegmentTotalRevenue dg:structure="tr" dg:origin="2 303 739 2247 775">
+            <docset:Account dg:structure="td" dg:origin="2 303 739 749 775" dg:style="font-weight: bold">Total Segment Revenue</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="127.70" dg:origin="2 1289 739 1416 775" dg:style="font-weight: bold">127.70</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="215.60" dg:origin="2 1704 739 1832 775" dg:style="font-weight: bold">215.60</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="116.00" dg:origin="2 2120 739 2247 775" dg:style="font-weight: bold">116.00</docset:CurrentPeriodValue>
+          </dg:SegmentTotalRevenue>
+          <docset:Account dg:structure="tr" dg:origin="2 303 892 940 928">
+            <docset:Account dg:structure="td" dg:origin="2 303 892 940 928" dg:style="font-weight: bold; text-transform: uppercase">OPERATING EXPENSES (ALLOCATED)</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+          </docset:Account>
+          <dg:LifeSupportCost dg:structure="tr" dg:origin="2 303 1038 2247 1081">
+            <docset:Account dg:structure="td" dg:origin="2 303 1038 947 1081" dg:style="font-size: 0.75em">
+              <docset:Account dg:origin="2 303 1046 898 1081" dg:style="font-size: 1em">Life Support Operating Costs</docset:Account>[1]</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="2 1267 1046 1416 1081" xml:id="currentperiodvalue">(45.10)</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="2 1683 1046 1832 1081" xml:id="currentperiodvalue-2">(52.20)</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="2 2098 1046 2247 1081" xml:id="currentperiodvalue-3">(39.80)</docset:CurrentPeriodValue>
+          </dg:LifeSupportCost>
+          <dg:SegmentOperatingExpenses dg:structure="tr" dg:origin="2 303 1199 2247 1234">
+            <docset:Account dg:structure="td" dg:origin="2 303 1199 898 1234">Radiation Shield Maintenance</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="2 1267 1199 1416 1234">(18.20)</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="2 1683 1199 1832 1234">(18.20)</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="2 2098 1199 2247 1234">(18.20)</docset:CurrentPeriodValue>
+          </dg:SegmentOperatingExpenses>
+          <dg:SegmentOperatingExpenses dg:structure="tr" dg:origin="2 303 1352 2247 1387">
+            <docset:Account dg:structure="td" dg:origin="2 303 1352 919 1387">Micro-meteoroid Defense Power</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="2 1267 1352 1416 1387">(12.50)</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="2 1683 1352 1832 1387">(12.50)</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="2 2098 1352 2247 1387">(12.50)</docset:CurrentPeriodValue>
+          </dg:SegmentOperatingExpenses>
+          <dg:SegmentNOI dg:structure="tr" dg:origin="2 303 1505 2247 1540" xml:id="segmentnoi">
+            <docset:Account dg:structure="td" dg:origin="2 303 1505 537 1540" dg:style="font-weight: bold">Segment NOI</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="51.90" dg:origin="2 1310 1505 1416 1540" dg:style="font-weight: bold">51.90</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="132.70" dg:origin="2 1704 1505 1832 1540" dg:style="font-weight: bold">132.70</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="45.50" dg:origin="2 2141 1505 2247 1540" dg:style="font-weight: bold">45.50</docset:CurrentPeriodValue>
+          </dg:SegmentNOI>
+        </dg:SegmentOperating>
+        <docset:Footnote dg:structure="p" dg:origin="2 240 1666 2225 1699; 2 240 1716 1289 1749" dg:style="color: dimgray" xml:id="footnote" dg:itemprop="references" dg:href="#lifesupportcost" dg:value="Table 2.2">
+          <docset:FootnoteReference dg:origin="2 240 1666 277 1699">[1]</docset:FootnoteReference> Life Support Operating Costs correspond directly to the summation of subtotal allocations by Spire detailed in the nested analysis in Table 2.2 (Alpha: <docset:CurrentPeriodValue dg:origin="2 507 1716 674 1749">SC 45.10m</docset:CurrentPeriodValue>; Beta: SC 52.20m; Gamma: SC 39.80m).</docset:Footnote>
+      </dg:SegmentRevenue>
+      <dg:LifeSupportCost dg:structure="section" dg:origin="2 240 1849 2247 2791; 3 240 280 2303 1656" xml:id="lifesupportcost">
+        <dg:chunk dg:structure="header" dg:origin="2 240 1849 1208 1890" dg:style="font-weight: bold; font-size: 1.25em">Table 2.2: Life Support Operations Cost Analysis</dg:chunk>
+        <docset:ReportingCurrency dg:structure="p" dg:origin="2 240 1962 829 1995" dg:style="color: dimgray">All figures in Millions of Sol Credits (SC)</docset:ReportingCurrency>
+        <dg:LifeSupportCostAnalysis dg:structure="table" dg:origin="2 303 2137 2247 2791; 3 303 280 2247 1447">
+          <dg:chunk dg:structure="tr" dg:origin="2 303 2137 2247 2226">
+            <dg:chunk dg:structure="td" dg:origin="2 303 2164 749 2199" dg:style="font-weight: bold; color: white">Operational Parameter</dg:chunk>
+            <dg:chunk dg:structure="td" dg:origin="2 926 2137 1117 2173; 2 926 2190 1117 2226" dg:style="font-weight: bold; color: white">Allocated Component</dg:chunk>
+            <dg:chunk dg:structure="td" dg:origin="2 1496 2137 1624 2173; 2 1454 2190 1624 2226" dg:style="font-weight: bold; color: white">Oxygen Scraping</dg:chunk>
+            <dg:chunk dg:structure="td" dg:origin="2 1808 2137 1935 2173; 2 1723 2190 1935 2226" dg:style="font-weight: bold; color: white">Carbon Extraction</dg:chunk>
+            <dg:chunk dg:structure="td" dg:origin="2 2141 2137 2247 2173; 2 2077 2190 2247 2226" dg:style="font-weight: bold; color: white">Water Recovery</dg:chunk>
+          </dg:chunk>
+          <dg:LifeSupportCost dg:structure="tr" dg:origin="2 303 2343 2247 2432">
+            <dg:SegmentName dg:structure="td" dg:origin="2 303 2343 537 2379; 2 303 2397 579 2432" dg:style="font-weight: bold">Spire Alpha (Residential)</dg:SegmentName>
+            <dg:LifeSupportCostComponent dg:structure="td" dg:origin="2 926 2343 1309 2379; 2 926 2397 1011 2432">Recycling Catalyst Fees</dg:LifeSupportCostComponent>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="15.10" dg:origin="2 1518 2370 1624 2405">15.10</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="8.50" dg:origin="2 1850 2370 1935 2405">8.50</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="10.50" dg:origin="2 2141 2370 2247 2405">10.50</docset:CurrentPeriodValue>
+          </dg:LifeSupportCost>
+          <dg:LifeSupportCost dg:structure="tr" dg:origin="2 926 2550 2247 2638">
+            <dg:SegmentName dg:structure="td"/>
+            <dg:LifeSupportCostComponent dg:structure="td" dg:origin="2 926 2550 1096 2585; 2 926 2603 1160 2638">Membrane Maintenance</dg:LifeSupportCostComponent>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="4.20" dg:origin="2 1539 2576 1624 2612">4.20</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="3.10" dg:origin="2 1850 2576 1935 2612">3.10</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="3.70" dg:origin="2 2162 2576 2247 2612">3.70</docset:CurrentPeriodValue>
+          </dg:LifeSupportCost>
+          <dg:LifeSupportCostSubtotal dg:structure="tr" dg:origin="2 926 2748 2247 2791" xml:id="lifesupportcostsubtotal" dg:itemprop="valueFrom" dg:href="#currentperiodvalue" dg:value="SC 45.10m">
+            <dg:SegmentName dg:structure="td"/>
+            <dg:LifeSupportCostComponent dg:structure="td" dg:origin="2 926 2748 1272 2791" dg:style="font-weight: bold; font-size: 0.75em">
+              <dg:LifeSupportCostComponent dg:origin="2 926 2756 1224 2791" dg:style="font-size: 1em">Alpha Subtotal</dg:LifeSupportCostComponent>[*]</dg:LifeSupportCostComponent>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="19.30" dg:origin="2 1518 2756 1624 2791" dg:style="font-weight: bold">19.30</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="11.60" dg:origin="2 1829 2756 1935 2791" dg:style="font-weight: bold">11.60</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="14.20" dg:origin="2 2141 2756 2247 2791" dg:style="font-weight: bold">14.20</docset:CurrentPeriodValue>
+          </dg:LifeSupportCostSubtotal>
+          <dg:LifeSupportCost dg:structure="tr" dg:origin="3 303 280 2247 368">
+            <dg:SegmentName dg:structure="td" dg:origin="3 303 280 792 315" dg:style="font-weight: bold">Spire Beta (Scientific)</dg:SegmentName>
+            <dg:LifeSupportCostComponent dg:structure="td" dg:origin="3 926 280 1309 315; 3 926 333 1011 368">Recycling Catalyst Fees</dg:LifeSupportCostComponent>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="18.50" dg:origin="3 1518 307 1624 342">18.50</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="10.20" dg:origin="3 1829 307 1935 342">10.20</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="12.80" dg:origin="3 2141 307 2247 342">12.80</docset:CurrentPeriodValue>
+          </dg:LifeSupportCost>
+          <dg:LifeSupportCost dg:structure="tr" dg:origin="3 926 486 2247 575">
+            <dg:SegmentName dg:structure="td"/>
+            <dg:LifeSupportCostComponent dg:structure="td" dg:origin="3 926 486 1096 522; 3 926 539 1160 575">Membrane Maintenance</dg:LifeSupportCostComponent>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="4.50" dg:origin="3 1539 513 1624 548">4.50</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="3.20" dg:origin="3 1850 513 1935 548">3.20</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="3.00" dg:origin="3 2162 513 2247 548">3.00</docset:CurrentPeriodValue>
+          </dg:LifeSupportCost>
+          <dg:LifeSupportCostSubtotal dg:structure="tr" dg:origin="3 926 685 2247 728" xml:id="lifesupportcostsubtotal-2" dg:itemprop="valueFrom" dg:href="#currentperiodvalue-2" dg:value="SC 52.20m">
+            <dg:SegmentName dg:structure="td"/>
+            <dg:LifeSupportCostComponent dg:structure="td" dg:origin="3 926 685 1251 728" dg:style="font-weight: bold; font-size: 0.75em">
+              <dg:LifeSupportCostComponent dg:origin="3 926 692 1202 728" dg:style="font-size: 1em">Beta Subtotal</dg:LifeSupportCostComponent>[*]</dg:LifeSupportCostComponent>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="23.00" dg:origin="3 1518 692 1624 728" dg:style="font-weight: bold">23.00</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="13.40" dg:origin="3 1829 692 1935 728" dg:style="font-weight: bold">13.40</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="15.80" dg:origin="3 2141 692 2247 728" dg:style="font-weight: bold">15.80</docset:CurrentPeriodValue>
+          </dg:LifeSupportCostSubtotal>
+          <dg:LifeSupportCost dg:structure="tr" dg:origin="3 303 845 2247 934">
+            <dg:SegmentName dg:structure="td" dg:origin="3 303 845 728 881" dg:style="font-weight: bold">Spire Gamma (Tourism)</dg:SegmentName>
+            <dg:LifeSupportCostComponent dg:structure="td" dg:origin="3 926 846 1309 881; 3 926 899 1011 934">Recycling Catalyst Fees</dg:LifeSupportCostComponent>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="12.20" dg:origin="3 1518 872 1624 908">12.20</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="6.40" dg:origin="3 1850 872 1935 908">6.40</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="11.00" dg:origin="3 2141 872 2247 908">11.00</docset:CurrentPeriodValue>
+          </dg:LifeSupportCost>
+          <dg:LifeSupportCost dg:structure="tr" dg:origin="3 926 1052 2247 1140">
+            <dg:SegmentName dg:structure="td"/>
+            <dg:LifeSupportCostComponent dg:structure="td" dg:origin="3 926 1052 1096 1087; 3 926 1105 1160 1140">Membrane Maintenance</dg:LifeSupportCostComponent>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="4.10" dg:origin="3 1539 1078 1624 1114">4.10</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="3.10" dg:origin="3 1850 1078 1935 1114">3.10</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="3.00" dg:origin="3 2162 1078 2247 1114">3.00</docset:CurrentPeriodValue>
+          </dg:LifeSupportCost>
+          <dg:LifeSupportCostSubtotal dg:structure="tr" dg:origin="3 926 1251 2247 1293" xml:id="lifesupportcostsubtotal-3" dg:itemprop="valueFrom" dg:href="#currentperiodvalue-3" dg:value="SC 39.80m">
+            <dg:SegmentName dg:structure="td"/>
+            <dg:LifeSupportCostComponent dg:structure="td" dg:origin="3 926 1251 1272 1293" dg:style="font-weight: bold; font-size: 0.75em">
+              <dg:LifeSupportCostComponent dg:origin="3 926 1258 1224 1293" dg:style="font-size: 1em">Gamma Subtotal</dg:LifeSupportCostComponent>[*]</dg:LifeSupportCostComponent>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="16.30" dg:origin="3 1518 1258 1624 1293" dg:style="font-weight: bold">16.30</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="9.50" dg:origin="3 1850 1258 1935 1293" dg:style="font-weight: bold">9.50</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="14.00" dg:origin="3 2141 1258 2247 1293" dg:style="font-weight: bold">14.00</docset:CurrentPeriodValue>
+          </dg:LifeSupportCostSubtotal>
+          <dg:LifeSupportTotalExpense dg:structure="tr" dg:origin="3 303 1411 2247 1447">
+            <docset:Account dg:structure="td" dg:origin="3 303 1411 855 1447" dg:style="font-weight: bold; text-transform: uppercase">TOTAL LIFE SUPPORT EXPENSE</docset:Account>
+            <dg:LifeSupportCostComponent dg:structure="td"/>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="58.60" dg:origin="3 1518 1411 1624 1447" dg:style="font-weight: bold">58.60</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="34.50" dg:origin="3 1829 1411 1935 1447" dg:style="font-weight: bold">34.50</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="44.00" dg:origin="3 2141 1411 2247 1447" dg:style="font-weight: bold">44.00</docset:CurrentPeriodValue>
+          </dg:LifeSupportTotalExpense>
+        </dg:LifeSupportCostAnalysis>
+        <docset:Footnote dg:structure="p" dg:origin="3 728 845 749 881; 3 240 1572 2303 1606; 3 240 1622 529 1656" dg:style="color: dimgray" xml:id="footnote-2" dg:itemprop="references" dg:href="#lifesupportcostsubtotal-3" dg:value="Gamma Subtotal">
+          <docset:FootnoteReference dg:origin="3 240 1572 272 1606">[*]</docset:FootnoteReference> The combined rows for each Spire sum to the exact allocated life support figures mapped in Table 2.1 (e.g., Spire Alpha: 19.30 + 11.60 + 14.20 = <docset:CurrentPeriodValue dg:origin="3 362 1622 529 1656">SC 45.10m</docset:CurrentPeriodValue>).</docset:Footnote>
+      </dg:LifeSupportCost>
+    </docset:ConsolidatedBalanceSheet>
+    <docset:ValuationMemo dg:structure="section" dg:origin="3 240 1755 2310 2930; 4 240 280 2238 1802">
+      <dg:chunk dg:structure="header" dg:origin="3 240 1755 880 1800" dg:style="font-weight: bold; font-size: 1.25em; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="3 240 1755 279 1800">3.</dg:chunk> Manager's Valuation Memo</dg:chunk>
+      <docset:ValuationMethodologyDescription dg:structure="p" dg:origin="3 240 1865 2310 1907; 3 240 1928 2030 1970" dg:style="font-size: 1.25em">Methodological Assumptions &amp; Yield Profile: The Spires are valued utilizing the Income Capitalization Method, focusing on rentable volume (per PVU) as outlined in standard outer-rim asset practices.</docset:ValuationMethodologyDescription>
+      <docset:DCFSchedule dg:structure="section" dg:origin="3 240 2040 1694 2930; 4 240 280 2238 1802">
+        <dg:chunk dg:structure="header" dg:origin="3 240 2040 1694 2082" dg:style="font-weight: bold; font-size: 1.25em">Table 2.3: Discounted Cash Flow (DCF) Summary &amp; Loan Value Coverage</dg:chunk>
+        <docset:ReportingCurrency dg:structure="p" dg:origin="3 240 2154 829 2187" dg:style="color: dimgray">All figures in Millions of Sol Credits (SC)</docset:ReportingCurrency>
+        <dg:DCFProjection dg:structure="table" dg:origin="3 303 2329 1633 2930; 4 303 280 1643 1493">
+          <docset:BalanceSheetColumnHeader dg:structure="tr" dg:origin="3 303 2329 1590 2470">
+            <docset:Account dg:structure="td" dg:origin="3 303 2382 707 2417" dg:style="font-weight: bold; color: white">Valuation Component</docset:Account>
+            <docset:ProjectionYear dg:structure="td" dg:origin="3 1159 2355 1287 2391; 3 1159 2408 1287 2444" dg:style="font-weight: bold; color: white">Year 1 (2147)</docset:ProjectionYear>
+            <docset:ProjectionYear dg:structure="td" dg:origin="3 1372 2329 1457 2364; 3 1404 2382 1425 2417; 3 1351 2435 1457 2470" dg:style="font-weight: bold; color: white">Year 2 (2148)</docset:ProjectionYear>
+            <docset:ProjectionYear dg:structure="td" dg:origin="3 1438 2329 1523 2364; 3 1470 2382 1492 2417; 3 1438 2435 1523 2470" dg:style="font-weight: bold; color: white">Year 3 (2149)</docset:ProjectionYear>
+            <docset:ProjectionYear dg:structure="td" dg:origin="3 1505 2329 1590 2364; 3 1537 2382 1558 2417; 3 1505 2435 1590 2470" dg:style="font-weight: bold; color: white">Year 4 (2150)</docset:ProjectionYear>
+          </docset:BalanceSheetColumnHeader>
+          <docset:ProjectedNOI dg:structure="tr" dg:origin="3 303 2581 1633 2624">
+            <docset:Account dg:structure="td" dg:origin="3 303 2581 755 2624" dg:style="font-weight: bold; font-size: 0.75em">
+              <docset:Account dg:origin="3 303 2588 707 2624" dg:style="font-size: 1em">Combined Spires NOI</docset:Account>[#]</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="920.40" dg:origin="3 1159 2588 1287 2624" xml:id="currentperiodvalue-4">920.40</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="957.20" dg:origin="3 1351 2588 1436 2624">957.20</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="995.50" dg:origin="3 1417 2588 1545 2624">995.50</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="1035.30" dg:origin="3 1505 2588 1633 2624">1,035.30</docset:CurrentPeriodValue>
+          </docset:ProjectedNOI>
+          <docset:MaintenanceCapitalExpenditures dg:structure="tr" dg:origin="3 303 2741 1351 2777">
+            <docset:Account dg:structure="td" dg:origin="3 303 2741 855 2777">Projected Capital Reserves</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="3 1138 2741 1351 2777">(110.00)</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td">(115.00)</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td">(120.00)</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td">(125.00)</docset:CurrentPeriodValue>
+          </docset:MaintenanceCapitalExpenditures>
+          <docset:FreeCashFlowToFirm dg:structure="tr" dg:origin="3 303 2894 1611 2930" xml:id="freecashflowtofirm">
+            <docset:Account dg:structure="td" dg:origin="3 303 2894 728 2930" dg:style="font-weight: bold">Free Cash Flow (FCF)</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="810.40" dg:origin="3 1159 2894 1287 2930" dg:style="font-weight: bold">810.40</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="842.20" dg:origin="3 1351 2894 1436 2930" dg:style="font-weight: bold">842.20</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="875.50" dg:origin="3 1417 2894 1502 2930" dg:style="font-weight: bold">875.50</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="910.30" dg:origin="3 1484 2894 1611 2930" dg:style="font-weight: bold">910.30</docset:CurrentPeriodValue>
+          </docset:FreeCashFlowToFirm>
+          <docset:PresentValueOfFCFF dg:structure="tr" dg:origin="4 303 280 1611 368" xml:id="presentvalueoffcff" dg:itemprop="valueFrom" dg:href="#freecashflowtofirm" dg:value="12.50% discount rate">
+            <docset:Account dg:structure="td" dg:origin="4 303 280 919 315; 4 303 333 452 368" dg:style="font-weight: bold">Present Value of Cash Flow (@ 12.50%)</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="720.36" dg:origin="4 1159 306 1287 342" dg:style="font-weight: bold">720.36</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="665.44" dg:origin="4 1351 306 1436 342" dg:style="font-weight: bold">665.44</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="614.86" dg:origin="4 1417 306 1502 342" dg:style="font-weight: bold">614.86</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="568.18" dg:origin="4 1484 306 1611 342" dg:style="font-weight: bold">568.18</docset:CurrentPeriodValue>
+          </docset:PresentValueOfFCFF>
+          <docset:TerminalValue dg:structure="tr" dg:origin="4 303 486 1643 575" xml:id="terminalvalue">
+            <docset:Account dg:structure="td" dg:origin="4 303 486 898 522; 4 303 539 409 575">Terminal Value (at 9.0% exit rate)</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="4 1212 513 1234 548">—</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="4 1404 513 1425 548">—</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="4 1470 513 1516 548">—</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="10114.44" dg:origin="4 1452 513 1643 548">10,114.44</docset:CurrentPeriodValue>
+          </docset:TerminalValue>
+          <docset:PresentValueOfTerminalValue dg:structure="tr" dg:origin="4 303 692 1633 728" xml:id="presentvalueofterminalvalue" dg:itemprop="valueFrom" dg:href="#terminalvalue" dg:value="present value of terminal value">
+            <docset:Account dg:structure="td" dg:origin="4 303 692 962 728">Present Value of Terminal Value</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="4 1404 692 1425 728">—</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="4 1212 692 1234 728">—</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="4 1470 692 1505 728">—</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="6312.91" dg:origin="4 1463 692 1633 728">6,312.91</docset:CurrentPeriodValue>
+          </docset:PresentValueOfTerminalValue>
+          <docset:TotalEnterpriseValue dg:structure="tr" dg:origin="4 303 845 1308 881" xml:id="totalenterprisevalue">
+            <docset:Account dg:structure="td" dg:origin="4 303 845 940 881" dg:style="font-weight: bold">Total Present Enterprise Value</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="8881.75" dg:origin="4 1138 845 1308 881" dg:style="font-weight: bold">8,881.75</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+          </docset:TotalEnterpriseValue>
+          <dg:SeniorCreditOutstandingDeducted dg:structure="tr" dg:origin="4 303 999 1329 1034" xml:id="seniorcreditoutstandingdeducted">
+            <docset:Account dg:structure="td" dg:origin="4 303 999 962 1034">Less: Senior Credit Outstanding</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="4 1117 999 1329 1034">(3,500.00)</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+          </dg:SeniorCreditOutstandingDeducted>
+          <dg:ResidualValueAfterSeniorDebt dg:structure="tr" dg:origin="4 303 1152 1308 1187" xml:id="residualvalueafterseniordebt" dg:itemprop="valueFrom" dg:href="#totalenterprisevalue #seniorcreditoutstandingdeducted">
+            <docset:Account dg:structure="td" dg:origin="4 303 1152 898 1187" dg:style="font-weight: bold">Remaining Value to Mezzanine</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="5381.75" dg:origin="4 1138 1152 1308 1187" dg:style="font-weight: bold">5,381.75</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+          </dg:ResidualValueAfterSeniorDebt>
+          <dg:MezzanineLoanBalance dg:structure="tr" dg:origin="4 303 1298 1308 1340" xml:id="mezzanineloanbalance">
+            <docset:Account dg:structure="td" dg:origin="4 303 1298 819 1340" dg:style="font-size: 0.75em">
+              <docset:Account dg:origin="4 303 1305 770 1340" dg:style="font-size: 1em">Mezzanine Loan Balance</docset:Account>[^]</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="1200.00" dg:origin="4 1138 1305 1308 1340">1,200.00</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+          </dg:MezzanineLoanBalance>
+          <dg:MezzanineValueCoverageRatio dg:structure="tr" dg:origin="4 303 1458 1276 1493" xml:id="mezzaninevaluecoverageratio" dg:itemprop="lesserOf" dg:href="#residualvalueafterseniordebt #mezzanineloanbalance" dg:value="4.48x">
+            <docset:Account dg:structure="td" dg:origin="4 303 1458 940 1493" dg:style="font-weight: bold">Mezzanine Value Coverage Ratio</docset:Account>
+            <docset:CurrentPeriodValue dg:structure="td" dg:origin="4 1170 1458 1276 1493" dg:style="font-weight: bold">4.48x</docset:CurrentPeriodValue>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+            <docset:CurrentPeriodValue dg:structure="td"/>
+          </dg:MezzanineValueCoverageRatio>
+        </dg:DCFProjection>
+        <docset:Footnote dg:structure="p" dg:origin="4 240 1619 2173 1652; 4 240 1669 561 1702" dg:style="color: dimgray" xml:id="footnote-3" dg:itemprop="references" dg:href="#segmentnoi" dg:value="SC 230.10m combined Q3 Segment NOI">
+          <docset:FootnoteReference dg:origin="4 240 1619 277 1652">[#]</docset:FootnoteReference> Year 1 NOI projects forward the combined Q3 Segment NOI totals from Table 2.1 (<docset:CurrentPeriodValue dg:origin="4 1511 1619 1697 1652">SC 230.10m</docset:CurrentPeriodValue> combined for the quarter, or <docset:AnnualizedNOI dg:origin="4 2126 1619 2173 1652; 4 240 1669 370 1702" xml:id="annualizednoi" dg:itemprop="valueFrom" dg:href="#currentperiodvalue-4" dg:value="SC 920.40m annualized">SC 920.40m</docset:AnnualizedNOI> annualized).</docset:Footnote>
+        <docset:Footnote dg:structure="p" dg:origin="4 240 1719 2238 1752; 4 240 1769 659 1802" dg:style="color: dimgray" xml:id="footnote-4" dg:itemprop="references" dg:href="#mezzanineloanbalance" dg:value="Section 2.01 Document 2A">
+          <docset:FootnoteReference dg:origin="4 240 1719 275 1752">[^]</docset:FootnoteReference> This balance matches the principal outstanding under the Mezzanine Loan facility as defined in <docset:CreditAgreementReference dg:origin="4 1692 1719 1877 1752">Section 2.01</docset:CreditAgreementReference> of the Mezzanine Credit Agreement (Document 2A).</docset:Footnote>
+      </docset:DCFSchedule>
+    </docset:ValuationMemo>
+  </docset:FacilityName>
+</dg:chunk>

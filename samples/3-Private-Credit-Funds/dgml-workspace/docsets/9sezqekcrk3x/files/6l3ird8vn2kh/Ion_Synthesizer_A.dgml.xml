@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/SecuredCreditAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 240 232 2295 2871; 2 340 336 2210 1882; 3 240 235 2310 1946; 4 240 235 2310 2042; 5 240 235 2310 2638; 6 240 235 2310 1650">
+  <docset:ProjectSetIdentifier dg:structure="section" dg:origin="1 240 232 2295 2871; 2 340 336 2210 1882">
+    <dg:chunk dg:structure="header" dg:origin="1 435 232 2115 307; 1 255 345 2295 420" dg:style="font-weight: bold; font-size: 2em">
+      <docset:DocumentIdentifier dg:origin="1 435 232 633 307">SET 9</docset:DocumentIdentifier>: THE <docset:FacilityName dg:origin="1 854 232 2115 307; 1 255 345 2295 420" dg:style="text-transform: uppercase">ONTARIO LACUS LIQUID ETHANE FRACTIONATION PLANT &amp; ORBITAL EXPORT GANTRY</docset:FacilityName>
+    </dg:chunk>
+    <docset:AgreementType dg:structure="section" dg:origin="1 240 580 1525 635">
+      <dg:chunk dg:structure="header" dg:origin="1 240 580 1525 635" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">
+        <docset:DocumentIdentifier dg:origin="1 240 580 642 635">DOCUMENT 9A</docset:DocumentIdentifier>: SECURED CREDIT AGREEMENT</dg:chunk>
+    </docset:AgreementType>
+    <docset:AgreementType dg:structure="section" dg:origin="1 536 829 2014 2871; 2 340 336 2210 1882">
+      <dg:chunk dg:structure="header" dg:origin="1 880 829 1670 870" dg:style="font-weight: bold; text-transform: uppercase">SECURED TERM CREDIT AGREEMENT</dg:chunk>
+      <docset:AgreementEffectiveDate dg:structure="p" dg:origin="1 764 1141 1786 1183">Dated as of the Agreement Effective Date (as defined herein)</docset:AgreementEffectiveDate>
+      <dg:chunk dg:structure="p" dg:origin="1 1218 1454 1332 1496">among</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="1 728 1766 1822 1808; 1 1165 1829 1386 1870" dg:style="font-weight: bold">
+        <docset:BorrowerEntityName dg:origin="1 728 1766 1822 1808" dg:style="text-transform: uppercase">ONTARIO ETHANE &amp; GANTRY INFRASTRUCTURE LP</docset:BorrowerEntityName>, as Borrower</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="1 1245 2141 1305 2183">and</dg:chunk>
+      <docset:LenderOrAgentEntityName dg:structure="p" dg:origin="1 536 2454 2014 2495; 1 717 2516 1833 2558" dg:style="font-weight: bold">JOVIAN-SATURNINE COLONIAL DEVELOPMENT CONSORTIUM (JSCDC), as Administrative Agent, Collateral Agent, and Lead Arranger</docset:LenderOrAgentEntityName>
+      <dg:chunk dg:structure="p" dg:origin="1 1245 2829 1305 2871">and</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="2 448 336 2102 378" dg:style="font-weight: bold">THE FINANCIAL INSTITUTIONS PARTY HERETO FROM TIME TO TIME, as Lenders</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="2 340 778 2210 820; 2 340 840 2210 882; 2 340 903 2210 945; 2 340 965 2133 1007">This <docset:AgreementType dg:origin="2 438 778 1221 820" dg:style="text-transform: uppercase">SECURED TERM CREDIT AGREEMENT</docset:AgreementType> (this "Agreement") is entered into on the Agreement Effective Date by and among <docset:BorrowerEntityName dg:origin="2 877 840 1644 882">Ontario Ethane &amp; Gantry Infrastructure LP</docset:BorrowerEntityName>, as Borrower, the Lenders party hereto from time to time, and <docset:LenderOrAgentEntityName dg:origin="2 843 903 1734 945">Jovian-Saturnine Colonial Development Consortium</docset:LenderOrAgentEntityName>, as Administrative Agent. In consideration of the mutual covenants and agreements herein contained, the parties hereto agree as follows:</dg:chunk>
+      <docset:FacilityName dg:structure="p" dg:origin="2 340 1278 2175 1320; 2 340 1340 2210 1382; 2 340 1403 810 1445">WHEREAS, the Borrower owns and operates a comprehensive shoreline and marine liquid ethane ($C_2H_<dg:chunk dg:structure="span" xsi:type="decimal" dg:value="6" dg:origin="2 2154 1278 2175 1320">6$</dg:chunk>) fractionation facility and carbon-nanotube high-altitude orbital export gantry situated on the southern shore of Ontario Lacus on Titan; and</docset:FacilityName>
+      <dg:chunk dg:structure="p" dg:origin="2 340 1715 2210 1757; 2 340 1778 2210 1820; 2 340 1840 1915 1882">WHEREAS, the Borrower has requested that the Lenders make term loans to finance shoreline piping systems, dynamic centrifuge fractionation towers, high-tension carbon-nanotube line arrays, and active docking gantries; and the Lenders are willing to do so on the terms and subject to the conditions set forth herein.</dg:chunk>
+    </docset:AgreementType>
+  </docset:ProjectSetIdentifier>
+  <docset:DefinedTerms dg:structure="section" dg:origin="3 240 235 2310 1946">
+    <dg:chunk dg:structure="header" dg:origin="3 240 235 1549 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">ARTICLE I: DEFINITIONS AND INTERPRETATION</dg:chunk>
+    <docset:DefinedTerms dg:structure="section" dg:origin="3 340 383 2310 1675">
+      <dg:chunk dg:structure="header" dg:origin="3 340 383 850 425" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="3 340 383 564 425">Section 1.01</dg:chunk> Defined Terms</dg:chunk>
+      <docset:DefinedTerms dg:structure="p" dg:origin="3 860 383 2255 425">As used in this Agreement, the following terms have the meanings specified below:</docset:DefinedTerms>
+      <dg:chunk dg:structure="ol" dg:origin="3 403 496 2310 1675">
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 426 496 2310 537; 3 403 558 2310 600; 3 403 621 1208 662; 3 870 1033 893 1075">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:AgreementEffectiveDate dg:origin="3 426 496 887 537" dg:style="font-weight: bold" xml:id="agreementeffectivedate">Agreement Effective Date</docset:AgreementEffectiveDate>" means the date on which this Agreement has been fully executed and delivered by all parties hereto, as verified by the date inscribed next to the signatures of the authorized officers in the execution block below (such date, the "Signature Date").</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 426 716 2310 758; 3 403 779 1968 821; 3 403 1033 426 1075">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:PerformanceIndexThreshold dg:origin="3 426 716 799 758" dg:style="font-weight: bold">Ethane Purity Index</docset:PerformanceIndexThreshold>" or "<docset:PerformanceIndexThreshold dg:origin="3 910 716 979 758" dg:style="font-weight: bold">EPI</docset:PerformanceIndexThreshold>" means the standard chemical composition rating of processed liquid ethane feedstock, as certified on a 100-point scale by the Titan Technical Safety Directorate (TTSD).</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 426 875 2310 916; 3 403 937 1716 979; 3 403 1191 426 1233">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:PerformanceIndexThreshold dg:origin="3 426 875 1007 916" dg:style="font-weight: bold" xml:id="performanceindexthreshold-5">Gantry Tension Stability Rating</docset:PerformanceIndexThreshold>" or "<docset:PerformanceIndexThreshold dg:origin="3 1114 875 1228 916" dg:style="font-weight: bold; text-transform: uppercase">GTSR</docset:PerformanceIndexThreshold>" means the structural, thermodynamic, and mechanical tension rating of the carbon-nanotube orbital delivery lines, as evaluated by the TTSD.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 426 1033 2310 1075; 3 403 1096 1680 1137" xml:id="definedterms" dg:itemprop="references" dg:href="#affirmativecovenants">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Lacus Sediment Escrow" means the cash escrow reserve fund mandated to be maintained under Section 4.01(3) for benthic lakebed stabilization and shoreline pressure containment.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 426 1191 2310 1233; 3 403 1254 2310 1296; 3 403 1316 1158 1358">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:FacilityName dg:origin="3 426 1191 829 1233" dg:style="font-weight: bold" xml:id="facilityname" dg:itemprop="references" dg:href="#sectordesignation">Ontario Lacus Facility</docset:FacilityName>" means the physical structural pipelines, high-altitude carbon-nanotube siphoning lines, fractional distillation units, and lakebed intake valves located at <docset:SectorDesignation dg:origin="3 1517 1254 1691 1296" xml:id="sectordesignation">Sector 36</docset:SectorDesignation>, Ontario Lacus coordinates (<docset:FacilityName dg:origin="3 2185 1254 2310 1296; 3 403 1316 854 1358">latitude 72.0° S, longitude 80.0° W</docset:FacilityName>) on Titan, Saturn.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 1228 875 1251 916; 3 426 1412 2310 1454; 3 403 1475 1518 1516">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:AccountingOrInterpretationRules dg:origin="3 426 1412 1282 1454" dg:style="font-weight: bold">Sol System Interstellar Accounting Standards</docset:AccountingOrInterpretationRules>" or "<docset:AccountingOrInterpretationRules dg:origin="3 1405 1412 1521 1454" dg:style="font-weight: bold; text-transform: uppercase">SSIAS</docset:AccountingOrInterpretationRules>" means the unified framework of financial accounting principles approved by the Interstellar Financial Board.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 1091 875 1114 916; 3 426 1571 2310 1612; 3 403 1633 984 1675">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:BenchmarkReferenceRate dg:origin="3 426 1571 563 1612" dg:style="font-weight: bold; text-transform: uppercase" xml:id="benchmarkreferencerate">TIDOR</docset:BenchmarkReferenceRate>" means the <docset:BenchmarkReferenceRate dg:origin="3 782 1571 1321 1612">Titan Inter-Dome Offered Rate</docset:BenchmarkReferenceRate>, which is the floating interbank benchmark rate calculated for Titan-denominated credit lines.</docset:DefinedTerms>
+      </dg:chunk>
+    </docset:DefinedTerms>
+    <docset:AccountingOrInterpretationRules dg:structure="section" dg:origin="3 240 1779 2310 1946">
+      <dg:chunk dg:structure="header" dg:origin="3 340 1779 1034 1821" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="3 340 1779 574 1821">Section 1.02</dg:chunk> Rules of Interpretation</dg:chunk>
+      <docset:AccountingOrInterpretationRules dg:structure="p" dg:origin="3 1055 1779 2310 1821; 3 240 1841 2310 1883; 3 240 1904 884 1946">Capitalized terms defined in the singular shall have the corresponding meanings in the plural, and vice versa. Any references to specific sections, tables, or documents relate directly to this Agreement unless otherwise specified.</docset:AccountingOrInterpretationRules>
+    </docset:AccountingOrInterpretationRules>
+  </docset:DefinedTerms>
+  <docset:CreditFacilityCommitment dg:structure="section" dg:origin="4 240 235 2310 1266">
+    <dg:chunk dg:structure="header" dg:origin="4 240 235 1361 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">ARTICLE II: THE SECURED CREDIT LINES</dg:chunk>
+    <docset:CreditFacilityCommitment dg:structure="section" dg:origin="4 240 383 2310 550">
+      <dg:chunk dg:structure="header" dg:origin="4 340 383 813 425" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 340 383 569 425">Section 2.01</dg:chunk> The Facility</dg:chunk>
+      <docset:CreditFacilityCommitment dg:structure="p" dg:origin="4 829 383 2310 425; 4 240 446 2310 487; 4 240 508 1502 550">Subject to the terms and conditions of this Agreement, each Lender agrees to make a single advance term loan (each a "Facility Loan") to the Borrower on the Closing Date (which is identical to the Signature Date) in an aggregate principal amount of 9,600,000,000 Sol Credits (SC).</docset:CreditFacilityCommitment>
+    </docset:CreditFacilityCommitment>
+    <docset:InterestRateMargin dg:structure="section" dg:origin="4 340 620 2310 996" xml:id="interestratemargin" dg:itemprop="references" dg:href="#performanceindexthreshold-5">
+      <dg:chunk dg:structure="header" dg:origin="4 340 620 1054 662" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 340 620 564 662">Section 2.02</dg:chunk> Interest Rate Adjustments</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="4 340 733 2310 996">
+        <dg:chunk dg:structure="li" dg:origin="4 340 733 2133 775">
+          <dg:chunk dg:structure="lim" dg:origin="4 340 733 372 775">1</dg:chunk> The Facility Loans shall accrue interest daily at a floating rate per annum equal to <docset:BenchmarkReferenceRate dg:origin="4 1776 733 1913 775" dg:style="font-weight: bold; text-transform: uppercase">TIDOR</docset:BenchmarkReferenceRate> plus <docset:InterestRateMargin xsi:type="decimal" dg:value="8.25" dg:origin="4 2008 733 2133 775" dg:style="font-weight: bold">8.25%</docset:InterestRateMargin>.</dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="4 340 829 2310 871; 4 403 891 2310 933; 4 403 954 1784 996" xml:id="chunk" dg:itemprop="references" dg:href="#performanceindexthreshold" dg:value="91.0%">
+          <dg:chunk dg:structure="lim" dg:origin="4 340 829 372 871">2</dg:chunk> Should the <docset:PerformanceIndexThreshold dg:origin="4 599 829 1336 871" dg:style="font-weight: bold">Gantry Tension Stability Rating (GTSR)</docset:PerformanceIndexThreshold> fall below <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="91.0" dg:origin="4 1534 829 1642 871" xml:id="performanceindexthreshold">91.0%</docset:PerformanceIndexThreshold> for any consecutive 3-day Titan cycle, the floating margin shall automatically increase by <docset:InterestRateMargin dg:origin="4 1327 891 1668 933" dg:style="font-weight: bold">3.75% per annum</docset:InterestRateMargin> (the "Orbital Load Alignment Risk Premium") until the GTSR is restored to <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="94.0" dg:origin="4 1088 954 1195 996">94.0%</docset:PerformanceIndexThreshold> or above, as verified by the TTSD.</dg:chunk>
+      </dg:chunk>
+    </docset:InterestRateMargin>
+    <docset:RepaymentSchedule dg:structure="section" dg:origin="4 240 1100 2310 1266">
+      <dg:chunk dg:structure="header" dg:origin="4 340 1100 1151 1141" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 340 1100 573 1141">Section 2.03</dg:chunk> Repayment and Amortization</dg:chunk>
+      <docset:RepaymentSchedule dg:structure="p" dg:origin="4 1171 1100 2310 1141; 4 240 1162 2310 1204; 4 240 1225 1784 1266" xml:id="repaymentschedule" dg:itemprop="accruesFrom" dg:href="#agreementeffectivedate">Repayment of the principal shall be executed in equal quarterly installments on the final operational day of each Martian fiscal quarter, starting on the first such date following the Agreement Effective Date, in accordance with the amortization schedules appended hereto.</docset:RepaymentSchedule>
+    </docset:RepaymentSchedule>
+  </docset:CreditFacilityCommitment>
+  <docset:RepresentationsAndWarranties dg:structure="section" dg:origin="4 240 1377 2310 2042">
+    <dg:chunk dg:structure="header" dg:origin="4 240 1377 1646 1431" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">ARTICLE III: REPRESENTATIONS AND WARRANTIES</dg:chunk>
+    <dg:chunk dg:structure="p" dg:origin="4 340 1526 1312 1567">The Borrower represents and warrants to the Lenders that:</dg:chunk>
+    <docset:ExtractionOrOperatingRights dg:structure="section" dg:origin="4 240 1638 2310 1805" xml:id="extractionoroperatingrights" dg:itemprop="references" dg:href="#sectordesignation-2">
+      <dg:chunk dg:structure="header" dg:origin="4 340 1638 1313 1680" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 340 1638 567 1680">Section 3.01</dg:chunk> Shoreline and Underlake Mining Rights</dg:chunk>
+      <docset:ExtractionOrOperatingRights dg:structure="p" dg:origin="4 1327 1638 2310 1680; 4 240 1701 2310 1742; 4 240 1763 360 1805">The Borrower holds exclusive licenses to harvest, siphon, and refine liquid hydrocarbon mixtures within <docset:SectorDesignation dg:origin="4 1024 1701 1435 1742" xml:id="sectordesignation-2">Sector 36-Ontario Lacus</docset:SectorDesignation> under the authority of the Titan Regulatory Council (TRC).</docset:ExtractionOrOperatingRights>
+    </docset:ExtractionOrOperatingRights>
+    <docset:StructuralOrEnvironmentalTolerance dg:structure="section" dg:origin="4 240 1876 2310 2042">
+      <dg:chunk dg:structure="header" dg:origin="4 340 1876 1514 1917" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 340 1876 576 1917">Section 3.02</dg:chunk> Gantry Tension and Dynamic Wind Tolerances</dg:chunk>
+      <docset:StructuralOrEnvironmentalTolerance dg:structure="p" dg:origin="4 1536 1876 2310 1917; 4 240 1938 2310 1980; 4 240 2001 916 2042">The high-tension carbon-nanotube lines are equipped with electromagnetic recoil dampening modules designed to stabilize cargo lines against high-altitude jet stream forces exceeding 160 meters per second.</docset:StructuralOrEnvironmentalTolerance>
+    </docset:StructuralOrEnvironmentalTolerance>
+  </docset:RepresentationsAndWarranties>
+  <docset:CovenantsArticle dg:structure="section" dg:origin="5 240 235 2310 1646">
+    <dg:chunk dg:structure="header" dg:origin="5 240 235 933 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">ARTICLE IV: COVENANTS</dg:chunk>
+    <docset:AffirmativeCovenants dg:structure="section" dg:origin="5 240 383 2310 1104">
+      <dg:chunk dg:structure="header" dg:origin="5 340 383 1002 425" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="5 340 383 567 425">Section 4.01</dg:chunk> Affirmative Covenants</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 1016 383 2310 425; 5 240 446 331 487">So long as any part of the Facility Loan remains outstanding, the Borrower shall:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="5 340 558 2310 1104">
+        <docset:MaintenanceCovenant dg:structure="li" dg:origin="5 340 558 2310 600; 5 403 621 2176 662" xml:id="maintenancecovenant" dg:itemprop="references" dg:href="#performanceindexthreshold-2" dg:value="92.0%">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 558 372 600">1</dg:chunk> Piping and Line Maintenance: Undertake continuous acoustic-imaging diagnostics of the primary shoreline pipeline casing and orbital cargo lines to ensure the GTSR does not fall below the base standard of <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="92.0" dg:origin="5 2058 621 2176 662" xml:id="performanceindexthreshold-2">92.0%</docset:PerformanceIndexThreshold>.</docset:MaintenanceCovenant>
+        <docset:AffirmativeCovenants dg:structure="li" dg:origin="5 340 716 2310 758; 5 403 779 2310 821; 5 403 841 786 883" xml:id="affirmativecovenants-2" dg:itemprop="references" dg:href="#performanceindexthreshold-4" dg:value="98.5%">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 716 372 758">2</dg:chunk> Maintain Composition Purity: Operate the fractionation centrifuge towers to sustain the processed liquid ethane within an Ethane Purity Index of <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="98.5" dg:origin="5 1002 779 1109 821" xml:id="performanceindexthreshold-4">98.5%</docset:PerformanceIndexThreshold> or above, ensuring supply covenants with orbital spacecraft propellant collectors are satisfied.</docset:AffirmativeCovenants>
+        <docset:AffirmativeCovenants dg:structure="li" dg:origin="5 340 937 2310 979; 5 403 1000 2310 1041; 5 403 1062 548 1104" xml:id="affirmativecovenants">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 937 372 979">3</dg:chunk> Lacus Sediment Escrow Account: Maintain the cash-funded Lacus Sediment Escrow with the Administrative Agent, holding a balance of not less than <docset:CreditFacilityCommitment dg:origin="5 1104 1000 1376 1041">SC 600,000,000</docset:CreditFacilityCommitment> at all times to manage ocean-floor structural anchoring stability.</docset:AffirmativeCovenants>
+      </dg:chunk>
+    </docset:AffirmativeCovenants>
+    <docset:NegativeCovenants dg:structure="section" dg:origin="5 240 1208 2310 1646">
+      <dg:chunk dg:structure="header" dg:origin="5 340 1208 989 1250" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="5 340 1208 581 1250">Section 4.02</dg:chunk> Negative Covenants</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 1016 1208 2310 1250; 5 240 1271 614 1312">The Borrower shall not, without the explicit written approval of the Administrative Agent:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="5 340 1383 2310 1646">
+        <docset:SystemModificationProhibition dg:structure="li" dg:origin="5 340 1383 2310 1425; 5 403 1446 972 1487">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 1383 372 1425">1</dg:chunk> System Modifications: Reroute or depressurize the structural pipelines of any active secondary fractionators within the designated coordinates.</docset:SystemModificationProhibition>
+        <docset:NegativeCovenants dg:structure="li" dg:origin="5 340 1541 2310 1583; 5 403 1604 1506 1646" xml:id="negativecovenants" dg:itemprop="references" dg:href="#performanceindexthreshold-3" dg:value="93.0%">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 1541 372 1583">2</dg:chunk> Restricted Payments: Declare or make any dividend distributions to corporate parent entities if the GTSR is below <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="93.0" dg:origin="5 515 1604 623 1646" xml:id="performanceindexthreshold-3">93.0%</docset:PerformanceIndexThreshold> or if a Default Event has occurred and is continuing.</docset:NegativeCovenants>
+      </dg:chunk>
+    </docset:NegativeCovenants>
+  </docset:CovenantsArticle>
+  <docset:DefaultArticle dg:structure="section" dg:origin="5 240 1831 2310 2638">
+    <dg:chunk dg:structure="header" dg:origin="5 240 1831 1494 1886" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">ARTICLE V: DEFAULT EVENTS AND REMEDIES</dg:chunk>
+    <docset:EventOfDefault dg:structure="section" dg:origin="5 340 1980 2310 2638">
+      <dg:chunk dg:structure="header" dg:origin="5 340 1980 847 2022" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="5 340 1980 564 2022">Section 5.01</dg:chunk> Default Events</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 858 1980 2238 2022">The occurrence of any of the following events shall constitute an Event of Default:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="5 340 2092 2310 2638">
+        <docset:PrimaryDefaultEvent dg:structure="li" dg:origin="5 340 2092 2310 2134; 5 403 2155 2155 2197">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 2092 372 2134">1</dg:chunk> Cargo Line Decoupling or Backlash: Any structural line failure resulting in high-altitude cargo decoupling, causing catastrophic dynamic backlash of carbon-nanotube arrays and severe shoreline platform damage.</docset:PrimaryDefaultEvent>
+        <docset:EventOfDefault dg:structure="li" dg:origin="5 340 2251 2310 2292; 5 403 2313 2310 2355; 5 403 2376 755 2417" xml:id="eventofdefault" dg:itemprop="references" dg:href="#definedterms">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 2251 372 2292">2</dg:chunk> Covenant Non-Compliance: Failure to maintain the required balance in the Lacus Sediment Escrow under Section 4.01(3), or failure to meet the Ethane Purity Index baseline standard of <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="98.0" dg:origin="5 1860 2313 1968 2355">98.0%</docset:PerformanceIndexThreshold> for more than two consecutive quarters.</docset:EventOfDefault>
+        <docset:EventOfDefault dg:structure="li" dg:origin="5 340 2472 2310 2513; 5 403 2534 2310 2576; 5 403 2597 698 2638">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 2472 372 2513">3</dg:chunk> Sub-surface Ice Deconsolidation: Any localized shoreline sub-surface heating adjacent to the primary pipeline anchors causing structural ice bedrock temperatures to exceed <docset:StructuralOrEnvironmentalTolerance dg:origin="5 1456 2534 1654 2576">242 Kelvin</docset:StructuralOrEnvironmentalTolerance>, threatening the structural alignment of the gantry gantry.</docset:EventOfDefault>
+      </dg:chunk>
+    </docset:EventOfDefault>
+  </docset:DefaultArticle>
+  <docset:MiscellaneousProvisions dg:structure="section" dg:origin="6 240 235 2310 1650">
+    <dg:chunk dg:structure="header" dg:origin="6 240 235 1419 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">ARTICLE VI: MISCELLANEOUS PROVISIONS</dg:chunk>
+    <docset:GoverningLaw dg:structure="section" dg:origin="6 240 383 2310 487">
+      <dg:chunk dg:structure="header" dg:origin="6 340 383 895 425" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="6 340 383 574 425">Section 6.01</dg:chunk> Governing Law</dg:chunk>
+      <docset:GoverningLaw dg:structure="p" dg:origin="6 916 383 2310 425; 6 240 446 2072 487">This Agreement shall be governed by, and construed in accordance with, the Admiralty Law of the Martian Lowlands and the outer-rim industrial treaties governing the Saturnian System.</docset:GoverningLaw>
+    </docset:GoverningLaw>
+    <docset:Counterparts dg:structure="section" dg:origin="6 240 558 2310 1650">
+      <dg:chunk dg:structure="header" dg:origin="6 340 558 831 600" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="6 340 558 567 600">Section 6.02</dg:chunk> Counterparts</dg:chunk>
+      <docset:Counterparts dg:structure="p" dg:origin="6 844 558 2310 600; 6 240 621 2310 662; 6 240 683 429 725">This Agreement may be executed in any number of counterparts, each of which when so executed and delivered shall be deemed an original, but all of which together shall constitute one and the same instrument.</docset:Counterparts>
+      <docset:BorrowerEntityName dg:structure="p" dg:origin="6 340 795 1234 837" dg:style="font-weight: bold; text-transform: uppercase" xml:id="borrowerentityname">ONTARIO ETHANE &amp; INFRASTRUCTURE LP</docset:BorrowerEntityName>
+      <dg:chunk dg:structure="ul" dg:origin="6 240 908 931 1187">
+        <dg:chunk dg:structure="li" dg:origin="6 340 908 401 950">
+          <dg:chunk dg:structure="header" dg:origin="6 340 908 401 950">By:</dg:chunk>
+          <dg:chunk dg:structure="p"/>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 971 717 1012">
+          <dg:chunk dg:structure="header" dg:origin="6 240 971 351 1012">Name:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 362 971 717 1012">
+            <docset:SignatoryName dg:origin="6 362 971 717 1012" xml:id="signatoryname" dg:itemprop="signatoryOf" dg:href="#borrowerentityname">Alistair Crane-Vance</docset:SignatoryName>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 1033 931 1075">
+          <dg:chunk dg:structure="header" dg:origin="6 240 1033 331 1075">Title:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 341 1033 931 1075">
+            <docset:Signatory dg:origin="6 341 1033 931 1075">Managing Partner, Marine Systems</docset:Signatory>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 340 1146 907 1187">
+          <dg:chunk dg:structure="header" dg:origin="6 340 1146 655 1187">Date of Execution:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 666 1146 907 1187">
+            <docset:ExecutionDate xsi:type="date" dg:value="2146-06-26" dg:origin="6 666 1146 907 1187" dg:style="font-weight: bold">June 26, 2146</docset:ExecutionDate>
+          </dg:chunk>
+        </dg:chunk>
+      </dg:chunk>
+      <docset:LenderOrAgentEntityName dg:structure="p" dg:origin="6 340 1258 1299 1299" dg:style="font-weight: bold; text-transform: uppercase" xml:id="lenderoragententityname">JOVIAN-SATURNINE COLONIAL CONSORTIUM</docset:LenderOrAgentEntityName>
+      <dg:chunk dg:structure="ul" dg:origin="6 240 1371 1274 1650">
+        <dg:chunk dg:structure="li" dg:origin="6 340 1371 401 1412">
+          <dg:chunk dg:structure="header" dg:origin="6 340 1371 401 1412">By:</dg:chunk>
+          <dg:chunk dg:structure="p"/>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 1433 724 1475">
+          <dg:chunk dg:structure="header" dg:origin="6 240 1433 351 1475">Name:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 362 1433 724 1475">
+            <docset:SignatoryName dg:origin="6 362 1433 724 1475" xml:id="signatoryname-2" dg:itemprop="signatoryOf" dg:href="#lenderoragententityname">Diana Sterling-Vance</docset:SignatoryName>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 1496 1072 1537">
+          <dg:chunk dg:structure="header" dg:origin="6 240 1496 331 1537">Title:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 341 1496 1072 1537">
+            <docset:Signatory dg:origin="6 341 1496 1072 1537">Director, Planetary Infrastructure Financing</docset:Signatory>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 340 1608 1274 1650">
+          <dg:chunk dg:structure="header" dg:origin="6 340 1608 1022 1650">Date of Execution (the Signature Date):</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 1032 1608 1274 1650">
+            <docset:ExecutionDate xsi:type="date" dg:value="2146-06-26" dg:origin="6 1032 1608 1274 1650" dg:style="font-weight: bold">June 26, 2146</docset:ExecutionDate>
+          </dg:chunk>
+        </dg:chunk>
+      </dg:chunk>
+    </docset:Counterparts>
+  </docset:MiscellaneousProvisions>
+</dg:chunk>

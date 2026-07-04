@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/SecuredCreditAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 240 232 2241 2897; 2 340 336 2210 2897; 3 340 336 2210 2151; 4 240 235 2310 2925; 5 240 236 2310 691; 6 240 235 2310 2013">
+  <docset:ProjectSetIdentifier dg:structure="section" dg:origin="1 309 232 2241 420">
+    <dg:chunk dg:structure="header" dg:origin="1 309 232 2241 307; 1 702 345 1848 420" dg:style="font-weight: bold; font-size: 1.5em">
+      <docset:DocumentIdentifier dg:origin="1 309 232 507 307">SET 5</docset:DocumentIdentifier>: <docset:FacilityName dg:origin="1 551 232 2241 307; 1 702 345 1848 420" dg:style="text-transform: uppercase">THE FENSAL FLATS ATMOSPHERIC XENON &amp; NITROGEN SIPHONING ARRAY</docset:FacilityName>
+    </dg:chunk>
+  </docset:ProjectSetIdentifier>
+  <docset:AgreementType dg:structure="section" dg:origin="1 240 580 1869 2897; 2 340 336 2210 956">
+    <dg:chunk dg:structure="header" dg:origin="1 240 580 1525 635" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">DOCUMENT <docset:DocumentIdentifier dg:origin="1 576 580 642 635" dg:style="text-transform: none">5A</docset:DocumentIdentifier>: <docset:AgreementType dg:origin="1 674 580 1525 635">SECURED CREDIT AGREEMENT</docset:AgreementType>
+    </dg:chunk>
+    <docset:AgreementType dg:structure="section" dg:origin="1 681 828 1869 2897; 2 340 336 2210 956">
+      <dg:chunk dg:structure="header" dg:origin="1 860 828 1690 872" dg:style="font-weight: bold; text-transform: uppercase">SECURED TERM CREDIT AGREEMENT</dg:chunk>
+      <docset:AgreementEffectiveDate dg:structure="p" dg:origin="1 739 1144 1811 1188" xml:id="agreementeffectivedate-2" dg:itemprop="effectiveOn" dg:href="#executiondate">Dated as of the Agreement Effective Date (as defined herein)</docset:AgreementEffectiveDate>
+      <dg:chunk dg:structure="p" dg:origin="1 1215 1460 1335 1504">among</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="1 802 1775 1748 1819; 1 1159 1841 1391 1885" dg:style="font-weight: bold">
+        <docset:BorrowerEntityName dg:origin="1 802 1775 1748 1819" dg:style="text-transform: uppercase" xml:id="borrowerentityname">FENSAL ATMOSPHERE HARVESTING CORP</docset:BorrowerEntityName>, as Borrower</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="1 1243 2157 1307 2201">and</dg:chunk>
+      <docset:LenderOrAgentEntityName dg:structure="p" dg:origin="1 681 2472 1869 2516; 1 689 2538 1861 2582" dg:style="font-weight: bold">JOVIAN-SATURNINE INDUSTRIAL CONSORTIUM (JSIC), as Lead Arranger, Administrative Agent, and Collateral Agent</docset:LenderOrAgentEntityName>
+      <dg:chunk dg:structure="p" dg:origin="1 1243 2854 1307 2897">and</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="2 703 336 1847 379" dg:style="font-weight: bold; text-transform: uppercase">THE LENDERS PARTY HERETO FROM TIME TO TIME</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="2 340 781 2210 825; 2 340 846 2210 890; 2 340 912 1976 956">This SECURED TERM CREDIT AGREEMENT (this "Agreement") is entered into on the Agreement Effective Date by and among the Borrower, the Lenders, and the Administrative Agent. In consideration of the mutual covenants and agreements herein contained, the parties hereto agree as follows:</dg:chunk>
+    </docset:AgreementType>
+  </docset:AgreementType>
+  <docset:DefinedTerms dg:structure="section" dg:origin="2 340 1244 2210 2897; 3 340 336 2210 2151">
+    <dg:chunk dg:structure="header" dg:origin="2 340 1244 1448 1290" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="2 340 1244 578 1290">ARTICLE I</dg:chunk> DEFINITIONS AND INTERPRETATION</dg:chunk>
+    <docset:DefinedTerms dg:structure="section" dg:origin="2 340 1546 2210 2897; 3 406 336 2210 1670">
+      <dg:chunk dg:structure="header" dg:origin="2 440 1546 988 1590" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="2 440 1546 679 1590">Section 1.01</dg:chunk> Defined Terms</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="2 1003 1546 2210 1590; 2 340 1612 628 1656">As used in this Agreement, the following terms have the meanings specified below:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="2 406 1928 2210 2897; 3 406 336 2210 1670">
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 430 1928 2210 1971; 2 406 1993 2210 2037; 2 406 2059 1687 2103; 3 406 336 430 380">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:AgreementEffectiveDate dg:origin="2 430 1928 919 1971" dg:style="font-weight: bold" xml:id="agreementeffectivedate" dg:itemprop="effectiveOn" dg:href="#executiondate">Agreement Effective Date</docset:AgreementEffectiveDate>" means the date on which this Agreement has been fully executed and delivered by all parties hereto, as verified by the date inscribed next to the signatures of the authorized officers in the execution block below (such date, the "Signature Date").</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 406 2358 2210 2402; 2 406 2424 2145 2467" xml:id="definedterms">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Atmospheric Ballast Escrow" means the cash escrow reserve fund mandated to be maintained under Section 4.01(3) for secondary nitrogen ballast regulation and localized pressure containment.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 406 2722 2210 2766; 2 406 2788 2210 2832; 2 406 2854 1775 2897" xml:id="definedterms-2" dg:itemprop="references" dg:href="#sectordesignation">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Siphoning Array" means the physical structural harvesting towers, high-altitude compression intakes, vacuum refrigeration ducts, and noble gas fractional condensation units located at <docset:SectorDesignation dg:origin="2 2029 2788 2210 2832" xml:id="sectordesignation">Sector 15</docset:SectorDesignation>, <docset:FacilityName dg:origin="2 406 2854 616 2897">Fensal Flats</docset:FacilityName> coordinates (latitude 5.2° N, longitude 30.1° W) on Titan, Saturn.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 430 336 2210 380; 3 406 402 1741 445">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:AccountingOrInterpretationRules dg:origin="3 430 336 1320 380" dg:style="font-weight: bold">Sol System Interstellar Accounting Standards</docset:AccountingOrInterpretationRules>" or "<docset:AccountingOrInterpretationRules dg:origin="3 1446 336 1567 380" dg:style="font-weight: bold; text-transform: uppercase">SSIAS</docset:AccountingOrInterpretationRules>" means the unified framework of financial accounting principles approved by the Interstellar Financial Board.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 1421 336 1446 380; 3 430 701 2210 744; 3 406 766 1204 810">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:BenchmarkReferenceRate dg:origin="3 430 701 574 744" dg:style="font-weight: bold; text-transform: uppercase">TIDOR</docset:BenchmarkReferenceRate>" means the <docset:BenchmarkReferenceRate dg:origin="3 803 701 1366 744">Titan Inter-Dome Offered Rate</docset:BenchmarkReferenceRate>, which is the floating interbank benchmark rate calculated for Titan-denominated credit lines.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 1567 336 1591 380; 3 430 1065 2210 1109; 3 406 1131 2210 1175; 3 406 1196 1237 1240">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:PerformanceIndexThreshold dg:origin="3 430 1065 1093 1109" dg:style="font-weight: bold" xml:id="performanceindexthreshold-2">Xenon Siphoning Efficiency Index</docset:PerformanceIndexThreshold>" or "<docset:PerformanceIndexThreshold dg:origin="3 1216 1065 1318 1109" dg:style="font-weight: bold; text-transform: uppercase">XSEI</docset:PerformanceIndexThreshold>" means the noble gas extraction and molecular separation efficiency rating of the primary fractionation column, as certified on a 100-point basis by the Titan Technical Safety Directorate (TTSD).</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 406 1495 2210 1539; 3 406 1561 2210 1605; 3 406 1627 526 1670">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Xenon Yield Target" means the minimum operational noble gas recovery metric of <docset:PerformanceIndexThreshold dg:origin="3 1925 1495 2210 1539; 3 406 1561 1271 1605" xml:id="performanceindexthreshold-3">4,500 kilograms of pure liquid Xenon (Xe) per Titan sidereal day</docset:PerformanceIndexThreshold>, as calculated under the provisions of Section 4.01(2) herein.</docset:DefinedTerms>
+      </dg:chunk>
+    </docset:DefinedTerms>
+    <docset:AccountingOrInterpretationRules dg:structure="section" dg:origin="3 340 1976 2210 2151">
+      <dg:chunk dg:structure="header" dg:origin="3 440 1976 1161 2019" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="3 440 1976 683 2019">Section 1.02</dg:chunk> Rules of Interpretation</dg:chunk>
+      <docset:AccountingOrInterpretationRules dg:structure="p" dg:origin="3 1180 1976 2210 2019; 3 340 2041 2210 2085; 3 340 2107 1588 2151">Capitalized terms defined in the singular shall have the corresponding meanings in the plural, and vice versa. Any references to specific sections, tables, or documents relate directly to this Agreement unless otherwise specified.</docset:AccountingOrInterpretationRules>
+    </docset:AccountingOrInterpretationRules>
+  </docset:DefinedTerms>
+  <docset:CreditFacilityCommitment dg:structure="section" dg:origin="4 240 235 2310 1255">
+    <dg:chunk dg:structure="header" dg:origin="4 240 235 1189 281" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="4 240 235 496 281">ARTICLE II</dg:chunk> THE SECURED CREDIT LINES</dg:chunk>
+    <docset:CreditFacilityCommitment dg:structure="section" dg:origin="4 240 338 2310 513">
+      <dg:chunk dg:structure="header" dg:origin="4 340 338 826 382" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 340 338 576 382">Section 2.01</dg:chunk> The Facility</dg:chunk>
+      <docset:CreditFacilityCommitment dg:structure="p" dg:origin="4 838 338 2310 382; 4 240 404 2310 447; 4 240 469 1758 513">Subject to the terms and conditions of this Agreement, each Lender agrees to make a single advance term loan (each a "Facility Loan") to the Borrower on the Closing Date (which is identical to the Signature Date) in an aggregate principal amount of 5,100,000,000 Sol Credits (SC).</docset:CreditFacilityCommitment>
+    </docset:CreditFacilityCommitment>
+    <docset:InterestRateMargin dg:structure="section" dg:origin="4 340 585 2310 975">
+      <dg:chunk dg:structure="header" dg:origin="4 340 585 1090 628" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 340 585 575 628">Section 2.02</dg:chunk> Interest Rate Adjustments</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="4 340 701 2310 975">
+        <dg:chunk dg:structure="li" dg:origin="4 340 701 2223 744">
+          <dg:chunk dg:structure="lim" dg:origin="4 340 701 373 744">1</dg:chunk> The Facility Loans shall accrue interest <docset:InterestCompoundingOrAccrualBasis dg:origin="4 1106 701 1193 744">daily</docset:InterestCompoundingOrAccrualBasis> at a floating rate per annum equal to <docset:BenchmarkReferenceRate dg:origin="4 1848 701 1992 744" dg:style="font-weight: bold; text-transform: uppercase">TIDOR</docset:BenchmarkReferenceRate> plus <docset:InterestRateMargin xsi:type="decimal" dg:value="6.25" dg:origin="4 2091 701 2223 744" dg:style="font-weight: bold">6.25%</docset:InterestRateMargin>.</dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="4 340 800 2310 843; 4 406 865 2310 909; 4 406 931 1547 975" xml:id="chunk" dg:itemprop="references" dg:href="#performanceindexthreshold">
+          <dg:chunk dg:structure="lim" dg:origin="4 340 800 373 843">2</dg:chunk> Should the Xenon Siphoning Efficiency Index (XSEI) fall below <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="91.0" dg:origin="4 1606 800 1719 843" xml:id="performanceindexthreshold">91.0%</docset:PerformanceIndexThreshold> for any consecutive 5-day cycle, the floating margin shall automatically increase by <docset:InterestRateMargin dg:origin="4 1317 865 1658 909" dg:style="font-weight: bold">2.75% per annum</docset:InterestRateMargin> (the "Xenon Venting Penalty") until the XSEI is restored to <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="94.0" dg:origin="4 816 931 929 975">94.0%</docset:PerformanceIndexThreshold> or above, as verified by the TTSD.</dg:chunk>
+      </dg:chunk>
+    </docset:InterestRateMargin>
+    <docset:RepaymentSchedule dg:structure="section" dg:origin="4 240 1080 2310 1255">
+      <dg:chunk dg:structure="header" dg:origin="4 340 1080 1164 1124" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 340 1080 578 1124">Section 2.03</dg:chunk> Repayment and Amortization</dg:chunk>
+      <docset:RepaymentSchedule dg:structure="p" dg:origin="4 1177 1080 2310 1124; 4 240 1145 2310 1189; 4 240 1211 1861 1255" xml:id="repaymentschedule" dg:itemprop="accruesFrom" dg:href="#agreementeffectivedate">Repayment of the principal shall be executed in equal quarterly installments on the final operational day of each Martian fiscal quarter, starting on the first such date following the Agreement Effective Date, in accordance with the amortization schedules appended hereto.</docset:RepaymentSchedule>
+    </docset:RepaymentSchedule>
+  </docset:CreditFacilityCommitment>
+  <docset:RepresentationsAndWarranties dg:structure="section" dg:origin="4 240 1343 2310 2049">
+    <dg:chunk dg:structure="header" dg:origin="4 240 1343 1430 1389" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="4 240 1343 514 1389">ARTICLE III</dg:chunk> REPRESENTATIONS AND WARRANTIES</dg:chunk>
+    <dg:chunk dg:structure="p" dg:origin="4 340 1445 1361 1489">The Borrower represents and warrants to the Lenders that:</dg:chunk>
+    <docset:ExtractionOrOperatingRights dg:structure="section" dg:origin="4 240 1561 2310 1802" xml:id="extractionoroperatingrights" dg:itemprop="references" dg:href="#sectordesignation">
+      <dg:chunk dg:structure="header" dg:origin="4 340 1561 1205 1605" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 340 1561 579 1605">Section 3.01</dg:chunk> Atmospheric Harvesting Rights</dg:chunk>
+      <docset:ExtractionOrOperatingRights dg:structure="p" dg:origin="4 1220 1561 2310 1605; 4 240 1627 2310 1670; 4 240 1692 2310 1736; 4 240 1758 720 1802">The Borrower holds exclusive licenses to harvest, compress, and process atmospheric compounds within <docset:SectorDesignation dg:origin="4 1132 1627 1462 1670">Sector 15-Fensal</docset:SectorDesignation>, which contains optimal concentrations of industrial-grade nitrogen, argon, and high-value noble gas trace compounds under the authority of the Titan Regulatory Council (TRC).</docset:ExtractionOrOperatingRights>
+    </docset:ExtractionOrOperatingRights>
+    <docset:StructuralOrEnvironmentalTolerance dg:structure="section" dg:origin="4 240 1874 2310 2049">
+      <dg:chunk dg:structure="header" dg:origin="4 340 1874 1050 1917" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 340 1874 584 1917">Section 3.02</dg:chunk> Wind-Shear Tolerance</dg:chunk>
+      <docset:StructuralOrEnvironmentalTolerance dg:structure="p" dg:origin="4 1070 1874 2310 1917; 4 240 1939 2310 1983; 4 240 2005 1067 2049">The structural towers of the Siphoning Array are engineered using dynamic tension carbon-fiber guy-wires and active gyroscope dampers capable of neutralizing heavy tropospheric wind-shear forces up to 150 meters per second.</docset:StructuralOrEnvironmentalTolerance>
+    </docset:StructuralOrEnvironmentalTolerance>
+  </docset:RepresentationsAndWarranties>
+  <docset:CovenantsArticle dg:structure="section" dg:origin="4 240 2137 2310 2925; 5 240 236 2310 691">
+    <dg:chunk dg:structure="header" dg:origin="4 240 2137 826 2182" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="4 240 2137 512 2182">ARTICLE IV</dg:chunk> COVENANTS</dg:chunk>
+    <docset:AffirmativeCovenants dg:structure="section" dg:origin="4 240 2239 2310 2925">
+      <dg:chunk dg:structure="header" dg:origin="4 340 2239 1052 2283" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 340 2239 584 2283">Section 4.01</dg:chunk> Affirmative Covenants</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="4 1072 2239 2310 2283; 4 240 2305 514 2349">So long as any part of the Facility Loan remains outstanding, the Borrower shall:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="4 340 2420 2310 2925">
+        <docset:MaintenanceCovenant dg:structure="li" dg:origin="4 340 2420 2310 2464; 4 406 2486 1823 2530" xml:id="maintenancecovenant" dg:itemprop="references" dg:href="#performanceindexthreshold-2">
+          <dg:chunk dg:structure="lim" dg:origin="4 340 2420 373 2464">1</dg:chunk> Siphon Array Maintenance: Undertake continuous acoustic-resonance structural audits of the primary intake pylons to ensure the XSEI does not fall below the base standard of <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="92.0" dg:origin="4 1699 2486 1823 2530">92.0%</docset:PerformanceIndexThreshold>.</docset:MaintenanceCovenant>
+        <docset:AffirmativeCovenants dg:structure="li" dg:origin="4 340 2585 2310 2629; 4 406 2651 2310 2694; 4 406 2716 563 2760" xml:id="affirmativecovenants" dg:itemprop="valueFrom" dg:href="#performanceindexthreshold-3">
+          <dg:chunk dg:structure="lim" dg:origin="4 340 2585 373 2629">2</dg:chunk> Maintain Xenon Yield: Operate the condensation columns to sustain the Xenon Yield Target of <docset:PerformanceIndexThreshold dg:origin="4 2211 2585 2310 2629; 4 406 2651 838 2694">4,500 kilograms per Titan day</docset:PerformanceIndexThreshold>, ensuring supply covenants with inter-planetary ion-propulsion transport vessels are satisfied.</docset:AffirmativeCovenants>
+        <docset:AffirmativeCovenants dg:structure="li" dg:origin="4 340 2815 2310 2859; 4 406 2881 1629 2925" xml:id="affirmativecovenants-2" dg:itemprop="references" dg:href="#definedterms">
+          <dg:chunk dg:structure="lim" dg:origin="4 340 2815 373 2859">3</dg:chunk> Atmospheric Escrow: Maintain the cash-funded Atmospheric Ballast Escrow with the Administrative Agent, holding a balance of not less than <docset:CreditFacilityCommitment dg:origin="4 1131 2881 1415 2925">SC 350,000,000</docset:CreditFacilityCommitment> at all times.</docset:AffirmativeCovenants>
+      </dg:chunk>
+    </docset:AffirmativeCovenants>
+    <docset:NegativeCovenants dg:structure="section" dg:origin="5 240 236 2310 691">
+      <dg:chunk dg:structure="header" dg:origin="5 340 236 1000 280" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="5 340 236 586 280">Section 4.02</dg:chunk> Negative Covenants</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 1022 236 2310 280; 5 240 302 633 345">The Borrower shall not, without the explicit written approval of the Administrative Agent:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="5 340 417 2310 691">
+        <docset:SystemModificationProhibition dg:structure="li" dg:origin="5 340 417 2310 461; 5 406 483 1163 527">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 417 373 461">1</dg:chunk> Tower Modifications: Alter, depressurize, or adjust the intake flow parameters of any active fractionation columns within the designated coordinates.</docset:SystemModificationProhibition>
+        <docset:NegativeCovenants dg:structure="li" dg:origin="5 340 582 2310 626; 5 406 647 1564 691">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 582 373 626">2</dg:chunk> Restricted Payments: Declare or make any dividend distributions to corporate parent entities if the XSEI is below <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="93.0" dg:origin="5 524 647 637 691">93.0%</docset:PerformanceIndexThreshold> or if a Default Event has occurred and is continuing.</docset:NegativeCovenants>
+      </dg:chunk>
+    </docset:NegativeCovenants>
+  </docset:CovenantsArticle>
+  <docset:DefaultArticle dg:structure="section" dg:origin="6 240 235 2310 2013">
+    <dg:chunk dg:structure="header" dg:origin="6 240 235 1301 281" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="6 240 235 494 281">ARTICLE V</dg:chunk> DEFAULT EVENTS AND REMEDIES</dg:chunk>
+    <docset:EventOfDefault dg:structure="section" dg:origin="6 240 338 2310 2013">
+      <dg:chunk dg:structure="header" dg:origin="6 340 338 897 382" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="6 340 338 583 382">Section 5.01</dg:chunk> Default Events</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="6 916 338 2310 382; 6 240 404 384 447">The occurrence of any of the following events shall constitute an Event of Default:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="6 340 519 2310 1024">
+        <docset:PrimaryDefaultEvent dg:structure="li" dg:origin="6 340 519 2310 563; 6 406 585 2012 629">
+          <dg:chunk dg:structure="lim" dg:origin="6 340 519 373 563">1</dg:chunk> Wind-Shear Structural Collapse: Any catastrophic structural failure or partial collapse of the siphoning towers due to extreme meteorological atmospheric pressure shifts or localized storm cycles.</docset:PrimaryDefaultEvent>
+        <docset:EventOfDefault dg:structure="li" dg:origin="6 340 684 2310 728; 6 406 750 2261 793" xml:id="eventofdefault" dg:itemprop="references" dg:href="#affirmativecovenants-2">
+          <dg:chunk dg:structure="lim" dg:origin="6 340 684 373 728">2</dg:chunk> Covenant Non-Compliance: Failure to maintain the required balance in the Atmospheric Ballast Escrow under Section 4.01(3), or failure to meet the Xenon Yield Target for more than two consecutive quarters.</docset:EventOfDefault>
+        <docset:EventOfDefault dg:structure="li" dg:origin="6 340 849 2310 892; 6 406 914 2310 958; 6 406 980 703 1024">
+          <dg:chunk dg:structure="lim" dg:origin="6 340 849 373 892">3</dg:chunk> Uncontained Nitrogen Blowout: Any pressurized piping failure leading to an explosive decompression event discharging more than <docset:PerformanceIndexThreshold dg:origin="6 935 914 1485 958">150,000 standard cubic meters</docset:PerformanceIndexThreshold> of compressed nitrogen into the active dome habitation zones.</docset:EventOfDefault>
+      </dg:chunk>
+      <docset:BorrowerEntityName dg:structure="p" dg:origin="6 340 1128 1275 1172" dg:style="font-weight: bold; text-transform: uppercase">FENSAL ATMOSPHERE HARVESTING CORP</docset:BorrowerEntityName>
+      <dg:chunk dg:structure="ul" dg:origin="6 240 1244 1166 1535">
+        <dg:chunk dg:structure="li" dg:origin="6 340 1244 404 1288">
+          <dg:chunk dg:structure="header" dg:origin="6 340 1244 404 1288">By:</dg:chunk>
+          <dg:chunk dg:structure="p">___________________________</dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 1310 741 1354">
+          <dg:chunk dg:structure="header" dg:origin="6 240 1310 357 1354">Name:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 368 1310 741 1354">
+            <docset:SignatoryName dg:origin="6 368 1310 741 1354" xml:id="signatoryname" dg:itemprop="signatoryOf" dg:href="#borrowerentityname">Alistair Crane-Vance</docset:SignatoryName>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 1376 1166 1419">
+          <dg:chunk dg:structure="header" dg:origin="6 240 1376 335 1419">Title:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 346 1376 1166 1419">
+            <docset:Signatory dg:origin="6 346 1376 1166 1419">Managing Director, Gas Extraction Operations</docset:Signatory>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 340 1491 936 1535">
+          <dg:chunk dg:structure="header" dg:origin="6 340 1491 671 1535">Date of Execution:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 682 1491 936 1535">
+            <docset:ExecutionDate xsi:type="date" dg:value="2146-06-26" dg:origin="6 682 1491 936 1535" dg:style="font-weight: bold" xml:id="executiondate">June 26, 2146</docset:ExecutionDate>
+          </dg:chunk>
+        </dg:chunk>
+      </dg:chunk>
+      <docset:LenderOrAgentEntityName dg:structure="p" dg:origin="6 340 1607 1383 1650" dg:style="font-weight: bold; text-transform: uppercase" xml:id="lenderoragententityname">JOVIAN-SATURNINE INDUSTRIAL CONSORTIUM</docset:LenderOrAgentEntityName>
+      <dg:chunk dg:structure="ul" dg:origin="6 240 1722 1321 2013">
+        <dg:chunk dg:structure="li" dg:origin="6 340 1722 404 1766">
+          <dg:chunk dg:structure="header" dg:origin="6 340 1722 404 1766">By:</dg:chunk>
+          <dg:chunk dg:structure="p">___________________________</dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 1788 707 1832">
+          <dg:chunk dg:structure="header" dg:origin="6 240 1788 357 1832">Name:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 368 1788 707 1832">
+            <docset:SignatoryName dg:origin="6 368 1788 707 1832" xml:id="signatoryname-2" dg:itemprop="signatoryOf" dg:href="#lenderoragententityname">Diana Ross-Vargas</docset:SignatoryName>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 1854 1232 1897">
+          <dg:chunk dg:structure="header" dg:origin="6 240 1854 335 1897">Title:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 346 1854 1232 1897">
+            <docset:Signatory dg:origin="6 346 1854 1232 1897">Senior Partner, Inter-Planetary Infrastructure Fund</docset:Signatory>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 340 1969 1321 2013">
+          <dg:chunk dg:structure="header" dg:origin="6 340 1969 1056 2013">Date of Execution (the Signature Date):</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 1067 1969 1321 2013">
+            <docset:ExecutionDate xsi:type="date" dg:value="2146-06-26" dg:origin="6 1067 1969 1321 2013" dg:style="font-weight: bold">June 26, 2146</docset:ExecutionDate>
+          </dg:chunk>
+        </dg:chunk>
+      </dg:chunk>
+    </docset:EventOfDefault>
+  </docset:DefaultArticle>
+</dg:chunk>

@@ -1,0 +1,326 @@
+# ==========================================================================
+# DGML docset schema — Manager Valuation Memorandum
+# RELAX NG Compact.  Data types observed in 10 .dgml.xml file(s):
+#   element text is the RAW page text; the normalized, typed value is
+#   carried by @dg:value, described by @xsi:type (XSD built-in names).
+# `# Field: value` comments are the LOSSLESS schema.json serialization;
+#   regenerate the JSON via dgml_core.generation.rnc.rnc_to_schema_dict.
+# ==========================================================================
+
+default namespace docset = "http://dgml.io/dgml-io/ManagerValuationMemorandum"
+namespace dg = "http://dgml.io/ns/dg#"
+namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = dg.chunk
+
+# --- attributes common to every DGML element ------------------------
+# dg:origin  = grounding bbox: "page x1 y1 x2 y2"
+# dg:itemprop / dg:href = semantic link (predicate + '#id' target(s))
+common.atts =
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  attribute dg:value { text }?,
+  attribute xsi:type { text }?
+
+# --- generic structural chunk (unlabeled scaffolding) ----------------
+dg.chunk = element dg:chunk { common.atts, mixed { any.docset* } }
+
+# a concept private to ONE document renders in the dg: namespace instead
+# of docset: (the shared-tag rule) — same shape, unshared vocabulary
+dg.private = element dg:* { common.atts, mixed { any.docset* } }
+
+# any docset element may appear where structure allows it
+any.docset = dg.chunk
+  | dg.private
+  | AnnualCapExReserve
+  | AppraisedValue
+  | CapitalExpenditureAnalysis
+  | ChangeFromPriorValuation
+  | DiscountRate
+  | HoldingPeriod
+  | IssuingFirm
+  | ParameterRationale
+  | PropertyName
+  | PropertyType
+  | RecipientOrganization
+  | RegionalRiskPremium
+  | TerminalCapRate
+  | UnderwritingBaseValue
+  | ValuationDate
+  | ValuationDocumentType
+  | ValuationMethodology
+  | ValuationParameter
+  | ValuationParameters
+  | ValuationPeriod
+  | ValuationSummaryAndParameters
+
+# ------------------------------------------------------------------
+# Description: "The modeled annual capital expenditure sinking reserve amount for the subject property"
+# Kind: section
+# Parent: CapitalExpenditureAnalysis
+# Example: "Due to the aggressive mechanical wear associated with deep-water chemical intera"
+# Examples: ["Due to the aggressive mechanical wear associated with deep-water chemical intera"]
+# Observed: 1 occurrence(s); dg:structure: p(1)
+AnnualCapExReserve = element AnnualCapExReserve {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The concluded appraised or capitalized value of the subject property in monetary units"
+# Kind: inline
+# Parent: ValuationSummaryAndParameters
+# Example: "115,000,000 ECU"
+# Examples: ["115,000,000 ECU", "525,000,000 ECU", "1,450,000,000 ECU"]
+# Observed: 9 occurrence(s)
+AppraisedValue = element AppraisedValue {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Section analyzing projected capital expenditure requirements and reserve modeling for the subject property"
+# Kind: section
+# Parent: ValuationDocumentType
+# Example: "Capital Expenditure (CapEx) Analysis"
+# Examples: ["Capital Expenditure (CapEx) Analysis"]
+# Observed: 1 occurrence(s); dg:structure: section(1)
+# Children (from schema hierarchy): AnnualCapExReserve
+CapitalExpenditureAnalysis = element CapitalExpenditureAnalysis {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The percentage or absolute change in appraised value compared to a prior valuation period"
+# Kind: inline
+ChangeFromPriorValuation = element ChangeFromPriorValuation {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The rate used to discount future cash flows, typically expressed as a WACC or similar measure"
+# Kind: inline
+# Parent: ValuationSummaryAndParameters
+# Example: "9.5%"
+# Examples: ["9.5%", "11.5%", "11.0%"]
+# Observed: 3 occurrence(s)
+# Data type (from DGML): decimal(3) of 3 occurrence(s)
+DiscountRate = element DiscountRate {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The assumed duration over which the asset is expected to be held for investment purposes"
+# Kind: inline
+HoldingPeriod = element HoldingPeriod {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The firm or advisory practice issuing the valuation document"
+# Kind: inline
+# Observed: 2 occurrence(s)
+IssuingFirm = element IssuingFirm {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The stated justification or basis for a specific valuation parameter's assumption"
+# Kind: inline
+# Parent: ValuationParameter
+# Example: "Rationale"
+# Examples: ["Rationale", "Aligned with life cycle of primary energy siphons", "Includes 2.0% regional risk premium for sub-ice assets"]
+# Observed: 5 occurrence(s); dg:structure: td(5)
+ParameterRationale = element ParameterRationale {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The name or identifier of the subject property being valued"
+# Kind: inline
+# Parent: ValuationDocumentType
+# Example: "Scientific Property"
+# Examples: ["Scientific Property", "Oyam Research Depot"]
+# Observed: 12 occurrence(s)
+PropertyName = element PropertyName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The functional or asset class category of the subject property (e.g., refinery, resort, biotech dome, condominiums)"
+# Kind: inline
+PropertyType = element PropertyType {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The organization or committee to whom the valuation document is addressed"
+# Kind: inline
+# Observed: 5 occurrence(s)
+RecipientOrganization = element RecipientOrganization {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The additional risk premium applied to the discount rate to account for location-specific or asset-specific risk"
+# Kind: inline
+# Observed: 1 occurrence(s)
+# Data type (from DGML): decimal(1) of 1 occurrence(s)
+RegionalRiskPremium = element RegionalRiskPremium {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The capitalization rate applied at the end of the holding period to derive terminal value"
+# Kind: inline
+# Parent: ValuationSummaryAndParameters
+# Example: "7.50%"
+# Examples: ["7.50%"]
+# Observed: 1 occurrence(s)
+# Data type (from DGML): decimal(1) of 1 occurrence(s)
+TerminalCapRate = element TerminalCapRate {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The base or underwritten value assigned to a given valuation parameter"
+# Kind: inline
+# Parent: ValuationSummaryAndParameters
+# Example: "32.2M ECU"
+# Examples: ["32.2M ECU", "Underwriting Base Value", "10 Jovian Years (approx. 11.8 Earth Years)"]
+# Observed: 7 occurrence(s); dg:structure: td(5)
+# Data type (from DGML): decimal(3) of 7 occurrence(s)
+UnderwritingBaseValue = element UnderwritingBaseValue {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The date on which the valuation memorandum is issued or effective"
+# Kind: inline
+# Observed: 1 occurrence(s)
+# Data type (from DGML): date(1) of 1 occurrence(s)
+ValuationDate = element ValuationDate {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "date" },
+    attribute dg:value { xsd:date })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The category or style of valuation document (e.g., memo, advisory, appraisal, reconciliation)"
+# Kind: section
+# Example: "Valuation Statement - Scientific Property"
+# Examples: ["Valuation Statement - Scientific Property", "Industrial Asset Appraisal", "Infrastructure Utility Memorandum"]
+# Observed: 10 occurrence(s); dg:structure: section(10)
+# Children (from schema hierarchy): CapitalExpenditureAnalysis, PropertyName, ValuationSummaryAndParameters
+ValuationDocumentType = element ValuationDocumentType {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The analytical approach or method applied to derive the valuation (e.g., DCF, direct capitalization)"
+# Kind: inline
+# Parent: ValuationSummaryAndParameters
+# Example: "replacement-cost appraisal model"
+# Examples: ["replacement-cost appraisal model", "We have updated the valuation of the Thalassa Hydrothermal Rift Resort using a m"]
+# Observed: 2 occurrence(s); dg:structure: p(1)
+ValuationMethodology = element ValuationMethodology {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "A named input or assumption used in the valuation model (e.g., holding period, discount rate, cap rate)"
+# Kind: row
+# Parent: ValuationParameters
+# Example: "Parameter"
+# Examples: ["Parameter", "Assumed Holding Period", "Base Discount Rate (WACC)"]
+# Observed: 10 occurrence(s); dg:structure: tr(5), td(5)
+# Children (from schema hierarchy): ParameterRationale
+ValuationParameter = element ValuationParameter {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Valuation Parameters"
+# Kind: section
+# Parent: ValuationSummaryAndParameters
+# Observed: 1 occurrence(s); dg:structure: table(1)
+# Children (from schema hierarchy): ValuationParameter
+ValuationParameters = element ValuationParameters {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The reporting period or cycle to which the valuation applies (e.g., Q2, annual)"
+# Kind: inline
+ValuationPeriod = element ValuationPeriod {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Section presenting the overall valuation conclusion alongside key analytical parameters"
+# Kind: section
+# Parent: ValuationDocumentType
+# Example: "Applying a replacement-cost appraisal model, we value the Oyam Research Depot st"
+# Examples: ["Applying a replacement-cost appraisal model, we value the Oyam Research Depot st", "Based on equipment replacement schedules, we appraise the physical refinery asse", "Based on capitalized cash flow models using a discount rate of 9.5%, we value th"]
+# Observed: 11 occurrence(s); dg:structure: p(10), section(1)
+# Children (from schema hierarchy): AppraisedValue, DiscountRate, TerminalCapRate, UnderwritingBaseValue, ValuationMethodology, ValuationParameters
+ValuationSummaryAndParameters = element ValuationSummaryAndParameters {
+  common.atts,
+  mixed { any.docset* }
+}
+

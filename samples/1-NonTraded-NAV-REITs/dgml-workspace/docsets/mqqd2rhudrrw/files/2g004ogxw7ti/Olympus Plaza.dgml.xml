@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/CommercialLeaseAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 122 120 2354 3331; 2 122 120 786 151">
+  <docset:PropertyPortfolioLabel dg:structure="section" dg:origin="1 122 120 2354 3331; 2 122 120 786 151">
+    <dg:chunk dg:structure="header" dg:origin="1 122 120 1045 153" dg:style="font-weight: bold">Property 2: <docset:DomeFacilityIdentifier dg:origin="1 310 120 559 153">Olympus Plaza</docset:DomeFacilityIdentifier>, <docset:ZoneIdentifier dg:origin="1 569 120 677 153">Zone 1</docset:ZoneIdentifier> (<docset:PremisesUseType dg:origin="1 698 120 1034 153">Retail Center Anchor</docset:PremisesUseType>)</dg:chunk>
+    <docset:LeaseAgreementType dg:structure="section" dg:origin="1 122 213 1775 377">
+      <dg:chunk dg:structure="header" dg:origin="1 122 213 857 244" dg:style="font-weight: bold">Commercial Pressurized Space Lease Agreement</dg:chunk>
+      <dg:chunk dg:structure="ul" dg:origin="1 122 299 1775 377">
+        <dg:chunk dg:structure="li" dg:origin="1 122 299 1114 330">
+          <dg:chunk dg:structure="header" dg:origin="1 122 299 308 330" dg:style="font-weight: bold; text-transform: uppercase">LANDLORD:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="1 317 299 1114 330">
+            <docset:LandlordName dg:origin="1 317 299 1114 330">Ares Prime Yield Fund I, LP, a <docset:LandlordEntityType dg:origin="1 746 299 1114 330">Martian limited partnership</docset:LandlordEntityType>
+            </docset:LandlordName>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="1 122 346 1775 377">
+          <dg:chunk dg:structure="header" dg:origin="1 122 346 259 377" dg:style="font-weight: bold; text-transform: uppercase">TENANT:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="1 268 346 1775 377">
+            <docset:TenantName dg:origin="1 268 346 1775 377">United Colonies Commissary, an <docset:TenantEntityType dg:origin="1 732 346 1775 377">administrative agency of the United Nations Martian Administration (UNMA)</docset:TenantEntityType>
+            </docset:TenantName>
+          </dg:chunk>
+        </dg:chunk>
+      </dg:chunk>
+    </docset:LeaseAgreementType>
+    <docset:LeaseAgreementType dg:structure="section" dg:origin="1 122 468 2306 766">
+      <dg:chunk dg:structure="header" dg:origin="1 122 468 1006 499" dg:style="font-weight: bold; text-transform: uppercase">COMMERCIAL PRESSURIZED SPACE LEASE AGREEMENT</dg:chunk>
+      <docset:Recital dg:structure="p" dg:origin="1 122 554 2306 586; 1 122 601 2305 632; 1 122 648 1534 679">THIS COMMERCIAL PRESSURIZED SPACE LEASE AGREEMENT (this "Lease") is entered into and made effective as of <docset:EffectiveDate xsi:type="date" dg:value="2085-01-01" dg:origin="1 1843 554 2076 586">January 1, 2085</docset:EffectiveDate>, by and between <docset:LandlordName dg:origin="1 122 601 539 632" dg:style="font-weight: bold">Ares Prime Yield Fund I, LP</docset:LandlordName>, a <docset:LandlordEntityType dg:origin="1 574 601 942 632">Martian limited partnership</docset:LandlordEntityType> (hereinafter referred to as "Landlord"), and the <docset:TenantName dg:origin="1 1618 601 2061 632" dg:style="font-weight: bold">United Colonies Commissary</docset:TenantName>, an <docset:TenantEntityType dg:origin="1 2113 601 2305 632; 1 122 648 1030 679" dg:style="font-weight: bold">administrative agency of the United Nations Martian Administration (UNMA)</docset:TenantEntityType> (hereinafter referred to as "Tenant").</docset:Recital>
+      <docset:Recital dg:structure="p" dg:origin="1 122 735 338 766" dg:style="font-weight: bold; text-transform: uppercase">WITNESSETH:</docset:Recital>
+    </docset:LeaseAgreementType>
+    <docset:PremisesDescription dg:structure="section" dg:origin="1 122 821 2348 1088">
+      <dg:chunk dg:structure="header" dg:origin="1 122 821 638 852" dg:style="font-weight: bold; text-transform: uppercase">ARTICLE 1: PREMISES AND TERM</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="1 169 907 2348 1088">
+        <docset:PremisesDescription dg:structure="li" dg:origin="1 169 907 2278 939; 1 169 954 694 986">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 907 221 939" dg:style="font-weight: bold">1.1.</dg:chunk> Premises: <docset:SuiteOrSectorIdentifier dg:origin="1 388 907 529 939">Suite 100</docset:SuiteOrSectorIdentifier>, <docset:DomeFacilityIdentifier dg:origin="1 537 907 874 939">Dome 2 (Olympus Mall)</docset:DomeFacilityIdentifier>, <docset:ZoneIdentifier dg:origin="1 883 907 989 939">Zone 1</docset:ZoneIdentifier>, Ares Prime, consisting of approximately <docset:PremisesArea dg:origin="1 1555 907 1842 939">8,500 square meters</docset:PremisesArea> of <docset:PremisesUseType dg:origin="1 1885 907 2215 939">pressurized retail space</docset:PremisesUseType> (the "Premises"), as shown on Exhibit A.</docset:PremisesDescription>
+        <dg:chunk dg:structure="li" dg:origin="1 169 1010 2348 1041; 1 169 1056 271 1088">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 1010 221 1041" dg:style="font-weight: bold">1.2.</dg:chunk> Term: <docset:LeaseTerm dg:origin="1 325 1010 702 1041">Twenty (20) Martian Years</docset:LeaseTerm>, commencing on <docset:CommencementDate xsi:type="date" dg:value="2085-01-01" dg:origin="1 940 1010 1164 1041" xml:id="commencementdate">January 1, 2085</docset:CommencementDate> (the "Commencement Date"), and expiring on <docset:ExpirationDate xsi:type="date" dg:value="2105-12-31" dg:origin="1 1835 1010 2109 1041" xml:id="expirationdate" dg:itemprop="relativeTo" dg:href="#commencementdate">December 31, 2105</docset:ExpirationDate> (the "Expiration Date").</dg:chunk>
+      </dg:chunk>
+    </docset:PremisesDescription>
+    <docset:BaseRent dg:structure="section" dg:origin="1 122 1143 2326 1410">
+      <dg:chunk dg:structure="header" dg:origin="1 122 1143 707 1174" dg:style="font-weight: bold; text-transform: uppercase">ARTICLE 2: RENT AND ADJUSTMENTS</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="1 169 1229 2326 1410">
+        <dg:chunk dg:structure="li" dg:origin="1 169 1229 2326 1261; 1 169 1276 1635 1307">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 1229 221 1261" dg:style="font-weight: bold">2.1.</dg:chunk> Base Rent: Base Rent shall be <docset:BaseRent dg:origin="1 673 1229 1725 1261" xml:id="baserent">Two Million Five Hundred Fifty Thousand Martian Credits (M$ 2,550,000.00)</docset:BaseRent> per annum (<docset:BaseRentPerSquareMeter dg:origin="1 1902 1229 2180 1261">M$ 300.00 per sq.m.</docset:BaseRentPerSquareMeter>), payable in monthly installments of <docset:MonthlyRentInstallment dg:origin="1 529 1276 1635 1307" xml:id="monthlyrentinstallment" dg:itemprop="valueFrom" dg:href="#baserent" dg:value="P1M">Two Hundred Twelve Thousand Five Hundred Martian Credits (M$ 212,500.00)</docset:MonthlyRentInstallment>.</dg:chunk>
+        <docset:RentEscalationFormula dg:structure="li" dg:origin="1 169 1331 2220 1363; 1 169 1378 2175 1410" xml:id="rentescalationformula" dg:itemprop="escalates" dg:href="#baserent">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 1331 221 1363" dg:style="font-weight: bold">2.2.</dg:chunk> Escalation Schedule: Base Rent shall remain flat for Lease Years 1 through 5. On the first day of Lease Year 6, and <docset:RentEscalationInterval dg:origin="1 1859 1331 2220 1363; 1 169 1378 331 1410">every fifth (5th) lease year anniversary</docset:RentEscalationInterval> thereafter, the Base Rent shall increase by a flat <docset:RentEscalationRate dg:origin="1 1015 1378 1277 1410" xml:id="rentescalationrate" dg:itemprop="escalates" dg:href="#rentescalationformula" dg:value="0.05">five percent (5.0%)</docset:RentEscalationRate> of the rent in effect during the immediately preceding lease year.</docset:RentEscalationFormula>
+      </dg:chunk>
+    </docset:BaseRent>
+    <docset:TenantImprovementAllowance dg:structure="section" dg:origin="1 122 1465 2298 1778">
+      <dg:chunk dg:structure="header" dg:origin="1 122 1465 1101 1496" dg:style="font-weight: bold; text-transform: uppercase">ARTICLE 3: RENT CONCESSIONS AND TENANT IMPROVEMENTS</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="1 169 1551 2298 1778">
+        <dg:chunk dg:structure="li" dg:origin="1 169 1551 2298 1582; 1 169 1598 2293 1629; 1 169 1645 244 1676">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 1551 221 1582" dg:style="font-weight: bold">3.1.</dg:chunk> Tenant Improvement Allowance: Landlord shall provide Tenant with a Tenant Improvement (TI) Allowance of <docset:TenantImprovementAllowance dg:origin="1 1770 1551 2298 1582; 1 169 1598 506 1629">Six Hundred Eighty Thousand Martian Credits (M$ 680,000.00)</docset:TenantImprovementAllowance> (<docset:TenantImprovementAllowancePerSquareMeter dg:origin="1 525 1598 786 1629">M$ 80.00 per sq.m.</docset:TenantImprovementAllowancePerSquareMeter>) for the <docset:TIAllowanceUseDescription dg:origin="1 911 1598 2293 1629; 1 169 1645 244 1676">installation of heavy-duty refrigeration systems, airlock retail entry points, and high-capacity shelving units</docset:TIAllowanceUseDescription>.</dg:chunk>
+        <docset:RentConcession dg:structure="li" dg:origin="1 169 1700 2244 1731; 1 169 1747 1507 1778">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 1700 221 1731" dg:style="font-weight: bold">3.2.</dg:chunk> Rent Abatement: Tenant shall receive a full abatement of Base Rent for the <docset:RentConcessionPeriod dg:origin="1 1295 1700 2048 1731">first three (3) months of the second (2nd) Lease Year</docset:RentConcessionPeriod> (the "Deferred Abatement Period") to offset logistical interruptions associated with seasonal solar wind storms.</docset:RentConcession>
+      </dg:chunk>
+    </docset:TenantImprovementAllowance>
+    <docset:UtilityAndOperatingExpenseResponsibility dg:structure="section" dg:origin="1 122 1833 2354 2147">
+      <dg:chunk dg:structure="header" dg:origin="1 122 1833 897 1865" dg:style="font-weight: bold; text-transform: uppercase">ARTICLE 4: UTILITIES AND EXPENSE RECOVERIES</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="1 169 1920 2354 2147">
+        <dg:chunk dg:structure="li" dg:origin="1 169 1920 2354 1951; 1 169 1967 2350 1998; 1 169 2014 875 2045">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 1920 221 1951" dg:style="font-weight: bold">4.1.</dg:chunk> Modified Gross Structure: Landlord and Tenant agree that this Lease is structured as a <docset:ExpenseStructure dg:origin="1 1468 1920 1781 1951">Modified Gross Lease</docset:ExpenseStructure>. Landlord shall establish an expense stop for the cost of oxygen, nitrogen, and potable water utility replenishment equal to <docset:BaseYearExpenseStop dg:origin="1 1277 1967 2222 1998" xml:id="baseyearexpensestop">Forty-Five Martian Credits (M$ 45.00) per square meter per annum</docset:BaseYearExpenseStop> (the "LSS Expense Stop", based on the Base Year of <docset:BaseYear xsi:type="gYear" dg:value="2085" dg:origin="1 787 2014 856 2045" xml:id="baseyear" dg:itemprop="effectiveOn" dg:href="#commencementdate">2085</docset:BaseYear>).</dg:chunk>
+        <docset:UtilityAndOperatingExpenseResponsibility dg:structure="li" dg:origin="1 169 2069 2327 2100; 1 169 2116 1892 2147">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 2069 221 2100" dg:style="font-weight: bold">4.2.</dg:chunk> Recovery Excess: Tenant shall pay as Additional Rent its proportionate share of any costs exceeding the LSS Expense Stop. Any increase in Tenant's annual LSS recovery billing shall be capped at <docset:RecoveryBillingCap dg:origin="1 819 2116 1104 2147" xml:id="recoverybillingcap" dg:itemprop="escalates" dg:href="#baseyearexpensestop" dg:value="0.03">three percent (3.0%)</docset:RecoveryBillingCap> over the actual billing of the immediately preceding year.</docset:UtilityAndOperatingExpenseResponsibility>
+      </dg:chunk>
+    </docset:UtilityAndOperatingExpenseResponsibility>
+    <docset:CoTenancyRequirement dg:structure="section" dg:origin="1 122 2202 2352 3331; 2 122 120 786 151">
+      <dg:chunk dg:structure="header" dg:origin="1 122 2202 1239 2233" dg:style="font-weight: bold; text-transform: uppercase">ARTICLE 5: SPECIAL COVENANTS, CO-TENANCY, AND GO-DARK RIGHTS</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="1 169 2289 2352 2665">
+        <docset:CoTenancyRequirement dg:structure="li" dg:origin="1 169 2289 2304 2320; 1 169 2336 2314 2367; 1 169 2382 2158 2414">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 2289 221 2320" dg:style="font-weight: bold">5.1.</dg:chunk> Retail Co-Tenancy: Landlord shall maintain at least <docset:CoTenancyOccupancyThreshold dg:origin="1 961 2289 1229 2320">sixty percent (60%)</docset:CoTenancyOccupancyThreshold> occupancy of the net leasable retail area of Dome 2 (excluding the Premises) with active, pressurized retail businesses. If such occupancy falls below <dg:chunk dg:structure="span" xsi:type="decimal" dg:value="60" dg:origin="1 1166 2336 1237 2367">60%</dg:chunk>, or if the secondary anchor tenant (<docset:AnchorTenantIdentifier dg:origin="1 1722 2336 2041 2367">Martian Agritech Depot</docset:AnchorTenantIdentifier>) ceases operations for more than <docset:CoTenancyGracePeriod dg:origin="1 364 2382 912 2414">forty-five (45) consecutive Martian Sols</docset:CoTenancyGracePeriod>, Tenant's obligation to pay Base Rent shall immediately be reduced by <docset:CoTenancyRemedyRate dg:origin="1 1896 2382 2158 2414" xml:id="cotenancyremedyrate" dg:itemprop="valueFrom" dg:href="#baserent" dg:value="0.50">fifty percent (50%)</docset:CoTenancyRemedyRate>.</docset:CoTenancyRequirement>
+        <docset:EarlyTerminationOption dg:structure="li" dg:origin="1 169 2438 2352 2469; 1 169 2485 2252 2516; 1 169 2531 784 2563">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 2438 221 2469" dg:style="font-weight: bold">5.2.</dg:chunk> Go-Dark Rights: Tenant, as a critical civil entity, shall have the right to cease operations and "Go Dark" without violating the terms of this Lease if a Level 3 or higher Colony-wide emergency evacuation order is declared by the UNMA. During any such period, Tenant shall continue to pay Base Rent at <dg:GoDarkRentRate dg:origin="1 2203 2485 2252 2516; 1 169 2531 365 2563" xml:id="godarkrentrate" dg:itemprop="valueFrom" dg:href="#baserent" dg:value="0.50">fifty percent (50%)</dg:GoDarkRentRate> of the rate otherwise in effect.</docset:EarlyTerminationOption>
+        <dg:ExclusiveUseRestriction dg:structure="li" dg:origin="1 169 2587 2290 2618; 1 169 2633 1086 2665">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 2587 221 2618" dg:style="font-weight: bold">5.3.</dg:chunk> Exclusive Use: Landlord shall not lease any space within Dome 2 to any other tenant whose primary business is the sale of dehydrated food rations, standard-issue surface survival gear, or Earth-imported dry goods.</dg:ExclusiveUseRestriction>
+      </dg:chunk>
+      <docset:Execution dg:structure="p" dg:origin="1 122 2720 1460 2751">IN WITNESS WHEREOF, the parties have executed this Lease as of the date first above written.</docset:Execution>
+      <docset:Execution dg:structure="p" dg:origin="1 122 2806 308 2838" dg:style="font-weight: bold; text-transform: uppercase">LANDLORD:</docset:Execution>
+      <docset:LandlordName dg:structure="p" dg:origin="1 122 2853 508 2885" dg:style="font-style: italic" xml:id="landlordname">Ares Prime Yield Fund I, LP</docset:LandlordName>
+      <docset:Execution dg:structure="p" dg:origin="1 122 2939 476 2971">By: /s/ Michael Chen</docset:Execution>
+      <docset:Execution dg:structure="p" dg:origin="1 122 2987 414 3018">Name: <docset:SignatoryName dg:origin="1 223 2987 414 3018" xml:id="signatoryname" dg:itemprop="signatoryOf" dg:href="#landlordname">Michael Chen</docset:SignatoryName>
+      </docset:Execution>
+      <docset:Execution dg:structure="p" dg:origin="1 122 3033 767 3065">Title: <docset:Signatory dg:origin="1 199 3033 767 3065">Managing Director of Asset Management</docset:Signatory>
+      </docset:Execution>
+      <docset:Execution dg:structure="p" dg:origin="1 122 3120 259 3151" dg:style="font-weight: bold; text-transform: uppercase">TENANT:</docset:Execution>
+      <docset:TenantName dg:structure="p" dg:origin="1 122 3167 525 3198" dg:style="font-style: italic" xml:id="tenantname">United Colonies Commissary</docset:TenantName>
+      <docset:Execution dg:structure="p" dg:origin="1 122 3253 551 3285">By: /s/ Arthur Pendelton</docset:Execution>
+      <docset:Execution dg:structure="p" dg:origin="1 122 3300 457 3331">Name: <docset:SignatoryName dg:origin="1 223 3300 457 3331" xml:id="signatoryname-2" dg:itemprop="signatoryOf" dg:href="#tenantname">Arthur Pendelton</docset:SignatoryName>
+      </docset:Execution>
+      <docset:Execution dg:structure="p" dg:origin="2 122 120 786 151">Title: <docset:Signatory dg:origin="2 199 120 786 151">Under-Secretary of Civilian Supply, UNMA</docset:Signatory>
+      </docset:Execution>
+    </docset:CoTenancyRequirement>
+  </docset:PropertyPortfolioLabel>
+</dg:chunk>

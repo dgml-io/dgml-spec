@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/PeriodicFinancialReportingPackage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2287 2130">
+  <docset:ReportingPackage dg:structure="section" dg:origin="1 193 258 2287 2130" xml:id="reportingpackage" dg:itemprop="describes" dg:href="#reportingentityname">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 1626 311" dg:style="font-weight: bold; font-size: 2em">
+      <docset:ReportingEntityName dg:origin="1 262 258 835 311" xml:id="reportingentityname">Lineae Express Corp.</docset:ReportingEntityName> - Operating Package <docset:ReportingPeriod dg:origin="1 1412 258 1626 311">Q2 2026</docset:ReportingPeriod>
+    </dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 262 567 654 599">
+      <dg:chunk dg:structure="li" dg:origin="1 262 567 654 599">
+        <dg:chunk dg:structure="header" dg:origin="1 262 567 526 599" dg:style="font-weight: bold; font-size: 1.25em; color: darkslategray">Reporting Period:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 534 567 654 599">
+          <docset:ReportingPeriod dg:origin="1 534 567 654 599" dg:style="font-size: 1.25em; color: darkslategray">Q2 2026</docset:ReportingPeriod>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:IndustrialOutput dg:structure="section" dg:origin="1 193 1010 2287 2130">
+      <dg:chunk dg:structure="header" dg:origin="1 262 1010 1035 1050" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="1 262 1010 294 1050">1.</dg:chunk> Corridor Performance Segment Metrics</dg:chunk>
+      <dg:CorridorSegmentPerformance dg:structure="table" dg:origin="1 193 1211 2287 1776">
+        <dg:chunk dg:structure="tr" dg:origin="1 193 1211 2245 1277">
+          <dg:chunk dg:structure="td" dg:origin="1 193 1231 401 1257" dg:style="font-weight: bold">Transit Segment</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 642 1231 924 1257" dg:style="font-weight: bold">Freight Volume (Tons)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1091 1231 1349 1257" dg:style="font-weight: bold">Cargo Income (ECU)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1540 1231 1814 1257" dg:style="font-weight: bold">Siphon Upkeep (ECU)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1988 1211 2245 1237; 1 1988 1250 2062 1277" dg:style="font-weight: bold">Net Segment Margin (ECU)</dg:chunk>
+        </dg:chunk>
+        <docset:SegmentRevenueActual dg:structure="tr" dg:origin="1 193 1390 2287 1457">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1390 478 1417; 1 193 1430 252 1457" dg:style="color: darkslategray">Lineae Equator-to-North Loop</docset:OperationalSegmentName>
+          <docset:PhysicalOutputVolume dg:structure="td" dg:origin="1 642 1410 753 1437" dg:style="color: darkslategray" xml:id="physicaloutputvolume">840,000 t</docset:PhysicalOutputVolume>
+          <docset:GrossRevenue dg:structure="td" xsi:type="integer" dg:value="120500000" dg:origin="1 1242 1410 1390 1437" dg:style="color: darkslategray" xml:id="grossrevenue">120,500,000</docset:GrossRevenue>
+          <docset:DirectCost dg:structure="td" dg:origin="1 1688 1410 1838 1437" dg:style="color: darkslategray" xml:id="directcost">(22,200,000)</docset:DirectCost>
+          <docset:NetSegmentMargin dg:structure="td" xsi:type="integer" dg:value="98300000" dg:origin="1 2154 1410 2287 1437" dg:style="color: darkslategray" xml:id="netsegmentmargin" dg:itemprop="derivedFrom" dg:href="#grossrevenue #directcost">98,300,000</docset:NetSegmentMargin>
+        </docset:SegmentRevenueActual>
+        <docset:SegmentRevenueActual dg:structure="tr" dg:origin="1 193 1570 2287 1636">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1570 447 1597; 1 193 1610 249 1636" dg:style="color: darkslategray">Rift Valley Secondary Spur</docset:OperationalSegmentName>
+          <docset:PhysicalOutputVolume dg:structure="td" dg:origin="1 642 1590 753 1617" dg:style="color: darkslategray" xml:id="physicaloutputvolume-2">120,000 t</docset:PhysicalOutputVolume>
+          <docset:GrossRevenue dg:structure="td" xsi:type="integer" dg:value="21400000" dg:origin="1 1257 1590 1390 1617" dg:style="color: darkslategray" xml:id="grossrevenue-2">21,400,000</docset:GrossRevenue>
+          <docset:DirectCost dg:structure="td" dg:origin="1 1703 1590 1838 1617" dg:style="color: darkslategray" xml:id="directcost-2">(7,200,000)</docset:DirectCost>
+          <docset:NetSegmentMargin dg:structure="td" xsi:type="integer" dg:value="14200000" dg:origin="1 2154 1590 2287 1617" dg:style="color: darkslategray" xml:id="netsegmentmargin-2" dg:itemprop="derivedFrom" dg:href="#grossrevenue-2 #directcost-2">14,200,000</docset:NetSegmentMargin>
+        </docset:SegmentRevenueActual>
+        <docset:SegmentRevenueActual dg:structure="tr" dg:origin="1 193 1750 2287 1776">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1750 257 1776" dg:style="font-weight: bold; color: darkslategray">Total</docset:OperationalSegmentName>
+          <docset:PhysicalOutputVolume dg:structure="td" dg:origin="1 642 1750 754 1776" dg:style="font-weight: bold; color: darkslategray" xml:id="physicaloutputvolume-3" dg:itemprop="derivedFrom" dg:href="#physicaloutputvolume #physicaloutputvolume-2">960,000 t</docset:PhysicalOutputVolume>
+          <docset:GrossRevenue dg:structure="td" xsi:type="integer" dg:value="141900000" dg:origin="1 1242 1750 1390 1776" dg:style="font-weight: bold; color: darkslategray" xml:id="grossrevenue-3" dg:itemprop="derivedFrom" dg:href="#grossrevenue #grossrevenue-2">141,900,000</docset:GrossRevenue>
+          <docset:DirectCost dg:structure="td" dg:origin="1 1688 1750 1838 1776" dg:style="font-weight: bold; color: darkslategray" xml:id="directcost-3" dg:itemprop="derivedFrom" dg:href="#directcost #directcost-2">(29,400,000)</docset:DirectCost>
+          <docset:NetSegmentMargin dg:structure="td" xsi:type="integer" dg:value="112500000" dg:origin="1 2140 1750 2287 1776" dg:style="font-weight: bold; color: darkslategray" xml:id="netsegmentmargin-3" dg:itemprop="derivedFrom" dg:href="#netsegmentmargin #netsegmentmargin-2">112,500,000</docset:NetSegmentMargin>
+        </docset:SegmentRevenueActual>
+      </dg:CorridorSegmentPerformance>
+      <docset:CovenantComplianceNarrative dg:structure="p" dg:origin="1 262 2052 2120 2083; 1 262 2099 377 2130" dg:style="font-size: 1.25em; color: darkslategray" xml:id="covenantcompliancenarrative" dg:itemprop="references" dg:href="#covenantmetricname">Compliance Status: The <docset:ReserveAccountName dg:origin="1 625 2052 995 2083" xml:id="reserveaccountname">Emergency Track Reserve</docset:ReserveAccountName> is fully funded at <docset:ReserveAccountBalance dg:origin="1 1238 2052 1478 2083">51,500,000 ECU</docset:ReserveAccountBalance>. The <docset:CovenantMetricName dg:origin="1 1549 2052 1898 2083" xml:id="covenantmetricname">Debt Yield covenant ratio</docset:CovenantMetricName> remains safe at <docset:DebtYieldRatio xsi:type="decimal" dg:value="13.24" dg:origin="1 262 2099 377 2130">13.24%</docset:DebtYieldRatio>.</docset:CovenantComplianceNarrative>
+    </docset:IndustrialOutput>
+  </docset:ReportingPackage>
+</dg:chunk>

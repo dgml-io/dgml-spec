@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/ManagerValuationMemorandum" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 206 258 2139 1092">
+  <docset:ValuationDocumentType dg:structure="section" dg:origin="1 206 258 2139 1092" xml:id="valuationdocumenttype" dg:itemprop="describes" dg:href="#propertyname">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 1070 311" dg:style="font-weight: bold; font-size: 1.5em">Valuation Office Memorandum</dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 206 502 829 747">
+      <dg:chunk dg:structure="li" dg:origin="1 206 502 696 530">
+        <dg:chunk dg:structure="header" dg:origin="1 206 502 254 530" dg:style="font-weight: bold; color: darkslategray">TO:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 262 502 696 530">
+          <docset:RecipientOrganization dg:origin="1 262 502 696 530" dg:style="color: darkslategray" xml:id="recipientorganization">Callisto Mortgage Fund Committee</docset:RecipientOrganization>
+        </dg:chunk>
+      </dg:chunk>
+      <dg:chunk dg:structure="li" dg:origin="1 206 719 829 747">
+        <dg:chunk dg:structure="header" dg:origin="1 206 719 370 747" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">PROPERTY:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 378 719 829 747">
+          <docset:PropertyName dg:origin="1 378 719 829 747" dg:style="color: darkslategray" xml:id="propertyname">Pwyll Crater Sub-Ice Condominiums</docset:PropertyName>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:ValuationSummaryAndParameters dg:structure="p" dg:origin="1 262 1014 2061 1045; 1 262 1061 2139 1092" dg:style="color: darkslategray" xml:id="valuationsummaryandparameters" dg:itemprop="describes" dg:href="#propertyname">We evaluate the Pwyll Crater residential assets at <docset:AppraisedValue dg:origin="1 958 1014 1215 1045" dg:style="font-weight: bold">490,000,000 ECU</docset:AppraisedValue>. Valuation is based on a terminal capitalization rate of <dg:TerminalCapRate xsi:type="decimal" dg:value="7.50" dg:origin="1 1964 1014 2061 1045">7.50%</dg:TerminalCapRate>, capitalizing current Net Operating Income of <docset:UnderwritingBaseValue dg:origin="1 880 1061 1042 1092" dg:style="text-transform: uppercase">32.2M ECU</docset:UnderwritingBaseValue> per quarter. Residential demand from researchers arriving from Earth is stable.</docset:ValuationSummaryAndParameters>
+  </docset:ValuationDocumentType>
+</dg:chunk>

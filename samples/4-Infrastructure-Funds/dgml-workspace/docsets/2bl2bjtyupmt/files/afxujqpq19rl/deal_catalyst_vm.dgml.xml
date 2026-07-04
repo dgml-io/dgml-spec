@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/ManagerValuationMemorandum" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 206 258 2206 875">
+  <docset:ValuationDocumentType dg:structure="section" dg:origin="1 206 258 2206 875">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 770 311" dg:style="font-weight: bold; font-size: 1.5em">Valuation Advisory</dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 206 502 929 530">
+      <dg:chunk dg:structure="li" dg:origin="1 206 502 929 530">
+        <dg:chunk dg:structure="header" dg:origin="1 206 502 370 530" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">PROPERTY:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 378 502 929 530">
+          <docset:PropertyName dg:origin="1 378 502 929 530" dg:style="color: darkslategray">Macula Cryo-Brewery &amp; Entertainment Vault</docset:PropertyName>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:ValuationSummaryAndParameters dg:structure="p" dg:origin="1 262 797 2206 828; 1 262 844 996 875" dg:style="color: darkslategray" xml:id="valuationsummaryandparameters" dg:itemprop="references" dg:href="#discountrate" dg:value="11.5%">Applying an <docset:DiscountRate xsi:type="decimal" dg:value="11.5" dg:origin="1 434 797 522 828" xml:id="discountrate">11.5%</docset:DiscountRate> discount factor to operations, the asset is appraised at <docset:AppraisedValue dg:origin="1 1288 797 1528 828" dg:style="font-weight: bold" xml:id="appraisedvalue">68,000,000 ECU</docset:AppraisedValue>. Capitalization values remain solid based on high customer traffic inside the under-ice leisure corridors.</docset:ValuationSummaryAndParameters>
+  </docset:ValuationDocumentType>
+</dg:chunk>

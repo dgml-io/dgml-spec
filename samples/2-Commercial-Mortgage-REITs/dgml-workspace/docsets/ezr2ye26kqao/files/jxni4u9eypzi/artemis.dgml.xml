@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/SecuredCreditAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 229 221 2321 2902; 2 229 265 2295 1424">
+  <docset:SecuredCreditAgreement dg:structure="section" dg:origin="1 229 221 2321 2902; 2 229 265 2295 1424" xml:id="securedcreditagreement" dg:itemprop="effectiveOn" dg:href="#signaturedate">
+    <dg:chunk dg:structure="header" dg:origin="1 846 221 1704 296" dg:style="font-weight: bold; font-size: 1.5em">Secured Credit Agreement</dg:chunk>
+    <docset:IntroductoryRecital dg:structure="p" dg:origin="1 229 452 2321 496; 1 229 518 2321 561; 1 229 583 1824 627">This SECURED CREDIT AGREEMENT (this "Agreement") is entered into as of the Effective Date by and between <docset:BorrowerName dg:origin="1 229 518 940 561" dg:style="font-weight: bold; text-transform: uppercase" xml:id="borrowername">ARTEMIS DATA SYSTEMS LTD.</docset:BorrowerName>, a <docset:BorrowerJurisdiction dg:origin="1 1003 518 1568 561">South Pole Settlement District</docset:BorrowerJurisdiction> corporation (the "Borrower"), and the <docset:LenderName dg:origin="1 229 583 1506 627" dg:style="font-weight: bold; text-transform: uppercase" xml:id="lendername">CONCERT OF JOVIAN-LUNAR SOVEREIGN WEALTH FUNDS</docset:LenderName> (the "Lenders").</docset:IntroductoryRecital>
+    <docset:DefinedTerms dg:structure="section" dg:origin="1 229 740 2265 1392">
+      <dg:chunk dg:structure="header" dg:origin="1 229 740 1034 784" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="1 229 740 386 784">Article I</dg:chunk> Definitions and Cross-References</dg:chunk>
+      <docset:DefinedTerms dg:structure="section" dg:origin="1 229 826 2265 1392">
+        <dg:chunk dg:structure="header" dg:origin="1 229 826 764 870" dg:style="font-weight: bold">
+          <dg:chunk dg:structure="lim" dg:origin="1 229 826 464 870">Section 1.01</dg:chunk> Defined Terms</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 775 826 2239 870">As used in this Agreement, the following terms have the meanings specified below:</dg:chunk>
+        <dg:chunk dg:structure="ol" dg:origin="1 378 933 2265 1392">
+          <docset:EffectiveDateDefinition dg:structure="li" dg:origin="1 378 933 2265 977; 1 378 999 729 1043" xml:id="effectivedatedefinition" dg:itemprop="effectiveOn" dg:href="#signaturedate">
+            <dg:chunk dg:structure="lim">•</dg:chunk> "Effective Date": This Agreement becomes fully enforceable upon the "Date of Signatures" appearing in the execution panel.</docset:EffectiveDateDefinition>
+          <docset:InterestIndex dg:structure="li" dg:origin="1 378 1094 2169 1137; 1 378 1159 680 1203" xml:id="interestindex">
+            <dg:chunk dg:structure="lim">•</dg:chunk> "SOFR Index": The Daily Solar System Overnight Financial Rate administered by the Interplanetary Settlement Bank.</docset:InterestIndex>
+          <docset:OperationalCovenantName dg:structure="li" dg:origin="1 378 1254 1799 1298" xml:id="operationalcovenantname-2" dg:itemprop="references" dg:href="#operationalcovenantname">
+            <dg:chunk dg:structure="lim">•</dg:chunk> "Cryogenic Cooling Standard": The thermal threshold defined in Section 3.01.</docset:OperationalCovenantName>
+          <dg:ReserveFundName dg:structure="li" dg:origin="1 378 1349 1893 1392" xml:id="reservefundname-2" dg:itemprop="references" dg:href="#reservefundname">
+            <dg:chunk dg:structure="lim">•</dg:chunk> "Physical Protection Fund": The sovereign reserve balance set forth in Section 4.01.</dg:ReserveFundName>
+        </dg:chunk>
+      </docset:DefinedTerms>
+    </docset:DefinedTerms>
+    <docset:CreditFacility dg:structure="section" dg:origin="1 229 1543 2321 1846">
+      <dg:chunk dg:structure="header" dg:origin="1 229 1543 1167 1587" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="1 229 1543 403 1587">Article II</dg:chunk> Credit Facility and Index Conformance</dg:chunk>
+      <docset:CreditFacilityCommitment dg:structure="section" dg:origin="1 229 1629 1649 1673">
+        <dg:chunk dg:structure="header" dg:origin="1 229 1629 658 1673" dg:style="font-weight: bold">
+          <dg:chunk dg:structure="lim" dg:origin="1 229 1629 464 1673">Section 2.01</dg:chunk> Principal</dg:chunk>
+        <docset:CreditFacilityCommitment dg:structure="p" dg:origin="1 669 1629 1649 1673">Lenders extend a total commitment of <docset:PrincipalAmount dg:origin="1 1347 1629 1649 1673" dg:style="font-weight: bold">LC 500,000,000</docset:PrincipalAmount>.</docset:CreditFacilityCommitment>
+      </docset:CreditFacilityCommitment>
+      <docset:CreditFacilityInterest dg:structure="section" dg:origin="1 229 1736 2321 1846">
+        <dg:chunk dg:structure="header" dg:origin="1 229 1736 933 1780" dg:style="font-weight: bold">
+          <dg:chunk dg:structure="lim" dg:origin="1 229 1736 470 1780">Section 2.02</dg:chunk> Interest Rate Indexing</dg:chunk>
+        <docset:CreditFacilityInterest dg:structure="p" dg:origin="1 951 1736 2321 1780; 1 229 1802 1081 1846" xml:id="creditfacilityinterest" dg:itemprop="references" dg:href="#interestindex">Daily interest calculations shall depend on the "<docset:InterestIndex dg:origin="1 1840 1736 2081 1780" dg:style="font-weight: bold">SOFR Index</docset:InterestIndex>" (defined in Section 1.01) plus a spread of <docset:InterestSpread dg:origin="1 760 1802 1081 1846">2.50% per annum</docset:InterestSpread>.</docset:CreditFacilityInterest>
+      </docset:CreditFacilityInterest>
+    </docset:CreditFacility>
+    <docset:OperationalStandards dg:structure="section" dg:origin="1 229 1959 2321 2154">
+      <dg:chunk dg:structure="header" dg:origin="1 229 1959 1015 2003" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="1 229 1959 420 2003">Article III</dg:chunk> Asset Standards &amp; Cryogenics</dg:chunk>
+      <docset:OperationalCovenantName dg:structure="section" dg:origin="1 229 2045 2321 2154" xml:id="operationalcovenantname">
+        <dg:chunk dg:structure="header" dg:origin="1 229 2045 1046 2088" dg:style="font-weight: bold">
+          <dg:chunk dg:structure="lim" dg:origin="1 229 2045 470 2088">Section 3.01</dg:chunk> Cryogenic Cooling Standard</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 1063 2045 2321 2088; 1 229 2110 1693 2154">Borrower covenants to preserve all active quantum memory modules below <docset:OperationalThreshold dg:origin="1 347 2110 532 2154">40 Kelvin</docset:OperationalThreshold>, which core limit is defined as the "<docset:OperationalCovenantName dg:origin="1 1159 2110 1693 2154" dg:style="font-weight: bold">Cryogenic Cooling Standard</docset:OperationalCovenantName>".</dg:chunk>
+      </docset:OperationalCovenantName>
+    </docset:OperationalStandards>
+    <docset:SpecialtyReservesOrCovenants dg:structure="section" dg:origin="1 229 2267 2321 2528">
+      <dg:chunk dg:structure="header" dg:origin="1 229 2267 789 2311" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="1 229 2267 417 2311">Article IV</dg:chunk> Specialty Reserves</dg:chunk>
+      <dg:ReserveFundName dg:structure="section" dg:origin="1 229 2353 2321 2528" xml:id="reservefundname">
+        <dg:chunk dg:structure="header" dg:origin="1 229 2353 988 2397" dg:style="font-weight: bold">
+          <dg:chunk dg:structure="lim" dg:origin="1 229 2353 471 2397">Section 4.01</dg:chunk> Physical Protection Fund</dg:chunk>
+        <docset:SpecialtyReservesOrCovenants dg:structure="p" dg:origin="1 1007 2353 2321 2397; 1 229 2419 2321 2462; 1 229 2484 396 2528">The Borrower shall lock a capital account with at least <dg:ReserveAmount dg:origin="1 2049 2353 2321 2397">LC 45,000,000</dg:ReserveAmount> designated as the "<dg:ReserveFundName dg:origin="1 587 2419 1074 2462" dg:style="font-weight: bold">Physical Protection Fund</dg:ReserveFundName>" for rapid deployable shielding during extreme solar coronal mass ejections.</docset:SpecialtyReservesOrCovenants>
+      </dg:ReserveFundName>
+    </docset:SpecialtyReservesOrCovenants>
+    <docset:EventsOfDefault dg:structure="section" dg:origin="1 229 2641 2321 2902; 2 229 265 2295 1424">
+      <dg:chunk dg:structure="header" dg:origin="1 229 2641 1108 2685" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="1 229 2641 400 2685">Article V</dg:chunk> Enforcement &amp; Covenant Violations</dg:chunk>
+      <docset:DefaultTriggerDescription dg:structure="section" dg:origin="1 229 2727 2321 2902; 2 229 265 2295 309" xml:id="defaulttriggerdescription" dg:itemprop="references" dg:href="#operationalcovenantname">
+        <dg:chunk dg:structure="header" dg:origin="1 229 2727 859 2771" dg:style="font-weight: bold">
+          <dg:chunk dg:structure="lim" dg:origin="1 229 2727 465 2771">Section 5.01</dg:chunk> Operational Breach</dg:chunk>
+        <docset:DefaultTriggerDescription dg:structure="p" dg:origin="1 871 2727 2321 2771; 1 229 2793 2321 2836; 1 229 2858 2089 2902" xml:id="defaulttriggerdescription-2" dg:itemprop="references" dg:href="#reservefundname">If the Borrower breaches the "<docset:OperationalCovenantName dg:origin="1 1413 2727 1949 2771" dg:style="font-weight: bold">Cryogenic Cooling Standard</docset:OperationalCovenantName>" (defined in Section 3.01) and fails to correct the violation within <docset:DefaultCurePeriod dg:origin="1 1039 2793 1405 2836">four (4) Earth hours</docset:DefaultCurePeriod>, Lenders may demand immediate liquidity transfers from the "<dg:ReserveFundName dg:origin="1 414 2858 885 2902" dg:style="font-weight: bold">Physical Protection Fund</dg:ReserveFundName>" (defined in Section 4.01) to manage third-party service guarantees.</docset:DefaultTriggerDescription>
+        <dg:chunk dg:structure="p" dg:origin="2 229 265 2295 309">IN WITNESS WHEREOF, the parties hereto have caused this Agreement to be executed as of the date written below.</dg:chunk>
+      </docset:DefaultTriggerDescription>
+      <docset:BorrowerExecution dg:structure="section" dg:origin="2 229 505 763 877" xml:id="borrowerexecution" dg:itemprop="signatoryOf" dg:href="#borrowername">
+        <dg:chunk dg:structure="header" dg:origin="2 229 505 509 548" dg:style="font-weight: bold; text-transform: uppercase">BORROWER:</dg:chunk>
+        <docset:BorrowerName dg:structure="p" dg:origin="2 229 570 703 614">Artemis Data Systems Ltd.</docset:BorrowerName>
+        <dg:chunk dg:structure="ul" dg:origin="2 229 702 763 877">
+          <dg:chunk dg:structure="li" dg:origin="2 229 702 292 745">
+            <dg:chunk dg:structure="header" dg:origin="2 229 702 292 745">By:</dg:chunk>
+            <dg:chunk dg:structure="p"/>
+          </dg:chunk>
+          <dg:chunk dg:structure="li" dg:origin="2 229 767 637 811">
+            <dg:chunk dg:structure="header" dg:origin="2 229 767 346 811">Name:</dg:chunk>
+            <dg:chunk dg:structure="p" dg:origin="2 357 767 637 811">
+              <docset:BorrowerSignatory dg:origin="2 357 767 637 811" xml:id="borrowersignatory" dg:itemprop="signatoryOf" dg:href="#borrowerexecution">Dr. Aris Thorne</docset:BorrowerSignatory>
+            </dg:chunk>
+          </dg:chunk>
+          <dg:chunk dg:structure="li" dg:origin="2 229 833 763 877">
+            <dg:chunk dg:structure="header" dg:origin="2 229 833 324 877">Title:</dg:chunk>
+            <dg:chunk dg:structure="p" dg:origin="2 335 833 763 877">
+              <docset:Borrower dg:origin="2 335 833 763 877">Chief Quantum Director</docset:Borrower>
+            </dg:chunk>
+          </dg:chunk>
+        </dg:chunk>
+      </docset:BorrowerExecution>
+      <docset:LenderExecution dg:structure="section" dg:origin="2 229 833 1103 1424" xml:id="lenderexecution" dg:itemprop="signatoryOf" dg:href="#lendername">
+        <dg:chunk dg:structure="header" dg:origin="2 774 833 995 877" dg:style="font-weight: bold; text-transform: uppercase">LENDERS:</dg:chunk>
+        <docset:LenderName dg:structure="p" dg:origin="2 229 898 1103 942">Concert of Jovian-Lunar Sovereign Wealth Funds</docset:LenderName>
+        <dg:chunk dg:structure="ul" dg:origin="2 229 1030 844 1424">
+          <dg:chunk dg:structure="li" dg:origin="2 229 1030 292 1073">
+            <dg:chunk dg:structure="header" dg:origin="2 229 1030 292 1073">By:</dg:chunk>
+            <dg:chunk dg:structure="p"/>
+          </dg:chunk>
+          <dg:chunk dg:structure="li" dg:origin="2 229 1095 673 1139">
+            <dg:chunk dg:structure="header" dg:origin="2 229 1095 346 1139">Name:</dg:chunk>
+            <dg:chunk dg:structure="p" dg:origin="2 357 1095 673 1139">
+              <docset:LenderSignatory dg:origin="2 357 1095 673 1139" xml:id="lendersignatory" dg:itemprop="signatoryOf" dg:href="#lenderexecution">Lady Vespera Lin</docset:LenderSignatory>
+            </dg:chunk>
+          </dg:chunk>
+          <dg:chunk dg:structure="li" dg:origin="2 229 1161 803 1205">
+            <dg:chunk dg:structure="header" dg:origin="2 229 1161 324 1205">Title:</dg:chunk>
+            <dg:chunk dg:structure="p" dg:origin="2 335 1161 803 1205">
+              <docset:Lender dg:origin="2 335 1161 803 1205">Outer-System Underwriter</docset:Lender>
+            </dg:chunk>
+          </dg:chunk>
+          <dg:chunk dg:structure="li" dg:origin="2 229 1380 844 1424">
+            <dg:chunk dg:structure="header" dg:origin="2 229 1380 589 1424" dg:style="font-weight: bold">Date of Signatures:</dg:chunk>
+            <dg:chunk dg:structure="p" dg:origin="2 600 1380 844 1424">
+              <docset:SignatureDate xsi:type="date" dg:value="2026-06-26" dg:origin="2 600 1380 844 1424" xml:id="signaturedate">June 26, 2026</docset:SignatureDate>
+            </dg:chunk>
+          </dg:chunk>
+        </dg:chunk>
+      </docset:LenderExecution>
+    </docset:EventsOfDefault>
+  </docset:SecuredCreditAgreement>
+</dg:chunk>

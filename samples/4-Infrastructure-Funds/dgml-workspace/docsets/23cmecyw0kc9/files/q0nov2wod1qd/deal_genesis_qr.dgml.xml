@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/PeriodicFinancialReportingPackage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2287 2043">
+  <docset:ReportingPackage dg:structure="section" dg:origin="1 193 258 2287 2043">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 1623 311" dg:style="font-weight: bold; font-size: 2em">
+      <docset:ReportingEntityName dg:origin="1 262 258 912 311">Taranis Energy Systems</docset:ReportingEntityName> - <docset:ReportingPeriod dg:origin="1 965 258 1178 311">Q2 2026</docset:ReportingPeriod> Grid Operations</dg:chunk>
+    <dg:chunk dg:structure="p" dg:origin="1 262 567 654 599" dg:style="font-weight: bold; font-size: 1.25em; color: darkslategray">Reporting Period: <docset:ReportingPeriod dg:origin="1 534 567 654 599" dg:style="font-weight: normal">Q2 2026</docset:ReportingPeriod>
+    </dg:chunk>
+    <docset:IndustrialOutput dg:structure="section" dg:origin="1 193 1010 2287 2043">
+      <dg:chunk dg:structure="header" dg:origin="1 262 1010 787 1050" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="1 262 1010 294 1050">1.</dg:chunk> Power Generation Metrics</dg:chunk>
+      <dg:PowerGenerationBySegment dg:structure="table" dg:origin="1 193 1211 2287 1736">
+        <dg:chunk dg:structure="tr" dg:origin="1 193 1211 2233 1277">
+          <dg:chunk dg:structure="td" dg:origin="1 193 1211 379 1237; 1 193 1250 305 1277" dg:style="font-weight: bold">Customer Grid Segment</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 642 1211 853 1237; 1 642 1250 787 1277" dg:style="font-weight: bold">Energy Provided (Gigawatts)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1091 1231 1356 1257" dg:style="font-weight: bold">Tariff Rate (ECU/GW)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1540 1211 1807 1237; 1 1540 1250 1613 1277" dg:style="font-weight: bold">Interconnection Fees (ECU)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1988 1231 2233 1257" dg:style="font-weight: bold">Total Income (ECU)</dg:chunk>
+        </dg:chunk>
+        <dg:PowerGenerationRecord dg:structure="tr" dg:origin="1 193 1390 2287 1417">
+          <dg:CustomerSegmentName dg:structure="td" dg:origin="1 193 1390 491 1417" dg:style="color: darkslategray">Sector-B Residential Hub</dg:CustomerSegmentName>
+          <docset:PhysicalOutputVolume dg:structure="td" dg:origin="1 642 1390 739 1417" dg:style="color: darkslategray">450 GW</docset:PhysicalOutputVolume>
+          <dg:TariffRate dg:structure="td" xsi:type="integer" dg:value="150000" dg:origin="1 1294 1390 1390 1417" dg:style="color: darkslategray">150,000</dg:TariffRate>
+          <docset:InterconnectionOrSurchargeRevenue dg:structure="td" xsi:type="integer" dg:value="10500000" dg:origin="1 1705 1390 1838 1417" dg:style="color: darkslategray" xml:id="interconnectionorsurchargerevenue">10,500,000</docset:InterconnectionOrSurchargeRevenue>
+          <docset:SegmentRevenueActual dg:structure="td" xsi:type="integer" dg:value="78000000" dg:origin="1 2154 1390 2287 1417" dg:style="color: darkslategray" xml:id="segmentrevenueactual">78,000,000</docset:SegmentRevenueActual>
+        </dg:PowerGenerationRecord>
+        <dg:PowerGenerationRecord dg:structure="tr" dg:origin="1 193 1530 2287 1597">
+          <dg:CustomerSegmentName dg:structure="td" dg:origin="1 193 1530 384 1557; 1 193 1570 298 1597" dg:style="color: darkslategray">Sector-C Mining Complex</dg:CustomerSegmentName>
+          <docset:PhysicalOutputVolume dg:structure="td" dg:origin="1 642 1550 739 1577" dg:style="color: darkslategray">890 GW</docset:PhysicalOutputVolume>
+          <dg:TariffRate dg:structure="td" xsi:type="integer" dg:value="120000" dg:origin="1 1294 1550 1390 1577" dg:style="color: darkslategray">120,000</dg:TariffRate>
+          <docset:InterconnectionOrSurchargeRevenue dg:structure="td" xsi:type="integer" dg:value="28200000" dg:origin="1 1705 1550 1838 1577" dg:style="color: darkslategray" xml:id="interconnectionorsurchargerevenue-2">28,200,000</docset:InterconnectionOrSurchargeRevenue>
+          <docset:SegmentRevenueActual dg:structure="td" xsi:type="integer" dg:value="135000000" dg:origin="1 2140 1550 2287 1577" dg:style="color: darkslategray" xml:id="segmentrevenueactual-2">135,000,000</docset:SegmentRevenueActual>
+        </dg:PowerGenerationRecord>
+        <dg:PowerGenerationRecord dg:structure="tr" dg:origin="1 193 1710 2287 1736">
+          <dg:CustomerSegmentName dg:structure="td" dg:origin="1 193 1710 351 1736" dg:style="font-weight: bold; color: darkslategray">Total Output</dg:CustomerSegmentName>
+          <docset:TotalPhysicalVolume dg:structure="td" dg:origin="1 642 1710 762 1736" dg:style="font-weight: bold; color: darkslategray">1,340 GW</docset:TotalPhysicalVolume>
+          <dg:TariffRate dg:structure="td" dg:origin="1 1091 1710 1100 1736" dg:style="font-weight: bold; color: darkslategray">-</dg:TariffRate>
+          <docset:InterconnectionOrSurchargeRevenue dg:structure="td" xsi:type="integer" dg:value="38700000" dg:origin="1 1705 1710 1838 1736" dg:style="font-weight: bold; color: darkslategray" xml:id="interconnectionorsurchargerevenue-3" dg:itemprop="sumOf" dg:href="#interconnectionorsurchargerevenue #interconnectionorsurchargerevenue-2">38,700,000</docset:InterconnectionOrSurchargeRevenue>
+          <docset:TotalRevenue dg:structure="td" xsi:type="integer" dg:value="213000000" dg:origin="1 2140 1710 2287 1736" dg:style="font-weight: bold; color: darkslategray" xml:id="totalrevenue" dg:itemprop="sumOf" dg:href="#segmentrevenueactual #segmentrevenueactual-2">213,000,000</docset:TotalRevenue>
+        </dg:PowerGenerationRecord>
+      </dg:PowerGenerationBySegment>
+      <docset:CovenantComplianceNarrative dg:structure="p" dg:origin="1 262 2012 2037 2043" dg:style="font-size: 1.25em; color: darkslategray" xml:id="covenantcompliancenarrative" dg:itemprop="describes" dg:href="#reserveaccountbalance">Compliance Status: <docset:ReserveAccountName dg:origin="1 562 2012 965 2043">Geothermal Turbine Reserve</docset:ReserveAccountName> is funded at <docset:ReserveAccountBalance dg:origin="1 1144 2012 1384 2043" xml:id="reserveaccountbalance">84,200,000 ECU</docset:ReserveAccountBalance>. Leverage covenants comply with facility terms.</docset:CovenantComplianceNarrative>
+    </docset:IndustrialOutput>
+  </docset:ReportingPackage>
+</dg:chunk>

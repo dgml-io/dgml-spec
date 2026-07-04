@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/PeriodicFinancialReportingPackage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2287 2003">
+  <docset:ReportingPackage dg:structure="section" dg:origin="1 193 258 2287 2003">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 1633 311" dg:style="font-weight: bold; font-size: 2em">
+      <docset:ReportingEntityName dg:origin="1 262 258 867 311">Minos Vista Properties</docset:ReportingEntityName> - <docset:ReportingPeriod dg:origin="1 921 258 1134 311">Q2 2026</docset:ReportingPeriod> Income Statement</dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 262 567 654 599">
+      <dg:chunk dg:structure="li" dg:origin="1 262 567 654 599">
+        <dg:chunk dg:structure="header" dg:origin="1 262 567 526 599" dg:style="font-weight: bold; font-size: 1.25em; color: darkslategray">Reporting Period:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 534 567 654 599">
+          <docset:ReportingPeriod dg:origin="1 534 567 654 599" dg:style="font-size: 1.25em; color: darkslategray">Q2 2026</docset:ReportingPeriod>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:IndustrialOutput dg:structure="section" dg:origin="1 193 1010 2287 2003">
+      <dg:chunk dg:structure="header" dg:origin="1 262 1010 833 1050" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="1 262 1010 294 1050">1.</dg:chunk> Hospitality Financial Metrics</dg:chunk>
+      <dg:HospitalityFinancialMetrics dg:structure="table" dg:origin="1 193 1211 2287 1697">
+        <dg:chunk dg:structure="tr" dg:origin="1 193 1211 2230 1277">
+          <dg:chunk dg:structure="td" dg:origin="1 193 1231 406 1257" dg:style="font-weight: bold">Source Category</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 642 1231 903 1257" dg:style="font-weight: bold">Gross Billings (ECU)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1091 1211 1342 1237; 1 1091 1250 1165 1277" dg:style="font-weight: bold">Shielding Expenses (ECU)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1540 1211 1770 1237; 1 1540 1250 1613 1277" dg:style="font-weight: bold">Operating Outlays (ECU)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1988 1231 2230 1257" dg:style="font-weight: bold">Net Revenue (ECU)</dg:chunk>
+        </dg:chunk>
+        <docset:SegmentRevenueActual dg:structure="tr" dg:origin="1 193 1390 2287 1417">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1390 422 1417" dg:style="color: darkslategray">Luxury Guest Villas</docset:OperationalSegmentName>
+          <docset:GrossRevenue dg:structure="td" xsi:type="integer" dg:value="38400000" dg:origin="1 808 1390 941 1417" dg:style="color: darkslategray" xml:id="grossrevenue">38,400,000</docset:GrossRevenue>
+          <docset:ShieldingOrContainmentCost dg:structure="td" dg:origin="1 1254 1390 1390 1417" dg:style="color: darkslategray" xml:id="shieldingorcontainmentcost">(4,100,000)</docset:ShieldingOrContainmentCost>
+          <docset:DirectCost dg:structure="td" dg:origin="1 1688 1390 1838 1417" dg:style="color: darkslategray" xml:id="directcost">(12,200,000)</docset:DirectCost>
+          <docset:NetSegmentMargin dg:structure="td" xsi:type="integer" dg:value="22100000" dg:origin="1 2154 1390 2287 1417" dg:style="color: darkslategray" xml:id="netsegmentmargin" dg:itemprop="derivedFrom" dg:href="#grossrevenue #shieldingorcontainmentcost #directcost">22,100,000</docset:NetSegmentMargin>
+        </docset:SegmentRevenueActual>
+        <docset:SegmentRevenueActual dg:structure="tr" dg:origin="1 193 1530 2287 1557">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1530 485 1557" dg:style="color: darkslategray">VIP Spaceport Transport</docset:OperationalSegmentName>
+          <docset:GrossRevenue dg:structure="td" xsi:type="integer" dg:value="12100000" dg:origin="1 808 1530 941 1557" dg:style="color: darkslategray" xml:id="grossrevenue-2">12,100,000</docset:GrossRevenue>
+          <docset:ShieldingOrContainmentCost dg:structure="td" dg:origin="1 1254 1530 1390 1557" dg:style="color: darkslategray" xml:id="shieldingorcontainmentcost-2">(1,500,000)</docset:ShieldingOrContainmentCost>
+          <docset:DirectCost dg:structure="td" dg:origin="1 1703 1530 1838 1557" dg:style="color: darkslategray" xml:id="directcost-2">(4,200,000)</docset:DirectCost>
+          <docset:NetSegmentMargin dg:structure="td" xsi:type="integer" dg:value="6400000" dg:origin="1 2169 1530 2287 1557" dg:style="color: darkslategray" xml:id="netsegmentmargin-2" dg:itemprop="derivedFrom" dg:href="#grossrevenue-2 #shieldingorcontainmentcost-2 #directcost-2">6,400,000</docset:NetSegmentMargin>
+        </docset:SegmentRevenueActual>
+        <docset:TotalRevenue dg:structure="tr" dg:origin="1 193 1670 2287 1697">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1670 257 1697" dg:style="font-weight: bold; color: darkslategray">Total</docset:OperationalSegmentName>
+          <docset:GrossRevenue dg:structure="td" xsi:type="integer" dg:value="50500000" dg:origin="1 808 1670 941 1697" dg:style="font-weight: bold; color: darkslategray" xml:id="grossrevenue-3" dg:itemprop="sumOf" dg:href="#grossrevenue #grossrevenue-2">50,500,000</docset:GrossRevenue>
+          <docset:ShieldingOrContainmentCost dg:structure="td" dg:origin="1 1254 1670 1390 1697" dg:style="font-weight: bold; color: darkslategray" xml:id="shieldingorcontainmentcost-3" dg:itemprop="sumOf" dg:href="#shieldingorcontainmentcost #shieldingorcontainmentcost-2">(5,600,000)</docset:ShieldingOrContainmentCost>
+          <docset:DirectCost dg:structure="td" dg:origin="1 1688 1670 1838 1697" dg:style="font-weight: bold; color: darkslategray" xml:id="directcost-3" dg:itemprop="sumOf" dg:href="#directcost #directcost-2">(16,400,000)</docset:DirectCost>
+          <docset:NetSegmentMargin dg:structure="td" xsi:type="integer" dg:value="28500000" dg:origin="1 2154 1670 2287 1697" dg:style="font-weight: bold; color: darkslategray" xml:id="netsegmentmargin-3" dg:itemprop="derivedFrom" dg:href="#grossrevenue-3 #shieldingorcontainmentcost-3 #directcost-3">28,500,000</docset:NetSegmentMargin>
+        </docset:TotalRevenue>
+      </dg:HospitalityFinancialMetrics>
+      <docset:EngineeringCertification dg:structure="p" dg:origin="1 262 1972 1880 2003" dg:style="font-size: 1.25em; color: darkslategray">Compliance Status: The magnetic deflector integrity remains optimal. No solar-flare exposures have been recorded.</docset:EngineeringCertification>
+    </docset:IndustrialOutput>
+  </docset:ReportingPackage>
+</dg:chunk>

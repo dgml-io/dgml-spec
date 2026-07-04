@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/SecuredCreditAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 240 232 2236 2670; 2 340 336 2210 2195; 3 240 235 2310 2071; 4 240 235 2310 2042; 5 240 235 2310 2576; 6 240 235 2310 1650">
+  <dg:chunk dg:structure="section" dg:origin="1 240 232 2236 2670; 2 340 336 2210 2195">
+    <docset:ProjectSetIdentifier dg:structure="header" dg:origin="1 484 232 2066 307; 1 314 345 2236 420; 1 1148 457 1402 532" dg:style="font-weight: bold; font-size: 2em; text-transform: uppercase">SET 8: THE HOTEI REGIO CRYOVOLCANIC GEOTHERMAL TAP &amp; HEAVY WATER EXTRACTION PLANT</docset:ProjectSetIdentifier>
+    <docset:DocumentIdentifier dg:structure="section" dg:origin="1 240 693 1525 747">
+      <dg:chunk dg:structure="header" dg:origin="1 240 693 1525 747" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">DOCUMENT 8A: SECURED CREDIT AGREEMENT</dg:chunk>
+    </docset:DocumentIdentifier>
+    <docset:AgreementType dg:structure="section" dg:origin="1 622 941 1928 2670; 2 340 336 2210 2195">
+      <dg:chunk dg:structure="header" dg:origin="1 880 941 1670 983" dg:style="font-weight: bold; text-transform: uppercase">SECURED TERM CREDIT AGREEMENT</dg:chunk>
+      <docset:AgreementEffectiveDate dg:structure="p" dg:origin="1 764 1254 1786 1296">Dated as of the Agreement Effective Date (as defined herein)</docset:AgreementEffectiveDate>
+      <dg:chunk dg:structure="p" dg:origin="1 1218 1566 1332 1608">among</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="1 669 1879 1881 1920; 1 1165 1941 1386 1983" dg:style="font-weight: bold">
+        <docset:BorrowerEntityName dg:origin="1 669 1879 1881 1920" dg:style="text-transform: uppercase" xml:id="borrowerentityname">HOTEI GEOTHERMAL ENERGY &amp; ISOTOPIC PARTNERS LP</docset:BorrowerEntityName>, as Borrower</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="1 1245 2254 1305 2296">and</dg:chunk>
+      <docset:LenderOrAgentEntityName dg:structure="p" dg:origin="1 622 2566 1928 2608; 1 717 2629 1833 2670" dg:style="font-weight: bold">SOL-SYSTEM INTERPLANETARY DEVELOPMENT BANK (SSIDB), as Administrative Agent, Collateral Agent, and Lead Arranger</docset:LenderOrAgentEntityName>
+      <dg:chunk dg:structure="p" dg:origin="2 1245 336 1305 378">and</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="2 448 648 2102 690" dg:style="font-weight: bold">THE FINANCIAL INSTITUTIONS PARTY HERETO FROM TIME TO TIME, as Lenders</dg:chunk>
+      <docset:AgreementType dg:structure="p" dg:origin="2 340 1090 2210 1132; 2 340 1153 2210 1195; 2 340 1215 2210 1257; 2 340 1278 2133 1320">This SECURED TERM CREDIT AGREEMENT (this "Agreement") is entered into on the Agreement Effective Date by and among <docset:BorrowerEntityName dg:origin="2 842 1153 1679 1195">Hotei Geothermal Energy &amp; Isotopic Partners LP</docset:BorrowerEntityName>, as Borrower, the Lenders party hereto from time to time, and <docset:LenderOrAgentEntityName dg:origin="2 893 1215 1700 1257">Sol-System Interplanetary Development Bank</docset:LenderOrAgentEntityName>, as Administrative Agent. In consideration of the mutual covenants and agreements herein contained, the parties hereto agree as follows:</docset:AgreementType>
+      <docset:FacilityName dg:structure="p" dg:origin="2 340 1590 2210 1632; 2 340 1653 2157 1695">WHEREAS, the Borrower owns and operates a comprehensive subsurface geothermal tap and cryogenic heavy water ($D_2O$) extraction facility situated in the cryovolcanically active Hotei Regio province of Titan; and</docset:FacilityName>
+      <dg:chunk dg:structure="p" dg:origin="2 340 1965 2210 2007; 2 340 2028 2210 2070; 2 340 2090 2210 2132; 2 340 2153 455 2195">WHEREAS, the Borrower has requested that the Lenders make term loans to finance deep-crust borehole excavation, centrifugal isotopic separation arrays, localized seismic mitigation pylons, and active thermal transmission lines; and the Lenders are willing to do so on the terms and subject to the conditions set forth herein.</dg:chunk>
+    </docset:AgreementType>
+  </dg:chunk>
+  <docset:DefinedTerms dg:structure="section" dg:origin="3 240 235 2310 2071">
+    <dg:chunk dg:structure="header" dg:origin="3 240 235 1549 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="3 501 235 522 289" dg:style="text-transform: none">I</dg:chunk> ARTICLE I: DEFINITIONS AND INTERPRETATION</dg:chunk>
+    <docset:DefinedTerms dg:structure="section" dg:origin="3 340 383 2310 1800">
+      <dg:chunk dg:structure="header" dg:origin="3 340 383 850 425" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="3 480 383 564 425">1.01</dg:chunk> Section 1.01. Defined Terms.</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="3 860 383 2255 425">As used in this Agreement, the following terms have the meanings specified below:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="3 403 496 2310 1800">
+        <docset:AgreementEffectiveDate dg:structure="li" dg:origin="3 403 496 2310 537; 3 403 558 2310 600; 3 403 621 1208 662" xml:id="agreementeffectivedate" dg:itemprop="effectiveOn" dg:href="#executiondate">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Agreement Effective Date" means the date on which this Agreement has been fully executed and delivered by all parties hereto, as verified by the date inscribed next to the signatures of the authorized officers in the execution block below (such date, the "Signature Date").</docset:AgreementEffectiveDate>
+        <docset:PerformanceIndexThreshold dg:structure="li" dg:origin="3 403 716 2310 758; 3 403 779 2310 821; 3 403 841 860 883" xml:id="performanceindexthreshold">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Cryovolcanic Tap Stability Rating" or "CTSR" means the structural, thermodynamic, and pressure stability rating of the deep-bore geothermal extraction casing, as evaluated on a 100-point scale by the Titan Technical Safety Directorate (TTSD).</docset:PerformanceIndexThreshold>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 403 937 2310 979; 3 403 1000 2310 1041; 3 403 1062 830 1104" xml:id="definedterms">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Heavy Water Yield Target" means the mandatory minimum operational isotopic separation metric of <docset:PerformanceIndexThreshold dg:origin="3 2195 937 2310 979; 3 403 1000 570 1041">17,500 kilograms</docset:PerformanceIndexThreshold> of pure deuterium oxide ($D_2O$ equivalent) per Titan sidereal day, as calculated under the provisions of Section 4.01(2) herein.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 403 1158 2310 1200; 3 403 1221 2310 1262; 3 403 1283 1510 1325">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Hotei Plant Substructure" means the physical subterranean piping networks, high-pressure booster valves, centrifugal isotopic separation towers, and thermal transmission gantry arrays situated at <docset:SectorDesignation dg:origin="3 1919 1221 2091 1262" xml:id="sectordesignation">Sector 32</docset:SectorDesignation>, Hotei Regio coordinates (<docset:FacilityName dg:origin="3 619 1283 1206 1325">latitude 26.0° S, longitude 78.0° W</docset:FacilityName>) on Titan, Saturn.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 403 1379 2310 1421; 3 403 1441 1701 1483" xml:id="definedterms-2">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Localized Seismic Escrow" means the cash escrow reserve fund mandated to be maintained under Section 4.01(3) for lithospheric stress mitigation and localized structural containment.</docset:DefinedTerms>
+        <docset:AccountingOrInterpretationRules dg:structure="li" dg:origin="3 403 1537 2310 1579; 3 403 1600 1518 1641">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Sol System Interstellar Accounting Standards" or "SSIAS" means the unified framework of financial accounting principles approved by the Interstellar Financial Board.</docset:AccountingOrInterpretationRules>
+        <docset:BenchmarkReferenceRate dg:structure="li" dg:origin="3 403 1696 2310 1737; 3 403 1758 984 1800" xml:id="benchmarkreferencerate">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "TIDOR" means the Titan Inter-Dome Offered Rate, which is the floating interbank benchmark rate calculated for Titan-denominated credit lines.</docset:BenchmarkReferenceRate>
+      </dg:chunk>
+    </docset:DefinedTerms>
+    <docset:AccountingOrInterpretationRules dg:structure="section" dg:origin="3 240 1904 2310 2071">
+      <dg:chunk dg:structure="header" dg:origin="3 340 1904 1034 1946" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="3 490 1904 574 1946">1.02</dg:chunk> Section 1.02. Rules of Interpretation.</dg:chunk>
+      <docset:AccountingOrInterpretationRules dg:structure="p" dg:origin="3 1055 1904 2310 1946; 3 240 1966 2310 2008; 3 240 2029 884 2071">Capitalized terms defined in the singular shall have the corresponding meanings in the plural, and vice versa. Any references to specific sections, tables, or documents relate directly to this Agreement unless otherwise specified.</docset:AccountingOrInterpretationRules>
+    </docset:AccountingOrInterpretationRules>
+  </docset:DefinedTerms>
+  <docset:CreditFacilityCommitment dg:structure="section" dg:origin="4 240 235 2310 1266">
+    <dg:chunk dg:structure="header" dg:origin="4 240 235 1361 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="4 501 235 543 289" dg:style="text-transform: none">II</dg:chunk> ARTICLE II: THE SECURED CREDIT LINES</dg:chunk>
+    <docset:CreditFacilityCommitment dg:structure="section" dg:origin="4 240 383 2310 550">
+      <dg:chunk dg:structure="header" dg:origin="4 340 383 813 425" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 485 383 569 425">2.01</dg:chunk> Section 2.01. The Facility.</dg:chunk>
+      <docset:CreditFacilityCommitment dg:structure="p" dg:origin="4 829 383 2310 425; 4 240 446 2310 487; 4 240 508 1502 550">Subject to the terms and conditions of this Agreement, each Lender agrees to make a single advance term loan (each a "Facility Loan") to the Borrower on the Closing Date (which is identical to the Signature Date) in an aggregate principal amount of 8,500,000,000 Sol Credits (SC).</docset:CreditFacilityCommitment>
+    </docset:CreditFacilityCommitment>
+    <docset:InterestRateMargin dg:structure="section" dg:origin="4 340 620 2310 996" xml:id="interestratemargin" dg:itemprop="accruesFrom" dg:href="#agreementeffectivedate" dg:value="TIDOR">
+      <dg:chunk dg:structure="header" dg:origin="4 340 620 1054 662" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 480 620 564 662">2.02</dg:chunk> Section 2.02. Interest Rate Adjustments.</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="4 340 733 2310 996">
+        <dg:chunk dg:structure="li" dg:origin="4 340 733 2133 775">
+          <dg:chunk dg:structure="lim" dg:origin="4 340 733 372 775">1.</dg:chunk> The Facility Loans shall accrue interest daily at a floating rate per annum equal to <docset:BenchmarkReferenceRate dg:origin="4 1776 733 1913 775" dg:style="font-weight: bold; text-transform: uppercase">TIDOR</docset:BenchmarkReferenceRate> plus <docset:InterestRateMargin xsi:type="decimal" dg:value="7.75" dg:origin="4 2008 733 2133 775" dg:style="font-weight: bold">7.75%</docset:InterestRateMargin>.</dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="4 340 829 2310 871; 4 403 891 2310 933; 4 403 954 1782 996" xml:id="chunk" dg:itemprop="references" dg:href="#performanceindexthreshold" dg:value="CTSR">
+          <dg:chunk dg:structure="lim" dg:origin="4 340 829 372 871">2.</dg:chunk> Should the Cryovolcanic Tap Stability Rating (CTSR) fall below <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="90.0" dg:origin="4 1548 829 1656 871">90.0%</docset:PerformanceIndexThreshold> for any consecutive 3-day Titan cycle, the floating margin shall automatically increase by <docset:InterestRateMargin dg:origin="4 1261 891 1583 933" dg:style="font-weight: bold">3.50% per annum</docset:InterestRateMargin> (the "Thermal Runaway Containment Risk Premium") until the CTSR is restored to <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="93.0" dg:origin="4 1085 954 1193 996">93.0%</docset:PerformanceIndexThreshold> or above, as verified by the TTSD.</dg:chunk>
+      </dg:chunk>
+    </docset:InterestRateMargin>
+    <docset:RepaymentSchedule dg:structure="section" dg:origin="4 240 1100 2310 1266">
+      <dg:chunk dg:structure="header" dg:origin="4 340 1100 1151 1141" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 490 1100 573 1141">2.03</dg:chunk> Section 2.03. Repayment and Amortization.</dg:chunk>
+      <docset:RepaymentSchedule dg:structure="p" dg:origin="4 1171 1100 2310 1141; 4 240 1162 2310 1204; 4 240 1225 1784 1266" xml:id="repaymentschedule" dg:itemprop="relativeTo" dg:href="#agreementeffectivedate">Repayment of the principal shall be executed in equal quarterly installments on the final operational day of each Martian fiscal quarter, starting on the first such date following the Agreement Effective Date, in accordance with the amortization schedules appended hereto.</docset:RepaymentSchedule>
+    </docset:RepaymentSchedule>
+  </docset:CreditFacilityCommitment>
+  <docset:RepresentationsAndWarranties dg:structure="section" dg:origin="4 240 1377 2310 2042">
+    <dg:chunk dg:structure="header" dg:origin="4 240 1377 1646 1431" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="4 501 1377 564 1431" dg:style="text-transform: none">III</dg:chunk> ARTICLE III: REPRESENTATIONS AND WARRANTIES</dg:chunk>
+    <dg:chunk dg:structure="p" dg:origin="4 340 1526 1312 1567">The Borrower represents and warrants to the Lenders that:</dg:chunk>
+    <docset:ExtractionOrOperatingRights dg:structure="section" dg:origin="4 240 1638 2310 1805" xml:id="extractionoroperatingrights" dg:itemprop="references" dg:href="#sectordesignation" dg:value="Sector 32">
+      <dg:chunk dg:structure="header" dg:origin="4 340 1638 1298 1680" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 485 1638 569 1680">3.01</dg:chunk> Section 3.01. Subsurface Geothermal Mining Rights.</dg:chunk>
+      <docset:ExtractionOrOperatingRights dg:structure="p" dg:origin="4 1314 1638 2310 1680; 4 240 1701 2310 1742; 4 240 1763 1063 1805">The Borrower holds exclusive licenses to tap and process deep lithospheric thermal flows and extract associated chemical/isotopic compounds within <docset:SectorDesignation dg:origin="4 1855 1701 2127 1742">Sector 32-Hotei</docset:SectorDesignation> under the authority of the Titan Regulatory Council (TRC).</docset:ExtractionOrOperatingRights>
+    </docset:ExtractionOrOperatingRights>
+    <docset:StructuralOrEnvironmentalTolerance dg:structure="section" dg:origin="4 240 1876 2310 2042">
+      <dg:chunk dg:structure="header" dg:origin="4 340 1876 1218 1917" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="4 487 1876 571 1917">3.02</dg:chunk> Section 3.02. Cryovolcanic Pressure Tolerances.</dg:chunk>
+      <docset:StructuralOrEnvironmentalTolerance dg:structure="p" dg:origin="4 1235 1876 2310 1917; 4 240 1938 2310 1980; 4 240 2001 1517 2042">The deep geothermal extraction casings are constructed using high-density titanium-carbide alloys and active magnetic suspension, engineered to withstand external hydrostatic pressure variants up to 500 atmospheres and thermal gradients exceeding 200 Kelvin.</docset:StructuralOrEnvironmentalTolerance>
+    </docset:StructuralOrEnvironmentalTolerance>
+  </docset:RepresentationsAndWarranties>
+  <docset:CovenantsArticle dg:structure="section" dg:origin="5 240 235 2310 1646">
+    <dg:chunk dg:structure="header" dg:origin="5 240 235 933 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="5 501 235 561 289" dg:style="text-transform: none">IV</dg:chunk> ARTICLE IV: COVENANTS</dg:chunk>
+    <docset:AffirmativeCovenants dg:structure="section" dg:origin="5 240 383 2310 1104">
+      <dg:chunk dg:structure="header" dg:origin="5 340 383 1002 425" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="5 484 383 567 425">4.01</dg:chunk> Section 4.01. Affirmative Covenants.</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 1016 383 2310 425; 5 240 446 331 487">So long as any part of the Facility Loan remains outstanding, the Borrower shall:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="5 340 558 2310 1104">
+        <docset:MaintenanceCovenant dg:structure="li" dg:origin="5 340 558 2310 600; 5 403 621 1702 662" xml:id="maintenancecovenant" dg:itemprop="references" dg:href="#performanceindexthreshold" dg:value="CTSR">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 558 372 600">1.</dg:chunk> Borehole Integrity Maintenance: Undertake continuous acoustic-resonance structural audits of the cryovolcanic boreholes to ensure the CTSR does not fall below the base standard of <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="91.0" dg:origin="5 1584 621 1702 662">91.0%</docset:PerformanceIndexThreshold>.</docset:MaintenanceCovenant>
+        <docset:AffirmativeCovenants dg:structure="li" dg:origin="5 340 716 2310 758; 5 403 779 2310 821; 5 403 841 552 883" xml:id="affirmativecovenants" dg:itemprop="references" dg:href="#definedterms" dg:value="Heavy Water Yield Target">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 716 372 758">2.</dg:chunk> Maintain Isotopic Output: Operate the centrifugal separating columns to sustain the Heavy Water Yield Target of <docset:PerformanceIndexThreshold dg:origin="5 583 779 1127 821">17,500 kilograms per Titan day</docset:PerformanceIndexThreshold>, ensuring supply covenants with orbital transport transport vessels are satisfied.</docset:AffirmativeCovenants>
+        <docset:AffirmativeCovenants dg:structure="li" dg:origin="5 340 937 2310 979; 5 403 1000 2310 1041; 5 403 1062 892 1104" xml:id="affirmativecovenants-2" dg:itemprop="references" dg:href="#definedterms-2" dg:value="Localized Seismic Escrow">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 937 372 979">3.</dg:chunk> Localized Seismic Escrow Account: Maintain the cash-funded Localized Seismic Escrow with the Administrative Agent, holding a balance of not less than SC 500,000,000 at all times to manage ocean-floor structural anchoring stability.</docset:AffirmativeCovenants>
+      </dg:chunk>
+    </docset:AffirmativeCovenants>
+    <docset:NegativeCovenants dg:structure="section" dg:origin="5 240 1208 2310 1646">
+      <dg:chunk dg:structure="header" dg:origin="5 340 1208 989 1250" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="5 497 1208 581 1250">4.02</dg:chunk> Section 4.02. Negative Covenants.</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 1016 1208 2310 1250; 5 240 1271 614 1312">The Borrower shall not, without the explicit written approval of the Administrative Agent:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="5 340 1383 2310 1646">
+        <docset:SystemModificationProhibition dg:structure="li" dg:origin="5 340 1383 2310 1425; 5 403 1446 972 1487">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 1383 372 1425">1.</dg:chunk> System Modifications: Reroute or depressurize the containment casings of any active secondary geothermal taps within the designated coordinates.</docset:SystemModificationProhibition>
+        <docset:NegativeCovenants dg:structure="li" dg:origin="5 340 1541 2310 1583; 5 403 1604 1506 1646" xml:id="negativecovenants" dg:itemprop="references" dg:href="#performanceindexthreshold" dg:value="CTSR">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 1541 372 1583">2.</dg:chunk> Restricted Payments: Declare or make any dividend distributions to corporate parent entities if the CTSR is below <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="92.0" dg:origin="5 515 1604 623 1646">92.0%</docset:PerformanceIndexThreshold> or if a Default Event has occurred and is continuing.</docset:NegativeCovenants>
+      </dg:chunk>
+    </docset:NegativeCovenants>
+  </docset:CovenantsArticle>
+  <docset:DefaultArticle dg:structure="section" dg:origin="5 240 1831 2310 2576">
+    <dg:chunk dg:structure="header" dg:origin="5 240 1831 1494 1886" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="5 501 1831 540 1886" dg:style="text-transform: none">V</dg:chunk> ARTICLE V: DEFAULT EVENTS AND REMEDIES</dg:chunk>
+    <docset:EventOfDefault dg:structure="section" dg:origin="5 340 1980 2310 2576">
+      <dg:chunk dg:structure="header" dg:origin="5 340 1980 847 2022" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="5 480 1980 564 2022">5.01</dg:chunk> Section 5.01. Default Events.</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 858 1980 2238 2022">The occurrence of any of the following events shall constitute an Event of Default:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="5 340 2092 2310 2576">
+        <docset:PrimaryDefaultEvent dg:structure="li" dg:origin="5 340 2092 2310 2134; 5 403 2155 2161 2197">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 2092 372 2134">1.</dg:chunk> Thermal Borehole Blowout: Any sudden structural casing failure leading to an uncontrollable high-pressure cryovolcanic blowout exceeding <docset:PerformanceIndexThreshold dg:origin="5 955 2155 1266 2197">25,000 metric tons</docset:PerformanceIndexThreshold> of ammonia-rich ice slurry within any 24-hour cycle.</docset:PrimaryDefaultEvent>
+        <docset:EventOfDefault dg:structure="li" dg:origin="5 340 2251 2310 2292; 5 403 2313 2186 2355" xml:id="eventofdefault" dg:itemprop="references" dg:href="#definedterms" dg:value="Heavy Water Yield Target">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 2251 372 2292">2.</dg:chunk> Covenant Non-Compliance: Failure to maintain the required balance in the Localized Seismic Escrow under Section 4.01(3), or failure to meet the Heavy Water Yield Target for more than two consecutive quarters.</docset:EventOfDefault>
+        <docset:EventOfDefault dg:structure="li" dg:origin="5 340 2409 2310 2451; 5 403 2472 2310 2513; 5 403 2534 688 2576">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 2409 372 2451">3.</dg:chunk> Bedrock Dissolution: Any localized sub-surface heating adjacent to the primary borehole casing causing structural water-ice bedrock temperatures to exceed <docset:PerformanceIndexThreshold dg:origin="5 1277 2472 1474 2513">245 Kelvin</docset:PerformanceIndexThreshold>, threatening the physical structural integrity of the plant foundation.</docset:EventOfDefault>
+      </dg:chunk>
+    </docset:EventOfDefault>
+  </docset:DefaultArticle>
+  <docset:MiscellaneousProvisions dg:structure="section" dg:origin="6 240 235 2310 1650">
+    <dg:chunk dg:structure="header" dg:origin="6 240 235 1419 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="6 501 235 561 289" dg:style="text-transform: none">VI</dg:chunk> ARTICLE VI: MISCELLANEOUS PROVISIONS</dg:chunk>
+    <docset:GoverningLaw dg:structure="section" dg:origin="6 240 383 2310 487">
+      <dg:chunk dg:structure="header" dg:origin="6 340 383 895 425" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="6 491 383 574 425">6.01</dg:chunk> Section 6.01. Governing Law.</dg:chunk>
+      <docset:GoverningLaw dg:structure="p" dg:origin="6 916 383 2310 425; 6 240 446 2072 487">This Agreement shall be governed by, and construed in accordance with, the Admiralty Law of the Martian Lowlands and the outer-rim industrial treaties governing the Saturnian System.</docset:GoverningLaw>
+    </docset:GoverningLaw>
+    <docset:Counterparts dg:structure="section" dg:origin="6 240 558 2310 1650">
+      <dg:chunk dg:structure="header" dg:origin="6 340 558 831 600" dg:style="font-weight: bold">
+        <dg:chunk dg:structure="lim" dg:origin="6 483 558 567 600">6.02</dg:chunk> Section 6.02. Counterparts.</dg:chunk>
+      <docset:Counterparts dg:structure="p" dg:origin="6 844 558 2310 600; 6 240 621 2310 662; 6 240 683 429 725">This Agreement may be executed in any number of counterparts, each of which when so executed and delivered shall be deemed an original, but all of which together shall constitute one and the same instrument.</docset:Counterparts>
+      <docset:BorrowerEntityName dg:structure="p" dg:origin="6 340 795 1353 837" dg:style="font-weight: bold; text-transform: uppercase">HOTEI GEOTHERMAL &amp; ISOTOPIC PARTNERS LP</docset:BorrowerEntityName>
+      <dg:chunk dg:structure="ul" dg:origin="6 240 908 1012 1187">
+        <dg:chunk dg:structure="li" dg:origin="6 340 908 401 950">
+          <dg:chunk dg:structure="header" dg:origin="6 340 908 401 950">By:</dg:chunk>
+          <dg:chunk dg:structure="p">___________________________</dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 971 675 1012">
+          <dg:chunk dg:structure="header" dg:origin="6 240 971 351 1012">Name:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 362 971 675 1012">
+            <docset:SignatoryName dg:origin="6 362 971 675 1012" xml:id="signatoryname" dg:itemprop="signatoryOf" dg:href="#borrowerentityname">Julian Kase-Vance</docset:SignatoryName>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 1033 1012 1075">
+          <dg:chunk dg:structure="header" dg:origin="6 240 1033 331 1075">Title:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 341 1033 1012 1075">
+            <docset:Signatory dg:origin="6 341 1033 1012 1075">Managing Partner, Geothermal Division</docset:Signatory>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 340 1146 907 1187">
+          <dg:chunk dg:structure="header" dg:origin="6 340 1146 655 1187">Date of Execution:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 666 1146 907 1187">
+            <docset:ExecutionDate xsi:type="date" dg:value="2146-06-26" dg:origin="6 666 1146 907 1187" dg:style="font-weight: bold" xml:id="executiondate">June 26, 2146</docset:ExecutionDate>
+          </dg:chunk>
+        </dg:chunk>
+      </dg:chunk>
+      <docset:LenderOrAgentEntityName dg:structure="p" dg:origin="6 340 1258 1478 1299" dg:style="font-weight: bold; text-transform: uppercase" xml:id="lenderoragententityname">SOL-SYSTEM INTERPLANETARY DEVELOPMENT BANK</docset:LenderOrAgentEntityName>
+      <dg:chunk dg:structure="ul" dg:origin="6 240 1371 1274 1650">
+        <dg:chunk dg:structure="li" dg:origin="6 340 1371 401 1412">
+          <dg:chunk dg:structure="header" dg:origin="6 340 1371 401 1412">By:</dg:chunk>
+          <dg:chunk dg:structure="p">___________________________</dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 1433 736 1475">
+          <dg:chunk dg:structure="header" dg:origin="6 240 1433 351 1475">Name:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 362 1433 736 1475">
+            <docset:SignatoryName dg:origin="6 362 1433 736 1475" xml:id="signatoryname-2" dg:itemprop="signatoryOf" dg:href="#lenderoragententityname">Diana Sterling-Lowell</docset:SignatoryName>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 1496 1134 1537">
+          <dg:chunk dg:structure="header" dg:origin="6 240 1496 331 1537">Title:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 341 1496 1134 1537">
+            <docset:Signatory dg:origin="6 341 1496 1134 1537">Managing Director, Outer-Rim Assets Division</docset:Signatory>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 340 1608 1274 1650">
+          <dg:chunk dg:structure="header" dg:origin="6 340 1608 1022 1650">Date of Execution (the Signature Date):</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 1032 1608 1274 1650">
+            <docset:ExecutionDate xsi:type="date" dg:value="2146-06-26" dg:origin="6 1032 1608 1274 1650" dg:style="font-weight: bold">June 26, 2146</docset:ExecutionDate>
+          </dg:chunk>
+        </dg:chunk>
+      </dg:chunk>
+    </docset:Counterparts>
+  </docset:MiscellaneousProvisions>
+</dg:chunk>

@@ -1,0 +1,525 @@
+# ==========================================================================
+# DGML docset schema — Secured Credit Agreement
+# RELAX NG Compact.  Data types observed in 3 .dgml.xml file(s):
+#   element text is the RAW page text; the normalized, typed value is
+#   carried by @dg:value, described by @xsi:type (XSD built-in names).
+# `# Field: value` comments are the LOSSLESS schema.json serialization;
+#   regenerate the JSON via dgml_core.generation.rnc.rnc_to_schema_dict.
+# ==========================================================================
+
+default namespace docset = "http://dgml.io/dgml-io/SecuredCreditAgreement"
+namespace dg = "http://dgml.io/ns/dg#"
+namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = dg.chunk
+
+# --- attributes common to every DGML element ------------------------
+# dg:origin  = grounding bbox: "page x1 y1 x2 y2"
+# dg:itemprop / dg:href = semantic link (predicate + '#id' target(s))
+common.atts =
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  attribute dg:value { text }?,
+  attribute xsi:type { text }?
+
+# --- generic structural chunk (unlabeled scaffolding) ----------------
+dg.chunk = element dg:chunk { common.atts, mixed { any.docset* } }
+
+# a concept private to ONE document renders in the dg: namespace instead
+# of docset: (the shared-tag rule) — same shape, unshared vocabulary
+dg.private = element dg:* { common.atts, mixed { any.docset* } }
+
+# any docset element may appear where structure allows it
+any.docset = dg.chunk
+  | dg.private
+  | Borrower
+  | BorrowerExecution
+  | BorrowerJurisdiction
+  | BorrowerName
+  | BorrowerSignatory
+  | CollateralDescription
+  | CreditFacility
+  | CreditFacilityCommitment
+  | CreditFacilityInterest
+  | DefaultCurePeriod
+  | DefaultTriggerDescription
+  | DefinedTerms
+  | EffectiveDateDefinition
+  | EventsOfDefault
+  | FinancialCovenant
+  | FinancialCovenantName
+  | FinancialCovenantThreshold
+  | InterestIndex
+  | InterestRate
+  | InterestSpread
+  | IntroductoryRecital
+  | Lender
+  | LenderExecution
+  | LenderName
+  | LenderRemedyOnDefault
+  | LenderSignatory
+  | OperationalCovenantName
+  | OperationalStandards
+  | OperationalThreshold
+  | PrincipalAmount
+  | ReserveAmount
+  | ReserveFundName
+  | SecuredCreditAgreement
+  | SignatureDate
+  | SpecialtyReservesOrCovenants
+
+# ------------------------------------------------------------------
+# Description: "Official title of the individual signing on behalf of the borrower"
+# Kind: inline
+# Parent: BorrowerExecution
+# Example: "Chief Leisure Officer"
+# Examples: ["Chief Leisure Officer"]
+# Observed: 2 occurrence(s)
+Borrower = element Borrower {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Signature block identifying and binding the borrowing party"
+# Kind: section
+# Parent: EventsOfDefault
+# Example: "BORROWER:"
+# Examples: ["BORROWER:", "Selene-V Hospitality Group, Inc.", "Name: Jean-Luc Carter"]
+# Observed: 8 occurrence(s); dg:structure: p(3), section(2)
+# Children (from schema hierarchy): Borrower, BorrowerSignatory
+BorrowerExecution = element BorrowerExecution {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The legal jurisdiction or registration territory of the borrowing entity"
+# Kind: inline
+# Parent: IntroductoryRecital
+# Example: "Copernicus Crater Free Zone limited liability company"
+# Examples: ["Copernicus Crater Free Zone limited liability company", "South Pole Settlement District", "joint terrestrial-lunar corporation"]
+# Observed: 3 occurrence(s)
+BorrowerJurisdiction = element BorrowerJurisdiction {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Legal name of the borrowing entity"
+# Kind: inline
+# Parent: IntroductoryRecital
+# Example: "HEPHAESTUS LUNAR EXTRACTORS LLC"
+# Examples: ["HEPHAESTUS LUNAR EXTRACTORS LLC", "ARTEMIS DATA SYSTEMS LTD.", "Artemis Data Systems Ltd."]
+# Observed: 5 occurrence(s); dg:structure: p(1)
+BorrowerName = element BorrowerName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Name of the individual executing the agreement on behalf of the borrower"
+# Kind: inline
+# Parent: BorrowerExecution
+# Example: "Jean-Luc Carter"
+# Examples: ["Jean-Luc Carter"]
+# Observed: 2 occurrence(s)
+BorrowerSignatory = element BorrowerSignatory {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The specific asset or property pledged as security for the loan"
+# Kind: section
+# Parent: DefinedTerms
+# Example: "\"Collateral\": Has the meaning specified in Section 3.01 of this Agreement."
+# Examples: ["\"Collateral\": Has the meaning specified in Section 3.01 of this Agreement.", "Section 3.01. Grant of Security Interest (Collateral).", "To secure the Obligations, Borrower hereby grants to Lender a first-priority sec"]
+# Observed: 4 occurrence(s); dg:structure: li(1), section(1), p(1)
+CollateralDescription = element CollateralDescription {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Section setting out the principal commitment and interest terms of the loan"
+# Kind: section
+# Example: "Article II: The Credit Facility"
+# Examples: ["Article II: The Credit Facility", "Credit Facility and Index Conformance"]
+# Observed: 2 occurrence(s); dg:structure: section(2)
+# Children (from schema hierarchy): CreditFacilityCommitment, CreditFacilityInterest
+CreditFacility = element CreditFacility {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Section or provision stating the lender's principal loan commitment to the borrower"
+# Kind: section
+# Parent: CreditFacility
+# Example: "Section 2.01. Commitment."
+# Examples: ["Section 2.01. Commitment.", "Lender agrees to lend to Borrower a principal sum of LC 150,000,000 (One Hundred", "Principal"]
+# Observed: 6 occurrence(s); dg:structure: section(3), p(3)
+# Children (from schema hierarchy): PrincipalAmount
+CreditFacilityCommitment = element CreditFacilityCommitment {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Section detailing the interest rate terms, index, and adjustment mechanics for the loan"
+# Kind: section
+# Parent: CreditFacility
+# Example: "Section 2.02. Interest."
+# Examples: ["Section 2.02. Interest.", "The Loan shall bear interest at the Earth-Lunar Transit Index Rate (ELTIR) plus ", "Interest Rate Indexing"]
+# Observed: 7 occurrence(s); dg:structure: section(4), p(3)
+# Children (from schema hierarchy): InterestIndex, InterestRate, InterestSpread
+CreditFacilityInterest = element CreditFacilityInterest {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The time window within which a borrower must remedy an operational or covenant breach before default is declared"
+# Kind: inline
+# Parent: DefaultTriggerDescription
+# Example: "seventy-two (72) Earth hours"
+# Examples: ["seventy-two (72) Earth hours", "four (4) Earth hours", "fifteen (15) Earth days"]
+# Observed: 3 occurrence(s)
+DefaultCurePeriod = element DefaultCurePeriod {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The narrative condition or failure event that activates a specific event of default"
+# Kind: section
+# Parent: EventsOfDefault
+# Example: "Any failure to maintain the \"Minimum Pressurization Standard\" (defined in Sectio"
+# Examples: ["Any failure to maintain the \"Minimum Pressurization Standard\" (defined in Sectio", "Operational Breach", "If the Borrower breaches the \"Cryogenic Cooling Standard\" (defined in Section 3."]
+# Observed: 4 occurrence(s); dg:structure: p(3), section(1)
+# Children (from schema hierarchy): DefaultCurePeriod, LenderRemedyOnDefault
+DefaultTriggerDescription = element DefaultTriggerDescription {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Section establishing the authoritative definitions of specialised terms used throughout the agreement"
+# Kind: section
+# Example: "Article I: Definitions and Cross-References"
+# Examples: ["Article I: Definitions and Cross-References", "Section 1.01. Defined Terms.", "Definitions and Cross-References"]
+# Observed: 6 occurrence(s); dg:structure: section(6)
+# Children (from schema hierarchy): CollateralDescription, EffectiveDateDefinition, FinancialCovenantName, OperationalCovenantName, ReserveFundName
+DefinedTerms = element DefinedTerms {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The defined-term entry specifying when the agreement becomes legally binding"
+# Kind: section
+# Parent: DefinedTerms
+# Example: "\"Effective Date\": The contract becomes legally binding on the date the last part"
+# Examples: ["\"Effective Date\": The contract becomes legally binding on the date the last part", "\"Effective Date\": This Agreement becomes fully enforceable upon the \"Date of Sig", "\"Effective Date\": Defined explicitly as the \"Execution Date\" appearing alongside"]
+# Observed: 3 occurrence(s); dg:structure: li(3)
+EffectiveDateDefinition = element EffectiveDateDefinition {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Section specifying conditions that constitute a breach triggering lender remedies"
+# Kind: section
+# Example: "Article V: Events of Default"
+# Examples: ["Article V: Events of Default", "Section 6.01. Environmental Default.", "Enforcement & Covenant Violations"]
+# Observed: 5 occurrence(s); dg:structure: section(5)
+# Children (from schema hierarchy): BorrowerExecution, DefaultTriggerDescription, LenderExecution
+EventsOfDefault = element EventsOfDefault {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Section or provision requiring the borrower to maintain a specified financial ratio or metric"
+# Kind: section
+# Example: "Article IV: Financial Covenants"
+# Examples: ["Article IV: Financial Covenants", "The Borrower covenants to maintain a DSCR of not less than 1.25x (the \"Required "]
+# Observed: 2 occurrence(s); dg:structure: section(1), p(1)
+FinancialCovenant = element FinancialCovenant {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The defined label assigned to a specific financial ratio or covenant metric"
+# Kind: section
+# Parent: DefinedTerms
+# Example: "\"Required DSCR\": The target ratio of 1.25x as specified in Section 5.01."
+# Examples: ["\"Required DSCR\": The target ratio of 1.25x as specified in Section 5.01.", "Section 5.01. Debt Service Coverage Ratio (DSCR).", "Required DSCR"]
+# Observed: 5 occurrence(s); dg:structure: li(1), section(1)
+# Children (from schema hierarchy): FinancialCovenantThreshold
+FinancialCovenantName = element FinancialCovenantName {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The minimum or maximum numeric ratio or value the borrower must sustain under a financial covenant"
+# Kind: inline
+# Parent: FinancialCovenantName
+# Example: "1.25x"
+# Examples: ["1.25x", "95%"]
+# Observed: 3 occurrence(s)
+# Data type (from DGML): decimal(1) of 3 occurrence(s)
+FinancialCovenantThreshold = element FinancialCovenantThreshold {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The named benchmark rate to which the contractual interest spread is anchored"
+# Kind: inline
+# Parent: CreditFacilityInterest
+# Example: "Earth-Lunar Transit Index Rate (ELTIR)"
+# Examples: ["Earth-Lunar Transit Index Rate (ELTIR)", "\"SOFR Index\": The Daily Solar System Overnight Financial Rate administered by th", "SOFR Index"]
+# Observed: 5 occurrence(s); dg:structure: li(1)
+InterestIndex = element InterestIndex {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The per-annum rate or spread applied to the outstanding loan balance"
+# Kind: inline
+# Parent: CreditFacilityInterest
+# Example: "7.50% per annum"
+# Examples: ["7.50% per annum"]
+# Observed: 1 occurrence(s)
+InterestRate = element InterestRate {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The fixed percentage margin added to the benchmark index to compute the total interest rate"
+# Kind: inline
+# Parent: CreditFacilityInterest
+# Example: "1.20%"
+# Examples: ["1.20%", "2.50% per annum"]
+# Observed: 2 occurrence(s)
+# Data type (from DGML): decimal(1) of 2 occurrence(s)
+InterestSpread = element InterestSpread {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Opening paragraph identifying the parties and establishing the agreement's basic framework"
+# Kind: section
+# Parent: SecuredCreditAgreement
+# Example: "This SECURED CREDIT AGREEMENT (this \"Agreement\") is entered into as of the Effec"
+# Examples: ["This SECURED CREDIT AGREEMENT (this \"Agreement\") is entered into as of the Effec"]
+# Observed: 3 occurrence(s); dg:structure: p(3)
+# Children (from schema hierarchy): BorrowerJurisdiction, BorrowerName, LenderName
+IntroductoryRecital = element IntroductoryRecital {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Official title of the individual signing on behalf of the lender"
+# Kind: inline
+# Parent: LenderExecution
+# Example: "Managing Creditor"
+# Examples: ["Managing Creditor"]
+# Observed: 2 occurrence(s)
+Lender = element Lender {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Signature block identifying and binding the lending party"
+# Kind: section
+# Parent: EventsOfDefault
+# Example: "LENDERS:"
+# Examples: ["LENDERS:", "LENDER:", "Lunar-Interstate Finance Corporation"]
+# Observed: 8 occurrence(s); dg:structure: p(3), section(2)
+# Children (from schema hierarchy): Lender, LenderSignatory, SignatureDate
+LenderExecution = element LenderExecution {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Legal name of the lending entity or syndicate"
+# Kind: inline
+# Parent: IntroductoryRecital
+# Example: "ORBITAL DEVELOPMENT BANK (ODB)"
+# Examples: ["ORBITAL DEVELOPMENT BANK (ODB)", "CONCERT OF JOVIAN-LUNAR SOVEREIGN WEALTH FUNDS", "Concert of Jovian-Lunar Sovereign Wealth Funds"]
+# Observed: 5 occurrence(s); dg:structure: p(1)
+LenderName = element LenderName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The contractual action or right available to the lender upon occurrence of an event of default"
+# Kind: inline
+# Parent: DefaultTriggerDescription
+# Example: "full acceleration of the loan and seizure of the \"Collateral\""
+# Examples: ["full acceleration of the loan and seizure of the \"Collateral\"", "Upon an Event of Default, Lender may foreclose on Dome-5. However, under the \"Hu"]
+# Observed: 2 occurrence(s); dg:structure: p(1)
+LenderRemedyOnDefault = element LenderRemedyOnDefault {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Name of the individual executing the agreement on behalf of the lender"
+# Kind: inline
+# Parent: LenderExecution
+# Example: "Sarah Sterling"
+# Examples: ["Sarah Sterling"]
+# Observed: 2 occurrence(s)
+LenderSignatory = element LenderSignatory {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The defined shorthand label assigned to a specific operational or environmental maintenance standard"
+# Kind: section
+# Parent: DefinedTerms
+# Example: "\"Minimum Pressurization Standard\": The mandatory micro-atmospheric parameter def"
+# Examples: ["\"Minimum Pressurization Standard\": The mandatory micro-atmospheric parameter def", "Section 3.02. Minimum Pressurization Standard.", "Minimum Pressurization Standard"]
+# Observed: 12 occurrence(s); dg:structure: li(4), section(2)
+OperationalCovenantName = element OperationalCovenantName {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Section imposing environment- or asset-specific maintenance obligations on the borrower as loan conditions"
+# Kind: section
+# Example: "Article III: Collateral and Environmental Maintenance"
+# Examples: ["Article III: Collateral and Environmental Maintenance", "The Borrower shall maintain continuous atmospheric pressure (101.3 kPa, 21% O2, ", "Asset Standards & Cryogenics"]
+# Observed: 5 occurrence(s); dg:structure: section(4), p(1)
+# Children (from schema hierarchy): OperationalThreshold
+OperationalStandards = element OperationalStandards {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The quantitative or qualitative standard the borrower must continuously satisfy under the operational covenant"
+# Kind: inline
+# Parent: OperationalStandards
+# Example: "101.3 kPa, 21% O2, 79% N2"
+# Examples: ["101.3 kPa, 21% O2, 79% N2", "40 Kelvin", "10,000 passengers/week"]
+# Observed: 3 occurrence(s)
+OperationalThreshold = element OperationalThreshold {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The total monetary sum committed or lent under the credit facility"
+# Kind: inline
+# Parent: CreditFacilityCommitment
+# Example: "LC 150,000,000"
+# Examples: ["LC 150,000,000", "LC 500,000,000", "LC 320,000,000"]
+# Observed: 3 occurrence(s)
+PrincipalAmount = element PrincipalAmount {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The minimum monetary sum the borrower must maintain in a designated reserve or protection fund"
+# Kind: inline
+# Parent: SpecialtyReservesOrCovenants
+# Example: "LC 45,000,000"
+# Examples: ["LC 45,000,000"]
+# Observed: 1 occurrence(s)
+ReserveAmount = element ReserveAmount {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The defined label assigned to a required capital reserve or protection fund"
+# Kind: section
+# Parent: DefinedTerms
+# Example: "\"Physical Protection Fund\": The sovereign reserve balance set forth in Section 4"
+# Examples: ["\"Physical Protection Fund\": The sovereign reserve balance set forth in Section 4", "Physical Protection Fund"]
+# Observed: 4 occurrence(s); dg:structure: li(1), section(1)
+ReserveFundName = element ReserveFundName {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The overarching financing instrument governing the credit relationship between borrower and lender"
+# Kind: section
+# Example: "Secured Credit Agreement"
+# Examples: ["Secured Credit Agreement"]
+# Observed: 3 occurrence(s); dg:structure: section(3)
+# Children (from schema hierarchy): IntroductoryRecital, SpecialtyReservesOrCovenants
+SecuredCreditAgreement = element SecuredCreditAgreement {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The calendar date on which the final party executes the agreement, establishing the effective date"
+# Kind: inline
+# Parent: LenderExecution
+# Example: "June 26, 2026"
+# Examples: ["June 26, 2026"]
+# Observed: 3 occurrence(s)
+# Data type (from DGML): date(3) of 3 occurrence(s)
+SignatureDate = element SignatureDate {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "date" },
+    attribute dg:value { xsd:date })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Section imposing financial reserve or ratio maintenance obligations on the borrower"
+# Kind: section
+# Parent: SecuredCreditAgreement
+# Example: "Specialty Reserves"
+# Examples: ["Specialty Reserves", "The Borrower shall lock a capital account with at least LC 45,000,000 designated", "Ecosystem Stability Level"]
+# Observed: 4 occurrence(s); dg:structure: section(2), p(2)
+# Children (from schema hierarchy): ReserveAmount
+SpecialtyReservesOrCovenants = element SpecialtyReservesOrCovenants {
+  common.atts,
+  mixed { any.docset* }
+}
+

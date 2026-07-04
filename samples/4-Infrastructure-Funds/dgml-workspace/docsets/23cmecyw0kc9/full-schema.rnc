@@ -1,0 +1,1211 @@
+# ==========================================================================
+# DGML docset schema — Periodic Financial Reporting Package
+# RELAX NG Compact.  Data types observed in 10 .dgml.xml file(s):
+#   element text is the RAW page text; the normalized, typed value is
+#   carried by @dg:value, described by @xsi:type (XSD built-in names).
+# `# Field: value` comments are the LOSSLESS schema.json serialization;
+#   regenerate the JSON via dgml_core.generation.rnc.rnc_to_schema_dict.
+# ==========================================================================
+
+default namespace docset = "http://dgml.io/dgml-io/PeriodicFinancialReportingPackage"
+namespace dg = "http://dgml.io/ns/dg#"
+namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = dg.chunk
+
+# --- attributes common to every DGML element ------------------------
+# dg:origin  = grounding bbox: "page x1 y1 x2 y2"
+# dg:itemprop / dg:href = semantic link (predicate + '#id' target(s))
+common.atts =
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  attribute dg:value { text }?,
+  attribute xsi:type { text }?
+
+# --- generic structural chunk (unlabeled scaffolding) ----------------
+dg.chunk = element dg:chunk { common.atts, mixed { any.docset* } }
+
+# a concept private to ONE document renders in the dg: namespace instead
+# of docset: (the shared-tag rule) — same shape, unshared vocabulary
+dg.private = element dg:* { common.atts, mixed { any.docset* } }
+
+# any docset element may appear where structure allows it
+any.docset = dg.chunk
+  | dg.private
+  | AccumulatedDepreciation
+  | ActualVsBudget
+  | AdministrativeCost
+  | AssetGrossBookValue
+  | AssetName
+  | AssetNetCarryingValue
+  | BalanceSheet
+  | BalanceSheetCarryingValue
+  | BudgetedNetOperatingIncome
+  | CashAndReserves
+  | CashFlow
+  | CashFlowAmount
+  | CashFlowFromOperations
+  | CashFlowItemName
+  | ConsolidatedIncome
+  | CorridorSegmentPerformance
+  | CostVariance
+  | CovenantActualRatio
+  | CovenantComplianceNarrative
+  | CovenantComplianceStatus
+  | CovenantContractualMinimum
+  | CovenantMetricName
+  | CovenantMetrics
+  | CustomerSegmentName
+  | DSCRCovenantFloor
+  | DebtCovenant
+  | DebtServiceCoverageRatio
+  | DebtYieldRatio
+  | DirectCost
+  | EngineeringCertification
+  | GrantAllocation
+  | GrossRevenue
+  | HospitalityFinancialMetrics
+  | IndustrialOutput
+  | InterconnectionOrSurchargeRevenue
+  | LeaseRevenue
+  | LiabilityClassName
+  | LiabilityMaturityPeriod
+  | LiabilityOutstandingBalance
+  | LicenseFeeRevenue
+  | LoanToValueRatio
+  | NetOperatingIncome
+  | NetOperatingIncomeVariance
+  | NetSegmentMargin
+  | Occupancy
+  | OperationalSegment
+  | OperationalSegmentName
+  | PhysicalOutputVolume
+  | PowerGenerationBySegment
+  | PowerGenerationRecord
+  | ProcessingSurcharge
+  | PropertyPlantEquipment
+  | QuarterlyOutputTarget
+  | RefiningOrProcessingMargin
+  | ReportingEntityName
+  | ReportingPackage
+  | ReportingPeriod
+  | ReserveAccountBalance
+  | ReserveAccountName
+  | ReserveBalance
+  | ReserveRestrictionStatus
+  | RevenueVariance
+  | SegmentCostActual
+  | SegmentCostBudget
+  | SegmentOperational
+  | SegmentOperations
+  | SegmentProduction
+  | SegmentRevenueActual
+  | SegmentRevenueBudget
+  | ShieldingOrContainmentCost
+  | StatementOfOperations
+  | SubmittingParty
+  | TariffRate
+  | TotalCost
+  | TotalLiabilities
+  | TotalNetIncome
+  | TotalPhysicalVolume
+  | TotalRevenue
+  | UnitPrice
+
+# ------------------------------------------------------------------
+# Description: "Accumulated depreciation, wear, or amortisation applied against a physical asset"
+# Kind: inline
+# Parent: BalanceSheet
+# Example: "Accumulated Wear (Tidal)"
+# Examples: ["Accumulated Wear (Tidal)", "(45,000,000)", "(56,000,000)"]
+# Observed: 4 occurrence(s); dg:structure: td(4)
+AccumulatedDepreciation = element AccumulatedDepreciation {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Explanatory note describing the reason for a variance between actual and budgeted figures"
+# Kind: row
+# Parent: ConsolidatedIncome
+# Example: "Notes"
+# Examples: ["Notes", "Reflects higher offworld tourism occupancy", "Long-term fixed contracts"]
+# Observed: 13 occurrence(s); dg:structure: td(12), tr(1)
+ActualVsBudget = element ActualVsBudget {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "General administrative, legal, and insurance expenses"
+# Kind: row
+# Parent: ConsolidatedIncome
+# Observed: 1 occurrence(s); dg:structure: tr(1)
+AdministrativeCost = element AdministrativeCost {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Gross book value of a physical asset before depreciation or wear"
+# Kind: inline
+# Parent: BalanceSheet
+# Example: "Gross Book Value"
+# Examples: ["Gross Book Value", "450,000,000", "280,000,000"]
+# Observed: 4 occurrence(s); dg:structure: td(4)
+# Data type (from DGML): integer(3) of 4 occurrence(s)
+AssetGrossBookValue = element AssetGrossBookValue {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Name of a distinct physical or structural asset on the balance sheet"
+# Kind: inline
+# Parent: BalanceSheet
+# Example: "Physical / Structural Asset"
+# Examples: ["Physical / Structural Asset", "Titanium-Glass Dome Units", "Hydrothermal Energy Interface"]
+# Observed: 4 occurrence(s); dg:structure: td(4)
+AssetName = element AssetName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Net carrying value of a physical asset after accumulated depreciation"
+# Kind: inline
+# Parent: BalanceSheet
+# Example: "Net Carrying Value"
+# Examples: ["Net Carrying Value", "405,000,000", "224,000,000"]
+# Observed: 4 occurrence(s); dg:structure: td(4)
+# Data type (from DGML): integer(3) of 4 occurrence(s)
+AssetNetCarryingValue = element AssetNetCarryingValue {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Recurring section presenting asset, liability, and reserve account carrying values"
+# Kind: section
+# Parent: ReportingPackage
+# Example: "Consolidated Balance Sheet & Reserve Accounts"
+# Examples: ["Consolidated Balance Sheet & Reserve Accounts"]
+# Observed: 11 occurrence(s); dg:structure: tr(9), section(1), table(1)
+# Children (from schema hierarchy): AccumulatedDepreciation, AssetGrossBookValue, AssetName, AssetNetCarryingValue, CashAndReserves, LiabilityClassName, LiabilityMaturityPeriod, LiabilityOutstandingBalance, PropertyPlantEquipment, ReserveBalance, ReserveRestrictionStatus, TotalLiabilities
+BalanceSheet = element BalanceSheet {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Total carrying value assigned to a broad balance sheet category"
+# Kind: inline
+# Observed: 3 occurrence(s); dg:structure: td(3)
+# Data type (from DGML): integer(3) of 3 occurrence(s)
+BalanceSheetCarryingValue = element BalanceSheetCarryingValue {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Budgeted or forecast net operating income for the reporting period"
+# Kind: inline
+BudgetedNetOperatingIncome = element BudgetedNetOperatingIncome {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Total cash and restricted reserve balance reported on the balance sheet"
+# Kind: row
+# Parent: BalanceSheet
+# Observed: 1 occurrence(s); dg:structure: tr(1)
+CashAndReserves = element CashAndReserves {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Recurring section presenting cash receipts, operating outflows, and net operating income"
+# Kind: section
+# Parent: ReportingPackage
+# Example: "Consolidated Income Statement (Actual vs. Budget)"
+# Examples: ["Consolidated Income Statement (Actual vs. Budget)", "Cash Flow from Operations", "Notes"]
+# Observed: 9 occurrence(s); dg:structure: td(6), section(2), tr(1)
+# Children (from schema hierarchy): CashFlowAmount, CashFlowFromOperations, CashFlowItemName, ConsolidatedIncome
+CashFlow = element CashFlow {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Cash Flow Amount"
+# Kind: inline
+# Parent: CashFlow
+# Example: "Amount (ECU)"
+# Examples: ["Amount (ECU)", "41,200,000", "6,500,000"]
+# Observed: 6 occurrence(s); dg:structure: td(6)
+# Data type (from DGML): integer(3) of 6 occurrence(s)
+CashFlowAmount = element CashFlowAmount {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Cash Flow From Operations"
+# Kind: section
+# Parent: CashFlow
+# Observed: 1 occurrence(s); dg:structure: table(1)
+CashFlowFromOperations = element CashFlowFromOperations {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Cash Flow Item Name"
+# Kind: inline
+# Parent: CashFlow
+# Example: "Cash Flow Item"
+# Examples: ["Cash Flow Item", "Gross Residential Lease Collections", "Common Atmosphere Surcharges"]
+# Observed: 6 occurrence(s); dg:structure: td(6)
+CashFlowItemName = element CashFlowItemName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Consolidated Income"
+# Kind: section
+# Parent: CashFlow
+# Observed: 1 occurrence(s); dg:structure: table(1)
+# Children (from schema hierarchy): ActualVsBudget, AdministrativeCost, InterconnectionOrSurchargeRevenue, LeaseRevenue
+ConsolidatedIncome = element ConsolidatedIncome {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Corridor Segment Performance"
+# Kind: section
+# Parent: IndustrialOutput
+# Observed: 1 occurrence(s); dg:structure: table(1)
+CorridorSegmentPerformance = element CorridorSegmentPerformance {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Difference between actual and budgeted cost for a specific operating cost line"
+# Kind: inline
+# Parent: ShieldingOrContainmentCost
+# Example: "(100,000)"
+# Examples: ["(100,000)", "600,000", "(3,500,000)"]
+# Observed: 7 occurrence(s); dg:structure: td(7)
+# Data type (from DGML): integer(2) of 7 occurrence(s)
+CostVariance = element CostVariance {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Actual computed value of a covenant metric for the reporting period"
+# Kind: inline
+# Parent: DebtCovenant
+# Example: "Actual Ratio (Q2 2026)"
+# Examples: ["Actual Ratio (Q2 2026)", "2.23x", "64.93%"]
+# Observed: 4 occurrence(s); dg:structure: td(4)
+# Data type (from DGML): decimal(2) of 4 occurrence(s)
+CovenantActualRatio = element CovenantActualRatio {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Prose summary confirming covenant compliance and noting any operational performance highlights"
+# Kind: section
+# Parent: IndustrialOutput
+# Example: "Compliance Status: The planetary remediation fund is currently capitalized at 18"
+# Examples: ["Compliance Status: The planetary remediation fund is currently capitalized at 18", "The DSCR stands at 1.82x (compared to the covenant floor of 1.30x). Organic outp", "Compliance Status: Net credit coverage matches requirements. Telemetry assets ar"]
+# Observed: 6 occurrence(s); dg:structure: p(6)
+# Children (from schema hierarchy): CovenantMetricName, DSCRCovenantFloor, DebtServiceCoverageRatio, DebtYieldRatio, ReserveAccountBalance, ReserveAccountName
+CovenantComplianceNarrative = element CovenantComplianceNarrative {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Pass/fail or compliance determination for a covenant metric"
+# Kind: inline
+# Parent: DebtCovenant
+# Example: "Compliance Status"
+# Examples: ["Compliance Status", "IN COMPLIANCE"]
+# Observed: 4 occurrence(s); dg:structure: td(4)
+CovenantComplianceStatus = element CovenantComplianceStatus {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Contractual floor or ceiling threshold for a covenant metric"
+# Kind: inline
+# Parent: DebtCovenant
+# Example: "Contractual Minimum"
+# Examples: ["Contractual Minimum", "1.45x", "75.00%"]
+# Observed: 4 occurrence(s); dg:structure: td(4)
+# Data type (from DGML): decimal(2) of 4 occurrence(s)
+CovenantContractualMinimum = element CovenantContractualMinimum {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Name of a financial covenant ratio or test"
+# Kind: inline
+# Parent: CovenantComplianceNarrative
+# Example: "Debt Yield covenant ratio"
+# Examples: ["Debt Yield covenant ratio", "Covenant Metric", "Debt Service Coverage Ratio (DSCR)\nNOI / (Interest + Principal)"]
+# Observed: 5 occurrence(s); dg:structure: td(4)
+CovenantMetricName = element CovenantMetricName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Covenant Metrics"
+# Kind: section
+# Parent: DebtCovenant
+# Observed: 1 occurrence(s); dg:structure: table(1)
+# Children (from schema hierarchy): LoanToValueRatio
+CovenantMetrics = element CovenantMetrics {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Name of the customer, grid zone, or external counterparty served by a segment"
+# Kind: inline
+# Parent: PowerGenerationRecord
+# Example: "Sector-B Residential Hub"
+# Examples: ["Sector-B Residential Hub", "Sector-C Mining Complex", "Total Output"]
+# Observed: 3 occurrence(s); dg:structure: td(3)
+CustomerSegmentName = element CustomerSegmentName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Minimum DSCR threshold stipulated in the debt covenant"
+# Kind: inline
+# Parent: CovenantComplianceNarrative
+# Example: "1.30x"
+# Examples: ["1.30x"]
+# Observed: 1 occurrence(s)
+DSCRCovenantFloor = element DSCRCovenantFloor {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Recurring section presenting debt covenant metrics, thresholds, and compliance status"
+# Kind: section
+# Parent: ReportingPackage
+# Example: "Debt Covenant Summary"
+# Examples: ["Debt Covenant Summary", "Debt Service & Financial Covenant Calculations"]
+# Observed: 3 occurrence(s); dg:structure: section(2), tr(1)
+# Children (from schema hierarchy): CovenantActualRatio, CovenantComplianceStatus, CovenantContractualMinimum, CovenantMetrics
+DebtCovenant = element DebtCovenant {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "DSCR value expressing net operating income relative to debt service obligations"
+# Kind: inline
+# Parent: CovenantComplianceNarrative
+# Example: "1.82x"
+# Examples: ["1.82x"]
+# Observed: 2 occurrence(s); dg:structure: tr(1)
+# Data type (from DGML): date(1) of 2 occurrence(s)
+DebtServiceCoverageRatio = element DebtServiceCoverageRatio {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "date" },
+    attribute dg:value { xsd:date })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Debt yield ratio expressing net operating income as a proportion of outstanding loan balance"
+# Kind: inline
+# Parent: CovenantComplianceNarrative
+# Example: "13.24%"
+# Examples: ["13.24%"]
+# Observed: 2 occurrence(s); dg:structure: tr(1)
+# Data type (from DGML): decimal(1) of 2 occurrence(s)
+DebtYieldRatio = element DebtYieldRatio {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Primary operating cost, maintenance, upkeep, or production expense charged against a segment"
+# Kind: inline
+# Parent: SegmentRevenueActual
+# Example: "(12,200,000)"
+# Examples: ["(12,200,000)", "(4,200,000)", "(16,400,000)"]
+# Observed: 15 occurrence(s); dg:structure: td(11), tr(4)
+DirectCost = element DirectCost {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Formal certification by engineers or operators confirming physical or safety parameter compliance"
+# Kind: section
+# Parent: IndustrialOutput
+# Example: "Compliance Status: The magnetic deflector integrity remains optimal. No solar-fl"
+# Examples: ["Compliance Status: The magnetic deflector integrity remains optimal. No solar-fl", "Compliance Status: The Replacement Reserve is current and funded at 18,500,000 E", "Engineering Certifications"]
+# Observed: 4 occurrence(s); dg:structure: p(3), section(1)
+EngineeringCertification = element EngineeringCertification {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Direct grant or subsidy income allocated to a segment"
+# Kind: inline
+# Parent: SegmentRevenueActual
+# Example: "15,000,000"
+# Examples: ["15,000,000", "8,000,000", "23,000,000"]
+# Observed: 3 occurrence(s); dg:structure: td(3)
+# Data type (from DGML): integer(3) of 3 occurrence(s)
+GrantAllocation = element GrantAllocation {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Top-line gross billings, income, or receipts generated by a segment before deductions"
+# Kind: inline
+# Parent: SegmentRevenueActual
+# Example: "38,400,000"
+# Examples: ["38,400,000", "12,100,000", "50,500,000"]
+# Observed: 9 occurrence(s); dg:structure: td(8), tr(1)
+# Data type (from DGML): integer(8) of 9 occurrence(s)
+GrossRevenue = element GrossRevenue {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Hospitality Financial Metrics"
+# Kind: section
+# Parent: IndustrialOutput
+# Observed: 1 occurrence(s); dg:structure: table(1)
+# Children (from schema hierarchy): SegmentRevenueActual, TotalRevenue
+HospitalityFinancialMetrics = element HospitalityFinancialMetrics {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Recurring section presenting segment-level production volumes, prices, and net income"
+# Kind: section
+# Parent: ReportingPackage
+# Example: "Industrial Output Summary"
+# Examples: ["Industrial Output Summary", "Hospitality Financial Metrics", "Statement of Operations"]
+# Observed: 17 occurrence(s); dg:structure: tr(9), section(8)
+# Children (from schema hierarchy): CorridorSegmentPerformance, CovenantComplianceNarrative, EngineeringCertification, HospitalityFinancialMetrics, NetSegmentMargin, OperationalSegment, OperationalSegmentName, PhysicalOutputVolume, PowerGenerationBySegment, ProcessingSurcharge, RefiningOrProcessingMargin, SegmentOperational, SegmentOperations, SegmentProduction, StatementOfOperations, TotalCost, TotalNetIncome, TotalPhysicalVolume, UnitPrice
+IndustrialOutput = element IndustrialOutput {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Revenue from ancillary surcharges, recoveries, or interconnection fees"
+# Kind: row
+# Parent: ConsolidatedIncome
+# Example: "10,500,000"
+# Examples: ["10,500,000", "28,200,000", "38,700,000"]
+# Observed: 5 occurrence(s); dg:structure: td(3), tr(2)
+# Data type (from DGML): integer(3) of 5 occurrence(s)
+InterconnectionOrSurchargeRevenue = element InterconnectionOrSurchargeRevenue {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Revenue collected from lease or rental arrangements with tenants or occupants"
+# Kind: row
+# Parent: ConsolidatedIncome
+# Observed: 3 occurrence(s); dg:structure: tr(3)
+LeaseRevenue = element LeaseRevenue {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Name or sub-class of a liability on the balance sheet"
+# Kind: inline
+# Parent: BalanceSheet
+# Example: "Liability Sub-Class"
+# Examples: ["Liability Sub-Class", "Senior Secured Debt (UJCC)", "Accrued Tectonic Remediation Fees"]
+# Observed: 4 occurrence(s); dg:structure: td(4)
+LiabilityClassName = element LiabilityClassName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Maturity date or time horizon for a liability"
+# Kind: inline
+# Parent: BalanceSheet
+# Example: "Maturity Period"
+# Examples: ["Maturity Period", "Jovian Year 2035", "Current (Within 1 Year)"]
+# Observed: 4 occurrence(s); dg:structure: td(4)
+LiabilityMaturityPeriod = element LiabilityMaturityPeriod {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Outstanding principal or accrued balance of a liability"
+# Kind: inline
+# Parent: BalanceSheet
+# Example: "Outstanding Balance"
+# Examples: ["Outstanding Balance", "750,000,000", "12,000,000"]
+# Observed: 4 occurrence(s); dg:structure: td(4)
+# Data type (from DGML): integer(3) of 4 occurrence(s)
+LiabilityOutstandingBalance = element LiabilityOutstandingBalance {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Revenue derived from licensing, franchise, or intellectual-property fees"
+# Kind: row
+# Parent: StatementOfOperations
+# Example: "3,200,000"
+# Examples: ["3,200,000", "1,400,000", "4,600,000"]
+# Observed: 4 occurrence(s); dg:structure: td(3), tr(1)
+# Data type (from DGML): integer(3) of 4 occurrence(s)
+LicenseFeeRevenue = element LicenseFeeRevenue {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "LTV ratio expressing outstanding debt as a proportion of appraised asset value"
+# Kind: row
+# Parent: CovenantMetrics
+# Observed: 1 occurrence(s); dg:structure: tr(1)
+LoanToValueRatio = element LoanToValueRatio {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Aggregate net operating income across all segments for the period"
+# Kind: row
+# Parent: StatementOfOperations
+# Observed: 3 occurrence(s); dg:structure: tr(3)
+NetOperatingIncome = element NetOperatingIncome {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Difference between actual and budgeted net operating income"
+# Kind: inline
+NetOperatingIncomeVariance = element NetOperatingIncomeVariance {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Net income or margin remaining for a segment after all costs"
+# Kind: inline
+# Parent: IndustrialOutput
+# Example: "110,000,000"
+# Examples: ["110,000,000", "13,000,000", "22,100,000"]
+# Observed: 15 occurrence(s); dg:structure: td(15)
+# Data type (from DGML): integer(15) of 15 occurrence(s)
+NetSegmentMargin = element NetSegmentMargin {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Narrative note stating occupancy rate or utilisation level for a property or facility"
+# Kind: inline
+Occupancy = element Occupancy {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Operational Segment"
+# Kind: section
+# Parent: IndustrialOutput
+# Observed: 1 occurrence(s); dg:structure: table(1)
+OperationalSegment = element OperationalSegment {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Name of a discrete business, product, transit, or operational segment within the entity"
+# Kind: inline
+# Parent: IndustrialOutput
+# Example: "Heavy Water (D2O)"
+# Examples: ["Heavy Water (D2O)", "Trace Lithium Isotopes", "Total"]
+# Observed: 37 occurrence(s); dg:structure: td(37)
+OperationalSegmentName = element OperationalSegmentName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Quantity of physical output, throughput, or capacity for a given segment (kg, liters, tons, GW, hL, etc.)"
+# Kind: inline
+# Parent: IndustrialOutput
+# Example: "50,000 kg"
+# Examples: ["50,000 kg", "15,000 kg", "840,000 t"]
+# Observed: 11 occurrence(s); dg:structure: td(11)
+PhysicalOutputVolume = element PhysicalOutputVolume {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Power Generation By Segment"
+# Kind: section
+# Parent: IndustrialOutput
+# Observed: 1 occurrence(s); dg:structure: table(1)
+# Children (from schema hierarchy): PowerGenerationRecord
+PowerGenerationBySegment = element PowerGenerationBySegment {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "A log entry capturing the amount of electrical energy supplied by a customer grid segment along with the associated tariff rate."
+# Kind: row
+# Parent: PowerGenerationBySegment
+# Observed: 3 occurrence(s); dg:structure: tr(3)
+# Children (from schema hierarchy): CustomerSegmentName, TariffRate
+PowerGenerationRecord = element PowerGenerationRecord {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Additional surcharge or processing fee deducted from segment gross revenue"
+# Kind: inline
+# Parent: IndustrialOutput
+# Example: "(15,000,000)"
+# Examples: ["(15,000,000)", "(5,000,000)", "(20,000,000)"]
+# Observed: 3 occurrence(s); dg:structure: td(3)
+ProcessingSurcharge = element ProcessingSurcharge {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Total net value of property, plant, and equipment reported on the balance sheet"
+# Kind: row
+# Parent: BalanceSheet
+# Observed: 1 occurrence(s); dg:structure: tr(1)
+PropertyPlantEquipment = element PropertyPlantEquipment {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Stated operational or production target for the reporting quarter"
+# Kind: inline
+QuarterlyOutputTarget = element QuarterlyOutputTarget {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Percentage margin retained after refining, processing, or extraction costs for a segment"
+# Kind: inline
+# Parent: IndustrialOutput
+# Example: "64.5%"
+# Examples: ["64.5%", "61.2%", "-"]
+# Observed: 3 occurrence(s); dg:structure: td(3)
+# Data type (from DGML): decimal(2) of 3 occurrence(s)
+RefiningOrProcessingMargin = element RefiningOrProcessingMargin {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Legal or trading name of the entity submitting the quarterly report"
+# Kind: inline
+# Parent: ReportingPackage
+# Example: "Carthage Resources PLC"
+# Examples: ["Carthage Resources PLC", "Minos Vista Properties", "Conamara Biosphere LLC"]
+# Observed: 10 occurrence(s)
+ReportingEntityName = element ReportingEntityName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Full descriptive title of the quarterly reporting package as it appears on the document"
+# Kind: section
+# Example: "Carthage Resources PLC - Q2 2026 Production & Operations Statement"
+# Examples: ["Carthage Resources PLC - Q2 2026 Production & Operations Statement", "Minos Vista Properties - Q2 2026 Income Statement", "Conamara Biosphere LLC - Q2 2026 Financial & Yield Statements"]
+# Observed: 10 occurrence(s); dg:structure: section(10)
+# Children (from schema hierarchy): BalanceSheet, CashFlow, DebtCovenant, IndustrialOutput, ReportingEntityName, ReportingPeriod
+ReportingPackage = element ReportingPackage {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Calendar or fiscal quarter covered by the report"
+# Kind: inline
+# Parent: ReportingPackage
+# Example: "Q2 2026"
+# Examples: ["Q2 2026"]
+# Observed: 19 occurrence(s)
+ReportingPeriod = element ReportingPeriod {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Current monetary balance held in a specific reserve or escrow account"
+# Kind: inline
+# Parent: CovenantComplianceNarrative
+# Example: "18,500,000 ECU"
+# Examples: ["18,500,000 ECU", "51,500,000 ECU", "Detailed Segment Ledger (Operational & Restricted Funds)"]
+# Observed: 13 occurrence(s); dg:structure: td(8)
+# Data type (from DGML): integer(3) of 13 occurrence(s)
+ReserveAccountBalance = element ReserveAccountBalance {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Name or classification of a restricted or sinking-fund reserve account"
+# Kind: inline
+# Parent: CovenantComplianceNarrative
+# Example: "Emergency Track Reserve"
+# Examples: ["Emergency Track Reserve", "Balance Sheet Category", "Cash & Restricted Reserves"]
+# Observed: 11 occurrence(s); dg:structure: td(8)
+ReserveAccountName = element ReserveAccountName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Recurring section reporting the current balance and draw-down status of reserve or escrow accounts"
+# Kind: row
+# Parent: BalanceSheet
+# Example: "Reserve Balance Statement"
+# Examples: ["Reserve Balance Statement"]
+# Observed: 5 occurrence(s); dg:structure: tr(4), section(1)
+ReserveBalance = element ReserveBalance {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Description of whether a reserve account is restricted, partially restricted, or free"
+# Kind: inline
+# Parent: BalanceSheet
+# Example: "Carrying Value (ECU)"
+# Examples: ["Carrying Value (ECU)", "Restricted Status", "Fully Restricted (UJCC Lien)"]
+# Observed: 5 occurrence(s); dg:structure: td(5)
+ReserveRestrictionStatus = element ReserveRestrictionStatus {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Difference between actual and budgeted revenue for a segment"
+# Kind: inline
+# Parent: SegmentRevenueActual
+# Example: "Variance (ECU)"
+# Examples: ["Variance (ECU)", "2,500,000", "(800,000)"]
+# Observed: 12 occurrence(s); dg:structure: td(12)
+# Data type (from DGML): integer(9) of 12 occurrence(s)
+RevenueVariance = element RevenueVariance {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Actual cost incurred for a specific operating cost line in the period"
+# Kind: inline
+# Parent: ShieldingOrContainmentCost
+# Example: "(9,100,000)"
+# Examples: ["(9,100,000)", "(11,400,000)", "(84,500,000)"]
+# Observed: 7 occurrence(s); dg:structure: td(7)
+SegmentCostActual = element SegmentCostActual {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Budgeted cost for a specific operating cost line in the period"
+# Kind: inline
+# Parent: ShieldingOrContainmentCost
+# Example: "(9,000,000)"
+# Examples: ["(9,000,000)", "(12,000,000)", "(81,000,000)"]
+# Observed: 7 occurrence(s); dg:structure: td(7)
+SegmentCostBudget = element SegmentCostBudget {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Segment Operational"
+# Kind: section
+# Parent: IndustrialOutput
+# Observed: 1 occurrence(s); dg:structure: table(1)
+SegmentOperational = element SegmentOperational {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Segment Operations"
+# Kind: section
+# Parent: IndustrialOutput
+# Observed: 1 occurrence(s); dg:structure: table(1)
+SegmentOperations = element SegmentOperations {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Segment Production"
+# Kind: section
+# Parent: IndustrialOutput
+# Observed: 1 occurrence(s); dg:structure: table(1)
+SegmentProduction = element SegmentProduction {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Actual period revenue for a segment as reported"
+# Kind: row
+# Parent: HospitalityFinancialMetrics
+# Example: "Q2 Actual (ECU)"
+# Examples: ["Q2 Actual (ECU)", "24,500,000", "12,200,000"]
+# Observed: 23 occurrence(s); dg:structure: td(14), tr(9)
+# Data type (from DGML): integer(12) of 23 occurrence(s)
+# Children (from schema hierarchy): DirectCost, GrantAllocation, GrossRevenue, RevenueVariance, SegmentRevenueBudget, ShieldingOrContainmentCost
+SegmentRevenueActual = element SegmentRevenueActual {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Budgeted or forecast revenue for a segment in the period"
+# Kind: inline
+# Parent: SegmentRevenueActual
+# Example: "Q2 Budget (ECU)"
+# Examples: ["Q2 Budget (ECU)", "22,000,000", "13,000,000"]
+# Observed: 12 occurrence(s); dg:structure: td(12)
+# Data type (from DGML): integer(10) of 12 occurrence(s)
+SegmentRevenueBudget = element SegmentRevenueBudget {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Costs specifically associated with radiation shielding, bio-containment, or environmental protection"
+# Kind: inline
+# Parent: SegmentRevenueActual
+# Example: "(4,100,000)"
+# Examples: ["(4,100,000)", "(1,500,000)", "(5,600,000)"]
+# Observed: 9 occurrence(s); dg:structure: td(5), tr(4)
+# Children (from schema hierarchy): CostVariance, SegmentCostActual, SegmentCostBudget
+ShieldingOrContainmentCost = element ShieldingOrContainmentCost {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Statement Of Operations"
+# Kind: section
+# Parent: IndustrialOutput
+# Observed: 1 occurrence(s); dg:structure: table(1)
+# Children (from schema hierarchy): LicenseFeeRevenue, NetOperatingIncome
+StatementOfOperations = element StatementOfOperations {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Name of the counterparty or lender to whom the report is submitted"
+# Kind: inline
+# Observed: 1 occurrence(s)
+SubmittingParty = element SubmittingParty {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Applicable tariff, price, or rate per unit charged to a customer or grid segment"
+# Kind: inline
+# Parent: PowerGenerationRecord
+# Example: "150,000"
+# Examples: ["150,000", "120,000", "-"]
+# Observed: 3 occurrence(s); dg:structure: td(3)
+# Data type (from DGML): integer(2) of 3 occurrence(s)
+TariffRate = element TariffRate {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Summed costs or operating expenditures across all segments or line items for the reporting period"
+# Kind: inline
+# Parent: IndustrialOutput
+# Example: "(3,950,000)"
+# Examples: ["(3,950,000)", "(17,300,000)"]
+# Observed: 3 occurrence(s); dg:structure: td(2), tr(1)
+TotalCost = element TotalCost {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Total current and long-term liabilities reported on the balance sheet"
+# Kind: row
+# Parent: BalanceSheet
+# Observed: 1 occurrence(s); dg:structure: tr(1)
+TotalLiabilities = element TotalLiabilities {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Aggregated net income or margin across all segments for the reporting period"
+# Kind: inline
+# Parent: IndustrialOutput
+# Example: "123,000,000"
+# Examples: ["123,000,000", "10,350,000", "69,900,000"]
+# Observed: 4 occurrence(s); dg:structure: td(3), tr(1)
+# Data type (from DGML): integer(3) of 4 occurrence(s)
+TotalNetIncome = element TotalNetIncome {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Aggregated physical output or throughput volume across all segments"
+# Kind: inline
+# Parent: IndustrialOutput
+# Example: "65,000 kg"
+# Examples: ["65,000 kg", "5,700 hL", "800,000,000 L"]
+# Observed: 4 occurrence(s); dg:structure: td(4)
+TotalPhysicalVolume = element TotalPhysicalVolume {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Summed revenue across all segments or line items for the reporting period"
+# Kind: row
+# Parent: HospitalityFinancialMetrics
+# Example: "14,300,000"
+# Examples: ["14,300,000", "213,000,000"]
+# Observed: 4 occurrence(s); dg:structure: tr(2), td(2)
+# Data type (from DGML): integer(2) of 4 occurrence(s)
+TotalRevenue = element TotalRevenue {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Rate or price per unit of output or energy (ECU per kg, per GW, etc.)"
+# Kind: inline
+# Parent: IndustrialOutput
+# Example: "2,500"
+# Examples: ["2,500", "1,200", "-"]
+# Observed: 3 occurrence(s); dg:structure: td(3)
+# Data type (from DGML): integer(2) of 3 occurrence(s)
+UnitPrice = element UnitPrice {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+

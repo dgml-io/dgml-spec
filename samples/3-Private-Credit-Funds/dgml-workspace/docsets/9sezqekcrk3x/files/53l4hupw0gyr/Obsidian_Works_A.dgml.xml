@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/SecuredCreditAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 240 232 2271 2897; 2 340 336 2210 1915; 3 240 235 2310 2204; 4 240 235 2310 2097; 5 240 235 2310 2781; 6 240 235 2310 1695">
+  <docset:ProjectSetIdentifier dg:structure="section" dg:origin="1 240 232 2271 2897; 2 340 336 2210 1915">
+    <dg:chunk dg:structure="header" dg:origin="1 495 232 2055 307; 1 279 345 2271 420" dg:style="font-weight: bold; font-size: 1.5em; color: darkslategray">
+      <docset:DocumentIdentifier dg:origin="1 495 232 693 307">SET 7</docset:DocumentIdentifier>: THE <docset:FacilityName dg:origin="1 914 232 2055 307; 1 279 345 2271 420" dg:style="text-transform: uppercase">LIGEIA MARE HYDROCARBON SUBSURFACE PIPELINE &amp; LIQUEFACTION TERMINAL</docset:FacilityName>
+    </dg:chunk>
+    <docset:AgreementType dg:structure="section" dg:origin="1 240 580 1525 635">
+      <dg:chunk dg:structure="header" dg:origin="1 240 580 1525 635" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: teal">DOCUMENT <docset:DocumentIdentifier dg:origin="1 576 580 642 635" dg:style="text-transform: none">7A</docset:DocumentIdentifier>: <docset:AgreementType dg:origin="1 674 580 1525 635">SECURED CREDIT AGREEMENT</docset:AgreementType>
+      </dg:chunk>
+    </docset:AgreementType>
+    <docset:AgreementType dg:structure="section" dg:origin="1 590 828 1960 2897; 2 340 336 2210 1915">
+      <dg:chunk dg:structure="header" dg:origin="1 860 828 1690 872" dg:style="font-weight: bold; text-transform: uppercase">SECURED TERM CREDIT AGREEMENT</dg:chunk>
+      <docset:AgreementEffectiveDate dg:structure="p" dg:origin="1 739 1144 1811 1188">Dated as of the Agreement Effective Date (as defined herein)</docset:AgreementEffectiveDate>
+      <dg:chunk dg:structure="p" dg:origin="1 1215 1460 1335 1504">among</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="1 816 1775 1734 1819; 1 1159 1841 1391 1885" dg:style="font-weight: bold">
+        <docset:BorrowerEntityName dg:origin="1 816 1775 1734 1819" dg:style="text-transform: uppercase">LIGEIA TRANSPORT &amp; LIQUEFACTION LP</docset:BorrowerEntityName>, as Borrower</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="1 1243 2157 1307 2201">and</dg:chunk>
+      <docset:LenderOrAgentEntityName dg:structure="p" dg:origin="1 590 2472 1960 2516; 1 689 2538 1861 2582" dg:style="font-weight: bold">JOVIAN-SATURNINE COLONIAL DEVELOPMENT BANK (JSCDB), as Administrative Agent, Collateral Agent, and Lead Arranger</docset:LenderOrAgentEntityName>
+      <dg:chunk dg:structure="p" dg:origin="1 1243 2854 1307 2897">and</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="2 407 336 2143 379" dg:style="font-weight: bold">THE FINANCIAL INSTITUTIONS PARTY HERETO FROM TIME TO TIME, as Lenders</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="2 340 781 2210 825; 2 340 846 2210 890; 2 340 912 2210 956; 2 340 978 1864 1021">This <docset:AgreementType dg:origin="2 435 781 1234 825" dg:style="text-transform: uppercase">SECURED TERM CREDIT AGREEMENT</docset:AgreementType> (this "Agreement") is entered into on the Agreement Effective Date by and among <docset:BorrowerEntityName dg:origin="2 869 846 1518 890">Ligeia Transport &amp; Liquefaction LP</docset:BorrowerEntityName>, as Borrower, the Lenders party hereto, and <docset:LenderOrAgentEntityName dg:origin="2 425 912 1277 956">Jovian-Saturnine Colonial Development Bank</docset:LenderOrAgentEntityName>, as Administrative Agent. In consideration of the mutual covenants and agreements herein contained, the parties hereto agree as follows:</dg:chunk>
+      <docset:FacilityName dg:structure="p" dg:origin="2 340 1293 2210 1337; 2 340 1359 2210 1403; 2 340 1425 519 1468">WHEREAS, the Borrower owns and operates a marine-subsurface pipeline network and cryogenic liquefaction facility transporting and processing liquid methane/ethane directly out of Ligeia Mare on Titan; and</docset:FacilityName>
+      <dg:chunk dg:structure="p" dg:origin="2 340 1740 2210 1784; 2 340 1806 2210 1850; 2 340 1871 2175 1915">WHEREAS, the Borrower has requested that the Lenders make loans to finance continuous subsurface pipeline structural reinforcement, centrifugal liquefaction plant servicing, and submarine docking platform upgrades; and the Lenders are willing to do so on the terms and subject to the conditions set forth herein.</dg:chunk>
+    </docset:AgreementType>
+  </docset:ProjectSetIdentifier>
+  <docset:DefinedTerms dg:structure="section" dg:origin="3 240 235 2310 2204">
+    <dg:chunk dg:structure="header" dg:origin="3 240 235 1549 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: teal">ARTICLE I: DEFINITIONS AND INTERPRETATION</dg:chunk>
+    <docset:DefinedTerms dg:structure="section" dg:origin="3 240 383 2310 1924">
+      <dg:chunk dg:structure="header" dg:origin="3 340 383 893 427" dg:style="font-weight: bold">Section 1.01. Defined Terms.</dg:chunk>
+      <docset:DefinedTerms dg:structure="p" dg:origin="3 910 383 2310 427; 3 240 449 359 492">As used in this Agreement, the following terms have the meanings specified below:</docset:DefinedTerms>
+      <dg:chunk dg:structure="ol" dg:origin="3 406 564 2310 1924">
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 430 564 2310 608; 3 406 630 2310 674; 3 406 695 1687 739; 3 406 1255 430 1299">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:AgreementEffectiveDate dg:origin="3 430 564 933 608" dg:style="font-weight: bold" xml:id="agreementeffectivedate" dg:itemprop="effectiveOn" dg:href="#executiondate">Agreement Effective Date</docset:AgreementEffectiveDate>" means the date on which this Agreement has been fully executed and delivered by all parties hereto, as verified by the date inscribed next to the signatures of the authorized officers in the execution block below (such date, the "Signature Date").</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 430 794 2310 838; 3 406 860 2310 904; 3 406 926 1598 969; 3 1132 1255 1156 1299">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:FacilityName dg:origin="3 430 794 862 838" dg:style="font-weight: bold">Ligeia Pipeline System</docset:FacilityName>" means the physical submarine piping networks, high-pressure booster stations, cryogenic fractional liquefaction plants, and submarine docking gantries situated at <docset:SectorDesignation dg:origin="3 1898 860 2078 904" xml:id="sectordesignation">Sector 27</docset:SectorDesignation>, Ligeia Mare coordinates (latitude <docset:FacilityName dg:origin="3 775 926 1278 969">79.0° N, longitude 248.0° W</docset:FacilityName>) on Titan, Saturn.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 430 1025 2310 1068; 3 406 1090 2310 1134; 3 406 1156 1112 1200; 3 1226 1255 1250 1299">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:PerformanceIndexThreshold dg:origin="3 430 1025 981 1068" dg:style="font-weight: bold" xml:id="performanceindexthreshold-3">Pipeline Throughput Target</docset:PerformanceIndexThreshold>" means the mandatory minimum operational transport and processing metric of <docset:PerformanceIndexThreshold dg:origin="3 583 1090 1954 1134" xml:id="performanceindexthreshold-4">9,200 metric tons of liquefied natural gas compounds per Titan sidereal day</docset:PerformanceIndexThreshold>, as calculated under the provisions of Section 4.01(2) herein.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 430 1255 2310 1299; 3 406 1320 2310 1364; 3 406 1386 1069 1430">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:PerformanceIndexThreshold dg:origin="3 430 1255 1132 1299" dg:style="font-weight: bold" xml:id="performanceindexthreshold-2">Subsurface Pipeline Integrity Rating</docset:PerformanceIndexThreshold>" or "<docset:PerformanceIndexThreshold dg:origin="3 1250 1255 1350 1299" dg:style="font-weight: bold; text-transform: uppercase">SPIR</docset:PerformanceIndexThreshold>" means the structural, thermodynamic, and pressure stability rating of the submarine-benthic piping lines, as evaluated on a 100-point scale by the Titan Technical Safety Directorate (TTSD).</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 981 1025 1005 1068; 3 430 1485 2310 1529; 3 406 1551 1577 1594">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:AccountingOrInterpretationRules dg:origin="3 430 1485 1296 1529" dg:style="font-weight: bold">Sol System Interstellar Accounting Standards</docset:AccountingOrInterpretationRules>" or "<docset:AccountingOrInterpretationRules dg:origin="3 1409 1485 1530 1529" dg:style="font-weight: bold; text-transform: uppercase">SSIAS</docset:AccountingOrInterpretationRules>" means the unified framework of financial accounting principles approved by the Interstellar Financial Board.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 406 1025 430 1068; 3 430 1650 2310 1693; 3 406 1715 1204 1759">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:BenchmarkReferenceRate dg:origin="3 430 1650 574 1693" dg:style="font-weight: bold; text-transform: uppercase">TIDOR</docset:BenchmarkReferenceRate>" means the <docset:BenchmarkReferenceRate dg:origin="3 826 1650 1412 1693">Titan Inter-Dome Offered Rate</docset:BenchmarkReferenceRate>, which is the floating interbank benchmark rate calculated for Titan-denominated credit lines.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 406 1814 2310 1858; 3 406 1880 1911 1924" xml:id="definedterms">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Undersea Sediment Escrow" means the cash escrow reserve fund mandated to be maintained under Section 4.01(3) for benthic sediment containment and localized pressure containment.</docset:DefinedTerms>
+      </dg:chunk>
+    </docset:DefinedTerms>
+    <docset:AccountingOrInterpretationRules dg:structure="section" dg:origin="3 240 2029 2310 2204">
+      <dg:chunk dg:structure="header" dg:origin="3 340 2029 1041 2072" dg:style="font-weight: bold">Section 1.02. Rules of Interpretation.</dg:chunk>
+      <docset:AccountingOrInterpretationRules dg:structure="p" dg:origin="3 1055 2029 2310 2072; 3 240 2094 2310 2138; 3 240 2160 916 2204">Capitalized terms defined in the singular shall have the corresponding meanings in the plural, and vice versa. Any references to specific sections, tables, or documents relate directly to this Agreement unless otherwise specified.</docset:AccountingOrInterpretationRules>
+    </docset:AccountingOrInterpretationRules>
+  </docset:DefinedTerms>
+  <docset:CreditFacilityCommitment dg:structure="section" dg:origin="4 240 235 2310 1300">
+    <dg:chunk dg:structure="header" dg:origin="4 240 235 1361 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: teal">ARTICLE II: THE SECURED CREDIT LINES</dg:chunk>
+    <docset:CreditFacilityCommitment dg:structure="section" dg:origin="4 240 383 2310 558">
+      <dg:chunk dg:structure="header" dg:origin="4 340 383 826 427" dg:style="font-weight: bold">Section 2.01. The Facility.</dg:chunk>
+      <docset:CreditFacilityCommitment dg:structure="p" dg:origin="4 838 383 2310 427; 4 240 449 2310 492; 4 240 514 1758 558">Subject to the terms and conditions of this Agreement, each Lender agrees to make a single advance term loan (each a "Facility Loan") to the Borrower on the Closing Date (which is identical to the Signature Date) in an aggregate principal amount of 7,200,000,000 Sol Credits (SC).</docset:CreditFacilityCommitment>
+    </docset:CreditFacilityCommitment>
+    <docset:InterestRateMargin dg:structure="section" dg:origin="4 340 629 2310 1019">
+      <dg:chunk dg:structure="header" dg:origin="4 340 629 1090 673" dg:style="font-weight: bold">Section 2.02. Interest Rate Adjustments.</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="4 340 745 2310 1019">
+        <dg:chunk dg:structure="li" dg:origin="4 340 745 2223 789">
+          <dg:chunk dg:structure="lim" dg:origin="4 340 745 373 789">1.</dg:chunk> The Facility Loans shall accrue interest daily at a floating rate per annum equal to <docset:BenchmarkReferenceRate dg:origin="4 1848 745 1992 789" dg:style="font-weight: bold; text-transform: uppercase">TIDOR</docset:BenchmarkReferenceRate> plus <docset:InterestRateMargin xsi:type="decimal" dg:value="7.25" dg:origin="4 2091 745 2223 789" dg:style="font-weight: bold">7.25%</docset:InterestRateMargin>.</dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="4 340 844 2310 888; 4 406 910 2310 954; 4 406 976 1837 1019">
+          <dg:chunk dg:structure="lim" dg:origin="4 340 844 373 888">2.</dg:chunk> Should the Subsurface Pipeline Integrity Rating (SPIR) fall below <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="89.0" dg:origin="4 1700 844 1813 888">89.0%</docset:PerformanceIndexThreshold> for any consecutive 5-day cycle, the floating margin shall automatically increase by <docset:InterestRateMargin dg:origin="4 1453 910 1798 954" dg:style="font-weight: bold">3.25% per annum</docset:InterestRateMargin> (the "Pipeline Rupture Risk Premium") until the SPIR is restored to <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="92.0" dg:origin="4 1106 976 1219 1019">92.0%</docset:PerformanceIndexThreshold> or above, as verified by the TTSD.</dg:chunk>
+      </dg:chunk>
+    </docset:InterestRateMargin>
+    <docset:RepaymentSchedule dg:structure="section" dg:origin="4 240 1125 2310 1300">
+      <dg:chunk dg:structure="header" dg:origin="4 340 1125 1164 1168" dg:style="font-weight: bold">Section 2.03. Repayment and Amortization.</dg:chunk>
+      <docset:RepaymentSchedule dg:structure="p" dg:origin="4 1177 1125 2310 1168; 4 240 1190 2310 1234; 4 240 1256 1861 1300">Repayment of the principal shall be executed in equal quarterly installments on the final operational day of each Martian fiscal quarter, starting on the first such date following the Agreement Effective Date, in accordance with the amortization schedules appended hereto.</docset:RepaymentSchedule>
+    </docset:RepaymentSchedule>
+  </docset:CreditFacilityCommitment>
+  <docset:RepresentationsAndWarranties dg:structure="section" dg:origin="4 240 1412 2310 2097">
+    <dg:chunk dg:structure="header" dg:origin="4 240 1412 1646 1466" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: teal">ARTICLE III: REPRESENTATIONS AND WARRANTIES</dg:chunk>
+    <dg:chunk dg:structure="p" dg:origin="4 340 1560 1361 1604">The Borrower represents and warrants to the Lenders that:</dg:chunk>
+    <docset:ExtractionOrOperatingRights dg:structure="section" dg:origin="4 240 1676 2310 1851" xml:id="extractionoroperatingrights" dg:itemprop="references" dg:href="#sectordesignation">
+      <dg:chunk dg:structure="header" dg:origin="4 340 1676 1285 1719" dg:style="font-weight: bold">Section 3.01. Marine Hydrocarbon Mining Rights.</dg:chunk>
+      <docset:ExtractionOrOperatingRights dg:structure="p" dg:origin="4 1298 1676 2310 1719; 4 240 1741 2310 1785; 4 240 1807 1443 1851">The Borrower holds exclusive licenses to extract, siphon, and process liquefied hydrocarbons within <docset:SectorDesignation dg:origin="4 1022 1741 1332 1785">Sector 27-Ligeia</docset:SectorDesignation>, containing high-purity cryogenic methane and ethane mixtures under the authority of the Titan Regulatory Council (TRC).</docset:ExtractionOrOperatingRights>
+    </docset:ExtractionOrOperatingRights>
+    <docset:StructuralOrEnvironmentalTolerance dg:structure="section" dg:origin="4 240 1922 2310 2097">
+      <dg:chunk dg:structure="header" dg:origin="4 340 1922 1266 1966" dg:style="font-weight: bold">Section 3.02. Subsurface Pressure Tolerances.</dg:chunk>
+      <docset:StructuralOrEnvironmentalTolerance dg:structure="p" dg:origin="4 1294 1922 2310 1966; 4 240 1988 2310 2032; 4 240 2054 1753 2097">The undersea pipeline casings are constructed using high-tensile titanium-niobium alloys and passive thermal insulation, engineered to withstand external hydrostatic pressure variants up to 250 atmospheres and ambient temperatures down to 90 Kelvin.</docset:StructuralOrEnvironmentalTolerance>
+    </docset:StructuralOrEnvironmentalTolerance>
+  </docset:RepresentationsAndWarranties>
+  <docset:CovenantsArticle dg:structure="section" dg:origin="5 240 235 2310 1694">
+    <dg:chunk dg:structure="header" dg:origin="5 240 235 933 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: teal">ARTICLE IV: COVENANTS</dg:chunk>
+    <docset:AffirmativeCovenants dg:structure="section" dg:origin="5 240 383 2310 1134">
+      <dg:chunk dg:structure="header" dg:origin="5 340 383 1052 427" dg:style="font-weight: bold">Section 4.01. Affirmative Covenants.</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 1072 383 2310 427; 5 240 449 514 492">So long as any part of the Facility Loan remains outstanding, the Borrower shall:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="5 340 564 2310 1134">
+        <docset:MaintenanceCovenant dg:structure="li" dg:origin="5 340 564 2310 608; 5 406 630 1741 674" xml:id="maintenancecovenant" dg:itemprop="references" dg:href="#performanceindexthreshold-2">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 564 373 608">1.</dg:chunk> Pipeline System Maintenance: Undertake continuous acoustic-resonance structural audits of the undersea pipelines to ensure the SPIR does not fall below the base standard of <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="90.0" dg:origin="5 1617 630 1741 674" xml:id="performanceindexthreshold">90.0%</docset:PerformanceIndexThreshold>.</docset:MaintenanceCovenant>
+        <docset:AffirmativeCovenants dg:structure="li" dg:origin="5 340 729 2310 772; 5 406 794 2310 838; 5 406 860 928 904" xml:id="affirmativecovenants" dg:itemprop="valueFrom" dg:href="#performanceindexthreshold-4" dg:value="9,200 metric tons per Titan day">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 729 373 772">2.</dg:chunk> Maintain Pipeline Throughput: Operate the high-pressure booster stations to sustain the Pipeline Throughput Target of <docset:PerformanceIndexThreshold dg:origin="5 849 794 1439 838">9,200 metric tons per Titan day</docset:PerformanceIndexThreshold>, ensuring supply covenants with orbital transfer transport vessels are satisfied.</docset:AffirmativeCovenants>
+        <docset:AffirmativeCovenants dg:structure="li" dg:origin="5 340 959 2310 1003; 5 406 1025 2310 1068; 5 406 1090 920 1134" xml:id="affirmativecovenants-2" dg:itemprop="references" dg:href="#definedterms">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 959 373 1003">3.</dg:chunk> Sediment Escrow Account: Maintain the cash-funded Undersea Sediment Escrow with the Administrative Agent, holding a balance of not less than SC 450,000,000 at all times to manage ocean-floor structural anchoring stability.</docset:AffirmativeCovenants>
+      </dg:chunk>
+    </docset:AffirmativeCovenants>
+    <docset:NegativeCovenants dg:structure="section" dg:origin="5 240 1239 2310 1694">
+      <dg:chunk dg:structure="header" dg:origin="5 340 1239 1000 1283" dg:style="font-weight: bold">Section 4.02. Negative Covenants.</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 1022 1239 2310 1283; 5 240 1305 633 1349">The Borrower shall not, without the explicit written approval of the Administrative Agent:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="5 340 1420 2310 1694">
+        <docset:SystemModificationProhibition dg:structure="li" dg:origin="5 340 1420 2310 1464; 5 406 1486 1163 1530">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 1420 373 1464">1.</dg:chunk> System Modifications: Reroute or depressurize the coolant loops of any active secondary liquefaction columns within the designated coordinates.</docset:SystemModificationProhibition>
+        <docset:NegativeCovenants dg:structure="li" dg:origin="5 340 1585 2310 1629; 5 406 1651 1564 1694" xml:id="negativecovenants" dg:itemprop="references" dg:href="#performanceindexthreshold-2">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 1585 373 1629">2.</dg:chunk> Restricted Payments: Declare or make any dividend distributions to corporate parent entities if the SPIR is below <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="91.0" dg:origin="5 524 1651 637 1694" xml:id="performanceindexthreshold-5">91.0%</docset:PerformanceIndexThreshold> or if a Default Event has occurred and is continuing.</docset:NegativeCovenants>
+      </dg:chunk>
+    </docset:NegativeCovenants>
+  </docset:CovenantsArticle>
+  <docset:DefaultArticle dg:structure="section" dg:origin="5 240 1881 2310 2781">
+    <dg:chunk dg:structure="header" dg:origin="5 240 1881 1494 1936" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: teal">ARTICLE V: DEFAULT EVENTS AND REMEDIES</dg:chunk>
+    <docset:EventOfDefault dg:structure="section" dg:origin="5 240 2030 2310 2781">
+      <dg:chunk dg:structure="header" dg:origin="5 340 2030 897 2074" dg:style="font-weight: bold">Section 5.01. Default Events.</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 916 2030 2310 2074; 5 240 2095 384 2139">The occurrence of any of the following events shall constitute an Event of Default:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="5 340 2211 2310 2781">
+        <docset:PrimaryDefaultEvent dg:structure="li" dg:origin="5 340 2211 2310 2255; 5 406 2277 2300 2320">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 2211 373 2255">1.</dg:chunk> Benthic Containment Rupture: Any sudden structural piping failure leading to an uncontrollable high-pressure hydrocarbon spill exceeding 5,000 metric tons of liquefied methane within any 24-hour cycle.</docset:PrimaryDefaultEvent>
+        <docset:EventOfDefault dg:structure="li" dg:origin="5 340 2376 2310 2419; 5 406 2441 2310 2485; 5 406 2507 558 2551" xml:id="eventofdefault" dg:itemprop="references" dg:href="#definedterms">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 2376 373 2419">2.</dg:chunk> Covenant Non-Compliance: Failure to maintain the required balance in the Undersea Sediment Escrow under Section 4.01(3), or failure to meet the Pipeline Throughput Target for more than two consecutive quarters.</docset:EventOfDefault>
+        <docset:EventOfDefault dg:structure="li" dg:origin="5 340 2606 2310 2650; 5 406 2671 2310 2715; 5 406 2737 1360 2781" xml:id="eventofdefault-2" dg:itemprop="references" dg:href="#structuralorenvironmentaltolerance" dg:value="240 Kelvin">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 2606 373 2650">3.</dg:chunk> Bedrock Dissolution: Any localized sub-surface heating adjacent to pipeline anchor pylons causing structural water-ice bedrock temperatures to exceed <docset:StructuralOrEnvironmentalTolerance dg:origin="5 1355 2671 1567 2715" xml:id="structuralorenvironmentaltolerance">240 Kelvin</docset:StructuralOrEnvironmentalTolerance>, threatening the alignment or mechanical structural integrity of the submarine docking platform.</docset:EventOfDefault>
+      </dg:chunk>
+    </docset:EventOfDefault>
+  </docset:DefaultArticle>
+  <docset:MiscellaneousProvisions dg:structure="section" dg:origin="6 240 235 2310 1695">
+    <dg:chunk dg:structure="header" dg:origin="6 240 235 1419 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: teal">ARTICLE VI: MISCELLANEOUS PROVISIONS</dg:chunk>
+    <docset:GoverningLaw dg:structure="section" dg:origin="6 240 383 2310 492">
+      <dg:chunk dg:structure="header" dg:origin="6 340 383 903 427" dg:style="font-weight: bold">Section 6.01. Governing Law.</dg:chunk>
+      <docset:GoverningLaw dg:structure="p" dg:origin="6 919 383 2310 427; 6 240 449 2164 492">This Agreement shall be governed by, and construed in accordance with, the Admiralty Law of the Martian Lowlands and the outer-rim industrial treaties governing the Saturnian System.</docset:GoverningLaw>
+    </docset:GoverningLaw>
+    <docset:Counterparts dg:structure="section" dg:origin="6 240 564 2310 1695">
+      <dg:chunk dg:structure="header" dg:origin="6 340 564 857 608" dg:style="font-weight: bold">Section 6.02. Counterparts.</dg:chunk>
+      <docset:Counterparts dg:structure="p" dg:origin="6 872 564 2310 608; 6 240 630 2310 674; 6 240 695 539 739">This Agreement may be executed in any number of counterparts, each of which when so executed and delivered shall be deemed an original, but all of which together shall constitute one and the same instrument.</docset:Counterparts>
+      <docset:BorrowerEntityName dg:structure="p" dg:origin="6 340 811 1247 854" dg:style="font-weight: bold; text-transform: uppercase" xml:id="borrowerentityname">LIGEIA TRANSPORT &amp; LIQUEFACTION LP</docset:BorrowerEntityName>
+      <dg:chunk dg:structure="p" dg:origin="6 340 927 404 970">By: ___________________________</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="6 240 992 741 1036">Name: <docset:SignatoryName dg:origin="6 368 992 741 1036" xml:id="signatoryname" dg:itemprop="signatoryOf" dg:href="#borrowerentityname">Alistair Crane-Vance</docset:SignatoryName>
+      </dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="6 240 1058 1089 1102">Title: <docset:Signatory dg:origin="6 346 1058 1089 1102">Chief Operating Officer, Pipeline Systems</docset:Signatory>
+      </dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="6 340 1174 936 1217">Date of Execution: <docset:ExecutionDate xsi:type="date" dg:value="2146-06-26" dg:origin="6 682 1174 936 1217" dg:style="font-weight: bold" xml:id="executiondate">June 26, 2146</docset:ExecutionDate>
+      </dg:chunk>
+      <docset:LenderOrAgentEntityName dg:structure="p" dg:origin="6 340 1289 1520 1333" dg:style="font-weight: bold; text-transform: uppercase" xml:id="lenderoragententityname">JOVIAN-SATURNINE COLONIAL DEVELOPMENT BANK</docset:LenderOrAgentEntityName>
+      <dg:chunk dg:structure="p" dg:origin="6 340 1405 404 1449">By: ___________________________</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="6 240 1470 622 1514">Name: <docset:SignatoryName dg:origin="6 368 1470 622 1514" xml:id="signatoryname-2" dg:itemprop="signatoryOf" dg:href="#lenderoragententityname">Diana Sterling</docset:SignatoryName>
+      </dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="6 240 1536 1179 1580">Title: <docset:Signatory dg:origin="6 346 1536 1179 1580">Managing Director, Outer-Rim Assets Division</docset:Signatory>
+      </dg:chunk>
+      <docset:ExecutionDate dg:structure="p" dg:origin="6 340 1652 1321 1695" dg:style="font-weight: bold">Date of Execution (the Signature Date): June 26, 2146</docset:ExecutionDate>
+    </docset:Counterparts>
+  </docset:MiscellaneousProvisions>
+</dg:chunk>

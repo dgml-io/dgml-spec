@@ -1,0 +1,12 @@
+{
+  "id": "23cmecyw0kc9",
+  "name": "Periodic Financial Reporting Package",
+  "description": "A periodic financial reporting package submitted by a borrower to a lender, containing operational performance, financial statements, and covenant compliance status.",
+  "key_questions": [
+    "What is the reporting period?",
+    "What is the Net Operating Income (NOI) for the reporting period?",
+    "What is the current Debt Service Coverage Ratio (DSCR)?",
+    "Is the borrower currently in compliance with their financial covenants?",
+    "What are the reported total operating revenues and expenses?"
+  ]
+}

@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/SecuredCreditAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 185 179 2135 2892; 2 199 196 2281 3138; 3 184 197 2281 3052; 4 184 197 2281 3238; 5 199 197 969 228">
+  <docset:ProjectSetIdentifier dg:structure="section" dg:origin="1 185 179 2135 2892">
+    <dg:chunk dg:structure="header" dg:origin="1 185 179 2135 254; 1 185 299 902 374" dg:style="font-weight: bold; font-size: 2em; color: darkslategray">
+      <docset:DocumentIdentifier dg:origin="1 185 179 393 254">SET 2</docset:DocumentIdentifier>: THE <docset:FacilityName dg:origin="1 610 179 2135 254; 1 185 299 902 374" dg:style="text-transform: uppercase">AEGAEON RIDGE LUXURY HABITATION &amp; RESEARCH SPIRES</docset:FacilityName>
+    </dg:chunk>
+    <docset:AgreementType dg:structure="section" dg:origin="1 185 637 2028 2892">
+      <dg:chunk dg:structure="header" dg:origin="1 185 637 2028 693" dg:style="font-weight: bold; font-size: 2em; color: darkslategray">
+        <docset:DocumentIdentifier dg:origin="1 185 637 597 693" dg:style="text-transform: uppercase">DOCUMENT 2A</docset:DocumentIdentifier>: <docset:AgreementType dg:origin="1 632 637 2028 693" dg:style="text-transform: uppercase">SUBORDINATED MEZZANINE CREDIT AGREEMENT</docset:AgreementType>
+      </dg:chunk>
+      <docset:AgreementType dg:structure="section" dg:origin="1 823 895 1657 2892">
+        <dg:chunk dg:structure="header" dg:origin="1 866 895 1614 926" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">SUBORDINATED MEZZANINE LOAN AGREEMENT</dg:chunk>
+        <docset:AgreementEffectiveDate dg:structure="p" dg:origin="1 906 1154 1575 1185" dg:style="color: darkslategray">Dated as of the Closing Date (as defined herein)</docset:AgreementEffectiveDate>
+        <dg:chunk dg:structure="p" dg:origin="1 1192 1413 1288 1445" dg:style="color: darkslategray">among</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 931 1673 1549 1704; 1 1149 1723 1331 1754" dg:style="font-weight: bold; color: darkslategray">
+          <docset:BorrowerEntityName dg:origin="1 931 1673 1549 1704" dg:style="text-transform: uppercase">AEGAEON HABITATION PARTNERS LLC</docset:BorrowerEntityName>, as Borrower</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 1214 1982 1266 2013" dg:style="color: darkslategray">and</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 823 2242 1657 2273; 1 1166 2292 1314 2323" dg:style="font-weight: bold; color: darkslategray">
+          <docset:LenderOrAgentEntityName dg:origin="1 823 2242 1657 2273" dg:style="text-transform: uppercase">OFF-WORLD REAL ESTATE OPPORTUNITIES FUND LP</docset:LenderOrAgentEntityName>, as Lender</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 1214 2551 1266 2582" dg:style="color: darkslategray">and</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 963 2810 1517 2842; 1 1126 2860 1355 2892" dg:style="font-weight: bold; color: darkslategray">
+          <docset:LenderOrAgentEntityName dg:origin="1 963 2810 1517 2842" dg:style="text-transform: uppercase">LUNAR-MARTIAN TRUST COMPANY</docset:LenderOrAgentEntityName>, as Fiscal Agent</dg:chunk>
+      </docset:AgreementType>
+    </docset:AgreementType>
+  </docset:ProjectSetIdentifier>
+  <docset:DefinedTerms dg:structure="section" dg:origin="2 199 196 2275 2450">
+    <dg:chunk dg:structure="header" dg:origin="2 199 196 1376 243" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslategray">ARTICLE I: DEFINITIONS AND ACCOUNTING TERMS</dg:chunk>
+    <docset:DefinedTerms dg:structure="section" dg:origin="2 199 481 2275 2450">
+      <dg:chunk dg:structure="header" dg:origin="2 199 481 625 513" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="2 321 481 390 513">1.01</dg:chunk> Section 1.01. Defined Terms.</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="2 634 481 1780 513" dg:style="color: darkslategray">As used in this Agreement, the following terms have the meanings specified below:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="2 231 819 2275 2450">
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 245 819 2167 850; 2 231 869 1182 900; 2 231 1981 245 2013" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:AgreementEffectiveDate dg:origin="2 245 819 436 850" dg:style="font-weight: bold">Closing Date</docset:AgreementEffectiveDate>" means the date on which this Agreement is executed by all participating parties, as designated next to each signature in the signature blocks below (such execution date, the "Signature Date").</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 231 1206 2219 1238; 2 231 1256 646 1288" dg:style="color: darkslategray" xml:id="definedterms">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Decompression Mitigation Protocol" means the deployment sequence of rapid aerosol-based self-healing foam sealant into structural stress points of the habitation spires.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 231 1594 2238 1625; 2 231 1644 651 1675" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "He-3 Supply Index" means the monthly unit price of Helium-3 isotope canisters imported from lunar orbital suppliers, as used to power the local secondary backup generators.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 245 1981 2275 2013; 2 231 2031 1283 2073" dg:style="color: darkslategray" xml:id="definedterms-2">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Pressurized Volume Unit" or "PVU" means one million cubic meters of gas mix at standard Earth surface density, containing not less than <dg:chunk dg:structure="span" xsi:type="decimal" dg:value="20.9" dg:origin="2 2186 1981 2275 2013">20.9%</dg:chunk> oxygen (O2), <dg:chunk dg:structure="span" xsi:type="decimal" dg:value="78.1" dg:origin="2 415 2031 504 2063">78.1%</dg:chunk> nitrogen (N2), and less than <dg:chunk dg:structure="span" xsi:type="decimal" dg:value="1.0" dg:origin="2 902 2031 973 2063">1.0%</dg:chunk> carbon dioxide (CO2).</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 231 2369 2218 2400; 2 231 2419 837 2450" dg:style="color: darkslategray" xml:id="definedterms-3">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Spires" means the three interconnected structural vertical habitation towers (<docset:FacilityName dg:origin="2 1313 2369 1909 2400">Spire Alpha, Spire Beta, and Spire Gamma</docset:FacilityName>) suspended along the gravity-shear cliffs of Aegaeon Ridge, Titan.</docset:DefinedTerms>
+      </dg:chunk>
+    </docset:DefinedTerms>
+  </docset:DefinedTerms>
+  <docset:CreditFacilityCommitment dg:structure="section" dg:origin="2 199 2771 2281 3138; 3 184 197 2235 1391">
+    <dg:chunk dg:structure="header" dg:origin="2 199 2771 1074 2818" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslategray">ARTICLE II: THE MEZZANINE FACILITY</dg:chunk>
+    <docset:CreditFacilityCommitment dg:structure="section" dg:origin="2 199 3056 2281 3138">
+      <dg:chunk dg:structure="header" dg:origin="2 199 3056 717 3088" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="2 322 3056 392 3088">2.01</dg:chunk> Section 2.01. The Mezzanine Loan.</dg:chunk>
+      <docset:CreditFacilityCommitment dg:structure="p" dg:origin="2 726 3056 2281 3088; 2 199 3106 1827 3138" dg:style="color: darkslategray">Subject to the terms and conditions set forth herein, the Lender agrees to make a single advance Subordinated Mezzanine Loan to the Borrower on the Closing Date in a principal amount equal to 1,200,000,000 Sol Credits (SC).</docset:CreditFacilityCommitment>
+    </docset:CreditFacilityCommitment>
+    <docset:InterestRateMargin dg:structure="section" dg:origin="3 184 197 2235 1391">
+      <dg:chunk dg:structure="header" dg:origin="3 199 197 805 228" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="3 321 197 390 228">2.02</dg:chunk> Section 2.02. Interest and Subordination.</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="3 184 535 2235 1391">
+        <dg:chunk dg:structure="li" dg:origin="3 184 535 1679 566" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim" dg:origin="3 184 535 210 566">1</dg:chunk> Interest Rate: The Loan shall bear interest at a fixed rate of <docset:InterestRateMargin dg:origin="3 1068 535 1351 566" dg:style="font-weight: bold">13.50% per annum</docset:InterestRateMargin>, <docset:InterestCompoundingOrAccrualBasis dg:origin="3 1360 535 1679 566">compounded quarterly</docset:InterestCompoundingOrAccrualBasis>.</dg:chunk>
+        <docset:RepaymentSchedule dg:structure="li" dg:origin="3 184 872 2235 903; 3 231 922 2119 953; 3 231 972 684 1003" dg:style="color: darkslategray" xml:id="repaymentschedule" dg:itemprop="references" dg:href="#performanceindexthreshold">
+          <dg:chunk dg:structure="lim" dg:origin="3 184 872 210 903">2</dg:chunk> Payment-in-Kind (PIK) Election: If the Borrower's Cash-on-Hand is less than <docset:PerformanceIndexThreshold dg:origin="3 1322 872 1532 903" xml:id="performanceindexthreshold">SC 50.0 million</docset:PerformanceIndexThreshold> due to unexpected micro-meteoroid armor repairs, the Borrower may elect to pay up to <docset:InterestRateMargin xsi:type="decimal" dg:value="5.0" dg:origin="3 733 922 804 953">5.0%</docset:InterestRateMargin> of the interest due in PIK notes, in which case such interest will be capitalized into the principal outstanding balance of the Loan.</docset:RepaymentSchedule>
+        <docset:RepaymentSchedule dg:structure="li" dg:origin="3 184 1310 2138 1341; 3 231 1360 1191 1391" dg:style="color: darkslategray" xml:id="repaymentschedule-2" dg:itemprop="references" dg:href="#lenderoragententityname">
+          <dg:chunk dg:structure="lim" dg:origin="3 184 1310 210 1341">3</dg:chunk> Subordination: The payment of principal and interest on the Mezzanine Loan is fully subordinated in right of payment to the Senior Credit Agreement held by the <docset:LenderOrAgentEntityName dg:origin="3 554 1360 1191 1391" xml:id="lenderoragententityname">Jovian-Saturnine Colonial Development Bank</docset:LenderOrAgentEntityName>.</docset:RepaymentSchedule>
+      </dg:chunk>
+    </docset:InterestRateMargin>
+  </docset:CreditFacilityCommitment>
+  <docset:RepresentationsAndWarranties dg:structure="section" dg:origin="3 199 1711 2281 2747">
+    <dg:chunk dg:structure="header" dg:origin="3 199 1711 1767 1758" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslategray">ARTICLE III: ENVIRONMENTAL AND TECHNICAL REPRESENTATIONS</dg:chunk>
+    <dg:chunk dg:structure="p" dg:origin="3 199 1997 997 2028" dg:style="color: darkslategray">The Borrower represents and warrants to the Lender that:</dg:chunk>
+    <docset:StructuralOrEnvironmentalTolerance dg:structure="section" dg:origin="3 199 2256 2281 2388" xml:id="structuralorenvironmentaltolerance" dg:itemprop="describes" dg:href="#definedterms-3">
+      <dg:chunk dg:structure="header" dg:origin="3 199 2256 777 2288" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="3 330 2256 399 2288">3.01</dg:chunk> Section 3.01. Life-Support Reliability.</dg:chunk>
+      <docset:StructuralOrEnvironmentalTolerance dg:structure="p" dg:origin="3 795 2256 2281 2288; 3 199 2306 2281 2338; 3 199 2356 297 2388" dg:style="color: darkslategray">The Spires' centralized life-support closed-loop recycling systems are rated to support up to <docset:PerformanceIndexThreshold xsi:type="integer" dg:value="12000" dg:origin="3 2185 2256 2281 2288">12,000</docset:PerformanceIndexThreshold> permanent human occupants at an average metabolic load of <docset:PerformanceIndexThreshold dg:origin="3 1069 2306 1336 2338">2,500 kcal per day</docset:PerformanceIndexThreshold>, with active oxygen and water reclamation efficiency of no less than <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="99.8" dg:origin="3 199 2356 297 2388">99.8%</docset:PerformanceIndexThreshold>.</docset:StructuralOrEnvironmentalTolerance>
+    </docset:StructuralOrEnvironmentalTolerance>
+    <docset:StructuralOrEnvironmentalTolerance dg:structure="section" dg:origin="3 199 2616 2281 2747" xml:id="structuralorenvironmentaltolerance-2" dg:itemprop="describes" dg:href="#definedterms-3">
+      <dg:chunk dg:structure="header" dg:origin="3 199 2616 810 2647" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="3 323 2616 392 2647">3.02</dg:chunk> Section 3.02. Radiation Protection Index.</dg:chunk>
+      <docset:StructuralOrEnvironmentalTolerance dg:structure="p" dg:origin="3 820 2616 2281 2647; 3 199 2666 2281 2697; 3 199 2716 342 2747" dg:style="color: darkslategray">The electro-magnetic deflective shielding envelope surrounding the Spires is fully functional and capable of deflecting high-energy cosmic rays and Saturnian magnetospheric energetic particles down to safe occupational limits (<docset:PerformanceIndexThreshold dg:origin="3 2014 2666 2281 2697; 3 199 2716 342 2747">&lt; 20 mSv/Earth-year equivalent</docset:PerformanceIndexThreshold>).</docset:StructuralOrEnvironmentalTolerance>
+    </docset:StructuralOrEnvironmentalTolerance>
+  </docset:RepresentationsAndWarranties>
+  <docset:CovenantsArticle dg:structure="section" dg:origin="3 199 3005 783 3052; 4 184 197 2261 1003">
+    <dg:chunk dg:structure="header" dg:origin="3 199 3005 783 3052" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslategray">ARTICLE IV: COVENANTS</dg:chunk>
+    <docset:AffirmativeCovenants dg:structure="section" dg:origin="4 184 197 2261 1003">
+      <dg:chunk dg:structure="header" dg:origin="4 199 197 712 228" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="4 321 197 390 228">4.01</dg:chunk> Section 4.01. Financial Covenants.</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="4 184 535 2261 1003">
+        <docset:MaintenanceCovenant dg:structure="li" dg:origin="4 184 535 2261 566; 4 231 585 1589 616" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim" dg:origin="4 184 535 210 566">1</dg:chunk> Debt Service Coverage Ratio (DSCR): The Borrower shall maintain a DSCR of not less than <docset:PerformanceIndexThreshold dg:origin="4 1537 535 1615 566" dg:style="font-weight: bold">1.15x</docset:PerformanceIndexThreshold> at the end of each fiscal quarter, calculated as Net Operating Cash Flow divided by the sum of Senior Debt Service and Mezzanine Debt Service.</docset:MaintenanceCovenant>
+        <docset:AffirmativeCovenants dg:structure="li" dg:origin="4 184 922 2197 953; 4 231 972 1632 1003" dg:style="color: darkslategray" xml:id="affirmativecovenants" dg:itemprop="references" dg:href="#definedterms-2">
+          <dg:chunk dg:structure="lim" dg:origin="4 184 922 210 953">2</dg:chunk> Occupancy Covenant: The Borrower shall maintain a weighted-average physical occupancy rate of not less than <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="72.5" dg:origin="4 1813 922 1901 953" dg:style="font-weight: bold">72.5%</docset:PerformanceIndexThreshold> across the Research Spires (measured by leased PVUs) and not less than <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="60.0" dg:origin="4 976 972 1064 1003" dg:style="font-weight: bold">60.0%</docset:PerformanceIndexThreshold> across the Elite Residential Penthouses.</docset:AffirmativeCovenants>
+      </dg:chunk>
+    </docset:AffirmativeCovenants>
+  </docset:CovenantsArticle>
+  <docset:DefaultArticle dg:structure="section" dg:origin="4 199 1324 2281 3238; 5 199 197 969 228">
+    <dg:chunk dg:structure="header" dg:origin="4 199 1324 1085 1371" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslategray">ARTICLE V: COVENANTS ON DEFAULT</dg:chunk>
+    <docset:PrimaryDefaultEvent dg:structure="section" dg:origin="4 199 1610 2281 3238; 5 199 197 969 228" xml:id="primarydefaultevent" dg:itemprop="references" dg:href="#definedterms">
+      <dg:chunk dg:structure="header" dg:origin="4 199 1610 875 1641" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="4 327 1610 396 1641">5.01</dg:chunk> Section 5.01. Immediate Acceleration Event.</dg:chunk>
+      <docset:PrimaryDefaultEvent dg:structure="p" dg:origin="4 890 1610 2281 1641; 4 199 1660 2281 1691; 4 199 1710 1571 1741" dg:style="color: darkslategray">Upon the occurrence of any "Life-Support De-certification" issued by the Sol-System Health and Human Safety Directorate, or upon any physical decompression event resulting in the complete evacuation of any individual Spire, the outstanding principal and all accrued interest under this Agreement shall immediately become due and payable.</docset:PrimaryDefaultEvent>
+      <docset:BorrowerEntityName dg:structure="p" dg:origin="4 199 1969 809 2000" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray" xml:id="borrowerentityname">AEGAEON HABITATION PARTNERS LLC</docset:BorrowerEntityName>
+      <dg:chunk dg:structure="ul" dg:origin="4 199 2228 531 2619">
+        <dg:chunk dg:structure="li" dg:origin="4 199 2228 245 2260">
+          <dg:chunk dg:structure="header" dg:origin="4 199 2228 245 2260" dg:style="color: darkslategray">By:</dg:chunk>
+          <dg:chunk dg:structure="p"/>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="4 199 2278 462 2310">
+          <dg:chunk dg:structure="header" dg:origin="4 199 2278 291 2310" dg:style="color: darkslategray">Name:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="4 300 2278 462 2310">
+            <docset:SignatoryName dg:origin="4 300 2278 462 2310" dg:style="color: darkslategray" xml:id="signatoryname" dg:itemprop="signatoryOf" dg:href="#borrowerentityname">Julian Kase</docset:SignatoryName>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="4 199 2328 531 2360">
+          <dg:chunk dg:structure="header" dg:origin="4 199 2328 267 2360" dg:style="color: darkslategray">Title:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="4 276 2328 531 2360">
+            <docset:Signatory dg:origin="4 276 2328 531 2360" dg:style="color: darkslategray">Managing Director</docset:Signatory>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="4 199 2588 486 2619">
+          <dg:chunk dg:structure="header" dg:origin="4 199 2588 274 2619" dg:style="color: darkslategray">Date:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="4 283 2588 486 2619">
+            <docset:ExecutionDate xsi:type="date" dg:value="2146-06-26" dg:origin="4 283 2588 486 2619" dg:style="font-weight: bold; color: darkslategray">June 26, 2146</docset:ExecutionDate>
+          </dg:chunk>
+        </dg:chunk>
+      </dg:chunk>
+      <docset:LenderOrAgentEntityName dg:structure="p" dg:origin="4 199 2847 1024 2878" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray" xml:id="lenderoragententityname-2">OFF-WORLD REAL ESTATE OPPORTUNITIES FUND LP</docset:LenderOrAgentEntityName>
+      <dg:chunk dg:structure="ul" dg:origin="4 199 3106 698 3238; 5 199 197 969 228">
+        <dg:chunk dg:structure="li" dg:origin="4 199 3106 245 3138">
+          <dg:chunk dg:structure="header" dg:origin="4 199 3106 245 3138" dg:style="color: darkslategray">By:</dg:chunk>
+          <dg:chunk dg:structure="p"/>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="4 199 3156 515 3188">
+          <dg:chunk dg:structure="header" dg:origin="4 199 3156 291 3188" dg:style="color: darkslategray">Name:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="4 300 3156 515 3188">
+            <docset:SignatoryName dg:origin="4 300 3156 515 3188" dg:style="color: darkslategray" xml:id="signatoryname-2" dg:itemprop="signatoryOf" dg:href="#lenderoragententityname-2">Michael Thorne</docset:SignatoryName>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="4 199 3206 698 3238">
+          <dg:chunk dg:structure="header" dg:origin="4 199 3206 267 3238" dg:style="color: darkslategray">Title:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="4 276 3206 698 3238">
+            <docset:Signatory dg:origin="4 276 3206 698 3238" dg:style="color: darkslategray">Portfolio Lead (Saturn Region)</docset:Signatory>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="5 199 197 969 228">
+          <dg:chunk dg:structure="header" dg:origin="5 199 197 757 228" dg:style="color: darkslategray">Date of Execution (the Signature Date):</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="5 766 197 969 228">
+            <docset:ExecutionDate xsi:type="date" dg:value="2146-06-26" dg:origin="5 766 197 969 228" dg:style="font-weight: bold; color: darkslategray">June 26, 2146</docset:ExecutionDate>
+          </dg:chunk>
+        </dg:chunk>
+      </dg:chunk>
+    </docset:PrimaryDefaultEvent>
+  </docset:DefaultArticle>
+</dg:chunk>

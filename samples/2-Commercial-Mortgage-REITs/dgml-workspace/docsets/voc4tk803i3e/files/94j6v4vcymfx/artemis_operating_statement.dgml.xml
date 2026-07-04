@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/BorrowerPeriodicOperatingStatement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 229 225 2269 2727; 2 229 260 2165 2878; 3 262 260 2165 1315">
+  <docset:OperatingStatementDocument dg:structure="section" dg:origin="1 229 225 2269 2727; 2 229 260 2165 2878; 3 262 260 2165 1315">
+    <dg:chunk dg:structure="header" dg:origin="1 704 225 1846 283" dg:style="font-weight: bold; font-size: 1.5em">Borrower's Periodic Operating Statement</dg:chunk>
+    <dg:chunk dg:structure="p" dg:origin="1 704 331 1846 377; 1 351 450 362 483" dg:style="font-weight: bold; font-style: italic">
+      <docset:BorrowerName dg:origin="1 704 331 1657 377" dg:style="font-weight: normal; font-style: normal; font-size: 1.25em">Artemis Data Systems &amp; Deep-Space Relay</docset:BorrowerName> — <docset:ReportingPeriod dg:origin="1 1670 331 1846 377" dg:style="font-weight: normal; font-style: normal; font-size: 1.25em">Q3 2026</docset:ReportingPeriod>
+    </dg:chunk>
+    <docset:DebtServiceCalculation dg:structure="p" dg:origin="1 256 450 2269 483; 1 256 493 1979 526" dg:style="font-style: italic">Cross-Reference Note: Financial reports herein calculate dynamic debt coverage limits on the baseline index designated as the "<docset:ComplianceMetricLabel dg:origin="1 2177 450 2269 483; 1 256 493 343 526" dg:style="font-weight: bold">SOFR Index</docset:ComplianceMetricLabel>" defined in Section 1.01 and governed by Section 2.02 of the Secured Credit Agreement dated <docset:ComplianceMetricValue xsi:type="date" dg:value="2026-06-26" dg:origin="1 1758 493 1979 526">June 26, 2026</docset:ComplianceMetricValue>.</docset:DebtServiceCalculation>
+    <docset:CompliancePerformance dg:structure="section" dg:origin="1 229 594 2044 932">
+      <dg:chunk dg:structure="header" dg:origin="1 229 594 1049 638" dg:style="font-weight: bold; font-size: 1.25em">
+        <dg:chunk dg:structure="lim" dg:origin="1 229 594 253 638">I.</dg:chunk> Compliance &amp; Performance Summary</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="1 325 684 2044 932">
+        <docset:ComplianceMetricValue dg:structure="li" dg:origin="1 325 684 1250 719">
+          <dg:chunk dg:structure="lim">•</dg:chunk> Base SOFR Index Rate: <dg:chunk dg:structure="span" xsi:type="decimal" dg:value="3.65" dg:origin="1 729 684 829 719">3.65%</dg:chunk> (Calculated daily average)</docset:ComplianceMetricValue>
+        <docset:ComplianceMetricValue dg:structure="li" dg:origin="1 325 755 1211 790" dg:style="font-weight: bold">
+          <dg:chunk dg:structure="lim">•</dg:chunk> Effective Quarterly Interest Charge: <dg:chunk dg:structure="span" xsi:type="decimal" dg:value="6.15" dg:origin="1 932 755 1032 790" dg:style="font-weight: normal">6.15%</dg:chunk> per annum</docset:ComplianceMetricValue>
+        <docset:ComplianceMetricValue dg:structure="li" dg:origin="1 325 826 2044 861">
+          <dg:chunk dg:structure="lim">•</dg:chunk> Physical Protection Fund Account Status: Fully funded at LC 45,000,000 (Satisfies Section 4.01 covenant)</docset:ComplianceMetricValue>
+        <docset:ComplianceMetricValue dg:structure="li" dg:origin="1 325 897 1368 932" xml:id="compliancemetricvalue" dg:itemprop="derivedFrom" dg:href="#quarterlynoiamount #debtserviceamount-2">
+          <dg:chunk dg:structure="lim">•</dg:chunk> Actual DSCR Achieved: 1.71x (Sufficiently covers required limits)</docset:ComplianceMetricValue>
+      </dg:chunk>
+    </docset:CompliancePerformance>
+    <docset:ConsolidatedOperatingPerformance dg:structure="section" dg:origin="1 229 1025 2165 2727; 2 229 260 2165 2878; 3 262 260 2165 1315">
+      <dg:chunk dg:structure="header" dg:origin="1 229 1025 1250 1069" dg:style="font-weight: bold; font-size: 1.25em">
+        <dg:chunk dg:structure="lim" dg:origin="1 229 1025 266 1069">II.</dg:chunk> Granular Performance &amp; Operating Sub-Tables</dg:chunk>
+      <docset:RevenueBreakdown dg:structure="section" dg:origin="1 229 1132 2165 2727; 2 262 260 2120 814">
+        <dg:chunk dg:structure="header" dg:origin="1 229 1132 1254 1171" dg:style="font-weight: bold">Sub-Table A: Detailed Breakdown of Revenue Streams</dg:chunk>
+        <docset:RevenueBreakdown dg:structure="table" dg:origin="1 262 1246 2165 2727; 2 262 260 2120 814">
+          <docset:TableColumnHeader dg:structure="tr" dg:origin="1 262 1246 2165 1327">
+            <docset:TableColumnHeader dg:structure="td" dg:origin="1 262 1246 597 1281; 1 262 1292 499 1327" dg:style="font-weight: bold">Category &amp; Specific Tier Accounts</docset:TableColumnHeader>
+            <docset:FirstMonthOfQuarter dg:structure="td" dg:origin="1 683 1269 923 1304" dg:style="font-weight: bold">July 2026 (LC)</docset:FirstMonthOfQuarter>
+            <docset:SecondMonthOfQuarter dg:structure="td" dg:origin="1 1103 1269 1394 1304" dg:style="font-weight: bold">August 2026 (LC)</docset:SecondMonthOfQuarter>
+            <docset:ThirdMonthOfQuarter dg:structure="td" dg:origin="1 1522 1246 1794 1281; 1 1522 1292 1593 1327" dg:style="font-weight: bold">September 2026 (LC)</docset:ThirdMonthOfQuarter>
+            <docset:ReportingPeriod dg:structure="td" dg:origin="1 1942 1269 2165 1304" dg:style="font-weight: bold">Q3 Total (LC)</docset:ReportingPeriod>
+          </docset:TableColumnHeader>
+          <dg:RevenueSubcategoryGroup dg:structure="tr" dg:origin="1 262 1413 857 1448">
+            <dg:RevenueSubcategoryGroup dg:structure="td" dg:origin="1 262 1413 857 1448" dg:style="font-weight: bold">1. Sovereign Data Storage Services</dg:RevenueSubcategoryGroup>
+            <dg:MonthlyRevenueSubcategoryAmount dg:structure="td"/>
+            <dg:MonthlyRevenueSubcategoryAmount dg:structure="td"/>
+            <dg:MonthlyRevenueSubcategoryAmount dg:structure="td"/>
+            <dg:QuarterlyRevenueSubcategoryAmount dg:structure="td"/>
+          </dg:RevenueSubcategoryGroup>
+          <docset:Revenue dg:structure="tr" dg:origin="1 325 1534 2120 1708">
+            <docset:Revenue dg:structure="td" dg:origin="1 325 1534 457 1569; 1 325 1580 484 1615; 1 325 1626 520 1662; 1 325 1672 461 1708" dg:style="font-style: italic">Class A: Terrestrial Government Archives</docset:Revenue>
+            <docset:MonthlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="5000000" dg:origin="1 683 1603 840 1638">5,000,000</docset:MonthlyRevenueAmount>
+            <docset:MonthlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="5000000" dg:origin="1 1103 1603 1260 1638">5,000,000</docset:MonthlyRevenueAmount>
+            <docset:MonthlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="5000000" dg:origin="1 1522 1603 1680 1638">5,000,000</docset:MonthlyRevenueAmount>
+            <docset:QuarterlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="15000000" dg:origin="1 1942 1603 2120 1638" xml:id="quarterlyrevenueamount">15,000,000</docset:QuarterlyRevenueAmount>
+          </docset:Revenue>
+          <docset:Revenue dg:structure="tr" dg:origin="1 325 1793 2120 1967">
+            <docset:Revenue dg:structure="td" dg:origin="1 325 1793 545 1829; 1 325 1839 453 1875; 1 325 1885 488 1921; 1 325 1931 461 1967" dg:style="font-style: italic">Class B: Mars Colonial Command Backups</docset:Revenue>
+            <docset:MonthlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="4500000" dg:origin="1 683 1862 840 1898">4,500,000</docset:MonthlyRevenueAmount>
+            <docset:MonthlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="4500000" dg:origin="1 1103 1862 1260 1898">4,500,000</docset:MonthlyRevenueAmount>
+            <docset:MonthlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="4500000" dg:origin="1 1522 1862 1680 1898">4,500,000</docset:MonthlyRevenueAmount>
+            <docset:QuarterlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="13500000" dg:origin="1 1942 1862 2120 1898" xml:id="quarterlyrevenueamount-2">13,500,000</docset:QuarterlyRevenueAmount>
+          </docset:Revenue>
+          <docset:Revenue dg:structure="tr" dg:origin="1 325 2052 2100 2180">
+            <docset:Revenue dg:structure="td" dg:origin="1 325 2052 571 2088; 1 325 2098 534 2134; 1 325 2144 423 2180" dg:style="font-style: italic">Class C: Jovian Joint Venture Vaults</docset:Revenue>
+            <docset:MonthlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="3000000" dg:origin="1 683 2098 840 2134">3,000,000</docset:MonthlyRevenueAmount>
+            <docset:MonthlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="3000000" dg:origin="1 1103 2098 1260 2134">3,000,000</docset:MonthlyRevenueAmount>
+            <docset:MonthlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="3000000" dg:origin="1 1522 2098 1680 2134">3,000,000</docset:MonthlyRevenueAmount>
+            <docset:QuarterlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="9000000" dg:origin="1 1942 2098 2100 2134" xml:id="quarterlyrevenueamount-3">9,000,000</docset:QuarterlyRevenueAmount>
+          </docset:Revenue>
+          <dg:RevenueSubcategorySubtotal dg:structure="tr" dg:origin="1 262 2265 2120 2347">
+            <dg:RevenueSubcategoryGroup dg:structure="td" dg:origin="1 262 2265 575 2301; 1 262 2312 404 2347" dg:style="font-weight: bold">Sovereign Storage Subtotal</dg:RevenueSubcategoryGroup>
+            <dg:MonthlyRevenueSubcategoryAmount dg:structure="td" xsi:type="integer" dg:value="12500000" dg:origin="1 683 2288 860 2324" dg:style="font-weight: bold">12,500,000</dg:MonthlyRevenueSubcategoryAmount>
+            <dg:MonthlyRevenueSubcategoryAmount dg:structure="td" xsi:type="integer" dg:value="12500000" dg:origin="1 1103 2288 1280 2324" dg:style="font-weight: bold">12,500,000</dg:MonthlyRevenueSubcategoryAmount>
+            <dg:MonthlyRevenueSubcategoryAmount dg:structure="td" xsi:type="integer" dg:value="12500000" dg:origin="1 1522 2288 1700 2324" dg:style="font-weight: bold">12,500,000</dg:MonthlyRevenueSubcategoryAmount>
+            <dg:QuarterlyRevenueSubcategoryAmount dg:structure="td" xsi:type="integer" dg:value="37500000" dg:origin="1 1942 2288 2120 2324" dg:style="font-weight: bold" xml:id="quarterlyrevenuesubcategoryamount" dg:itemprop="derivedFrom" dg:href="#quarterlyrevenueamount #quarterlyrevenueamount-2 #quarterlyrevenueamount-3">37,500,000</dg:QuarterlyRevenueSubcategoryAmount>
+          </dg:RevenueSubcategorySubtotal>
+          <dg:RevenueSubcategoryGroup dg:structure="tr" dg:origin="1 262 2433 816 2468">
+            <dg:RevenueSubcategoryGroup dg:structure="td" dg:origin="1 262 2433 816 2468" dg:style="font-weight: bold">2. Commercial &amp; Relay Accounts</dg:RevenueSubcategoryGroup>
+            <dg:MonthlyRevenueSubcategoryAmount dg:structure="td"/>
+            <dg:MonthlyRevenueSubcategoryAmount dg:structure="td"/>
+            <dg:MonthlyRevenueSubcategoryAmount dg:structure="td"/>
+            <dg:QuarterlyRevenueSubcategoryAmount dg:structure="td"/>
+          </dg:RevenueSubcategoryGroup>
+          <docset:Revenue dg:structure="tr" dg:origin="1 325 2554 2120 2727">
+            <docset:Revenue dg:structure="td" dg:origin="1 325 2554 459 2589; 1 325 2600 543 2635; 1 325 2646 536 2681; 1 325 2692 449 2727" dg:style="font-style: italic">Class D: Quantum-Key Banking Cold Storage</docset:Revenue>
+            <docset:MonthlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="5200000" dg:origin="1 683 2623 840 2658">5,200,000</docset:MonthlyRevenueAmount>
+            <docset:MonthlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="5350000" dg:origin="1 1103 2623 1260 2658">5,350,000</docset:MonthlyRevenueAmount>
+            <docset:MonthlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="5700000" dg:origin="1 1522 2623 1680 2658">5,700,000</docset:MonthlyRevenueAmount>
+            <docset:QuarterlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="16250000" dg:origin="1 1942 2623 2120 2658" xml:id="quarterlyrevenueamount-4">16,250,000</docset:QuarterlyRevenueAmount>
+          </docset:Revenue>
+          <docset:Revenue dg:structure="tr" dg:origin="2 325 260 2120 479">
+            <docset:Revenue dg:structure="td" dg:origin="2 325 260 457 295; 2 325 306 522 341; 2 325 352 435 387; 2 325 398 526 433; 2 325 444 433 479" dg:style="font-style: italic">Class E: Deep-Space Optical Transponder Relays</docset:Revenue>
+            <docset:MonthlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="7100000" dg:origin="2 683 352 840 387">7,100,000</docset:MonthlyRevenueAmount>
+            <docset:MonthlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="7300000" dg:origin="2 1103 352 1260 387">7,300,000</docset:MonthlyRevenueAmount>
+            <docset:MonthlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="7550000" dg:origin="2 1522 352 1680 387">7,550,000</docset:MonthlyRevenueAmount>
+            <docset:QuarterlyRevenueAmount dg:structure="td" xsi:type="integer" dg:value="21950000" dg:origin="2 1942 352 2120 387" xml:id="quarterlyrevenueamount-5">21,950,000</docset:QuarterlyRevenueAmount>
+          </docset:Revenue>
+          <dg:RevenueSubcategorySubtotal dg:structure="tr" dg:origin="2 262 565 2120 647">
+            <dg:RevenueSubcategoryGroup dg:structure="td" dg:origin="2 262 565 570 600; 2 262 611 404 647" dg:style="font-weight: bold">Commercial/Relay Subtotal</dg:RevenueSubcategoryGroup>
+            <dg:MonthlyRevenueSubcategoryAmount dg:structure="td" xsi:type="integer" dg:value="12300000" dg:origin="2 683 588 860 623" dg:style="font-weight: bold">12,300,000</dg:MonthlyRevenueSubcategoryAmount>
+            <dg:MonthlyRevenueSubcategoryAmount dg:structure="td" xsi:type="integer" dg:value="12650000" dg:origin="2 1103 588 1280 623" dg:style="font-weight: bold">12,650,000</dg:MonthlyRevenueSubcategoryAmount>
+            <dg:MonthlyRevenueSubcategoryAmount dg:structure="td" xsi:type="integer" dg:value="13250000" dg:origin="2 1522 588 1700 623" dg:style="font-weight: bold">13,250,000</dg:MonthlyRevenueSubcategoryAmount>
+            <dg:QuarterlyRevenueSubcategoryAmount dg:structure="td" xsi:type="integer" dg:value="38200000" dg:origin="2 1942 588 2120 623" dg:style="font-weight: bold" xml:id="quarterlyrevenuesubcategoryamount-2" dg:itemprop="derivedFrom" dg:href="#quarterlyrevenueamount-4 #quarterlyrevenueamount-5">38,200,000</dg:QuarterlyRevenueSubcategoryAmount>
+          </dg:RevenueSubcategorySubtotal>
+          <docset:GrossRevenueSubtotal dg:structure="tr" dg:origin="2 262 732 2120 814">
+            <docset:GrossRevenueSubtotal dg:structure="td" dg:origin="2 262 732 599 768; 2 262 778 410 814" dg:style="font-weight: bold">Consolidated Gross Revenue</docset:GrossRevenueSubtotal>
+            <docset:MonthlyGrossRevenueAmount dg:structure="td" xsi:type="integer" dg:value="24800000" dg:origin="2 683 755 860 791" dg:style="font-weight: bold">24,800,000</docset:MonthlyGrossRevenueAmount>
+            <docset:MonthlyGrossRevenueAmount dg:structure="td" xsi:type="integer" dg:value="25150000" dg:origin="2 1103 755 1280 791" dg:style="font-weight: bold">25,150,000</docset:MonthlyGrossRevenueAmount>
+            <docset:MonthlyGrossRevenueAmount dg:structure="td" xsi:type="integer" dg:value="25750000" dg:origin="2 1522 755 1700 791" dg:style="font-weight: bold">25,750,000</docset:MonthlyGrossRevenueAmount>
+            <docset:QuarterlyGrossRevenueAmount dg:structure="td" xsi:type="integer" dg:value="75700000" dg:origin="2 1942 755 2120 791" dg:style="font-weight: bold" xml:id="quarterlygrossrevenueamount" dg:itemprop="derivedFrom" dg:href="#quarterlyrevenuesubcategoryamount #quarterlyrevenuesubcategoryamount-2">75,700,000</docset:QuarterlyGrossRevenueAmount>
+          </docset:GrossRevenueSubtotal>
+        </docset:RevenueBreakdown>
+      </docset:RevenueBreakdown>
+      <docset:OperatingExpenseBreakdown dg:structure="section" dg:origin="2 229 907 2165 2745">
+        <dg:chunk dg:structure="header" dg:origin="2 229 907 1424 947" dg:style="font-weight: bold">Sub-Table B: Segmented Cryogenic &amp; Environmental Expenses</dg:chunk>
+        <docset:OperatingExpenseBreakdown dg:structure="table" dg:origin="2 262 1022 2165 2745">
+          <docset:TableColumnHeader dg:structure="tr" dg:origin="2 262 1022 2165 1103">
+            <docset:TableColumnHeader dg:structure="td" dg:origin="2 262 1022 566 1057; 2 262 1068 487 1103" dg:style="font-weight: bold">Expense Center &amp; Sub-Systems</docset:TableColumnHeader>
+            <docset:FirstMonthOfQuarter dg:structure="td" dg:origin="2 683 1045 923 1080" dg:style="font-weight: bold">July 2026 (LC)</docset:FirstMonthOfQuarter>
+            <docset:SecondMonthOfQuarter dg:structure="td" dg:origin="2 1103 1045 1394 1080" dg:style="font-weight: bold">August 2026 (LC)</docset:SecondMonthOfQuarter>
+            <docset:ThirdMonthOfQuarter dg:structure="td" dg:origin="2 1522 1022 1794 1057; 2 1522 1068 1593 1103" dg:style="font-weight: bold">September 2026 (LC)</docset:ThirdMonthOfQuarter>
+            <docset:ReportingPeriod dg:structure="td" dg:origin="2 1942 1045 2165 1080" dg:style="font-weight: bold">Q3 Total (LC)</docset:ReportingPeriod>
+          </docset:TableColumnHeader>
+          <dg:ExpenseSubcategoryGroup dg:structure="tr" dg:origin="2 262 1189 815 1224">
+            <dg:ExpenseSubcategoryGroup dg:structure="td" dg:origin="2 262 1189 815 1224" dg:style="font-weight: bold">1. Thermal Control Infrastructure</dg:ExpenseSubcategoryGroup>
+            <dg:MonthlyExpenseSubcategoryAmount dg:structure="td"/>
+            <dg:MonthlyExpenseSubcategoryAmount dg:structure="td"/>
+            <dg:MonthlyExpenseSubcategoryAmount dg:structure="td"/>
+            <dg:QuarterlyExpenseSubcategoryAmount dg:structure="td"/>
+          </dg:ExpenseSubcategoryGroup>
+          <docset:OperatingExpense dg:structure="tr" dg:origin="2 325 1310 2124 1437">
+            <docset:OperatingExpense dg:structure="td" dg:origin="2 325 1310 540 1345; 2 325 1356 447 1391; 2 325 1402 561 1437" dg:style="font-style: italic">Liquid Helium Coolant Replenishment</docset:OperatingExpense>
+            <docset:MonthlyExpenseAmount dg:structure="td" dg:origin="2 683 1356 864 1391">(2,000,000)</docset:MonthlyExpenseAmount>
+            <docset:MonthlyExpenseAmount dg:structure="td" dg:origin="2 1103 1356 1284 1391">(2,050,000)</docset:MonthlyExpenseAmount>
+            <docset:MonthlyExpenseAmount dg:structure="td" dg:origin="2 1522 1356 1704 1391">(2,200,000)</docset:MonthlyExpenseAmount>
+            <docset:QuarterlyExpenseAmount dg:structure="td" dg:origin="2 1942 1356 2124 1391" xml:id="quarterlyexpenseamount">(6,250,000)</docset:QuarterlyExpenseAmount>
+          </docset:OperatingExpense>
+          <docset:OperatingExpense dg:structure="tr" dg:origin="2 325 1523 2124 1696">
+            <docset:OperatingExpense dg:structure="td" dg:origin="2 325 1523 477 1558; 2 325 1569 561 1604; 2 325 1615 471 1650; 2 325 1661 504 1696" dg:style="font-style: italic">Insulation Maintenance &amp; Shielding Inspections</docset:OperatingExpense>
+            <docset:MonthlyExpenseAmount dg:structure="td" dg:origin="2 683 1592 864 1627">(1,200,000)</docset:MonthlyExpenseAmount>
+            <docset:MonthlyExpenseAmount dg:structure="td" dg:origin="2 1103 1592 1284 1627">(1,200,000)</docset:MonthlyExpenseAmount>
+            <docset:MonthlyExpenseAmount dg:structure="td" dg:origin="2 1522 1592 1704 1627">(1,200,000)</docset:MonthlyExpenseAmount>
+            <docset:QuarterlyExpenseAmount dg:structure="td" dg:origin="2 1942 1592 2124 1627" xml:id="quarterlyexpenseamount-2">(3,600,000)</docset:QuarterlyExpenseAmount>
+          </docset:OperatingExpense>
+          <dg:ExpenseSubcategorySubtotal dg:structure="tr" dg:origin="2 262 1782 2124 1863">
+            <dg:ExpenseSubcategoryGroup dg:structure="td" dg:origin="2 262 1782 556 1817; 2 262 1828 404 1863" dg:style="font-weight: bold">Thermal Systems Subtotal</dg:ExpenseSubcategoryGroup>
+            <dg:MonthlyExpenseSubcategoryAmount dg:structure="td" dg:origin="2 683 1805 864 1840" dg:style="font-weight: bold">(3,200,000)</dg:MonthlyExpenseSubcategoryAmount>
+            <dg:MonthlyExpenseSubcategoryAmount dg:structure="td" dg:origin="2 1103 1805 1284 1840" dg:style="font-weight: bold">(3,250,000)</dg:MonthlyExpenseSubcategoryAmount>
+            <dg:MonthlyExpenseSubcategoryAmount dg:structure="td" dg:origin="2 1522 1805 1704 1840" dg:style="font-weight: bold">(3,400,000)</dg:MonthlyExpenseSubcategoryAmount>
+            <dg:QuarterlyExpenseSubcategoryAmount dg:structure="td" dg:origin="2 1942 1805 2124 1840" dg:style="font-weight: bold" xml:id="quarterlyexpensesubcategoryamount" dg:itemprop="derivedFrom" dg:href="#quarterlyexpenseamount #quarterlyexpenseamount-2">(9,850,000)</dg:QuarterlyExpenseSubcategoryAmount>
+          </dg:ExpenseSubcategorySubtotal>
+          <dg:ExpenseSubcategoryGroup dg:structure="tr" dg:origin="2 262 1949 926 1984">
+            <dg:ExpenseSubcategoryGroup dg:structure="td" dg:origin="2 262 1949 926 1984" dg:style="font-weight: bold">2. Power, Compliance &amp; Technical Staff</dg:ExpenseSubcategoryGroup>
+            <dg:MonthlyExpenseSubcategoryAmount dg:structure="td"/>
+            <dg:MonthlyExpenseSubcategoryAmount dg:structure="td"/>
+            <dg:MonthlyExpenseSubcategoryAmount dg:structure="td"/>
+            <dg:QuarterlyExpenseSubcategoryAmount dg:structure="td"/>
+          </dg:ExpenseSubcategoryGroup>
+          <docset:OperatingExpense dg:structure="tr" dg:origin="2 325 2070 2124 2198">
+            <docset:OperatingExpense dg:structure="td" dg:origin="2 325 2070 498 2105; 2 325 2116 597 2152; 2 325 2162 410 2198" dg:style="font-style: italic">South Pole Municipal Energy Grids</docset:OperatingExpense>
+            <docset:MonthlyExpenseAmount dg:structure="td" dg:origin="2 683 2116 864 2152">(1,100,000)</docset:MonthlyExpenseAmount>
+            <docset:MonthlyExpenseAmount dg:structure="td" dg:origin="2 1103 2116 1284 2152">(1,150,000)</docset:MonthlyExpenseAmount>
+            <docset:MonthlyExpenseAmount dg:structure="td" dg:origin="2 1522 2116 1704 2152">(1,200,000)</docset:MonthlyExpenseAmount>
+            <docset:QuarterlyExpenseAmount dg:structure="td" dg:origin="2 1942 2116 2124 2152" xml:id="quarterlyexpenseamount-3">(3,450,000)</docset:QuarterlyExpenseAmount>
+          </docset:OperatingExpense>
+          <docset:OperatingExpense dg:structure="tr" dg:origin="2 325 2283 2124 2411">
+            <docset:OperatingExpense dg:structure="td" dg:origin="2 325 2283 532 2319; 2 325 2329 573 2365; 2 325 2375 601 2411" dg:style="font-style: italic">On-Site Core Tech Personnel Base Hazard Pay</docset:OperatingExpense>
+            <docset:MonthlyExpenseAmount dg:structure="td" dg:origin="2 683 2329 864 2365">(3,050,000)</docset:MonthlyExpenseAmount>
+            <docset:MonthlyExpenseAmount dg:structure="td" dg:origin="2 1103 2329 1284 2365">(3,050,000)</docset:MonthlyExpenseAmount>
+            <docset:MonthlyExpenseAmount dg:structure="td" dg:origin="2 1522 2329 1704 2365">(3,100,000)</docset:MonthlyExpenseAmount>
+            <docset:QuarterlyExpenseAmount dg:structure="td" dg:origin="2 1942 2329 2124 2365" xml:id="quarterlyexpenseamount-4">(9,200,000)</docset:QuarterlyExpenseAmount>
+          </docset:OperatingExpense>
+          <dg:ExpenseSubcategorySubtotal dg:structure="tr" dg:origin="2 262 2496 2143 2578">
+            <dg:ExpenseSubcategoryGroup dg:structure="td" dg:origin="2 262 2496 499 2532; 2 262 2542 550 2578" dg:style="font-weight: bold">Compliance &amp; Support Subtotal</dg:ExpenseSubcategoryGroup>
+            <dg:MonthlyExpenseSubcategoryAmount dg:structure="td" dg:origin="2 683 2519 864 2555" dg:style="font-weight: bold">(4,150,000)</dg:MonthlyExpenseSubcategoryAmount>
+            <dg:MonthlyExpenseSubcategoryAmount dg:structure="td" dg:origin="2 1103 2519 1284 2555" dg:style="font-weight: bold">(4,200,000)</dg:MonthlyExpenseSubcategoryAmount>
+            <dg:MonthlyExpenseSubcategoryAmount dg:structure="td" dg:origin="2 1522 2519 1704 2555" dg:style="font-weight: bold">(4,300,000)</dg:MonthlyExpenseSubcategoryAmount>
+            <dg:QuarterlyExpenseSubcategoryAmount dg:structure="td" dg:origin="2 1942 2519 2143 2555" dg:style="font-weight: bold" xml:id="quarterlyexpensesubcategoryamount-2" dg:itemprop="derivedFrom" dg:href="#quarterlyexpenseamount-3 #quarterlyexpenseamount-4">(12,650,000)</dg:QuarterlyExpenseSubcategoryAmount>
+          </dg:ExpenseSubcategorySubtotal>
+          <docset:TotalOperatingExpenses dg:structure="tr" dg:origin="2 262 2663 2143 2745">
+            <docset:TotalOperatingExpenses dg:structure="td" dg:origin="2 262 2663 591 2699; 2 262 2709 428 2745" dg:style="font-weight: bold">Total Net Operating Expenses</docset:TotalOperatingExpenses>
+            <docset:MonthlyTotalExpenseAmount dg:structure="td" dg:origin="2 683 2686 864 2722" dg:style="font-weight: bold">(7,350,000)</docset:MonthlyTotalExpenseAmount>
+            <docset:MonthlyTotalExpenseAmount dg:structure="td" dg:origin="2 1103 2686 1284 2722" dg:style="font-weight: bold">(7,450,000)</docset:MonthlyTotalExpenseAmount>
+            <docset:MonthlyTotalExpenseAmount dg:structure="td" dg:origin="2 1522 2686 1704 2722" dg:style="font-weight: bold">(7,700,000)</docset:MonthlyTotalExpenseAmount>
+            <docset:QuarterlyTotalExpenseAmount dg:structure="td" dg:origin="2 1942 2686 2143 2722" dg:style="font-weight: bold" xml:id="quarterlytotalexpenseamount" dg:itemprop="derivedFrom" dg:href="#quarterlyexpensesubcategoryamount #quarterlyexpensesubcategoryamount-2">(22,500,000)</docset:QuarterlyTotalExpenseAmount>
+          </docset:TotalOperatingExpenses>
+        </docset:OperatingExpenseBreakdown>
+      </docset:OperatingExpenseBreakdown>
+      <docset:DebtServiceCalculation dg:structure="section" dg:origin="2 229 2838 1210 2878; 3 262 260 2165 1315">
+        <dg:chunk dg:structure="header" dg:origin="2 229 2838 1210 2878" dg:style="font-weight: bold">Sub-Table C: Consolidated Debt Service Calculation</dg:chunk>
+        <docset:DebtServiceCalculation dg:structure="table" dg:origin="3 262 260 2165 1315">
+          <docset:TableColumnHeader dg:structure="tr" dg:origin="3 262 260 2165 341">
+            <docset:TableColumnHeader dg:structure="td" dg:origin="3 262 260 424 295; 3 262 306 505 341" dg:style="font-weight: bold">Summary Reconciliation</docset:TableColumnHeader>
+            <docset:FirstMonthOfQuarter dg:structure="td" dg:origin="3 683 283 923 318" dg:style="font-weight: bold">July 2026 (LC)</docset:FirstMonthOfQuarter>
+            <docset:SecondMonthOfQuarter dg:structure="td" dg:origin="3 1103 283 1394 318" dg:style="font-weight: bold">August 2026 (LC)</docset:SecondMonthOfQuarter>
+            <docset:ThirdMonthOfQuarter dg:structure="td" dg:origin="3 1522 260 1794 295; 3 1522 306 1593 341" dg:style="font-weight: bold">September 2026 (LC)</docset:ThirdMonthOfQuarter>
+            <docset:ReportingPeriod dg:structure="td" dg:origin="3 1942 283 2165 318" dg:style="font-weight: bold">Q3 Total (LC)</docset:ReportingPeriod>
+          </docset:TableColumnHeader>
+          <docset:GrossRevenueSubtotal dg:structure="tr" dg:origin="3 262 427 2120 554" xml:id="grossrevenuesubtotal">
+            <docset:GrossRevenueSubtotal dg:structure="td" dg:origin="3 262 427 573 462; 3 262 473 589 508; 3 262 519 298 554">Consolidated Gross Revenue (Sub-Table A)</docset:GrossRevenueSubtotal>
+            <docset:MonthlyGrossRevenueAmount dg:structure="td" xsi:type="integer" dg:value="24800000" dg:origin="3 683 473 860 508">24,800,000</docset:MonthlyGrossRevenueAmount>
+            <docset:MonthlyGrossRevenueAmount dg:structure="td" xsi:type="integer" dg:value="25150000" dg:origin="3 1103 473 1280 508">25,150,000</docset:MonthlyGrossRevenueAmount>
+            <docset:MonthlyGrossRevenueAmount dg:structure="td" xsi:type="integer" dg:value="25750000" dg:origin="3 1522 473 1700 508">25,750,000</docset:MonthlyGrossRevenueAmount>
+            <docset:QuarterlyGrossRevenueAmount dg:structure="td" xsi:type="integer" dg:value="75700000" dg:origin="3 1942 473 2120 508">75,700,000</docset:QuarterlyGrossRevenueAmount>
+          </docset:GrossRevenueSubtotal>
+          <docset:TotalOperatingExpenses dg:structure="tr" dg:origin="3 262 640 2143 768" xml:id="totaloperatingexpenses">
+            <docset:TotalOperatingExpenses dg:structure="td" dg:origin="3 262 640 572 675; 3 262 686 603 722; 3 262 732 298 768">Total Net Operating Expenses (Sub-Table B)</docset:TotalOperatingExpenses>
+            <docset:MonthlyTotalExpenseAmount dg:structure="td" dg:origin="3 683 686 864 722">(7,350,000)</docset:MonthlyTotalExpenseAmount>
+            <docset:MonthlyTotalExpenseAmount dg:structure="td" dg:origin="3 1103 686 1284 722">(7,450,000)</docset:MonthlyTotalExpenseAmount>
+            <docset:MonthlyTotalExpenseAmount dg:structure="td" dg:origin="3 1522 686 1704 722">(7,700,000)</docset:MonthlyTotalExpenseAmount>
+            <docset:QuarterlyTotalExpenseAmount dg:structure="td" dg:origin="3 1942 686 2143 722">(22,500,000)</docset:QuarterlyTotalExpenseAmount>
+          </docset:TotalOperatingExpenses>
+          <docset:NetOperatingIncome dg:structure="tr" dg:origin="3 262 853 2120 935" xml:id="netoperatingincome" dg:itemprop="derivedFrom" dg:href="#grossrevenuesubtotal #totaloperatingexpenses">
+            <docset:NetOperatingIncome dg:structure="td" dg:origin="3 262 853 497 889; 3 262 899 483 935" dg:style="font-weight: bold">Net Operating Income (NOI)</docset:NetOperatingIncome>
+            <docset:MonthlyNOIAmount dg:structure="td" xsi:type="integer" dg:value="17450000" dg:origin="3 683 876 860 912" dg:style="font-weight: bold">17,450,000</docset:MonthlyNOIAmount>
+            <docset:MonthlyNOIAmount dg:structure="td" xsi:type="integer" dg:value="17700000" dg:origin="3 1103 876 1280 912" dg:style="font-weight: bold">17,700,000</docset:MonthlyNOIAmount>
+            <docset:MonthlyNOIAmount dg:structure="td" xsi:type="integer" dg:value="18050000" dg:origin="3 1522 876 1700 912" dg:style="font-weight: bold">18,050,000</docset:MonthlyNOIAmount>
+            <docset:QuarterlyNOIAmount dg:structure="td" xsi:type="integer" dg:value="53200000" dg:origin="3 1942 876 2120 912" dg:style="font-weight: bold" xml:id="quarterlynoiamount">53,200,000</docset:QuarterlyNOIAmount>
+          </docset:NetOperatingIncome>
+          <dg:DebtServiceAmount dg:structure="tr" dg:origin="3 262 1020 2143 1102" xml:id="debtserviceamount">
+            <dg:DebtServiceLineLabel dg:structure="td" dg:origin="3 262 1020 558 1056; 3 262 1066 583 1102">Debt Service Draw (Principal &amp; Interest)</dg:DebtServiceLineLabel>
+            <docset:MonthlyNOIAmount dg:structure="td" dg:origin="3 1103 1043 1138 1079">—</docset:MonthlyNOIAmount>
+            <docset:MonthlyNOIAmount dg:structure="td" dg:origin="3 683 1043 718 1079">—</docset:MonthlyNOIAmount>
+            <docset:MonthlyNOIAmount dg:structure="td" dg:origin="3 1522 1043 1723 1079">(31,050,000)</docset:MonthlyNOIAmount>
+            <dg:DebtServiceAmount dg:structure="td" dg:origin="3 1942 1043 2143 1079" xml:id="debtserviceamount-2">(31,050,000)</dg:DebtServiceAmount>
+          </dg:DebtServiceAmount>
+          <dg:NetResidualCashFlow dg:structure="tr" dg:origin="3 262 1187 2120 1315" xml:id="netresidualcashflow" dg:itemprop="derivedFrom" dg:href="#netoperatingincome #debtserviceamount">
+            <dg:NetResidualCashFlow dg:structure="td" dg:origin="3 262 1187 477 1223; 3 262 1233 526 1269; 3 262 1279 343 1315" dg:style="font-weight: bold">Net Residual Operating Cash Flow</dg:NetResidualCashFlow>
+            <dg:NetResidualCashFlowMonthly dg:structure="td" xsi:type="integer" dg:value="17450000" dg:origin="3 683 1233 860 1269" dg:style="font-weight: bold">17,450,000</dg:NetResidualCashFlowMonthly>
+            <dg:NetResidualCashFlowMonthly dg:structure="td" xsi:type="integer" dg:value="17700000" dg:origin="3 1103 1233 1280 1269" dg:style="font-weight: bold">17,700,000</dg:NetResidualCashFlowMonthly>
+            <dg:NetResidualCashFlowMonthly dg:structure="td" dg:origin="3 1522 1233 1723 1269" dg:style="font-weight: bold">(13,000,000)</dg:NetResidualCashFlowMonthly>
+            <dg:NetResidualCashFlowQuarterly dg:structure="td" xsi:type="integer" dg:value="22150000" dg:origin="3 1942 1233 2120 1269" dg:style="font-weight: bold">22,150,000</dg:NetResidualCashFlowQuarterly>
+          </dg:NetResidualCashFlow>
+        </docset:DebtServiceCalculation>
+      </docset:DebtServiceCalculation>
+    </docset:ConsolidatedOperatingPerformance>
+  </docset:OperatingStatementDocument>
+</dg:chunk>

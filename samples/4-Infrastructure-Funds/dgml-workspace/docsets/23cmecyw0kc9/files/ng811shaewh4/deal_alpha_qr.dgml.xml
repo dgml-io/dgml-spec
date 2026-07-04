@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/PeriodicFinancialReportingPackage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2282 3160; 2 193 166 2303 2930; 3 193 179 2283 2681">
+  <docset:ReportingPackage dg:structure="section" dg:origin="1 193 258 2282 3160; 2 193 166 2303 2930; 3 193 179 2283 2681">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 1889 311" dg:style="font-weight: bold; font-size: 2em">
+      <docset:ReportingEntityName dg:origin="1 262 258 1098 311">Thalassa Sub-Ice Leisure Corp.</docset:ReportingEntityName> - <docset:ReportingPeriod dg:origin="1 1152 258 1365 311">Q2 2026</docset:ReportingPeriod> Reporting Package</dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 262 567 988 964">
+      <dg:chunk dg:structure="li" dg:origin="1 262 567 988 599">
+        <dg:chunk dg:structure="header" dg:origin="1 262 567 526 599" dg:style="font-weight: bold; font-size: 1.25em; color: darkslategray">Reporting Period:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 534 567 988 599">
+          <docset:ReportingPeriod dg:origin="1 534 567 988 599" dg:style="font-size: 1.25em; color: darkslategray">Q2 2026 (Jovian Standard Time)</docset:ReportingPeriod>
+        </dg:chunk>
+      </dg:chunk>
+      <dg:chunk dg:structure="li" dg:origin="1 262 933 847 964">
+        <dg:chunk dg:structure="header" dg:origin="1 262 933 472 964" dg:style="font-weight: bold; font-size: 1.25em; color: darkslategray">Submitted To:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 481 933 847 964">
+          <dg:SubmittingParty dg:origin="1 481 933 847 964" dg:style="font-size: 1.25em; color: darkslategray" xml:id="submittingparty">United Jovian Credit Corp.</dg:SubmittingParty>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:CashFlow dg:structure="section" dg:origin="1 193 1376 2282 3160; 2 193 166 2275 632">
+      <dg:chunk dg:structure="header" dg:origin="1 262 1376 1267 1415" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="1 262 1376 294 1415">1.</dg:chunk> Consolidated Income Statement (Actual vs. Budget)</dg:chunk>
+      <dg:ConsolidatedIncome dg:structure="table" dg:origin="1 193 1576 2282 3160; 2 193 166 2275 632">
+        <dg:ActualVsBudget dg:structure="tr" dg:origin="1 193 1576 2062 1603">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1576 447 1603" dg:style="font-weight: bold">Category / Line Item</docset:OperationalSegmentName>
+          <docset:SegmentRevenueActual dg:structure="td" dg:origin="1 642 1576 847 1603" dg:style="font-weight: bold">Q2 Actual (ECU)</docset:SegmentRevenueActual>
+          <docset:SegmentRevenueBudget dg:structure="td" dg:origin="1 1091 1576 1306 1603" dg:style="font-weight: bold">Q2 Budget (ECU)</docset:SegmentRevenueBudget>
+          <docset:RevenueVariance dg:structure="td" dg:origin="1 1540 1576 1731 1603" dg:style="font-weight: bold">Variance (ECU)</docset:RevenueVariance>
+          <dg:ActualVsBudget dg:structure="td" dg:origin="1 1988 1576 2062 1603" dg:style="font-weight: bold">Notes</dg:ActualVsBudget>
+        </dg:ActualVsBudget>
+        <docset:GrossRevenue dg:structure="tr" dg:origin="1 193 1716 2198 1822">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1736 403 1763; 1 193 1776 319 1802" dg:style="font-weight: bold; color: darkslategray">Gross Operating Revenues</docset:OperationalSegmentName>
+          <docset:SegmentRevenueActual dg:structure="td" xsi:type="integer" dg:value="157000000" dg:origin="1 793 1756 941 1783" dg:style="font-weight: bold; color: darkslategray">157,000,000</docset:SegmentRevenueActual>
+          <docset:SegmentRevenueBudget dg:structure="td" xsi:type="integer" dg:value="150000000" dg:origin="1 1242 1756 1390 1783" dg:style="font-weight: bold; color: darkslategray">150,000,000</docset:SegmentRevenueBudget>
+          <docset:RevenueVariance dg:structure="td" xsi:type="integer" dg:value="7000000" dg:origin="1 1720 1756 1838 1783" dg:style="font-weight: bold; color: darkslategray">7,000,000</docset:RevenueVariance>
+          <dg:ActualVsBudget dg:structure="td" dg:origin="1 1988 1716 2180 1743; 1 1988 1756 2198 1783; 1 1988 1796 2127 1822" dg:style="font-weight: bold; color: darkslategray">Reflects higher offworld tourism occupancy</dg:ActualVsBudget>
+        </docset:GrossRevenue>
+        <docset:LeaseRevenue dg:structure="tr" dg:origin="1 243 1936 2173 2002">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 243 1936 463 1962; 1 243 1975 367 2002" dg:style="color: darkslategray">- Base Lease Rent (Scientific)</docset:OperationalSegmentName>
+          <docset:SegmentRevenueActual dg:structure="td" xsi:type="integer" dg:value="45000000" dg:origin="1 808 1956 941 1982" dg:style="color: darkslategray">45,000,000</docset:SegmentRevenueActual>
+          <docset:SegmentRevenueBudget dg:structure="td" xsi:type="integer" dg:value="45000000" dg:origin="1 1257 1956 1390 1982" dg:style="color: darkslategray">45,000,000</docset:SegmentRevenueBudget>
+          <docset:RevenueVariance dg:structure="td" xsi:type="integer" dg:value="0" dg:origin="1 1824 1956 1838 1982" dg:style="color: darkslategray">0</docset:RevenueVariance>
+          <dg:ActualVsBudget dg:structure="td" dg:origin="1 1988 1936 2173 1962; 1 1988 1975 2096 2002" dg:style="color: darkslategray">Long-term fixed contracts</dg:ActualVsBudget>
+        </docset:LeaseRevenue>
+        <docset:LeaseRevenue dg:structure="tr" dg:origin="1 243 2115 2242 2182">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 243 2115 479 2142; 1 243 2155 403 2182" dg:style="color: darkslategray">- Variable Turn-over Rent (Resort)</docset:OperationalSegmentName>
+          <docset:SegmentRevenueActual dg:structure="td" xsi:type="integer" dg:value="72000000" dg:origin="1 808 2135 941 2162" dg:style="color: darkslategray">72,000,000</docset:SegmentRevenueActual>
+          <docset:SegmentRevenueBudget dg:structure="td" xsi:type="integer" dg:value="68000000" dg:origin="1 1257 2135 1390 2162" dg:style="color: darkslategray">68,000,000</docset:SegmentRevenueBudget>
+          <docset:RevenueVariance dg:structure="td" xsi:type="integer" dg:value="4000000" dg:origin="1 1720 2135 1838 2162" dg:style="color: darkslategray">4,000,000</docset:RevenueVariance>
+          <dg:ActualVsBudget dg:structure="td" dg:origin="1 1988 2115 2242 2142; 1 1988 2155 2200 2182" dg:style="color: darkslategray">Increased guest retail and dining activity</dg:ActualVsBudget>
+        </docset:LeaseRevenue>
+        <docset:InterconnectionOrSurchargeRevenue dg:structure="tr" dg:origin="1 243 2295 2282 2361">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 243 2295 482 2322; 1 243 2335 476 2361" dg:style="color: darkslategray">- Atmospheric &amp; Life Support Recoveries</docset:OperationalSegmentName>
+          <docset:SegmentRevenueActual dg:structure="td" xsi:type="integer" dg:value="25000000" dg:origin="1 808 2315 941 2342" dg:style="color: darkslategray">25,000,000</docset:SegmentRevenueActual>
+          <docset:SegmentRevenueBudget dg:structure="td" xsi:type="integer" dg:value="23000000" dg:origin="1 1257 2315 1390 2342" dg:style="color: darkslategray">23,000,000</docset:SegmentRevenueBudget>
+          <docset:RevenueVariance dg:structure="td" xsi:type="integer" dg:value="2000000" dg:origin="1 1720 2315 1838 2342" dg:style="color: darkslategray">2,000,000</docset:RevenueVariance>
+          <dg:ActualVsBudget dg:structure="td" dg:origin="1 1988 2295 2205 2322; 1 1988 2335 2282 2361" dg:style="color: darkslategray">Reimbursement of oxygen/water processing</dg:ActualVsBudget>
+        </docset:InterconnectionOrSurchargeRevenue>
+        <docset:ShieldingOrContainmentCost dg:structure="tr" dg:origin="1 243 2475 2270 2541">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 243 2475 476 2501; 1 243 2515 441 2541" dg:style="color: darkslategray">- Ancillary Gravity &amp; Rad-Shield Fees</docset:OperationalSegmentName>
+          <docset:SegmentRevenueActual dg:structure="td" xsi:type="integer" dg:value="15000000" dg:origin="1 808 2495 941 2521" dg:style="color: darkslategray">15,000,000</docset:SegmentRevenueActual>
+          <docset:SegmentRevenueBudget dg:structure="td" xsi:type="integer" dg:value="14000000" dg:origin="1 1257 2495 1390 2521" dg:style="color: darkslategray">14,000,000</docset:SegmentRevenueBudget>
+          <docset:RevenueVariance dg:structure="td" xsi:type="integer" dg:value="1000000" dg:origin="1 1720 2495 1838 2521" dg:style="color: darkslategray">1,000,000</docset:RevenueVariance>
+          <dg:ActualVsBudget dg:structure="td" dg:origin="1 1988 2475 2270 2501; 1 1988 2515 2176 2541" dg:style="color: darkslategray">Offworlder physiological adjustment fees</dg:ActualVsBudget>
+        </docset:ShieldingOrContainmentCost>
+        <docset:TotalCost dg:structure="tr" dg:origin="1 193 2654 2188 2761">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 2674 389 2701; 1 193 2714 412 2741" dg:style="font-weight: bold; color: darkslategray">Total Operating Expenses (OpEx)</docset:OperationalSegmentName>
+          <docset:SegmentCostActual dg:structure="td" dg:origin="1 790 2694 941 2721" dg:style="font-weight: bold; color: darkslategray" xml:id="segmentcostactual">(84,500,000)</docset:SegmentCostActual>
+          <docset:SegmentCostBudget dg:structure="td" dg:origin="1 1239 2694 1390 2721" dg:style="font-weight: bold; color: darkslategray">(81,000,000)</docset:SegmentCostBudget>
+          <docset:CostVariance dg:structure="td" dg:origin="1 1703 2694 1838 2721" dg:style="font-weight: bold; color: darkslategray">(3,500,000)</docset:CostVariance>
+          <dg:ActualVsBudget dg:structure="td" dg:origin="1 1988 2654 2188 2681; 1 1988 2694 2183 2721; 1 1988 2734 2168 2761" dg:style="font-weight: bold; color: darkslategray" xml:id="actualvsbudget">Seismic activity required higher filtration cycle</dg:ActualVsBudget>
+        </docset:TotalCost>
+        <docset:DirectCost dg:structure="tr" dg:origin="1 243 2874 2238 2940">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 243 2874 468 2900; 1 243 2914 417 2940" dg:style="color: darkslategray">- Life Support &amp; Air Scrubber Loop</docset:OperationalSegmentName>
+          <docset:SegmentCostActual dg:structure="td" dg:origin="1 790 2894 941 2920" dg:style="color: darkslategray">(28,000,000)</docset:SegmentCostActual>
+          <docset:SegmentCostBudget dg:structure="td" dg:origin="1 1239 2894 1390 2920" dg:style="color: darkslategray">(27,000,000)</docset:SegmentCostBudget>
+          <docset:CostVariance dg:structure="td" dg:origin="1 1703 2894 1838 2920" dg:style="color: darkslategray">(1,000,000)</docset:CostVariance>
+          <dg:ActualVsBudget dg:structure="td" dg:origin="1 1988 2874 2238 2900; 1 1988 2914 2126 2940" dg:style="color: darkslategray">Catalyst replacement accelerated</dg:ActualVsBudget>
+        </docset:DirectCost>
+        <docset:ShieldingOrContainmentCost dg:structure="tr" dg:origin="1 243 3054 2250 3160">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 243 3054 372 3080; 1 243 3093 439 3120; 1 243 3133 345 3160" dg:style="color: darkslategray">- Radiation Deflection &amp; Hull Monitors</docset:OperationalSegmentName>
+          <docset:SegmentCostActual dg:structure="td" dg:origin="1 790 3093 941 3120" dg:style="color: darkslategray">(18,500,000)</docset:SegmentCostActual>
+          <docset:SegmentCostBudget dg:structure="td" dg:origin="1 1239 3093 1390 3120" dg:style="color: darkslategray">(18,000,000)</docset:SegmentCostBudget>
+          <docset:CostVariance dg:structure="td" dg:origin="1 1725 3093 1838 3120" dg:style="color: darkslategray">(500,000)</docset:CostVariance>
+          <dg:ActualVsBudget dg:structure="td" dg:origin="1 1988 3074 2250 3100; 1 1988 3113 2188 3140" dg:style="color: darkslategray">Minor electromagnetic coil maintenance</dg:ActualVsBudget>
+        </docset:ShieldingOrContainmentCost>
+        <docset:DirectCost dg:structure="tr" dg:origin="2 243 166 2275 272" xml:id="directcost" dg:itemprop="references" dg:href="#actualvsbudget" dg:value="Tectonic drift / seismic activity driving higher filtration and maintenance costs">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="2 243 166 398 193; 2 243 206 346 233; 2 243 246 395 272" dg:style="color: darkslategray">- Geothermal Interface Maintenance</docset:OperationalSegmentName>
+          <docset:SegmentCostActual dg:structure="td" dg:origin="2 790 206 941 233" dg:style="color: darkslategray">(22,000,000)</docset:SegmentCostActual>
+          <docset:SegmentCostBudget dg:structure="td" dg:origin="2 1239 206 1390 233" dg:style="color: darkslategray">(20,000,000)</docset:SegmentCostBudget>
+          <docset:CostVariance dg:structure="td" dg:origin="2 1703 206 1838 233" dg:style="color: darkslategray">(2,000,000)</docset:CostVariance>
+          <dg:ActualVsBudget dg:structure="td" dg:origin="2 1988 186 2140 213; 2 1988 226 2275 252" dg:style="color: darkslategray">Tectonic drift realignments in Sector 4</dg:ActualVsBudget>
+        </docset:DirectCost>
+        <dg:AdministrativeCost dg:structure="tr" dg:origin="2 243 386 2241 452">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="2 243 386 434 412; 2 243 425 457 452" dg:style="color: darkslategray">- Administrative, Legal &amp; Insurance</docset:OperationalSegmentName>
+          <docset:SegmentCostActual dg:structure="td" dg:origin="2 790 406 941 432" dg:style="color: darkslategray">(16,000,000)</docset:SegmentCostActual>
+          <docset:SegmentCostBudget dg:structure="td" dg:origin="2 1239 406 1390 432" dg:style="color: darkslategray">(16,000,000)</docset:SegmentCostBudget>
+          <docset:CostVariance dg:structure="td" xsi:type="integer" dg:value="0" dg:origin="2 1824 406 1838 432" dg:style="color: darkslategray">0</docset:CostVariance>
+          <dg:ActualVsBudget dg:structure="td" dg:origin="2 1988 386 2241 412; 2 1988 425 2135 452" dg:style="color: darkslategray">Jovian Lloyd's liability premium flat</dg:ActualVsBudget>
+        </dg:AdministrativeCost>
+        <docset:NetOperatingIncome dg:structure="tr" dg:origin="2 193 565 2250 632" xml:id="netoperatingincome">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="2 193 565 469 592; 2 193 605 258 632" dg:style="font-weight: bold; color: darkslategray">Net Operating Income (NOI)</docset:OperationalSegmentName>
+          <docset:SegmentRevenueActual dg:structure="td" xsi:type="integer" dg:value="72500000" dg:origin="2 808 585 941 612" dg:style="font-weight: bold; color: darkslategray" xml:id="segmentrevenueactual" dg:itemprop="valueFrom" dg:href="#segmentcostactual">72,500,000</docset:SegmentRevenueActual>
+          <docset:SegmentRevenueBudget dg:structure="td" xsi:type="integer" dg:value="69000000" dg:origin="2 1257 585 1390 612" dg:style="font-weight: bold; color: darkslategray">69,000,000</docset:SegmentRevenueBudget>
+          <docset:RevenueVariance dg:structure="td" xsi:type="integer" dg:value="3500000" dg:origin="2 1720 585 1838 612" dg:style="font-weight: bold; color: darkslategray">3,500,000</docset:RevenueVariance>
+          <dg:ActualVsBudget dg:structure="td" dg:origin="2 1988 565 2192 592; 2 1988 605 2250 632" dg:style="font-weight: bold; color: darkslategray">Exceeds budget underwriting models</dg:ActualVsBudget>
+        </docset:NetOperatingIncome>
+      </dg:ConsolidatedIncome>
+    </docset:CashFlow>
+    <dg:BalanceSheet dg:structure="section" dg:origin="2 193 947 2303 2930; 3 193 179 2283 894">
+      <dg:chunk dg:structure="header" dg:origin="2 262 947 1221 986" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="2 262 947 294 986">2.</dg:chunk> Consolidated Balance Sheet &amp; Reserve Accounts</dg:chunk>
+      <dg:BalanceSheet dg:structure="table" dg:origin="2 193 1147 2303 2930; 3 193 179 2283 894">
+        <dg:BalanceSheet dg:structure="tr" dg:origin="2 193 1147 2198 1214">
+          <docset:ReserveAccountName dg:structure="td" dg:origin="2 193 1167 497 1194" dg:style="font-weight: bold">Balance Sheet Category</docset:ReserveAccountName>
+          <dg:ReserveRestrictionStatus dg:structure="td" dg:origin="2 941 1167 1210 1194" dg:style="font-weight: bold">Carrying Value (ECU)</dg:ReserveRestrictionStatus>
+          <docset:ReserveAccountBalance dg:structure="td" dg:origin="2 1689 1147 2198 1174; 2 1689 1187 1915 1214" dg:style="font-weight: bold">Detailed Segment Ledger (Operational &amp; Restricted Funds)</docset:ReserveAccountBalance>
+        </dg:BalanceSheet>
+        <dg:CashAndReserves dg:structure="tr" dg:origin="2 193 1698 1539 1725">
+          <docset:ReserveAccountName dg:structure="td" dg:origin="2 193 1698 547 1725" dg:style="font-weight: bold; color: darkslategray">Cash &amp; Restricted Reserves</docset:ReserveAccountName>
+          <dg:BalanceSheetCarryingValue dg:structure="td" xsi:type="integer" dg:value="185200000" dg:origin="2 1391 1698 1539 1725" dg:style="color: darkslategray" xml:id="balancesheetcarryingvalue" dg:itemprop="valueFrom" dg:href="#reserveaccountbalance #reserveaccountbalance-2 #reserveaccountbalance-3">185,200,000</dg:BalanceSheetCarryingValue>
+          <docset:ReserveAccountBalance dg:structure="td"/>
+        </dg:CashAndReserves>
+        <docset:ReserveBalance dg:structure="tr" dg:origin="2 1714 1340 2241 1421">
+          <docset:ReserveAccountName dg:structure="td" dg:origin="2 1714 1355 1795 1376; 2 1714 1386 1846 1406" dg:style="font-weight: bold; font-size: 0.75em">Account Classification</docset:ReserveAccountName>
+          <dg:ReserveRestrictionStatus dg:structure="td" dg:origin="2 1939 1355 2038 1376; 2 1939 1386 2001 1406" dg:style="font-weight: bold; font-size: 0.75em">Restricted Status</dg:ReserveRestrictionStatus>
+          <docset:ReserveAccountBalance dg:structure="td" dg:origin="2 2163 1340 2236 1360; 2 2163 1371 2241 1391; 2 2163 1401 2219 1421" dg:style="font-weight: bold; font-size: 0.75em">Current Balance (ECU)</docset:ReserveAccountBalance>
+        </docset:ReserveBalance>
+        <docset:ReserveBalance dg:structure="tr" dg:origin="2 1714 1506 2262 1664">
+          <docset:ReserveAccountName dg:structure="td" dg:origin="2 1714 1506 1762 1529; 2 1714 1540 1789 1563; 2 1714 1574 1798 1597; 2 1714 1608 1796 1630; 2 1714 1642 1792 1664" dg:style="font-size: 0.75em; color: darkslategray">Debt Service Reserve Account (DSRA)</docset:ReserveAccountName>
+          <dg:ReserveRestrictionStatus dg:structure="td" dg:origin="2 1939 1523 1986 1546; 2 1939 1557 2040 1580; 2 1939 1591 2006 1614; 2 1939 1625 1989 1647" dg:style="font-size: 0.75em; color: darkslategray">Fully Restricted (UJCC Lien)</dg:ReserveRestrictionStatus>
+          <docset:ReserveAccountBalance dg:structure="td" xsi:type="integer" dg:value="65000000" dg:origin="2 2149 1574 2262 1597" dg:style="font-size: 0.75em; color: darkslategray" xml:id="reserveaccountbalance">65,000,000</docset:ReserveAccountBalance>
+        </docset:ReserveBalance>
+        <docset:ReserveBalance dg:structure="tr" dg:origin="2 1714 1751 2262 1909">
+          <docset:ReserveAccountName dg:structure="td" dg:origin="2 1714 1751 1751 1773; 2 1714 1784 1806 1807; 2 1714 1818 1782 1841; 2 1714 1852 1788 1875; 2 1714 1886 1766 1909" dg:style="font-size: 0.75em; color: darkslategray">Life Support / CapEx Sinking Fund</docset:ReserveAccountName>
+          <dg:ReserveRestrictionStatus dg:structure="td" dg:origin="2 1939 1784 2040 1807; 2 1939 1818 2043 1841; 2 1939 1852 2041 1875" dg:style="font-size: 0.75em; color: darkslategray">Restricted (Structural Reserves)</dg:ReserveRestrictionStatus>
+          <docset:ReserveAccountBalance dg:structure="td" xsi:type="integer" dg:value="45000000" dg:origin="2 2149 1818 2262 1841" dg:style="font-size: 0.75em; color: darkslategray" xml:id="reserveaccountbalance-2">45,000,000</docset:ReserveAccountBalance>
+        </docset:ReserveBalance>
+        <docset:ReserveBalance dg:structure="tr" dg:origin="2 1714 1995 2262 2085">
+          <docset:ReserveAccountName dg:structure="td" dg:origin="2 1714 1995 1836 2018; 2 1714 2029 1813 2051; 2 1714 2063 1767 2085" dg:style="font-size: 0.75em; color: darkslategray">Unrestricted Operating Cash</docset:ReserveAccountName>
+          <dg:ReserveRestrictionStatus dg:structure="td" dg:origin="2 1939 2012 2029 2034; 2 1939 2046 1992 2068" dg:style="font-size: 0.75em; color: darkslategray">Free and Clear</dg:ReserveRestrictionStatus>
+          <docset:ReserveAccountBalance dg:structure="td" xsi:type="integer" dg:value="75200000" dg:origin="2 2149 2029 2262 2051" dg:style="font-size: 0.75em; color: darkslategray" xml:id="reserveaccountbalance-3">75,200,000</docset:ReserveAccountBalance>
+        </docset:ReserveBalance>
+        <dg:PropertyPlantEquipment dg:structure="tr" dg:origin="2 193 2561 1539 2588" xml:id="propertyplantequipment">
+          <docset:ReserveAccountName dg:structure="td" dg:origin="2 193 2561 651 2588" dg:style="font-weight: bold; color: darkslategray">Property, Plant &amp; Equipment (PP&amp;E)</docset:ReserveAccountName>
+          <dg:BalanceSheetCarryingValue dg:structure="td" xsi:type="integer" dg:value="895400000" dg:origin="2 1391 2561 1539 2588" dg:style="color: darkslategray">895,400,000</dg:BalanceSheetCarryingValue>
+          <docset:ReserveAccountBalance dg:structure="td"/>
+        </dg:PropertyPlantEquipment>
+        <dg:BalanceSheet dg:structure="tr" dg:origin="2 1714 2222 2303 2334">
+          <dg:AssetName dg:structure="td" dg:origin="2 1714 2222 1797 2242; 2 1714 2283 1810 2303; 2 1714 2313 1770 2334" dg:style="font-weight: bold; font-size: 0.75em">Physical / Structural Asset</dg:AssetName>
+          <dg:AssetGrossBookValue dg:structure="td" dg:origin="2 1882 2237 1941 2257; 2 1882 2267 1933 2288; 2 1882 2298 1937 2318" dg:style="font-weight: bold; font-size: 0.75em">Gross Book Value</dg:AssetGrossBookValue>
+          <dg:AccumulatedDepreciation dg:structure="td" dg:origin="2 2051 2237 2178 2257; 2 2051 2267 2100 2288; 2 2051 2298 2112 2318" dg:style="font-weight: bold; font-size: 0.75em">Accumulated Wear (Tidal)</dg:AccumulatedDepreciation>
+          <dg:AssetNetCarryingValue dg:structure="td" dg:origin="2 2219 2237 2252 2257; 2 2219 2267 2303 2288; 2 2219 2298 2273 2318" dg:style="font-weight: bold; font-size: 0.75em">Net Carrying Value</dg:AssetNetCarryingValue>
+        </dg:BalanceSheet>
+        <dg:BalanceSheet dg:structure="tr" dg:origin="2 1714 2418 2262 2509">
+          <dg:AssetName dg:structure="td" dg:origin="2 1714 2418 1866 2441; 2 1714 2452 1774 2475; 2 1714 2486 1766 2509" dg:style="font-size: 0.75em; color: darkslategray">Titanium-Glass Dome Units</dg:AssetName>
+          <dg:AssetGrossBookValue dg:structure="td" xsi:type="integer" dg:value="450000000" dg:origin="2 1800 2452 1926 2475" dg:style="font-size: 0.75em; color: darkslategray">450,000,000</dg:AssetGrossBookValue>
+          <dg:AccumulatedDepreciation dg:structure="td" dg:origin="2 1966 2452 2094 2475" dg:style="font-size: 0.75em; color: darkslategray">(45,000,000)</dg:AccumulatedDepreciation>
+          <dg:AssetNetCarryingValue dg:structure="td" xsi:type="integer" dg:value="405000000" dg:origin="2 2137 2452 2262 2475" dg:style="font-size: 0.75em; color: darkslategray">405,000,000</dg:AssetNetCarryingValue>
+        </dg:BalanceSheet>
+        <dg:BalanceSheet dg:structure="tr" dg:origin="2 1714 2595 2262 2685">
+          <dg:AssetName dg:structure="td" dg:origin="2 1714 2595 1850 2618; 2 1714 2629 1786 2652; 2 1714 2663 1802 2685" dg:style="font-size: 0.75em; color: darkslategray">Hydrothermal Energy Interface</dg:AssetName>
+          <dg:AssetGrossBookValue dg:structure="td" xsi:type="integer" dg:value="280000000" dg:origin="2 1800 2629 1926 2652" dg:style="font-size: 0.75em; color: darkslategray">280,000,000</dg:AssetGrossBookValue>
+          <dg:AccumulatedDepreciation dg:structure="td" dg:origin="2 1966 2629 2094 2652" dg:style="font-size: 0.75em; color: darkslategray">(56,000,000)</dg:AccumulatedDepreciation>
+          <dg:AssetNetCarryingValue dg:structure="td" xsi:type="integer" dg:value="224000000" dg:origin="2 2137 2629 2262 2652" dg:style="font-size: 0.75em; color: darkslategray">224,000,000</dg:AssetNetCarryingValue>
+        </dg:BalanceSheet>
+        <dg:BalanceSheet dg:structure="tr" dg:origin="2 1714 2772 2262 2930">
+          <dg:AssetName dg:structure="td" dg:origin="2 1714 2772 1751 2794; 2 1714 2806 1793 2828; 2 1714 2839 1776 2862; 2 1714 2907 1817 2930" dg:style="font-size: 0.75em; color: darkslategray">Life Support Loops &amp; Scrubbers</dg:AssetName>
+          <dg:AssetGrossBookValue dg:structure="td" xsi:type="integer" dg:value="210400000" dg:origin="2 1800 2839 1926 2862" dg:style="font-size: 0.75em; color: darkslategray">210,400,000</dg:AssetGrossBookValue>
+          <dg:AccumulatedDepreciation dg:structure="td" dg:origin="2 1966 2839 2094 2862" dg:style="font-size: 0.75em; color: darkslategray">(10,520,000)</dg:AccumulatedDepreciation>
+          <dg:AssetNetCarryingValue dg:structure="td" xsi:type="integer" dg:value="199880000" dg:origin="2 2137 2839 2262 2862" dg:style="font-size: 0.75em; color: darkslategray">199,880,000</dg:AssetNetCarryingValue>
+        </dg:BalanceSheet>
+        <dg:TotalLiabilities dg:structure="tr" dg:origin="3 193 522 1539 548">
+          <docset:ReserveAccountName dg:structure="td" dg:origin="3 193 522 592 548" dg:style="font-weight: bold; color: darkslategray">Current &amp; Long-Term Liabilities</docset:ReserveAccountName>
+          <dg:BalanceSheetCarryingValue dg:structure="td" xsi:type="integer" dg:value="812000000" dg:origin="3 1391 522 1539 548" dg:style="color: darkslategray">812,000,000</dg:BalanceSheetCarryingValue>
+          <docset:ReserveAccountBalance dg:structure="td"/>
+        </dg:TotalLiabilities>
+        <dg:BalanceSheet dg:structure="tr" dg:origin="3 1714 179 2283 230">
+          <dg:LiabilityClassName dg:structure="td" dg:origin="3 1714 179 1791 199; 3 1714 210 1814 230" dg:style="font-weight: bold; font-size: 0.75em">Liability Sub-Class</dg:LiabilityClassName>
+          <dg:LiabilityMaturityPeriod dg:structure="td" dg:origin="3 1939 179 2018 199; 3 1939 210 2002 230" dg:style="font-weight: bold; font-size: 0.75em">Maturity Period</dg:LiabilityMaturityPeriod>
+          <dg:LiabilityOutstandingBalance dg:structure="td" dg:origin="3 2163 179 2283 199; 3 2163 210 2241 230" dg:style="font-weight: bold; font-size: 0.75em">Outstanding Balance</dg:LiabilityOutstandingBalance>
+        </dg:BalanceSheet>
+        <dg:BalanceSheet dg:structure="tr" dg:origin="3 1714 315 2262 439">
+          <dg:LiabilityClassName dg:structure="td" dg:origin="3 1714 315 1779 337; 3 1714 349 1798 371; 3 1714 383 1762 405; 3 1714 416 1789 439" dg:style="font-size: 0.75em; color: darkslategray" xml:id="liabilityclassname" dg:itemprop="references" dg:href="#submittingparty">Senior Secured Debt (UJCC)</dg:LiabilityClassName>
+          <dg:LiabilityMaturityPeriod dg:structure="td" dg:origin="3 1939 332 2004 354; 3 1939 366 1986 388; 3 1939 400 1989 422" dg:style="font-size: 0.75em; color: darkslategray">Jovian Year 2035</dg:LiabilityMaturityPeriod>
+          <dg:LiabilityOutstandingBalance dg:structure="td" xsi:type="integer" dg:value="750000000" dg:origin="3 2137 366 2262 388" dg:style="font-size: 0.75em; color: darkslategray" xml:id="liabilityoutstandingbalance">750,000,000</dg:LiabilityOutstandingBalance>
+        </dg:BalanceSheet>
+        <dg:BalanceSheet dg:structure="tr" dg:origin="3 1714 525 2262 650">
+          <dg:LiabilityClassName dg:structure="td" dg:origin="3 1714 525 1797 548; 3 1714 559 1799 582; 3 1714 593 1841 616; 3 1714 627 1764 650" dg:style="font-size: 0.75em; color: darkslategray" xml:id="liabilityclassname-2" dg:itemprop="accruesFrom" dg:href="#directcost" dg:value="Tectonic drift realignments Sector 4">Accrued Tectonic Remediation Fees</dg:LiabilityClassName>
+          <dg:LiabilityMaturityPeriod dg:structure="td" dg:origin="3 1939 542 2014 565; 3 1939 576 2028 599; 3 1939 610 1994 633" dg:style="font-size: 0.75em; color: darkslategray">Current (Within 1 Year)</dg:LiabilityMaturityPeriod>
+          <dg:LiabilityOutstandingBalance dg:structure="td" xsi:type="integer" dg:value="12000000" dg:origin="3 2149 576 2262 599" dg:style="font-size: 0.75em; color: darkslategray">12,000,000</dg:LiabilityOutstandingBalance>
+        </dg:BalanceSheet>
+        <dg:BalanceSheet dg:structure="tr" dg:origin="3 1714 736 2262 894">
+          <dg:LiabilityClassName dg:structure="td" dg:origin="3 1714 736 1802 758; 3 1714 770 1752 792; 3 1714 804 1787 826; 3 1714 837 1789 860; 3 1714 871 1804 894" dg:style="font-size: 0.75em; color: darkslategray">Deferred Tax (Jovian System Registry)</dg:LiabilityClassName>
+          <dg:LiabilityMaturityPeriod dg:structure="td" dg:origin="3 1939 804 2049 826" dg:style="font-size: 0.75em; color: darkslategray">Long-Term</dg:LiabilityMaturityPeriod>
+          <dg:LiabilityOutstandingBalance dg:structure="td" xsi:type="integer" dg:value="50000000" dg:origin="3 2149 804 2262 826" dg:style="font-size: 0.75em; color: darkslategray">50,000,000</dg:LiabilityOutstandingBalance>
+        </dg:BalanceSheet>
+      </dg:BalanceSheet>
+    </dg:BalanceSheet>
+    <docset:DebtCovenant dg:structure="section" dg:origin="3 193 1220 2188 2025">
+      <dg:chunk dg:structure="header" dg:origin="3 262 1220 1193 1259" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="3 262 1220 294 1259">3.</dg:chunk> Debt Service &amp; Financial Covenant Calculations</dg:chunk>
+      <dg:CovenantMetrics dg:structure="table" dg:origin="3 193 1420 2188 2025">
+        <docset:DebtCovenant dg:structure="tr" dg:origin="3 193 1420 2115 1446">
+          <docset:CovenantMetricName dg:structure="td" dg:origin="3 193 1420 400 1446" dg:style="font-weight: bold">Covenant Metric</docset:CovenantMetricName>
+          <dg:CovenantActualRatio dg:structure="td" dg:origin="3 754 1420 1036 1446" dg:style="font-weight: bold">Actual Ratio (Q2 2026)</dg:CovenantActualRatio>
+          <dg:CovenantContractualMinimum dg:structure="td" dg:origin="3 1315 1420 1587 1446" dg:style="font-weight: bold">Contractual Minimum</dg:CovenantContractualMinimum>
+          <dg:CovenantComplianceStatus dg:structure="td" dg:origin="3 1876 1420 2115 1446" dg:style="font-weight: bold">Compliance Status</dg:CovenantComplianceStatus>
+        </docset:DebtCovenant>
+        <docset:DebtServiceCoverageRatio dg:structure="tr" dg:origin="3 193 1560 2188 1666">
+          <docset:CovenantMetricName dg:structure="td" dg:origin="3 193 1560 556 1586; 3 193 1599 286 1626; 3 193 1639 501 1666" dg:style="font-weight: bold; color: darkslategray">Debt Service Coverage Ratio (DSCR)
+NOI / (Interest + Principal)</docset:CovenantMetricName>
+          <dg:CovenantActualRatio dg:structure="td" dg:origin="3 926 1599 993 1626" dg:style="font-weight: bold; color: darkslategray" xml:id="covenantactualratio" dg:itemprop="valueFrom" dg:href="#netoperatingincome" dg:value="NOI / (Interest + Principal)">2.23x</dg:CovenantActualRatio>
+          <dg:CovenantContractualMinimum dg:structure="td" dg:origin="3 1488 1599 1553 1626" dg:style="color: darkslategray">1.45x</dg:CovenantContractualMinimum>
+          <dg:CovenantComplianceStatus dg:structure="td" dg:origin="3 1975 1599 2188 1626" dg:style="font-weight: bold; text-transform: uppercase; color: green">IN COMPLIANCE</dg:CovenantComplianceStatus>
+        </docset:DebtServiceCoverageRatio>
+        <dg:LoanToValueRatio dg:structure="tr" dg:origin="3 193 1779 2188 1845">
+          <docset:CovenantMetricName dg:structure="td" dg:origin="3 193 1779 445 1806; 3 193 1819 540 1845" dg:style="font-style: italic; color: darkslategray">Loan-to-Value (LTV)
+Debt / Appraised Asset Value</docset:CovenantMetricName>
+          <dg:CovenantActualRatio dg:structure="td" xsi:type="decimal" dg:value="64.93" dg:origin="3 915 1799 1005 1826" dg:style="font-weight: bold; color: darkslategray" xml:id="covenantactualratio-3" dg:itemprop="valueFrom" dg:href="#liabilityoutstandingbalance #propertyplantequipment">64.93%</dg:CovenantActualRatio>
+          <dg:CovenantContractualMinimum dg:structure="td" xsi:type="decimal" dg:value="75.00" dg:origin="3 1476 1799 1566 1826" dg:style="color: darkslategray">75.00%</dg:CovenantContractualMinimum>
+          <dg:CovenantComplianceStatus dg:structure="td" dg:origin="3 1975 1799 2188 1826" dg:style="font-weight: bold; text-transform: uppercase; color: green">IN COMPLIANCE</dg:CovenantComplianceStatus>
+        </dg:LoanToValueRatio>
+        <docset:DebtYieldRatio dg:structure="tr" dg:origin="3 193 1959 2188 2025">
+          <docset:CovenantMetricName dg:structure="td" dg:origin="3 193 1959 397 1985; 3 193 1999 420 2025" dg:style="color: darkslategray">Debt Yield Ratio
+NOI / Loan Amount</docset:CovenantMetricName>
+          <dg:CovenantActualRatio dg:structure="td" xsi:type="decimal" dg:value="9.67" dg:origin="3 922 1979 997 2005" dg:style="font-weight: bold; color: darkslategray" xml:id="covenantactualratio-2" dg:itemprop="valueFrom" dg:href="#netoperatingincome">9.67%</dg:CovenantActualRatio>
+          <dg:CovenantContractualMinimum dg:structure="td" xsi:type="decimal" dg:value="8.50" dg:origin="3 1483 1979 1558 2005" dg:style="color: darkslategray">8.50%</dg:CovenantContractualMinimum>
+          <dg:CovenantComplianceStatus dg:structure="td" dg:origin="3 1975 1979 2188 2005" dg:style="font-weight: bold; text-transform: uppercase; color: green">IN COMPLIANCE</dg:CovenantComplianceStatus>
+        </docset:DebtYieldRatio>
+      </dg:CovenantMetrics>
+    </docset:DebtCovenant>
+    <docset:EngineeringCertification dg:structure="section" dg:origin="3 262 2341 2207 2681">
+      <dg:chunk dg:structure="header" dg:origin="3 262 2341 792 2380" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="3 262 2341 294 2380">4.</dg:chunk> Engineering Certifications</dg:chunk>
+      <docset:EngineeringCertification dg:structure="p" dg:origin="3 262 2603 2207 2634; 3 262 2650 1478 2681" dg:style="font-size: 1.25em; color: darkslategray">We hereby certify that atmospheric contamination remains below <dg:chunk dg:structure="span" xsi:type="decimal" dg:value="0.0001" dg:origin="3 1167 2603 1290 2634">0.0001%</dg:chunk> limit, radiation shields are operating at <dg:chunk dg:structure="span" xsi:type="decimal" dg:value="104" dg:origin="3 1834 2603 1914 2634">104%</dg:chunk> design capacity, and hull stress measurements in all occupied sectors are within acceptable seismic margins.</docset:EngineeringCertification>
+    </docset:EngineeringCertification>
+  </docset:ReportingPackage>
+</dg:chunk>

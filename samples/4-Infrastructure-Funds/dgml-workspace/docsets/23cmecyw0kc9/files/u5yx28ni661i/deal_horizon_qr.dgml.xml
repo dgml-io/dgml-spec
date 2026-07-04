@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/PeriodicFinancialReportingPackage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2122 2545">
+  <docset:ReportingPackage dg:structure="section" dg:origin="1 193 258 2122 2545">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 1755 311" dg:style="font-weight: bold; font-size: 2em">
+      <docset:ReportingEntityName dg:origin="1 262 258 940 311">Pwyll Habitation Partners</docset:ReportingEntityName> - <docset:ReportingPeriod dg:origin="1 993 258 1207 311">Q2 2026</docset:ReportingPeriod> Financial Statement</dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 262 567 654 599">
+      <dg:chunk dg:structure="li" dg:origin="1 262 567 654 599">
+        <dg:chunk dg:structure="header" dg:origin="1 262 567 526 599" dg:style="font-weight: bold; font-size: 1.25em; color: darkslategray">Reporting Period:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 534 567 654 599">
+          <docset:ReportingPeriod dg:origin="1 534 567 654 599" dg:style="font-size: 1.25em; color: darkslategray">Q2 2026</docset:ReportingPeriod>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:CashFlow dg:structure="section" dg:origin="1 193 1010 2122 1936">
+      <dg:chunk dg:structure="header" dg:origin="1 262 1010 815 1050" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="1 262 1010 294 1050">1.</dg:chunk> Cash Flow from Operations</dg:chunk>
+      <dg:CashFlowFromOperations dg:structure="table" dg:origin="1 193 1211 2122 1936">
+        <docset:CashFlow dg:structure="tr" dg:origin="1 193 1211 1763 1237">
+          <dg:CashFlowItemName dg:structure="td" dg:origin="1 193 1211 388 1237" dg:style="font-weight: bold">Cash Flow Item</dg:CashFlowItemName>
+          <dg:CashFlowAmount dg:structure="td" dg:origin="1 941 1211 1123 1237" dg:style="font-weight: bold">Amount (ECU)</dg:CashFlowAmount>
+          <docset:CashFlow dg:structure="td" dg:origin="1 1689 1211 1763 1237" dg:style="font-weight: bold">Notes</docset:CashFlow>
+        </docset:CashFlow>
+        <docset:LeaseRevenue dg:structure="tr" dg:origin="1 193 1350 2036 1377">
+          <dg:CashFlowItemName dg:structure="td" dg:origin="1 193 1350 620 1377" dg:style="color: darkslategray">Gross Residential Lease Collections</dg:CashFlowItemName>
+          <dg:CashFlowAmount dg:structure="td" xsi:type="integer" dg:value="41200000" dg:origin="1 1406 1350 1539 1377" dg:style="color: darkslategray">41,200,000</dg:CashFlowAmount>
+          <docset:CashFlow dg:structure="td" dg:origin="1 1689 1350 2036 1377" dg:style="color: darkslategray">94.2% occupancy maintained</docset:CashFlow>
+        </docset:LeaseRevenue>
+        <docset:InterconnectionOrSurchargeRevenue dg:structure="tr" dg:origin="1 193 1490 1902 1517">
+          <dg:CashFlowItemName dg:structure="td" dg:origin="1 193 1490 595 1517" dg:style="color: darkslategray">Common Atmosphere Surcharges</dg:CashFlowItemName>
+          <dg:CashFlowAmount dg:structure="td" xsi:type="integer" dg:value="6500000" dg:origin="1 1421 1490 1539 1517" dg:style="color: darkslategray">6,500,000</dg:CashFlowAmount>
+          <docset:CashFlow dg:structure="td" dg:origin="1 1689 1490 1902 1517" dg:style="color: darkslategray">Utility recoupment</docset:CashFlow>
+        </docset:InterconnectionOrSurchargeRevenue>
+        <docset:DirectCost dg:structure="tr" dg:origin="1 193 1630 2072 1657">
+          <dg:CashFlowItemName dg:structure="td" dg:origin="1 193 1630 674 1657" dg:style="color: darkslategray">Less: Core Maintenance &amp; Air Scrubbers</dg:CashFlowItemName>
+          <dg:CashFlowAmount dg:structure="td" dg:origin="1 1389 1630 1539 1657" dg:style="color: darkslategray">(12,400,000)</dg:CashFlowAmount>
+          <docset:CashFlow dg:structure="td" dg:origin="1 1689 1630 2072 1657" dg:style="color: darkslategray">Filter exchange executed in May</docset:CashFlow>
+        </docset:DirectCost>
+        <docset:ShieldingOrContainmentCost dg:structure="tr" dg:origin="1 193 1770 2002 1797">
+          <dg:CashFlowItemName dg:structure="td" dg:origin="1 193 1770 515 1797" dg:style="color: darkslategray">Less: Shielding Inspections</dg:CashFlowItemName>
+          <dg:CashFlowAmount dg:structure="td" dg:origin="1 1403 1770 1539 1797" dg:style="color: darkslategray">(3,100,000)</dg:CashFlowAmount>
+          <docset:CashFlow dg:structure="td" dg:origin="1 1689 1770 2002 1797" dg:style="color: darkslategray">Annual structural scanning</docset:CashFlow>
+        </docset:ShieldingOrContainmentCost>
+        <docset:NetOperatingIncome dg:structure="tr" dg:origin="1 193 1910 2122 1936">
+          <dg:CashFlowItemName dg:structure="td" dg:origin="1 193 1910 469 1936" dg:style="font-weight: bold; color: darkslategray">Net Operating Income</dg:CashFlowItemName>
+          <dg:CashFlowAmount dg:structure="td" xsi:type="integer" dg:value="32200000" dg:origin="1 1406 1910 1539 1936" dg:style="font-weight: bold; color: darkslategray">32,200,000</dg:CashFlowAmount>
+          <docset:CashFlow dg:structure="td" dg:origin="1 1689 1910 2122 1936" dg:style="font-weight: bold; color: darkslategray">In-line with underwriting forecasts</docset:CashFlow>
+        </docset:NetOperatingIncome>
+      </dg:CashFlowFromOperations>
+    </docset:CashFlow>
+    <docset:ReserveBalance dg:structure="section" dg:origin="1 262 2252 1981 2545">
+      <dg:chunk dg:structure="header" dg:origin="1 262 2252 818 2291" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="1 262 2252 294 2291">2.</dg:chunk> Reserve Balance Statement</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="1 262 2514 1981 2545" dg:style="font-size: 1.25em; color: darkslategray">The balance in the <docset:ReserveAccountName dg:origin="1 528 2514 1031 2545">Radiation Glass &amp; Structural Escrow</docset:ReserveAccountName> stands at <docset:ReserveAccountBalance dg:origin="1 1175 2514 1415 2545">14,800,000 ECU</docset:ReserveAccountBalance>. It has not been drawn down this quarter.</dg:chunk>
+    </docset:ReserveBalance>
+  </docset:ReportingPackage>
+</dg:chunk>

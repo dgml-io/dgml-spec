@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/SecuredCreditAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 185 179 1793 2892; 2 199 196 2268 3175; 3 184 197 2281 3275; 4 184 197 2281 3019; 5 184 196 2281 3269; 6 199 197 969 228">
+  <docset:FacilityName dg:structure="section" dg:origin="1 185 179 1793 2892">
+    <docset:ProjectSetIdentifier dg:structure="header" dg:origin="1 185 179 1793 254; 1 185 299 1372 374" dg:style="font-weight: bold; font-size: 2em; text-transform: uppercase; color: midnightblue">SET 1: THE KRAKEN MARE HYDROCARBON EXTRACTION &amp; REFINING DOME</docset:ProjectSetIdentifier>
+    <docset:AgreementType dg:structure="section" dg:origin="1 185 637 1764 2892">
+      <dg:chunk dg:structure="header" dg:origin="1 185 637 1507 693" dg:style="font-weight: bold; font-size: 2em; text-transform: uppercase; color: darkslateblue">
+        <docset:DocumentIdentifier dg:origin="1 185 637 597 693">DOCUMENT 1A</docset:DocumentIdentifier>: SECURED CREDIT AGREEMENT</dg:chunk>
+      <docset:AgreementType dg:structure="section" dg:origin="1 717 895 1764 2892">
+        <dg:chunk dg:structure="header" dg:origin="1 997 895 1483 926" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">SECURED CREDIT AGREEMENT</dg:chunk>
+        <docset:AgreementEffectiveDate dg:structure="p" dg:origin="1 817 1154 1663 1185" dg:style="color: darkslategray" xml:id="agreementeffectivedate-2" dg:itemprop="effectiveOn" dg:href="#executiondate">Dated as of the Agreement Effective Date (as defined herein)</docset:AgreementEffectiveDate>
+        <dg:chunk dg:structure="p" dg:origin="1 1192 1413 1288 1445" dg:style="color: darkslategray">among</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 968 1673 1513 1704; 1 1149 1723 1331 1754" dg:style="font-weight: bold; color: darkslategray">
+          <docset:BorrowerEntityName dg:origin="1 968 1673 1513 1704" dg:style="text-transform: uppercase">KRAKEN EXTRACTION PHASE II LP</docset:BorrowerEntityName>, as Borrower</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 1214 1982 1266 2013" dg:style="color: darkslategray">and</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 717 2242 1764 2273; 1 1158 2292 1323 2323" dg:style="font-weight: bold; color: darkslategray">
+          <docset:LenderOrAgentEntityName dg:origin="1 717 2242 1764 2273" dg:style="text-transform: uppercase">THE FINANCIAL INSTITUTIONS PARTY HERETO FROM TIME TO TIME</docset:LenderOrAgentEntityName>, as Lenders</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 1214 2551 1266 2582" dg:style="color: darkslategray">and</dg:chunk>
+        <docset:LenderOrAgentEntityName dg:structure="p" dg:origin="1 885 2810 1595 2842; 1 905 2860 1575 2892" dg:style="font-weight: bold; color: darkslategray">SOL-SYSTEM INFRASTRUCTURE BANK (SSIB), as Administrative Agent and Collateral Agent</docset:LenderOrAgentEntityName>
+      </docset:AgreementType>
+    </docset:AgreementType>
+  </docset:FacilityName>
+  <docset:DefinedTerms dg:structure="section" dg:origin="2 199 196 2268 3175; 3 199 197 2281 635">
+    <dg:chunk dg:structure="header" dg:origin="2 199 196 1376 243" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="2 199 196 429 243">ARTICLE I</dg:chunk> DEFINITIONS AND ACCOUNTING TERMS</dg:chunk>
+    <docset:DefinedTerms dg:structure="section" dg:origin="2 199 481 2268 3175; 3 231 197 2136 278">
+      <dg:chunk dg:structure="header" dg:origin="2 199 481 625 513" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="2 199 481 390 513">Section 1.01</dg:chunk> Defined Terms</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="2 634 481 1780 513" dg:style="color: darkslategray">As used in this Agreement, the following terms have the meanings specified below:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="2 231 819 2268 3175; 3 231 197 2136 278">
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 245 819 2268 850; 2 231 869 1724 900; 2 670 2319 685 2350" dg:style="color: darkslategray" xml:id="definedterms">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:AgreementEffectiveDate dg:origin="2 245 819 624 850" dg:style="font-weight: bold" xml:id="agreementeffectivedate" dg:itemprop="definedBy" dg:href="#definedterms">Agreement Effective Date</docset:AgreementEffectiveDate>" means the date on which this Agreement has been fully executed and delivered by all parties hereto, which date shall be the date written next to the last signature in the signature block below (such date, the "Signature Date").</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 245 1206 2218 1238; 2 231 1256 1125 1288; 2 610 2319 625 2350" dg:style="color: darkslategray" xml:id="definedterms-2">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:PerformanceIndexThreshold dg:origin="2 245 1206 674 1238" dg:style="font-weight: bold">Atmospheric Integrity Rating</docset:PerformanceIndexThreshold>" means the structural safety rating of the primary containment dome at Kraken Mare, as measured by the Titan Regulatory Council (TRC) using the barometric differential index.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 231 1594 2240 1625; 2 231 1644 656 1675" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Cryo-Containment Failure" means any thermodynamic drift in the secondary holding tanks exceeding <docset:PerformanceIndexThreshold dg:origin="2 1679 1594 1816 1625">5.0 Kelvin</docset:PerformanceIndexThreshold> above nominal liquid methane storage temperatures (91.1 K).</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 245 1981 1991 2013; 2 747 2319 762 2350" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:FacilityName dg:origin="2 245 1981 332 2013" dg:style="font-weight: bold">Dome</docset:FacilityName>" means the <docset:SectorDesignation dg:origin="2 510 1981 828 2013">Kraken Dome Sector-4</docset:SectorDesignation> pressurized facility, located at latitude <docset:FacilityName dg:origin="2 1365 1981 1751 2013">68.3° N, longitude 310.1° W</docset:FacilityName> on Titan, Saturn.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 245 2319 2261 2350; 2 231 2369 839 2400" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Energy Equivalent Value" or "EEV" means the energy value of refined hydrocarbon product calculated in Megawatt-hours equivalent (MWe) per metric ton of liquid methane/ethane mixture.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 245 2706 2219 2738; 2 231 2756 1525 2788" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Methane Export Price Index" or "MEPI" means the volume-weighted average price per metric ton of liquefied natural gas delivered FOB orbit (Titan orbital transfer station L-5) as published daily by the Sol System Commodity Exchange.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 231 2319 245 2350; 2 245 3094 2268 3125; 2 231 3144 1125 3175" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:AccountingOrInterpretationRules dg:origin="2 245 3094 924 3125" dg:style="font-weight: bold" xml:id="accountingorinterpretationrules">Sol System Interstellar Accounting Standards</docset:AccountingOrInterpretationRules>" or "<docset:AccountingOrInterpretationRules dg:origin="2 999 3094 1093 3125" dg:style="font-weight: bold; text-transform: uppercase" xml:id="accountingorinterpretationrules-3">SSIAS</docset:AccountingOrInterpretationRules>" means the body of accounting principles, standards, and interpretations adopted by the Interstellar Board of Standards, as in effect from time to time.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="2 231 2706 245 2738; 3 245 197 2136 228; 3 231 247 948 278" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:BenchmarkReferenceRate dg:origin="3 245 197 343 228" dg:style="font-weight: bold; text-transform: uppercase">TIDOR</docset:BenchmarkReferenceRate>" means the <docset:BenchmarkReferenceRate dg:origin="3 521 197 951 228">Titan Inter-Dome Offered Rate</docset:BenchmarkReferenceRate>, the average interest rate at which major Titan-based financial institutions offer to lend unsecured funds to other banks in the Titan system.</docset:DefinedTerms>
+      </dg:chunk>
+    </docset:DefinedTerms>
+    <docset:AccountingOrInterpretationRules dg:structure="section" dg:origin="3 199 553 2281 635">
+      <dg:chunk dg:structure="header" dg:origin="3 199 553 689 585" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="3 199 553 393 585">Section 1.02</dg:chunk> Accounting Terms</dg:chunk>
+      <docset:AccountingOrInterpretationRules dg:structure="p" dg:origin="3 699 553 2281 585; 3 199 603 988 635" dg:style="color: darkslategray" xml:id="accountingorinterpretationrules-2" dg:itemprop="references" dg:href="#accountingorinterpretationrules-3">Except as otherwise expressly provided herein, all financial terms and ratios shall be calculated, and all financial statements shall be prepared, in accordance with SSIAS.</docset:AccountingOrInterpretationRules>
+    </docset:AccountingOrInterpretationRules>
+  </docset:DefinedTerms>
+  <docset:CreditFacilityCommitment dg:structure="section" dg:origin="3 184 893 2281 2700">
+    <dg:chunk dg:structure="header" dg:origin="3 199 893 975 940" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="3 199 893 442 940">ARTICLE II</dg:chunk> THE CREDIT FACILITY</dg:chunk>
+    <docset:CreditFacilityCommitment dg:structure="section" dg:origin="3 199 1178 2281 1310">
+      <dg:chunk dg:structure="header" dg:origin="3 199 1178 603 1210" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="3 199 1178 393 1210">Section 2.01</dg:chunk> Commitment</dg:chunk>
+      <docset:CreditFacilityCommitment dg:structure="p" dg:origin="3 614 1178 2281 1210; 3 199 1228 2281 1260; 3 199 1278 1877 1310" dg:style="color: darkslategray">Subject to the terms and conditions set forth herein, each Lender agrees to make loans (each a "Facility Loan") to the Borrower from time to time during the Availability Period in an aggregate principal amount that will not result in such Lender's Credit Exposure exceeding such Lender's Commitment. The aggregate principal amount of the Facility is 2,500,000,000 Sol Credits (SC).</docset:CreditFacilityCommitment>
+    </docset:CreditFacilityCommitment>
+    <docset:InterestRateMargin dg:structure="section" dg:origin="3 184 1538 2280 2294">
+      <dg:chunk dg:structure="header" dg:origin="3 199 1538 614 1569" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="3 199 1538 390 1569">Section 2.02</dg:chunk> Interest Rates</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="3 184 1875 2280 2294">
+        <dg:chunk dg:structure="li" dg:origin="3 184 1875 1781 1906" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim" dg:origin="3 184 1875 210 1906">1</dg:chunk> The Loans shall bear interest at a floating rate per annum equal to <docset:BenchmarkReferenceRate dg:origin="3 1153 1875 1250 1906" dg:style="font-weight: bold; text-transform: uppercase">TIDOR</docset:BenchmarkReferenceRate> plus <docset:InterestRateMargin xsi:type="decimal" dg:value="4.50" dg:origin="3 1332 1875 1420 1906" dg:style="font-weight: bold">4.50%</docset:InterestRateMargin> (the "Applicable Margin").</dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="3 184 2213 2280 2244; 3 231 2263 2086 2294" dg:style="color: darkslategray" xml:id="chunk" dg:itemprop="references" dg:href="#definedterms-2">
+          <dg:chunk dg:structure="lim" dg:origin="3 184 2213 210 2244">2</dg:chunk> If the Borrower fails to maintain an <docset:PerformanceIndexThreshold dg:origin="3 713 2213 1142 2244" dg:style="font-weight: bold">Atmospheric Integrity Rating</docset:PerformanceIndexThreshold> (as defined in Section 1.01 and determined by the TRC) of <docset:PerformanceIndexThreshold dg:origin="3 1967 2213 2094 2244">Grade A-</docset:PerformanceIndexThreshold> or better, the Applicable Margin shall increase by an additional <docset:InterestRateMargin dg:origin="3 915 2263 1172 2294" dg:style="font-weight: bold">1.50% per annum</docset:InterestRateMargin> (the "Atmospheric Risk Premium") until such rating is restored.</dg:chunk>
+      </dg:chunk>
+    </docset:InterestRateMargin>
+    <docset:RepaymentSchedule dg:structure="section" dg:origin="3 199 2569 2281 2700">
+      <dg:chunk dg:structure="header" dg:origin="3 199 2569 721 2600" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="3 199 2569 392 2600">Section 2.03</dg:chunk> Repayment of Loans</dg:chunk>
+      <docset:RepaymentSchedule dg:structure="p" dg:origin="3 731 2569 2281 2600; 3 199 2619 2281 2650; 3 199 2669 512 2700" dg:style="color: darkslategray" xml:id="repaymentschedule">The Borrower shall repay the outstanding principal amount of the Facility Loans in quarterly installments on the last Business Day of each Martian fiscal quarter, commencing after the Agreement Effective Date, in accordance with the amortization schedule set forth in <docset:DocumentIdentifier dg:origin="3 304 2669 512 2700" xml:id="documentidentifier" dg:itemprop="governs" dg:href="#repaymentschedule">Schedule 2.03</docset:DocumentIdentifier>.</docset:RepaymentSchedule>
+    </docset:RepaymentSchedule>
+  </docset:CreditFacilityCommitment>
+  <docset:RepresentationsAndWarranties dg:structure="section" dg:origin="3 199 2958 1392 3275; 4 199 197 2281 638">
+    <dg:chunk dg:structure="header" dg:origin="3 199 2958 1392 3005" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="3 199 2958 455 3005">ARTICLE III</dg:chunk> REPRESENTATIONS AND WARRANTIES</dg:chunk>
+    <dg:chunk dg:structure="p" dg:origin="3 199 3244 1012 3275" dg:style="color: darkslategray">The Borrower represents and warrants to the Lenders that:</dg:chunk>
+    <docset:RepresentationsAndWarranties dg:structure="section" dg:origin="4 199 197 2281 328">
+      <dg:chunk dg:structure="header" dg:origin="4 199 197 971 228" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="4 199 197 396 228">Section 3.01</dg:chunk> Environmental Compliance on Titan</dg:chunk>
+      <docset:RepresentationsAndWarranties dg:structure="p" dg:origin="4 986 197 2281 228; 4 199 247 2281 278; 4 199 297 545 328" dg:style="color: darkslategray" xml:id="representationsandwarranties" dg:itemprop="governedBy" dg:href="#governinglaw">The Dome operations comply in all material respects with the <docset:GoverningLaw dg:origin="4 1899 197 2281 228; 4 199 247 556 278" xml:id="governinglaw">Titan Ecological Protection Protocol (TEPP) of 2104</docset:GoverningLaw>. No hazardous chemical dispersion, other than permitted venting of pressurized nitrogen ballast, has occurred outside the localized collection zone.</docset:RepresentationsAndWarranties>
+    </docset:RepresentationsAndWarranties>
+    <docset:StructuralOrEnvironmentalTolerance dg:structure="section" dg:origin="4 199 556 2281 638">
+      <dg:chunk dg:structure="header" dg:origin="4 199 556 939 588" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="4 199 556 396 588">Section 3.02</dg:chunk> Gravity and Structural Tolerances</dg:chunk>
+      <docset:StructuralOrEnvironmentalTolerance dg:structure="p" dg:origin="4 954 556 2281 588; 4 199 606 1708 638" dg:style="color: darkslategray">The structural foundations of the Dome are anchored into bedrock water-ice, engineered to withstand the gravitational shear of Saturn's tidal forces and atmospheric winds up to <docset:PerformanceIndexThreshold dg:origin="4 1379 606 1708 638">120 meters per second</docset:PerformanceIndexThreshold>.</docset:StructuralOrEnvironmentalTolerance>
+    </docset:StructuralOrEnvironmentalTolerance>
+  </docset:RepresentationsAndWarranties>
+  <docset:CovenantsArticle dg:structure="section" dg:origin="4 184 896 2235 3019">
+    <dg:chunk dg:structure="header" dg:origin="4 199 896 783 943" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="4 199 896 460 943">ARTICLE IV</dg:chunk> COVENANTS</dg:chunk>
+    <docset:AffirmativeCovenants dg:structure="section" dg:origin="4 184 1181 2231 1988">
+      <dg:chunk dg:structure="header" dg:origin="4 199 1181 739 1213" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="4 199 1181 390 1213">Section 4.01</dg:chunk> Affirmative Covenants</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="4 748 1181 1884 1213" dg:style="color: darkslategray">So long as any Lender shall have any Commitment hereunder, the Borrower shall:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="4 184 1519 2231 1988">
+        <docset:MaintenanceCovenant dg:structure="li" dg:origin="4 184 1519 2210 1550; 4 231 1569 1482 1611" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim" dg:origin="4 184 1519 210 1550">1</dg:chunk> Maintenance of Pressurization: Maintain interior atmospheric pressure at a minimum of <docset:PerformanceIndexThreshold dg:origin="4 1472 1519 1950 1550">1.45 Earth atmospheres (147 kPa)</docset:PerformanceIndexThreshold> with a gas mixture consisting of not less than <docset:PerformanceIndexThreshold dg:origin="4 599 1569 879 1611">95.0% Nitrogen (N2)</docset:PerformanceIndexThreshold> and <docset:PerformanceIndexThreshold dg:origin="4 949 1569 1173 1600">5.0% Argon (Ar)</docset:PerformanceIndexThreshold> in all habitable zones.</docset:MaintenanceCovenant>
+        <docset:MaintenanceCovenant dg:structure="li" dg:origin="4 184 1906 2231 1938; 4 231 1956 984 1988" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim" dg:origin="4 184 1906 210 1938">2</dg:chunk> Environmental Shielding: Maintain and repair the active thermal-barrier pylons designed to prevent the heat generated by the industrial refining plants from melting the surrounding water-ice bedrock.</docset:MaintenanceCovenant>
+      </dg:chunk>
+    </docset:AffirmativeCovenants>
+    <docset:NegativeCovenants dg:structure="section" dg:origin="4 184 2263 2235 3019">
+      <dg:chunk dg:structure="header" dg:origin="4 199 2263 706 2294" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="4 199 2263 390 2294">Section 4.02</dg:chunk> Negative Covenants</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="4 715 2263 1879 2294" dg:style="color: darkslategray">The Borrower shall not, without the prior written consent of the Administrative Agent:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="4 184 2600 2235 3019">
+        <docset:NegativeCovenants dg:structure="li" dg:origin="4 184 2600 2151 2631" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim" dg:origin="4 184 2600 210 2631">1</dg:chunk> Fundamental Changes: Permit any merger, consolidation, or orbit-transfer of major corporate assets out of the Saturn System jurisdiction.</docset:NegativeCovenants>
+        <docset:SystemModificationProhibition dg:structure="li" dg:origin="4 184 2938 2235 2969; 4 231 2988 1507 3019" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim" dg:origin="4 184 2938 210 2969">2</dg:chunk> No Liens on Life-Support Infrastructure: Create, incur, assume, or permit to exist any Lien on any life-support systems, oxygenation scrubbing units, or nuclear fusion containment walls essential to the survival of the resident labor force.</docset:SystemModificationProhibition>
+      </dg:chunk>
+    </docset:NegativeCovenants>
+  </docset:CovenantsArticle>
+  <docset:DefaultArticle dg:structure="section" dg:origin="5 184 196 2281 3269; 6 199 197 969 228">
+    <dg:chunk dg:structure="header" dg:origin="5 199 196 973 243" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslategray">
+      <dg:chunk dg:structure="lim" dg:origin="5 199 196 447 243">ARTICLE V</dg:chunk> EVENTS OF DEFAULT</dg:chunk>
+    <docset:EventOfDefault dg:structure="section" dg:origin="5 184 481 2281 3269; 6 199 197 969 228">
+      <dg:chunk dg:structure="header" dg:origin="5 199 481 670 513" dg:style="font-weight: bold; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="5 199 481 392 513">Section 5.01</dg:chunk> Events of Default</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 680 481 2281 513; 5 199 531 950 563" dg:style="color: darkslategray">If any of the following events shall occur, the Administrative Agent may, with the consent of the Required Lenders, declare the Loans to be immediately due and payable:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="5 184 869 2259 1725">
+        <docset:PrimaryDefaultEvent dg:structure="li" dg:origin="5 184 869 2237 900; 5 231 919 1507 950" dg:style="color: darkslategray" xml:id="primarydefaultevent" dg:itemprop="references" dg:href="#definedterms-2">
+          <dg:chunk dg:structure="lim" dg:origin="5 184 869 210 900">1</dg:chunk> Atmospheric Decompression: Any sudden decompression of the main dome structure resulting in a loss of pressurized volume exceeding <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="15" dg:origin="5 2174 869 2237 900">15%</docset:PerformanceIndexThreshold> within any <docset:PerformanceIndexThreshold dg:origin="5 378 919 590 950">24-hour period</docset:PerformanceIndexThreshold>, or a decline in the Atmospheric Integrity Rating below <docset:PerformanceIndexThreshold dg:origin="5 1382 919 1507 950">Grade B</docset:PerformanceIndexThreshold>.</docset:PrimaryDefaultEvent>
+        <docset:EventOfDefault dg:structure="li" dg:origin="5 184 1256 2259 1288; 5 231 1306 868 1338" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim" dg:origin="5 184 1256 210 1288">2</dg:chunk> Bedrock Liquefaction: Any thermal monitoring station registering bedrock water-ice temperatures above <docset:PerformanceIndexThreshold dg:origin="5 1696 1256 1851 1288">260 Kelvin</docset:PerformanceIndexThreshold>, indicating an imminent threat of structural collapse due to substrate melting.</docset:EventOfDefault>
+        <docset:EventOfDefault dg:structure="li" dg:origin="5 184 1644 2165 1675; 5 231 1694 1406 1725" dg:style="color: darkslategray">
+          <dg:chunk dg:structure="lim" dg:origin="5 184 1644 210 1675">3</dg:chunk> Solar Flare Abandonment: Evacuation of more than <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="80" dg:origin="5 977 1644 1040 1675">80%</docset:PerformanceIndexThreshold> of the operational workforce due to Solar Cosmic Radiation levels exceeding <docset:PerformanceIndexThreshold dg:origin="5 2113 1644 2165 1675; 5 231 1694 526 1725">500 millisieverts per hour</docset:PerformanceIndexThreshold>, if such evacuation lasts longer than <docset:PerformanceIndexThreshold dg:origin="5 1031 1694 1406 1725">30 Earth consecutive days</docset:PerformanceIndexThreshold>.</docset:EventOfDefault>
+      </dg:chunk>
+      <docset:BorrowerEntityName dg:structure="p" dg:origin="5 199 2000 736 2031" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray" xml:id="borrowerentityname">KRAKEN EXTRACTION PHASE II LP</docset:BorrowerEntityName>
+      <dg:chunk dg:structure="p" dg:origin="5 199 2260 245 2291" dg:style="color: darkslategray">By: ___________________________</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 199 2310 587 2341" dg:style="color: darkslategray">Name: <docset:SignatoryName dg:origin="5 300 2310 587 2341" xml:id="signatoryname" dg:itemprop="signatoryOf" dg:href="#borrowerentityname">Tarek Vance-Vargas</docset:SignatoryName>
+      </dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 199 2360 727 2391" dg:style="color: darkslategray">Title: <docset:Signatory dg:origin="5 276 2360 727 2391">Managing Director of Operations</docset:Signatory>
+      </dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 199 2619 667 2650" dg:style="color: darkslategray">Date of Execution: <docset:ExecutionDate xsi:type="date" dg:value="2146-06-26" dg:origin="5 463 2619 667 2650" dg:style="font-weight: bold" xml:id="executiondate">June 26, 2146</docset:ExecutionDate>
+      </dg:chunk>
+      <docset:LenderOrAgentEntityName dg:structure="p" dg:origin="5 199 2878 798 2910" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray" xml:id="lenderoragententityname">SOL-SYSTEM INFRASTRUCTURE BANK</docset:LenderOrAgentEntityName>
+      <dg:chunk dg:structure="p" dg:origin="5 199 3138 245 3169" dg:style="color: darkslategray">By: ___________________________</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 199 3188 512 3219" dg:style="color: darkslategray">Name: <docset:SignatoryName dg:origin="5 300 3188 512 3219" xml:id="signatoryname-2" dg:itemprop="signatoryOf" dg:href="#lenderoragententityname">Elizabeth Chen</docset:SignatoryName>
+      </dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 199 3238 906 3269" dg:style="color: darkslategray">Title: <docset:Signatory dg:origin="5 276 3238 906 3269">Vice President, Outer-Rim Debt Infrastructure</docset:Signatory>
+      </dg:chunk>
+      <docset:ExecutionDate dg:structure="p" dg:origin="6 199 197 969 228" dg:style="font-weight: bold; color: darkslategray">Date of Execution (the Signature Date): June 26, 2146</docset:ExecutionDate>
+    </docset:EventOfDefault>
+  </docset:DefaultArticle>
+</dg:chunk>

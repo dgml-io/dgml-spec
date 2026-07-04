@@ -1,0 +1,356 @@
+# ==========================================================================
+# DGML docset schema — Property Rent Roll Report
+# RELAX NG Compact.  Data types observed in 5 .dgml.xml file(s):
+#   element text is the RAW page text; the normalized, typed value is
+#   carried by @dg:value, described by @xsi:type (XSD built-in names).
+# `# Field: value` comments are the LOSSLESS schema.json serialization;
+#   regenerate the JSON via dgml_core.generation.rnc.rnc_to_schema_dict.
+# ==========================================================================
+
+default namespace docset = "http://dgml.io/dgml-io/PropertyRentRollReport"
+namespace dg = "http://dgml.io/ns/dg#"
+namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = dg.chunk
+
+# --- attributes common to every DGML element ------------------------
+# dg:origin  = grounding bbox: "page x1 y1 x2 y2"
+# dg:itemprop / dg:href = semantic link (predicate + '#id' target(s))
+common.atts =
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  attribute dg:value { text }?,
+  attribute xsi:type { text }?
+
+# --- generic structural chunk (unlabeled scaffolding) ----------------
+dg.chunk = element dg:chunk { common.atts, mixed { any.docset* } }
+
+# a concept private to ONE document renders in the dg: namespace instead
+# of docset: (the shared-tag rule) — same shape, unshared vocabulary
+dg.private = element dg:* { common.atts, mixed { any.docset* } }
+
+# any docset element may appear where structure allows it
+any.docset = dg.chunk
+  | dg.private
+  | AnnualBaseRent
+  | CurrencyDenomination
+  | EscalationSchedule
+  | GuarantorOrRelatedParty
+  | LeaseEndDate
+  | LeaseStartDate
+  | LeaseTerm
+  | MonthlyBaseRent
+  | NetArea
+  | PortfolioStatus
+  | PortfolioTotals
+  | PropertyIdentifier
+  | RecoveryType
+  | RemainingConcession
+  | RentRoll
+  | ReportDate
+  | TenantName
+  | TotalAnnualBaseRent
+  | TotalMonthlyBaseRent
+  | TotalNetArea
+  | UnitSuite
+  | ZoneOrSector
+
+# ------------------------------------------------------------------
+# Description: "Annualised base rent amount payable by the tenant"
+# Kind: inline
+# Parent: RentRoll
+# Example: "M$ 4,500,000.00"
+# Examples: ["M$ 4,500,000.00", "M$ 3,224,000.00", "Annual Base Rent (M$)"]
+# Observed: 6 occurrence(s); dg:structure: td(6)
+AnnualBaseRent = element AnnualBaseRent {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Currency unit used for rent amounts throughout the rent roll (e.g. M$)"
+# Kind: inline
+CurrencyDenomination = element CurrencyDenomination {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Method or schedule by which the base rent escalates over the lease term"
+# Kind: inline
+# Parent: RentRoll
+# Example: "Biennial METI Index (2%–6%)"
+# Examples: ["Biennial METI Index (2%–6%)", "3.0% Fixed Annual", "Escalation Structure"]
+# Observed: 10 occurrence(s); dg:structure: td(10)
+EscalationSchedule = element EscalationSchedule {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Guarantor entity or related party associated with the lease"
+# Kind: inline
+# Parent: RentRoll
+# Example: "Phobos Holdings PLC / BBB- Rated"
+# Examples: ["Phobos Holdings PLC / BBB- Rated", "Neo-Zurich Pharma SE / AA Rated", "Guarantor"]
+# Observed: 10 occurrence(s); dg:structure: td(10)
+GuarantorOrRelatedParty = element GuarantorOrRelatedParty {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Expiry date of the lease term"
+# Kind: inline
+# Parent: RentRoll
+# Example: "02/28/2094"
+# Examples: ["02/28/2094", "10/31/2096", "Lease End"]
+# Observed: 10 occurrence(s); dg:structure: td(10)
+# Data type (from DGML): date(1) of 10 occurrence(s)
+LeaseEndDate = element LeaseEndDate {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "date" },
+    attribute dg:value { xsd:date })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Commencement date of the lease term"
+# Kind: inline
+# Parent: RentRoll
+# Example: "03/01/2084"
+# Examples: ["03/01/2084", "11/01/2084", "Lease Start"]
+# Observed: 10 occurrence(s); dg:structure: td(10)
+# Data type (from DGML): date(4) of 10 occurrence(s)
+LeaseStartDate = element LeaseStartDate {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "date" },
+    attribute dg:value { xsd:date })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Duration or term of the lease derived from start and end dates"
+# Kind: inline
+LeaseTerm = element LeaseTerm {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Monthly base rent amount payable by the tenant"
+# Kind: inline
+# Parent: RentRoll
+# Example: "M$ 375,000.00"
+# Examples: ["M$ 375,000.00", "M$ 268,666.67", "Monthly Base Rent (M$)"]
+# Observed: 6 occurrence(s); dg:structure: td(6)
+MonthlyBaseRent = element MonthlyBaseRent {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Net leasable area of the unit expressed in square metres"
+# Kind: inline
+# Parent: RentRoll
+# Example: "25,000"
+# Examples: ["25,000", "6,200", "Net Area (sq.m.)"]
+# Observed: 6 occurrence(s); dg:structure: td(6)
+# Data type (from DGML): integer(5) of 6 occurrence(s)
+NetArea = element NetArea {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Pressurization or operational status of the portfolio at report date"
+# Kind: inline
+# Parent: RentRoll
+# Example: "100% Pressurized"
+# Examples: ["100% Pressurized"]
+# Observed: 5 occurrence(s)
+PortfolioStatus = element PortfolioStatus {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Aggregated totals row summarising net area and rent across all units in the rent roll"
+# Kind: row
+# Parent: RentRoll
+# Observed: 5 occurrence(s); dg:structure: tr(5)
+# Children (from schema hierarchy): TotalAnnualBaseRent, TotalMonthlyBaseRent, TotalNetArea
+PortfolioTotals = element PortfolioTotals {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Name or identifier of the specific property or complex covered by the rent roll"
+# Kind: inline
+# Parent: RentRoll
+# Example: "Hellas Basin Logistics Complex - Depot Gamma"
+# Examples: ["Hellas Basin Logistics Complex - Depot Gamma", "Olympus Plaza - Zone 1", "Olympus Plaza - Zone 2 Annex"]
+# Observed: 5 occurrence(s)
+PropertyIdentifier = element PropertyIdentifier {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Structure governing how operating expenses or outgoings are recovered from the tenant"
+# Kind: inline
+# Parent: RentRoll
+# Example: "NNN (Heavy Filtration)"
+# Examples: ["NNN (Heavy Filtration)", "NNN (Base Year Lock)", "Recovery Type"]
+# Observed: 10 occurrence(s); dg:structure: td(10)
+RecoveryType = element RecoveryType {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Outstanding rent-free or incentive concession remaining on the lease"
+# Kind: inline
+# Parent: RentRoll
+# Example: "1 Month Free (Solar storm delay)"
+# Examples: ["1 Month Free (Solar storm delay)", "None", "Remaining Concessions"]
+# Observed: 10 occurrence(s); dg:structure: td(10)
+RemainingConcession = element RemainingConcession {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Recurring rent roll schedule section listing all leased units within a property"
+# Kind: section
+# Example: "Rent Roll"
+# Examples: ["Rent Roll", "Part B: Rent Roll"]
+# Observed: 17 occurrence(s); dg:structure: table(6), tr(6), section(5)
+# Children (from schema hierarchy): AnnualBaseRent, EscalationSchedule, GuarantorOrRelatedParty, LeaseEndDate, LeaseStartDate, MonthlyBaseRent, NetArea, PortfolioStatus, PortfolioTotals, PropertyIdentifier, RecoveryType, RemainingConcession, ReportDate, TenantName, UnitSuite, ZoneOrSector
+RentRoll = element RentRoll {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Date on which the rent roll report was generated"
+# Kind: inline
+# Parent: RentRoll
+# Example: "June 25, 2026"
+# Examples: ["June 25, 2026"]
+# Observed: 5 occurrence(s)
+# Data type (from DGML): date(5) of 5 occurrence(s)
+ReportDate = element ReportDate {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "date" },
+    attribute dg:value { xsd:date })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Legal name of the tenant occupying the unit"
+# Kind: inline
+# Parent: RentRoll
+# Example: "Phobos Minerals Extraction"
+# Examples: ["Phobos Minerals Extraction", "Martian Biotech Synthetics", "Tenant Name"]
+# Observed: 10 occurrence(s); dg:structure: td(10)
+TenantName = element TenantName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Summed annual base rent across all units in the totals row"
+# Kind: inline
+# Parent: PortfolioTotals
+# Example: "M$ 4,500,000.00"
+# Examples: ["M$ 4,500,000.00", "M$ 3,224,000.00", "M$ 2,550,000.00"]
+# Observed: 5 occurrence(s); dg:structure: td(5)
+TotalAnnualBaseRent = element TotalAnnualBaseRent {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Summed monthly base rent across all units in the totals row"
+# Kind: inline
+# Parent: PortfolioTotals
+# Example: "M$ 375,000.00"
+# Examples: ["M$ 375,000.00", "M$ 268,666.67", "M$ 212,500.00"]
+# Observed: 5 occurrence(s); dg:structure: td(5)
+TotalMonthlyBaseRent = element TotalMonthlyBaseRent {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Summed net leasable area across all units in the totals row"
+# Kind: inline
+# Parent: PortfolioTotals
+# Example: "25,000"
+# Examples: ["25,000", "6,200", "8,500"]
+# Observed: 5 occurrence(s); dg:structure: td(5)
+# Data type (from DGML): integer(5) of 5 occurrence(s)
+TotalNetArea = element TotalNetArea {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Identifier for the individual leasable unit or suite within the property"
+# Kind: inline
+# Parent: RentRoll
+# Example: "Warehouse C"
+# Examples: ["Warehouse C", "TOTALS", "Sector F"]
+# Observed: 8 occurrence(s); dg:structure: td(8)
+UnitSuite = element UnitSuite {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Named sub-division or zone heading within a property used to group units"
+# Kind: inline
+# Parent: RentRoll
+# Example: "Sector A-4"
+# Examples: ["Sector A-4", "TOTALS"]
+# Observed: 2 occurrence(s); dg:structure: header(1), td(1)
+ZoneOrSector = element ZoneOrSector {
+  common.atts,
+  text
+}
+
