@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/ManagerValuationMemorandum" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 206 258 2105 875">
+  <docset:ValuationDocumentType dg:structure="section" dg:origin="1 206 258 2105 875">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 1183 311" dg:style="font-weight: bold; font-size: 1.5em">Infrastructure Utility Memorandum</dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 206 502 785 530">
+      <dg:chunk dg:structure="li" dg:origin="1 206 502 785 530">
+        <dg:chunk dg:structure="header" dg:origin="1 206 502 370 530" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">PROPERTY:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 378 502 785 530">
+          <docset:PropertyName dg:origin="1 378 502 785 530" dg:style="color: darkslategray" xml:id="propertyname">Taranis Geothermal Power Plant</docset:PropertyName>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:ValuationSummaryAndParameters dg:structure="p" dg:origin="1 262 797 2105 828; 1 262 844 1403 875" dg:style="color: darkslategray" xml:id="valuationsummaryandparameters" dg:itemprop="references" dg:href="#discountrate">Based on capitalized cash flow models using a discount rate of <docset:DiscountRate xsi:type="decimal" dg:value="9.5" dg:origin="1 1139 797 1219 828" xml:id="discountrate">9.5%</docset:DiscountRate>, we value the utility asset at <docset:AppraisedValue dg:origin="1 1610 797 1893 828" dg:style="font-weight: bold" xml:id="appraisedvalue" dg:itemprop="derivedUsing" dg:href="#discountrate" dg:value="9.5%">1,450,000,000 ECU</docset:AppraisedValue>. Stable value is supported by long-term power delivery agreements with regional industrial sectors.</docset:ValuationSummaryAndParameters>
+  </docset:ValuationDocumentType>
+</dg:chunk>

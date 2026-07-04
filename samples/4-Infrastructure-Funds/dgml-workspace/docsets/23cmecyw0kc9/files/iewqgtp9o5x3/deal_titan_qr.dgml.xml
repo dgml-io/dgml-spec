@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/PeriodicFinancialReportingPackage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2287 2050">
+  <docset:ReportingPackage dg:structure="section" dg:origin="1 193 258 2287 2050">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 1677 311" dg:style="font-weight: bold; font-size: 2em">
+      <docset:ReportingEntityName dg:origin="1 262 258 895 311">Balor Deep Aqua Group</docset:ReportingEntityName> - <docset:ReportingPeriod dg:origin="1 949 258 1162 311">Q2 2026</docset:ReportingPeriod> Operations Ledger</dg:chunk>
+    <dg:chunk dg:structure="p" dg:origin="1 262 567 654 599" dg:style="font-weight: bold; font-size: 1.25em; color: darkslategray">Reporting Period: <docset:ReportingPeriod dg:origin="1 534 567 654 599" dg:style="font-weight: normal">Q2 2026</docset:ReportingPeriod>
+    </dg:chunk>
+    <docset:IndustrialOutput dg:structure="section" dg:origin="1 193 1010 2287 2050">
+      <dg:chunk dg:structure="header" dg:origin="1 262 1010 887 1050" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="1 262 1010 294 1050">1.</dg:chunk> Segment Operations Statement</dg:chunk>
+      <dg:SegmentOperations dg:structure="table" dg:origin="1 193 1211 2287 1697">
+        <dg:chunk dg:structure="tr" dg:origin="1 193 1211 2245 1277">
+          <dg:chunk dg:structure="td" dg:origin="1 193 1231 440 1257" dg:style="font-weight: bold">Siphon Station Hub</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 642 1211 850 1237; 1 642 1250 732 1277" dg:style="font-weight: bold">Volume Pumped (Liters)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1091 1231 1340 1257" dg:style="font-weight: bold">Refining Margin (%)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1540 1231 1785 1257" dg:style="font-weight: bold">Repair Costs (ECU)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1988 1211 2245 1237; 1 1720 1231 1776 1257" dg:style="font-weight: bold">Net Segment Margin (ECU)</dg:chunk>
+        </dg:chunk>
+        <docset:IndustrialOutput dg:structure="tr" dg:origin="1 193 1390 2287 1417">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1390 477 1417" dg:style="color: darkslategray">Siphon Unit Balor-Alpha</docset:OperationalSegmentName>
+          <docset:PhysicalOutputVolume dg:structure="td" dg:origin="1 642 1390 812 1417" dg:style="color: darkslategray" xml:id="physicaloutputvolume">420,000,000 L</docset:PhysicalOutputVolume>
+          <dg:RefiningOrProcessingMargin dg:structure="td" xsi:type="decimal" dg:value="64.5" dg:origin="1 1203 1390 1278 1417" dg:style="color: darkslategray">64.5%</dg:RefiningOrProcessingMargin>
+          <docset:DirectCost dg:structure="td" dg:origin="1 1703 1390 1838 1417" dg:style="color: darkslategray">(8,200,000)</docset:DirectCost>
+          <docset:NetSegmentMargin dg:structure="td" xsi:type="integer" dg:value="38400000" dg:origin="1 2154 1390 2287 1417" dg:style="color: darkslategray" xml:id="netsegmentmargin">38,400,000</docset:NetSegmentMargin>
+        </docset:IndustrialOutput>
+        <docset:IndustrialOutput dg:structure="tr" dg:origin="1 193 1530 2287 1557">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1530 463 1557" dg:style="color: darkslategray">Siphon Unit Balor-Beta</docset:OperationalSegmentName>
+          <docset:PhysicalOutputVolume dg:structure="td" dg:origin="1 642 1530 812 1557" dg:style="color: darkslategray" xml:id="physicaloutputvolume-2">380,000,000 L</docset:PhysicalOutputVolume>
+          <dg:RefiningOrProcessingMargin dg:structure="td" xsi:type="decimal" dg:value="61.2" dg:origin="1 1203 1530 1278 1557" dg:style="color: darkslategray">61.2%</dg:RefiningOrProcessingMargin>
+          <docset:DirectCost dg:structure="td" dg:origin="1 1703 1530 1838 1557" dg:style="color: darkslategray">(9,100,000)</docset:DirectCost>
+          <docset:NetSegmentMargin dg:structure="td" xsi:type="integer" dg:value="31500000" dg:origin="1 2154 1530 2287 1557" dg:style="color: darkslategray" xml:id="netsegmentmargin-2">31,500,000</docset:NetSegmentMargin>
+        </docset:IndustrialOutput>
+        <docset:IndustrialOutput dg:structure="tr" dg:origin="1 193 1670 2287 1697">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1670 257 1697" dg:style="font-weight: bold; color: darkslategray">Total</docset:OperationalSegmentName>
+          <docset:TotalPhysicalVolume dg:structure="td" dg:origin="1 642 1670 813 1697" dg:style="font-weight: bold; color: darkslategray" xml:id="totalphysicalvolume" dg:itemprop="greaterOf" dg:href="#physicaloutputvolume #physicaloutputvolume-2">800,000,000 L</docset:TotalPhysicalVolume>
+          <dg:RefiningOrProcessingMargin dg:structure="td" dg:origin="1 1236 1670 1245 1697" dg:style="font-weight: bold; color: darkslategray">-</dg:RefiningOrProcessingMargin>
+          <docset:TotalCost dg:structure="td" dg:origin="1 1688 1670 1838 1697" dg:style="font-weight: bold; color: darkslategray">(17,300,000)</docset:TotalCost>
+          <docset:TotalNetIncome dg:structure="td" xsi:type="integer" dg:value="69900000" dg:origin="1 2154 1670 2287 1697" dg:style="font-weight: bold; color: darkslategray" xml:id="totalnetincome" dg:itemprop="greaterOf" dg:href="#netsegmentmargin #netsegmentmargin-2">69,900,000</docset:TotalNetIncome>
+        </docset:IndustrialOutput>
+      </dg:SegmentOperations>
+      <docset:EngineeringCertification dg:structure="p" dg:origin="1 262 1972 2181 2003; 1 262 2019 429 2050" dg:style="font-size: 1.25em; color: darkslategray" xml:id="engineeringcertification" dg:itemprop="attestsTo" dg:href="#reserveaccountbalance">Compliance Status: The Replacement Reserve is current and funded at <docset:ReserveAccountBalance dg:origin="1 1280 1972 1519 2003" xml:id="reserveaccountbalance">18,500,000 ECU</docset:ReserveAccountBalance>. All equipment siphons are working within target parameters.</docset:EngineeringCertification>
+    </docset:IndustrialOutput>
+  </docset:ReportingPackage>
+</dg:chunk>

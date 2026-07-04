@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/SecuredCreditAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 240 232 2235 2897; 2 340 336 2210 1850; 3 240 235 2310 2434; 4 240 235 2310 2163; 5 240 235 2310 2880; 6 240 235 2310 1695">
+  <docset:ProjectSetIdentifier dg:structure="section" dg:origin="1 240 232 2235 2897; 2 340 336 2210 1850">
+    <dg:chunk dg:structure="header" dg:origin="1 315 232 2235 307; 1 497 345 2053 420" dg:style="font-weight: bold; font-size: 1.5em; color: midnightblue">
+      <docset:DocumentIdentifier dg:origin="1 315 232 513 307">SET 6</docset:DocumentIdentifier>: <docset:FacilityName dg:origin="1 557 232 2235 307; 1 497 345 2053 420" dg:style="text-transform: uppercase">THE BELET DUNES ORGANOPHOTOVOLTAIC SOLAR GRID &amp; ENERGY STORAGE DEPOT</docset:FacilityName>
+    </dg:chunk>
+    <docset:AgreementType dg:structure="section" dg:origin="1 240 580 1525 635">
+      <dg:chunk dg:structure="header" dg:origin="1 240 580 1525 635" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: midnightblue">
+        <docset:DocumentIdentifier dg:origin="1 240 580 642 635">DOCUMENT 6A</docset:DocumentIdentifier>: SECURED CREDIT AGREEMENT</dg:chunk>
+    </docset:AgreementType>
+    <docset:AgreementType dg:structure="section" dg:origin="1 689 828 1861 2897; 2 340 336 2210 1850">
+      <dg:chunk dg:structure="header" dg:origin="1 860 828 1690 872" dg:style="font-weight: bold; text-transform: uppercase">SECURED TERM CREDIT AGREEMENT</dg:chunk>
+      <docset:AgreementEffectiveDate dg:structure="p" dg:origin="1 739 1144 1811 1188">Dated as of the Agreement Effective Date (as defined herein)</docset:AgreementEffectiveDate>
+      <dg:chunk dg:structure="p" dg:origin="1 1215 1460 1335 1504">among</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="1 731 1775 1819 1819; 1 1159 1841 1391 1885" dg:style="font-weight: bold">
+        <docset:BorrowerEntityName dg:origin="1 731 1775 1819 1819" dg:style="text-transform: uppercase">BELET ENERGY INFRASTRUCTURE PARTNERS LP</docset:BorrowerEntityName>, as Borrower</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="1 1243 2157 1307 2201">and</dg:chunk>
+      <docset:LenderOrAgentEntityName dg:structure="p" dg:origin="1 798 2472 1752 2516; 1 689 2538 1861 2582" dg:style="font-weight: bold">SOL SYSTEM ENERGY CONSORTIUM (SSEC), as Administrative Agent, Collateral Agent, and Lead Arranger</docset:LenderOrAgentEntityName>
+      <dg:chunk dg:structure="p" dg:origin="1 1243 2854 1307 2897">and</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="2 407 336 2143 379" dg:style="font-weight: bold">THE FINANCIAL INSTITUTIONS PARTY HERETO FROM TIME TO TIME, as Lenders</dg:chunk>
+      <docset:AgreementType dg:structure="p" dg:origin="2 340 781 2210 825; 2 340 846 2210 890; 2 340 912 1976 956">This SECURED TERM CREDIT AGREEMENT (this "Agreement") is entered into on the Agreement Effective Date by and among the Borrower, the Lenders, and the Administrative Agent. In consideration of the mutual covenants and agreements herein contained, the parties hereto agree as follows:</docset:AgreementType>
+      <docset:FacilityName dg:structure="p" dg:origin="2 340 1228 2210 1271; 2 340 1293 2210 1337; 2 340 1359 689 1403">WHEREAS, the Borrower owns and operates a comprehensive solar power grid utilizing organophotovoltaic surface collectors and deep-ground battery storage facilities located in the Belet Dunes region of Titan; and</docset:FacilityName>
+      <dg:chunk dg:structure="p" dg:origin="2 340 1675 2210 1718; 2 340 1740 2210 1784; 2 340 1806 1704 1850">WHEREAS, the Borrower has requested that the Lenders make loans to finance continuous solar array scaling, regular polymer substrate servicing, and active sandstorm-clearing maintenance; and the Lenders are willing to do so on the terms and subject to the conditions set forth herein.</dg:chunk>
+    </docset:AgreementType>
+  </docset:ProjectSetIdentifier>
+  <docset:DefinedTerms dg:structure="section" dg:origin="3 240 235 2310 2434">
+    <dg:chunk dg:structure="header" dg:origin="3 240 235 1549 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: midnightblue">ARTICLE I: DEFINITIONS AND INTERPRETATION</dg:chunk>
+    <docset:DefinedTerms dg:structure="section" dg:origin="3 240 383 2310 2154">
+      <dg:chunk dg:structure="header" dg:origin="3 340 383 893 427" dg:style="font-weight: bold">Section 1.01. Defined Terms.</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="3 910 383 2310 427; 3 240 449 359 492">As used in this Agreement, the following terms have the meanings specified below:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="3 406 564 2310 2154">
+        <docset:AgreementEffectiveDate dg:structure="li" dg:origin="3 406 564 2310 608; 3 406 630 2310 674; 3 406 695 1687 739" xml:id="agreementeffectivedate" dg:itemprop="effectiveOn" dg:href="#executiondate">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Agreement Effective Date" means the date on which this Agreement has been fully executed and delivered by all parties hereto, as verified by the date inscribed next to the signatures of the authorized officers in the execution block below (such date, the "Signature Date").</docset:AgreementEffectiveDate>
+        <dg:chunk dg:structure="li" dg:origin="3 430 794 2310 838; 3 406 860 2310 904; 3 406 926 2310 969; 3 406 991 531 1035; 3 993 1255 1017 1299">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:FacilityName dg:origin="3 430 794 862 838" dg:style="font-weight: bold">Belet Solar Grid Array</docset:FacilityName>" means the physical structural solar collectors, organophotovoltaic cells, dynamic electrostatic dust shielders, power conversion modules, and subsurface lithium-ion organometallic battery storage grids situated at <docset:SectorDesignation dg:origin="3 846 926 1027 969" xml:id="sectordesignation">Sector 21</docset:SectorDesignation>, Belet Dunes coordinates (<docset:FacilityName dg:origin="3 1506 926 2119 969">latitude 4.8° S, longitude 12.4° W</docset:FacilityName>) on Titan, Saturn.</dg:chunk>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 406 1090 2310 1134; 3 406 1156 1509 1200" xml:id="definedterms" dg:itemprop="references" dg:href="#affirmativecovenants" dg:value="Section 4.01(3)">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Helium-Pressurized Sinking Fund" or "HPSF" means the emergency cryogenic cooling and safety reserve fund mandated to be maintained under Section 4.01(3).</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 406 1255 2310 1299; 3 406 1320 1462 1364" xml:id="definedterms-2" dg:itemprop="references" dg:href="#affirmativecovenants-2" dg:value="Section 4.01(4)">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Regolith Stabilisation Escrow" means the cash escrow reserve fund mandated to be maintained under Section 4.01(4) to counter localized electrostatic sand shifts.</docset:DefinedTerms>
+        <docset:DefinedTerms dg:structure="li" dg:origin="3 430 1419 2310 1463; 3 406 1485 2310 1529; 3 406 1551 1069 1594" xml:id="definedterms-3">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Solar Conversion Efficiency Index" or "SCEI" means the raw photovoltaic light-to-electricity conversion rating of the surface solar panels, adjusted for atmospheric aerosols, as certified by the Titan Technical Safety Directorate (TTSD).</docset:DefinedTerms>
+        <dg:chunk dg:structure="li" dg:origin="3 406 1419 430 1463; 3 430 1650 2310 1693; 3 406 1715 2310 1759; 3 406 1781 1458 1825" xml:id="chunk">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "<docset:DefinedTerms dg:origin="3 430 1650 962 1693" dg:style="font-weight: bold">Solar Power Tariff Target</docset:DefinedTerms>" means the minimum operational power production metric of <docset:PerformanceIndexThreshold dg:origin="3 2189 1650 2310 1693; 3 406 1715 839 1759">20,000 Megawatt-hours (MWh)</docset:PerformanceIndexThreshold> equivalent delivered to the neighboring industrial domes per Titan sidereal cycle, as calculated under the provisions of Section 4.01(2) herein.</dg:chunk>
+        <docset:AccountingOrInterpretationRules dg:structure="li" dg:origin="3 406 1880 2310 1924; 3 406 1945 1577 1989">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Sol System Interstellar Accounting Standards" or "SSIAS" means the unified framework of financial accounting principles approved by the Interstellar Financial Board.</docset:AccountingOrInterpretationRules>
+        <docset:BenchmarkReferenceRate dg:structure="li" dg:origin="3 406 2044 2310 2088; 3 406 2110 1204 2154" xml:id="benchmarkreferencerate">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "TIDOR" means the Titan Inter-Dome Offered Rate, which is the floating interbank benchmark rate calculated for Titan-denominated credit lines.</docset:BenchmarkReferenceRate>
+      </dg:chunk>
+    </docset:DefinedTerms>
+    <docset:AccountingOrInterpretationRules dg:structure="section" dg:origin="3 240 2259 2310 2434">
+      <dg:chunk dg:structure="header" dg:origin="3 340 2259 1041 2303" dg:style="font-weight: bold">Section 1.02. Rules of Interpretation.</dg:chunk>
+      <docset:AccountingOrInterpretationRules dg:structure="p" dg:origin="3 1055 2259 2310 2303; 3 240 2325 2310 2368; 3 240 2390 916 2434">Capitalized terms defined in the singular shall have the corresponding meanings in the plural, and vice versa. Any references to specific sections, tables, or documents relate directly to this Agreement unless otherwise specified.</docset:AccountingOrInterpretationRules>
+    </docset:AccountingOrInterpretationRules>
+  </docset:DefinedTerms>
+  <docset:CreditFacilityCommitment dg:structure="section" dg:origin="4 240 235 2310 1365">
+    <dg:chunk dg:structure="header" dg:origin="4 240 235 1361 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: midnightblue">ARTICLE II: THE SECURED CREDIT LINES</dg:chunk>
+    <docset:CreditFacilityCommitment dg:structure="section" dg:origin="4 240 383 2310 558">
+      <dg:chunk dg:structure="header" dg:origin="4 340 383 826 427" dg:style="font-weight: bold">Section 2.01. The Facility.</dg:chunk>
+      <docset:CreditFacilityCommitment dg:structure="p" dg:origin="4 838 383 2310 427; 4 240 449 2310 492; 4 240 514 1758 558" xml:id="creditfacilitycommitment" dg:itemprop="effectiveOn" dg:href="#executiondate-2" dg:value="Closing Date equals Signature Date">Subject to the terms and conditions of this Agreement, each Lender agrees to make a single advance term loan (each a "Facility Loan") to the Borrower on the Closing Date (which is identical to the Signature Date) in an aggregate principal amount of 6,500,000,000 Sol Credits (SC).</docset:CreditFacilityCommitment>
+    </docset:CreditFacilityCommitment>
+    <docset:InterestRateMargin dg:structure="section" dg:origin="4 340 629 2310 1085" xml:id="interestratemargin" dg:itemprop="references" dg:href="#definedterms-3" dg:value="SCEI trigger for margin step-up">
+      <dg:chunk dg:structure="header" dg:origin="4 340 629 1090 673" dg:style="font-weight: bold">Section 2.02. Interest Rate Adjustments.</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="4 340 745 2310 1085">
+        <dg:chunk dg:structure="li" dg:origin="4 340 745 2223 789">
+          <dg:chunk dg:structure="lim" dg:origin="4 340 745 373 789">1.</dg:chunk> The Facility Loans shall accrue interest daily at a floating rate per annum equal to <docset:BenchmarkReferenceRate dg:origin="4 1848 745 1992 789" dg:style="font-weight: bold; text-transform: uppercase">TIDOR</docset:BenchmarkReferenceRate> plus <docset:InterestRateMargin xsi:type="decimal" dg:value="6.75" dg:origin="4 2091 745 2223 789" dg:style="font-weight: bold">6.75%</docset:InterestRateMargin>.</dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="4 340 844 2310 888; 4 406 910 2310 954; 4 406 976 2310 1019; 4 406 1041 1334 1085">
+          <dg:chunk dg:structure="lim" dg:origin="4 340 844 373 888">2.</dg:chunk> Should the <docset:PerformanceIndexThreshold dg:origin="4 612 844 1261 888" dg:style="font-weight: bold">Solar Conversion Efficiency Index</docset:PerformanceIndexThreshold> (SCEI) fall below <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="88.0" dg:origin="4 1614 844 1727 888">88.0%</docset:PerformanceIndexThreshold> for any consecutive 3-day Titan cycle due to carbon-aerosol sky occlusion or electrostatic dust coating, the floating margin shall automatically increase by <docset:InterestRateMargin xsi:type="decimal" dg:value="3.00" dg:origin="4 878 976 998 1019" dg:style="font-weight: bold">3.00%</docset:InterestRateMargin> per annum (the "Dynamic Siphon Charge Premium") until the SCEI is restored to <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="91.0" dg:origin="4 603 1041 716 1085">91.0%</docset:PerformanceIndexThreshold> or above, as verified by the TTSD.</dg:chunk>
+      </dg:chunk>
+    </docset:InterestRateMargin>
+    <docset:RepaymentSchedule dg:structure="section" dg:origin="4 240 1190 2310 1365">
+      <dg:chunk dg:structure="header" dg:origin="4 340 1190 1164 1234" dg:style="font-weight: bold">Section 2.03. Repayment and Amortization.</dg:chunk>
+      <docset:RepaymentSchedule dg:structure="p" dg:origin="4 1177 1190 2310 1234; 4 240 1256 2310 1300; 4 240 1321 1861 1365" xml:id="repaymentschedule" dg:itemprop="accruesFrom" dg:href="#agreementeffectivedate">Repayment of the principal shall be executed in equal quarterly installments on the final operational day of each Martian fiscal quarter, starting on the first such date following the Agreement Effective Date, in accordance with the amortization schedules appended hereto.</docset:RepaymentSchedule>
+    </docset:RepaymentSchedule>
+  </docset:CreditFacilityCommitment>
+  <docset:RepresentationsAndWarranties dg:structure="section" dg:origin="4 240 1477 2310 2163">
+    <dg:chunk dg:structure="header" dg:origin="4 240 1477 1646 1531" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: midnightblue">ARTICLE III: REPRESENTATIONS AND WARRANTIES</dg:chunk>
+    <dg:chunk dg:structure="p" dg:origin="4 340 1626 1361 1669">The Borrower represents and warrants to the Lenders that:</dg:chunk>
+    <docset:ExtractionOrOperatingRights dg:structure="section" dg:origin="4 240 1741 2310 1916" xml:id="extractionoroperatingrights" dg:itemprop="references" dg:href="#sectordesignation" dg:value="Sector 21-Belet coordinates">
+      <dg:chunk dg:structure="header" dg:origin="4 340 1741 1090 1785" dg:style="font-weight: bold">Section 3.01. Surface Land Concessions.</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="4 1101 1741 2310 1785; 4 240 1807 2310 1851; 4 240 1872 1104 1916">The Borrower holds exclusive long-term leases to construct, operate, and maintain surface organophotovoltaic grids over the designated sand dune coordinates (<docset:SectorDesignation dg:origin="4 1843 1807 2118 1851">Sector 21-Belet</docset:SectorDesignation>) under the authority of the <docset:ExtractionOrOperatingRights dg:origin="4 521 1872 1104 1916">Titan Regulatory Council (TRC)</docset:ExtractionOrOperatingRights>.</dg:chunk>
+    </docset:ExtractionOrOperatingRights>
+    <docset:StructuralOrEnvironmentalTolerance dg:structure="section" dg:origin="4 240 1988 2310 2163">
+      <dg:chunk dg:structure="header" dg:origin="4 340 1988 1191 2032" dg:style="font-weight: bold">Section 3.02. Electrostatic Charge Shielding.</dg:chunk>
+      <docset:StructuralOrEnvironmentalTolerance dg:structure="p" dg:origin="4 1208 1988 2310 2032; 4 240 2054 2310 2097; 4 240 2119 1214 2163">The organophotovoltaic cells are equipped with high-voltage alternating-current electrostatic dust repulsion systems engineered to repel fine tholin aerosol deposits without causing structural degradation of the polymer substrate.</docset:StructuralOrEnvironmentalTolerance>
+    </docset:StructuralOrEnvironmentalTolerance>
+  </docset:RepresentationsAndWarranties>
+  <docset:CovenantsArticle dg:structure="section" dg:origin="5 240 235 2310 1859">
+    <dg:chunk dg:structure="header" dg:origin="5 240 235 933 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: midnightblue">ARTICLE IV: COVENANTS</dg:chunk>
+    <docset:AffirmativeCovenants dg:structure="section" dg:origin="5 240 383 2310 1299">
+      <dg:chunk dg:structure="header" dg:origin="5 340 383 1052 427" dg:style="font-weight: bold">Section 4.01. Affirmative Covenants.</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 1072 383 2310 427; 5 240 449 514 492">So long as any part of the Facility Loan remains outstanding, the Borrower shall:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="5 340 564 2310 1299">
+        <docset:MaintenanceCovenant dg:structure="li" dg:origin="5 340 564 2310 608; 5 406 630 1830 674" xml:id="maintenancecovenant" dg:itemprop="references" dg:href="#definedterms-3" dg:value="SCEI base standard 89.0%">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 564 373 608">1.</dg:chunk> Solar Grid Maintenance: Undertake continuous optical-spectroscopy and electrical audits of the active surface arrays to ensure the SCEI does not fall below the base standard of <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="89.0" dg:origin="5 1706 630 1830 674">89.0%</docset:PerformanceIndexThreshold>.</docset:MaintenanceCovenant>
+        <docset:MaintenanceCovenant dg:structure="li" dg:origin="5 340 729 2310 772; 5 406 794 2310 838; 5 406 860 1174 904" xml:id="maintenancecovenant-2" dg:itemprop="references" dg:href="#chunk" dg:value="Solar Power Tariff Target 20,000 MWh">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 729 373 772">2.</dg:chunk> Maintain Solar Power Tariff: Operate the distribution transformers and storage batteries to sustain the Solar Power Tariff Target of <docset:PerformanceIndexThreshold dg:origin="5 968 794 1693 838">20,000 MWh equivalent per Titan cycle</docset:PerformanceIndexThreshold>, ensuring energy supply covenants with adjacent industrial domes are satisfied.</docset:MaintenanceCovenant>
+        <docset:AffirmativeCovenants dg:structure="li" dg:origin="5 340 959 2310 1003; 5 406 1025 2310 1068; 5 406 1090 893 1134" xml:id="affirmativecovenants">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 959 373 1003">3.</dg:chunk> Helium Sinking Reserve: Maintain the cash-funded Helium-Pressurized Sinking Fund with the Administrative Agent, holding a balance of not less than SC 200,000,000 at all times to preserve battery terminal temperature limits.</docset:AffirmativeCovenants>
+        <docset:AffirmativeCovenants dg:structure="li" dg:origin="5 340 1189 2310 1233; 5 406 1255 1902 1299" xml:id="affirmativecovenants-2">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 1189 373 1233">4.</dg:chunk> Regolith Stabilisation Reserve: Maintain the cash-funded Regolith Stabilisation Escrow with the Administrative Agent, holding a balance of not less than SC 400,000,000 at all times.</docset:AffirmativeCovenants>
+      </dg:chunk>
+    </docset:AffirmativeCovenants>
+    <docset:NegativeCovenants dg:structure="section" dg:origin="5 240 1404 2310 1859">
+      <dg:chunk dg:structure="header" dg:origin="5 340 1404 1000 1447" dg:style="font-weight: bold">Section 4.02. Negative Covenants.</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 1022 1404 2310 1447; 5 240 1469 633 1513">The Borrower shall not, without the explicit written approval of the Administrative Agent:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="5 340 1585 2310 1859">
+        <docset:SystemModificationProhibition dg:structure="li" dg:origin="5 340 1585 2310 1629; 5 406 1651 788 1694">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 1585 373 1629">1.</dg:chunk> Array Expansions: Build secondary transmission grids or restructure high-voltage substations within the specified coordinates.</docset:SystemModificationProhibition>
+        <docset:NegativeCovenants dg:structure="li" dg:origin="5 340 1750 2310 1793; 5 406 1815 1564 1859" xml:id="negativecovenants" dg:itemprop="references" dg:href="#definedterms-3" dg:value="SCEI threshold 90.0% for restricted payments">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 1750 373 1793">2.</dg:chunk> Restricted Payments: Declare or make any dividend distributions to corporate parent entities if the SCEI is below <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="90.0" dg:origin="5 524 1815 637 1859">90.0%</docset:PerformanceIndexThreshold> or if a Default Event has occurred and is continuing.</docset:NegativeCovenants>
+      </dg:chunk>
+    </docset:NegativeCovenants>
+  </docset:CovenantsArticle>
+  <docset:DefaultArticle dg:structure="section" dg:origin="5 240 2046 2310 2880">
+    <dg:chunk dg:structure="header" dg:origin="5 240 2046 1494 2100" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: midnightblue">ARTICLE V: DEFAULT EVENTS AND REMEDIES</dg:chunk>
+    <docset:EventOfDefault dg:structure="section" dg:origin="5 240 2194 2310 2880">
+      <dg:chunk dg:structure="header" dg:origin="5 340 2194 897 2238" dg:style="font-weight: bold">Section 5.01. Default Events.</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="5 916 2194 2310 2238; 5 240 2260 384 2304">The occurrence of any of the following events shall constitute an Event of Default:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="5 340 2376 2310 2880">
+        <dg:chunk dg:structure="li" dg:origin="5 340 2376 2310 2419; 5 406 2441 1135 2485">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 2376 373 2419">1.</dg:chunk> Major Dust Obliteration: Any storm or electrostatic dune shift resulting in a loss of surface collector area exceeding <docset:PerformanceIndexThreshold xsi:type="decimal" dg:value="45" dg:origin="5 594 2441 675 2485">45%</docset:PerformanceIndexThreshold> within any <docset:PrimaryDefaultEvent dg:origin="5 882 2441 1135 2485">48-hour cycle</docset:PrimaryDefaultEvent>.</dg:chunk>
+        <docset:EventOfDefault dg:structure="li" dg:origin="5 340 2540 2310 2584; 5 406 2606 2310 2650; 5 406 2671 938 2715" dg:style="font-weight: bold" xml:id="eventofdefault" dg:itemprop="references" dg:href="#chunk" dg:value="Solar Power Tariff Target covenant">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 2540 373 2584" dg:style="font-weight: normal">2.</dg:chunk> Covenant Non-Compliance: Failure to maintain the required balances in the Helium-Pressurized Sinking Fund or the Regolith Stabilisation Escrow, or failure to meet the Solar Power Tariff Target for more than two consecutive quarters.</docset:EventOfDefault>
+        <docset:EventOfDefault dg:structure="li" dg:origin="5 340 2770 2310 2814; 5 406 2836 1711 2880">
+          <dg:chunk dg:structure="lim" dg:origin="5 340 2770 373 2814">3.</dg:chunk> Battery System Runaway: Any unchecked localized heating of the subsurface organometallic batteries causing localized ice bedrock melting or regional thermal sink subsidence.</docset:EventOfDefault>
+      </dg:chunk>
+    </docset:EventOfDefault>
+  </docset:DefaultArticle>
+  <docset:MiscellaneousProvisions dg:structure="section" dg:origin="6 240 235 2310 1695">
+    <dg:chunk dg:structure="header" dg:origin="6 240 235 1419 289" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: midnightblue">ARTICLE VI: MISCELLANEOUS PROVISIONS</dg:chunk>
+    <docset:GoverningLaw dg:structure="section" dg:origin="6 240 383 2310 492">
+      <dg:chunk dg:structure="header" dg:origin="6 340 383 903 427" dg:style="font-weight: bold">Section 6.01. Governing Law.</dg:chunk>
+      <docset:GoverningLaw dg:structure="p" dg:origin="6 919 383 2310 427; 6 240 449 2164 492">This Agreement shall be governed by, and construed in accordance with, the Admiralty Law of the Martian Lowlands and the outer-rim industrial treaties governing the Saturnian System.</docset:GoverningLaw>
+    </docset:GoverningLaw>
+    <docset:Counterparts dg:structure="section" dg:origin="6 240 564 2310 1695">
+      <dg:chunk dg:structure="header" dg:origin="6 340 564 857 608" dg:style="font-weight: bold">Section 6.02. Counterparts.</dg:chunk>
+      <docset:Counterparts dg:structure="p" dg:origin="6 872 564 2310 608; 6 240 630 2310 674; 6 240 695 539 739">This Agreement may be executed in any number of counterparts, each of which when so executed and delivered shall be deemed an original, but all of which together shall constitute one and the same instrument.</docset:Counterparts>
+      <docset:BorrowerEntityName dg:structure="p" dg:origin="6 340 811 1417 854" dg:style="font-weight: bold; text-transform: uppercase" xml:id="borrowerentityname">BELET ENERGY INFRASTRUCTURE PARTNERS LP</docset:BorrowerEntityName>
+      <dg:chunk dg:structure="ul" dg:origin="6 240 927 971 1217">
+        <dg:chunk dg:structure="li" dg:origin="6 340 927 404 970">
+          <dg:chunk dg:structure="header" dg:origin="6 340 927 404 970">By:</dg:chunk>
+          <dg:chunk dg:structure="p">___________________________</dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 992 736 1036">
+          <dg:chunk dg:structure="header" dg:origin="6 240 992 357 1036">Name:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 368 992 736 1036">
+            <docset:SignatoryName dg:origin="6 368 992 736 1036" xml:id="signatoryname" dg:itemprop="signatoryOf" dg:href="#borrowerentityname">Alistair Vance-Cross</docset:SignatoryName>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 1058 971 1102">
+          <dg:chunk dg:structure="header" dg:origin="6 240 1058 335 1102">Title:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 346 1058 971 1102">
+            <docset:Signatory dg:origin="6 346 1058 971 1102">Managing Partner, Energy Division</docset:Signatory>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 340 1174 936 1217">
+          <dg:chunk dg:structure="header" dg:origin="6 340 1174 671 1217">Date of Execution:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 682 1174 936 1217">
+            <docset:ExecutionDate xsi:type="date" dg:value="2146-06-26" dg:origin="6 682 1174 936 1217" dg:style="font-weight: bold" xml:id="executiondate">June 26, 2146</docset:ExecutionDate>
+          </dg:chunk>
+        </dg:chunk>
+      </dg:chunk>
+      <docset:LenderOrAgentEntityName dg:structure="p" dg:origin="6 340 1289 1134 1333" dg:style="font-weight: bold; text-transform: uppercase" xml:id="lenderoragententityname">SOL SYSTEM ENERGY CONSORTIUM</docset:LenderOrAgentEntityName>
+      <dg:chunk dg:structure="ul" dg:origin="6 240 1405 1321 1695">
+        <dg:chunk dg:structure="li" dg:origin="6 340 1405 404 1449">
+          <dg:chunk dg:structure="header" dg:origin="6 340 1405 404 1449">By:</dg:chunk>
+          <dg:chunk dg:structure="p">___________________________</dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 1470 622 1514">
+          <dg:chunk dg:structure="header" dg:origin="6 240 1470 357 1514">Name:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 368 1470 622 1514">
+            <docset:SignatoryName dg:origin="6 368 1470 622 1514" xml:id="signatoryname-2" dg:itemprop="signatoryOf" dg:href="#lenderoragententityname">Diana Sterling</docset:SignatoryName>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 240 1536 1065 1580">
+          <dg:chunk dg:structure="header" dg:origin="6 240 1536 335 1580">Title:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 346 1536 1065 1580">
+            <docset:Signatory dg:origin="6 346 1536 1065 1580">Director, Planetary Energy Infrastructure</docset:Signatory>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="6 340 1652 1321 1695">
+          <dg:chunk dg:structure="header" dg:origin="6 340 1652 1056 1695">Date of Execution (the Signature Date):</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="6 1067 1652 1321 1695">
+            <docset:ExecutionDate xsi:type="date" dg:value="2146-06-26" dg:origin="6 1067 1652 1321 1695" dg:style="font-weight: bold" xml:id="executiondate-2">June 26, 2146</docset:ExecutionDate>
+          </dg:chunk>
+        </dg:chunk>
+      </dg:chunk>
+    </docset:Counterparts>
+  </docset:MiscellaneousProvisions>
+</dg:chunk>

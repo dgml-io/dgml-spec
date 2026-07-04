@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/ManagerValuationMemorandum" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 206 258 2192 875">
+  <docset:ValuationDocumentType dg:structure="section" dg:origin="1 206 258 2192 875">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 956 311" dg:style="font-weight: bold; font-size: 1.5em">Industrial Asset Appraisal</dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 206 502 1028 530">
+      <dg:chunk dg:structure="li" dg:origin="1 206 502 1028 530">
+        <dg:chunk dg:structure="header" dg:origin="1 206 502 370 530" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">PROPERTY:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 378 502 1028 530">
+          <docset:PropertyName dg:origin="1 378 502 1028 530" dg:style="color: darkslategray">Balor Chaos Aqua-Mining Refinery Equipment Array</docset:PropertyName>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:ValuationSummaryAndParameters dg:structure="p" dg:origin="1 262 797 2192 828; 1 262 844 1056 875" dg:style="color: darkslategray">Based on equipment replacement schedules, we appraise the physical refinery assets at <docset:AppraisedValue dg:origin="1 1493 797 1750 828" dg:style="font-weight: bold">525,000,000 ECU</docset:AppraisedValue>. Stable valuations reflect steady industrial water sales across the local Jovian settlements.</docset:ValuationSummaryAndParameters>
+  </docset:ValuationDocumentType>
+</dg:chunk>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/ManagerValuationMemorandum" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2255 3172; 2 262 260 2205 797">
+  <docset:ValuationDocumentType dg:structure="section" dg:origin="1 193 258 2255 3172; 2 262 260 2205 797">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 1187 311" dg:style="font-weight: bold; font-size: 2em">Manager's Valuation Memorandum</dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 206 502 1093 1182">
+      <dg:chunk dg:structure="li" dg:origin="1 206 502 889 530">
+        <dg:chunk dg:structure="header" dg:origin="1 206 502 254 530" dg:style="font-weight: bold; color: darkslategray">TO:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 262 502 889 530">
+          <docset:RecipientOrganization dg:origin="1 262 502 889 530" dg:style="color: darkslategray">Investment Committee, United Jovian Credit Corp.</docset:RecipientOrganization>
+        </dg:chunk>
+      </dg:chunk>
+      <dg:chunk dg:structure="li" dg:origin="1 206 719 801 747">
+        <dg:chunk dg:structure="header" dg:origin="1 206 719 298 747" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">FROM:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 306 719 801 747">
+          <docset:IssuingFirm dg:origin="1 306 719 801 747" dg:style="color: darkslategray">Jovian Valuation Advisory Partners LLC</docset:IssuingFirm>
+        </dg:chunk>
+      </dg:chunk>
+      <dg:chunk dg:structure="li" dg:origin="1 206 936 478 964">
+        <dg:chunk dg:structure="header" dg:origin="1 206 936 292 964" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">DATE:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 299 936 478 964">
+          <dg:ValuationDate xsi:type="date" dg:value="2026-06-26" dg:origin="1 299 936 478 964" dg:style="color: darkslategray">June 26, 2026</dg:ValuationDate>
+        </dg:chunk>
+      </dg:chunk>
+      <dg:chunk dg:structure="li" dg:origin="1 206 1154 1093 1182">
+        <dg:chunk dg:structure="header" dg:origin="1 206 1154 370 1182" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">PROPERTY:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 378 1154 1093 1182">
+          <docset:PropertyName dg:origin="1 378 1154 1093 1182" dg:style="color: darkslategray" xml:id="propertyname">Thalassa Hydrothermal Rift Resort (Under-Ice Sector 4G)</docset:PropertyName>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:ValuationSummaryAndParameters dg:structure="section" dg:origin="1 193 1526 2255 2818">
+      <dg:chunk dg:structure="header" dg:origin="1 262 1526 933 1565" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="1 262 1526 294 1565">1.</dg:chunk> Valuation Summary &amp; Parameters</dg:chunk>
+      <docset:ValuationMethodology dg:structure="p" dg:origin="1 262 1788 2160 1820; 1 262 1835 2106 1867; 1 262 1882 646 1913" dg:style="font-size: 1.25em; color: darkslategray" xml:id="valuationmethodology" dg:itemprop="describes" dg:href="#propertyname">We have updated the valuation of the Thalassa Hydrothermal Rift Resort using a multi-period Discounted Cash Flow (DCF) methodology. The analysis reflects Q2 performance margins, adjusted offworld traffic projection curves, and current risk parameters associated with radiation and seismic shifts.</docset:ValuationMethodology>
+      <dg:ValuationParameters dg:structure="table" dg:origin="1 193 2192 2255 2818">
+        <dg:ValuationParameter dg:structure="tr" dg:origin="1 193 2192 1809 2218">
+          <dg:ValuationParameter dg:structure="td" dg:origin="1 193 2192 323 2218" dg:style="font-weight: bold">Parameter</dg:ValuationParameter>
+          <docset:UnderwritingBaseValue dg:structure="td" dg:origin="1 941 2192 1254 2218" dg:style="font-weight: bold">Underwriting Base Value</docset:UnderwritingBaseValue>
+          <dg:ParameterRationale dg:structure="td" dg:origin="1 1689 2192 1809 2218" dg:style="font-weight: bold">Rationale</dg:ParameterRationale>
+        </dg:ValuationParameter>
+        <dg:ValuationParameter dg:structure="tr" dg:origin="1 193 2332 2255 2358">
+          <dg:ValuationParameter dg:structure="td" dg:origin="1 193 2332 509 2358" dg:style="font-weight: bold; color: darkslategray">Assumed Holding Period</dg:ValuationParameter>
+          <docset:UnderwritingBaseValue dg:structure="td" dg:origin="1 941 2332 1452 2358" dg:style="color: darkslategray">10 Jovian Years (approx. 11.8 Earth Years)</docset:UnderwritingBaseValue>
+          <dg:ParameterRationale dg:structure="td" dg:origin="1 1689 2332 2255 2358" dg:style="color: darkslategray">Aligned with life cycle of primary energy siphons</dg:ParameterRationale>
+        </dg:ValuationParameter>
+        <dg:ValuationParameter dg:structure="tr" dg:origin="1 193 2472 2249 2538">
+          <dg:ValuationParameter dg:structure="td" dg:origin="1 193 2492 550 2518" dg:style="font-weight: bold; color: darkslategray">Base Discount Rate (WACC)</dg:ValuationParameter>
+          <docset:UnderwritingBaseValue dg:structure="td" xsi:type="decimal" dg:value="11.50" dg:origin="1 941 2492 1031 2518" dg:style="color: darkslategray" xml:id="underwritingbasevalue" dg:itemprop="incorporates" dg:href="#regionalriskpremium">11.50%</docset:UnderwritingBaseValue>
+          <dg:ParameterRationale dg:structure="td" dg:origin="1 1689 2472 2249 2498; 1 1689 2511 1766 2538" dg:style="color: darkslategray">Includes <dg:RegionalRiskPremium xsi:type="decimal" dg:value="2.0" dg:origin="1 1795 2472 1856 2498" xml:id="regionalriskpremium">2.0%</dg:RegionalRiskPremium> regional risk premium for sub-ice assets</dg:ParameterRationale>
+        </dg:ValuationParameter>
+        <dg:ValuationParameter dg:structure="tr" dg:origin="1 193 2651 2250 2678">
+          <dg:ValuationParameter dg:structure="td" dg:origin="1 193 2651 426 2678" dg:style="font-weight: bold; color: darkslategray">Terminal Cap Rate</dg:ValuationParameter>
+          <docset:UnderwritingBaseValue dg:structure="td" xsi:type="decimal" dg:value="8.25" dg:origin="1 941 2651 1016 2678" dg:style="color: darkslategray">8.25%</docset:UnderwritingBaseValue>
+          <dg:ParameterRationale dg:structure="td" dg:origin="1 1689 2651 2250 2678" dg:style="color: darkslategray">Derived from capital transactions in Jupiter orbit</dg:ParameterRationale>
+        </dg:ValuationParameter>
+        <dg:ValuationParameter dg:structure="tr" dg:origin="1 193 2791 2135 2818">
+          <dg:ValuationParameter dg:structure="td" dg:origin="1 193 2791 581 2818" dg:style="font-weight: bold; color: darkslategray">Appraised Capitalization Value</dg:ValuationParameter>
+          <docset:UnderwritingBaseValue dg:structure="td" dg:origin="1 941 2791 1174 2818" dg:style="font-weight: bold; color: darkslategray" xml:id="underwritingbasevalue-2">1,155,000,000 ECU</docset:UnderwritingBaseValue>
+          <dg:ParameterRationale dg:structure="td" dg:origin="1 1689 2791 2135 2818" dg:style="color: darkslategray">Increase of 3.12% from Q1 evaluation</dg:ParameterRationale>
+        </dg:ValuationParameter>
+      </dg:ValuationParameters>
+    </docset:ValuationSummaryAndParameters>
+    <dg:CapitalExpenditureAnalysis dg:structure="section" dg:origin="1 262 3133 1002 3172; 2 262 260 2205 797">
+      <dg:chunk dg:structure="header" dg:origin="1 262 3133 1002 3172" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="1 262 3133 294 3172">2.</dg:chunk> Capital Expenditure (CapEx) Analysis</dg:chunk>
+      <dg:AnnualCapExReserve dg:structure="p" dg:origin="2 262 260 2205 291; 2 262 306 2091 338; 2 262 353 1587 385" dg:style="color: darkslategray">Due to the aggressive mechanical wear associated with deep-water chemical interactions at the hydrothermal rifts, the annual CapEx sinking reserve is modeled at <dg:chunk dg:structure="span" xsi:type="decimal" dg:value="4.5" dg:origin="2 569 306 640 338">4.5%</dg:chunk> of total revenues, as compared to the typical <dg:chunk dg:structure="span" xsi:type="decimal" dg:value="2.0" dg:origin="2 1271 306 1342 338">2.0%</dg:chunk> standard for lunar or orbital properties. This allocation supports preventative maintenance of the heat exchangers without disrupting cash flow stability.</dg:AnnualCapExReserve>
+      <docset:ValuationSummaryAndParameters dg:structure="p" dg:origin="2 262 719 2200 750; 2 262 766 1056 797" dg:style="color: darkslategray" xml:id="valuationsummaryandparameters" dg:itemprop="references" dg:href="#underwritingbasevalue-2">Valuation Conclusion: The collateral property displays robust asset health. The LTV of <docset:UnderwritingBaseValue xsi:type="decimal" dg:value="64.93" dg:origin="2 1486 719 1592 750">64.93%</docset:UnderwritingBaseValue> provides adequate security cushion against extreme tectonic events or regulatory alignment changes.</docset:ValuationSummaryAndParameters>
+    </dg:CapitalExpenditureAnalysis>
+  </docset:ValuationDocumentType>
+</dg:chunk>

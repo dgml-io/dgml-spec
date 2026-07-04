@@ -1,0 +1,976 @@
+# ==========================================================================
+# DGML docset schema — Commercial Lease Agreement
+# RELAX NG Compact.  Data types observed in 5 .dgml.xml file(s):
+#   element text is the RAW page text; the normalized, typed value is
+#   carried by @dg:value, described by @xsi:type (XSD built-in names).
+# `# Field: value` comments are the LOSSLESS schema.json serialization;
+#   regenerate the JSON via dgml_core.generation.rnc.rnc_to_schema_dict.
+# ==========================================================================
+
+default namespace docset = "http://dgml.io/dgml-io/CommercialLeaseAgreement"
+namespace dg = "http://dgml.io/ns/dg#"
+namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = dg.chunk
+
+# --- attributes common to every DGML element ------------------------
+# dg:origin  = grounding bbox: "page x1 y1 x2 y2"
+# dg:itemprop / dg:href = semantic link (predicate + '#id' target(s))
+common.atts =
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  attribute dg:value { text }?,
+  attribute xsi:type { text }?
+
+# --- generic structural chunk (unlabeled scaffolding) ----------------
+dg.chunk = element dg:chunk { common.atts, mixed { any.docset* } }
+
+# a concept private to ONE document renders in the dg: namespace instead
+# of docset: (the shared-tag rule) — same shape, unshared vocabulary
+dg.private = element dg:* { common.atts, mixed { any.docset* } }
+
+# any docset element may appear where structure allows it
+any.docset = dg.chunk
+  | dg.private
+  | AnchorTenantIdentifier
+  | BaseRent
+  | BaseRentPerSquareMeter
+  | BaseYear
+  | BaseYearExpenseStop
+  | CoTenancyGracePeriod
+  | CoTenancyOccupancyThreshold
+  | CoTenancyRemedyRate
+  | CoTenancyRemedyRight
+  | CoTenancyRequirement
+  | CommencementDate
+  | DecommissioningCovenant
+  | Definitions
+  | DomeFacilityIdentifier
+  | EarlyTerminationNoticePeriod
+  | EarlyTerminationOption
+  | EffectiveDate
+  | ExclusiveUseRestriction
+  | Execution
+  | ExpansionOption
+  | ExpenseStructure
+  | ExpirationDate
+  | GoDarkRentRate
+  | GuarantorName
+  | HazardousMaterialsCovenant
+  | IndexOrBenchmarkName
+  | LandlordEntityType
+  | LandlordName
+  | LeaseAgreementType
+  | LeaseTerm
+  | LicenseGrantToAdditionalSpace
+  | LicensedAdditionalArea
+  | LifeSupportAndAtmosphericSystemsObligation
+  | MonthlyRentInstallment
+  | PercentageRent
+  | PercentageRentBreakpoint
+  | PercentageRentRate
+  | PersonalGuaranty
+  | PremisesArea
+  | PremisesDescription
+  | PremisesUseType
+  | PropertyPortfolioLabel
+  | Recital
+  | RecoveryBillingCap
+  | RenewalOption
+  | RenewalOptionCount
+  | RenewalOptionDuration
+  | RentConcession
+  | RentConcessionPeriod
+  | RentEscalationFormula
+  | RentEscalationInterval
+  | RentEscalationRate
+  | ReportingDeadline
+  | RightOfFirstRefusal
+  | SideLetter
+  | SideLetterIdentifier
+  | Signatory
+  | SignatoryName
+  | SuiteOrSectorIdentifier
+  | TIAllowanceUseDescription
+  | TenantEntityType
+  | TenantImprovementAllowance
+  | TenantImprovementAllowancePerSquareMeter
+  | TenantName
+  | TenantRegistrationNumber
+  | UtilityAndOperatingExpenseResponsibility
+  | WastewaterRecyclingLimit
+  | ZoneIdentifier
+
+# ------------------------------------------------------------------
+# Description: "Named anchor tenant whose occupancy or departure triggers co-tenancy or other lease protections"
+# Kind: inline
+# Parent: CoTenancyRequirement
+# Example: "Martian Agritech Depot"
+# Examples: ["Martian Agritech Depot", "United Colonies Commissary (Suite 100)"]
+# Observed: 2 occurrence(s)
+AnchorTenantIdentifier = element AnchorTenantIdentifier {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Annual or periodic base rent amount expressed in Martian Credits"
+# Kind: section
+# Parent: PropertyPortfolioLabel
+# Example: "ARTICLE 2: RENT AND ADJUSTMENTS"
+# Examples: ["ARTICLE 2: RENT AND ADJUSTMENTS", "Two Million Five Hundred Fifty Thousand Martian Credits (M$ 2,550,000.00)", "Two Hundred Ninety-Two Thousand Five Hundred Martian Credits (M$ 292,500.00)"]
+# Observed: 8 occurrence(s); dg:structure: section(2)
+# Children (from schema hierarchy): BaseRentPerSquareMeter, MonthlyRentInstallment, RentEscalationFormula
+BaseRent = element BaseRent {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Base rent rate expressed as a per-square-meter figure"
+# Kind: inline
+# Parent: BaseRent
+# Example: "M$ 300.00 per sq.m."
+# Examples: ["M$ 300.00 per sq.m.", "M$ 650.00 per sq.m.", "M$ 520.00 per sq.m."]
+# Observed: 5 occurrence(s)
+BaseRentPerSquareMeter = element BaseRentPerSquareMeter {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The reference year used for calculating operating expense or tax escalations."
+# Kind: inline
+# Parent: UtilityAndOperatingExpenseResponsibility
+# Example: "2085"
+# Examples: ["2085", "2084"]
+# Observed: 2 occurrence(s)
+# Data type (from DGML): gYear(2) of 2 occurrence(s)
+BaseYear = element BaseYear {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "gYear" },
+    attribute dg:value { xsd:gYear })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Reference year or baseline amount used to cap landlord's expense contribution under a base-year or expense-stop structure"
+# Kind: inline
+# Parent: UtilityAndOperatingExpenseResponsibility
+# Example: "Forty-Five Martian Credits (M$ 45.00) per square meter per annum"
+# Examples: ["Forty-Five Martian Credits (M$ 45.00) per square meter per annum", "Base Year Expense Stop: This Lease is structured as an NNN Lease with a Base Yea"]
+# Observed: 2 occurrence(s); dg:structure: li(1)
+BaseYearExpenseStop = element BaseYearExpenseStop {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The consecutive time period a co-tenancy condition may be unmet before the tenant's remedy rights are triggered."
+# Kind: inline
+# Parent: CoTenancyRequirement
+# Example: "forty-five (45) consecutive Martian Sols"
+# Examples: ["forty-five (45) consecutive Martian Sols", "one hundred eighty (180) Martian Sols"]
+# Observed: 2 occurrence(s)
+CoTenancyGracePeriod = element CoTenancyGracePeriod {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The minimum occupancy level in the property that must be maintained to satisfy co-tenancy requirements."
+# Kind: inline
+# Parent: CoTenancyRequirement
+# Example: "sixty percent (60%)"
+# Examples: ["sixty percent (60%)", "100%", "12.5%"]
+# Observed: 3 occurrence(s)
+# Data type (from DGML): decimal(2) of 3 occurrence(s)
+CoTenancyOccupancyThreshold = element CoTenancyOccupancyThreshold {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The reduced rent rate the tenant may pay when a co-tenancy condition has been breached."
+# Kind: inline
+# Parent: CoTenancyRequirement
+# Example: "fifty percent (50%)"
+# Examples: ["fifty percent (50%)", "6% of gross sales"]
+# Observed: 2 occurrence(s)
+CoTenancyRemedyRate = element CoTenancyRemedyRate {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Tenant's remedy or option triggered by a co-tenancy condition failure"
+# Kind: section
+# Parent: CoTenancyRequirement
+# Example: "4.1. Anchor Co-Tenancy Option: The United Colonies Commissary (Suite 100) is rec"
+# Examples: ["4.1. Anchor Co-Tenancy Option: The United Colonies Commissary (Suite 100) is rec"]
+# Observed: 1 occurrence(s); dg:structure: li(1)
+# Children (from schema hierarchy): EarlyTerminationNoticePeriod
+CoTenancyRemedyRight = element CoTenancyRemedyRight {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Occupancy or tenancy condition that must be maintained by landlord to protect tenant's lease rights"
+# Kind: section
+# Parent: PropertyPortfolioLabel
+# Example: "ARTICLE 5: SPECIAL COVENANTS, CO-TENANCY, AND GO-DARK RIGHTS"
+# Examples: ["ARTICLE 5: SPECIAL COVENANTS, CO-TENANCY, AND GO-DARK RIGHTS", "Retail Co-Tenancy: Landlord shall maintain at least sixty percent (60%) occupanc", "ARTICLE 4: RETAIL CO-TENANCY PROTECTION"]
+# Observed: 3 occurrence(s); dg:structure: section(2), li(1)
+# Children (from schema hierarchy): AnchorTenantIdentifier, CoTenancyGracePeriod, CoTenancyOccupancyThreshold, CoTenancyRemedyRate, CoTenancyRemedyRight, EarlyTerminationOption, ExclusiveUseRestriction, Execution
+CoTenancyRequirement = element CoTenancyRequirement {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Date on which the lease term begins and from which rent and escalation obligations are measured"
+# Kind: inline
+# Parent: PremisesDescription
+# Example: "January 1, 2085"
+# Examples: ["January 1, 2085", "May 15, 2083", "November 1, 2084"]
+# Observed: 5 occurrence(s)
+# Data type (from DGML): date(5) of 5 occurrence(s)
+CommencementDate = element CommencementDate {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "date" },
+    attribute dg:value { xsd:date })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Obligations governing the removal, remediation, or restoration of specialized tenant installations upon lease expiration or termination"
+# Kind: section
+# Parent: RightOfFirstRefusal
+# Example: "Mandated Biological Decontamination: Upon the expiration or earlier termination "
+# Examples: ["Mandated Biological Decontamination: Upon the expiration or earlier termination "]
+# Observed: 1 occurrence(s); dg:structure: li(1)
+DecommissioningCovenant = element DecommissioningCovenant {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The section of the document that establishes and explains key terms used throughout the agreement."
+# Kind: section
+# Example: "ARTICLE 1: DEFINITIONS AND KEY TERMS"
+# Examples: ["ARTICLE 1: DEFINITIONS AND KEY TERMS"]
+# Observed: 1 occurrence(s); dg:structure: section(1)
+Definitions = element Definitions {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Named dome or facility complex in which the premises are located (e.g., Dome 2, Dome 4)"
+# Kind: inline
+# Parent: PropertyPortfolioLabel
+# Example: "Olympus Plaza"
+# Examples: ["Olympus Plaza", "Dome 2 (Olympus Mall)", "Dome 4"]
+# Observed: 7 occurrence(s)
+DomeFacilityIdentifier = element DomeFacilityIdentifier {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The advance notice required from a party to exercise an early termination right."
+# Kind: inline
+# Parent: CoTenancyRemedyRight
+# Example: "thirty (30) Sols"
+# Examples: ["thirty (30) Sols", "fifty percent (50%)", "twenty-four (24) Martian month period"]
+# Observed: 5 occurrence(s)
+EarlyTerminationNoticePeriod = element EarlyTerminationNoticePeriod {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Condition or right allowing a party to terminate the lease before the stated expiration"
+# Kind: section
+# Parent: CoTenancyRequirement
+# Example: "Go-Dark Rights: Tenant, as a critical civil entity, shall have the right to ceas"
+# Examples: ["Go-Dark Rights: Tenant, as a critical civil entity, shall have the right to ceas", "ARTICLE 5: EARLY TERMINATION OPTION", "Orbital Window Termination Option: If the Interplanetary Aviation Authority redu"]
+# Observed: 3 occurrence(s); dg:structure: li(2), section(1)
+# Children (from schema hierarchy): GoDarkRentRate
+EarlyTerminationOption = element EarlyTerminationOption {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Date on which the lease is made effective or entered into"
+# Kind: inline
+# Parent: Recital
+# Example: "January 1, 2085"
+# Examples: ["January 1, 2085", "May 15, 2083", "November 1, 2084"]
+# Observed: 5 occurrence(s)
+# Data type (from DGML): date(5) of 5 occurrence(s)
+EffectiveDate = element EffectiveDate {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "date" },
+    attribute dg:value { xsd:date })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The clause prohibiting the landlord from leasing to competing tenants or uses within the property."
+# Kind: section
+# Parent: CoTenancyRequirement
+# Example: "Exclusive Use: Landlord shall not lease any space within Dome 2 to any other ten"
+# Examples: ["Exclusive Use: Landlord shall not lease any space within Dome 2 to any other ten"]
+# Observed: 1 occurrence(s); dg:structure: li(1)
+ExclusiveUseRestriction = element ExclusiveUseRestriction {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Signature and execution block identifying each party by name and authorized signatory role"
+# Kind: section
+# Parent: CoTenancyRequirement
+# Example: "IN WITNESS WHEREOF, the parties have executed this Lease as of the date first ab"
+# Examples: ["IN WITNESS WHEREOF, the parties have executed this Lease as of the date first ab", "LANDLORD:", "By: /s/ Michael Chen"]
+# Observed: 25 occurrence(s); dg:structure: p(22), section(3)
+# Children (from schema hierarchy): Signatory, SignatoryName
+Execution = element Execution {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Tenant's right to lease additional space within the project during the lease term"
+# Kind: section
+# Parent: RenewalOption
+# Example: "5.2. Expansion Option: Tenant shall have a Right of First Offer (ROFO) to lease "
+# Examples: ["5.2. Expansion Option: Tenant shall have a Right of First Offer (ROFO) to lease "]
+# Observed: 1 occurrence(s); dg:structure: li(1)
+ExpansionOption = element ExpansionOption {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Overall lease expense structure classification (e.g., Modified Gross, NNN, Base Year)"
+# Kind: inline
+# Parent: UtilityAndOperatingExpenseResponsibility
+# Example: "Modified Gross Lease"
+# Examples: ["Modified Gross Lease", "ARTICLE 4: TRIPLE-NET (NNN) INDUSTRIAL RECOVERIES", "4.1. Net Lease: This is a Triple-Net (NNN) Lease. Landlord shall not be responsi"]
+# Observed: 3 occurrence(s); dg:structure: section(1), li(1)
+ExpenseStructure = element ExpenseStructure {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The date on which the lease term ends."
+# Kind: inline
+# Parent: PremisesDescription
+# Example: "December 31, 2105"
+# Examples: ["December 31, 2105", "May 14, 2093", "October 31, 2096"]
+# Observed: 5 occurrence(s)
+# Data type (from DGML): date(5) of 5 occurrence(s)
+ExpirationDate = element ExpirationDate {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "date" },
+    attribute dg:value { xsd:date })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The reduced rent rate applicable when the tenant ceases operations but remains in possession."
+# Kind: inline
+# Parent: EarlyTerminationOption
+# Example: "fifty percent (50%)"
+# Examples: ["fifty percent (50%)"]
+# Observed: 1 occurrence(s)
+GoDarkRentRate = element GoDarkRentRate {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Name of the individual personally guaranteeing the tenant's lease obligations"
+# Kind: inline
+# Parent: PersonalGuaranty
+# Example: "Virgil Grissom"
+# Examples: ["Virgil Grissom", "Offworld Escrow Bank of Phobos", "Terran Terraform Holdings LLC"]
+# Observed: 3 occurrence(s)
+GuarantorName = element GuarantorName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Obligations and acknowledgments relating to hazardous, contaminating, or biohazardous materials on the premises"
+# Kind: section
+# Example: "ARTICLE 6: REGOLITH CONTAMINATION AND HAZARDOUS MATERIALS"
+# Examples: ["ARTICLE 6: REGOLITH CONTAMINATION AND HAZARDOUS MATERIALS", "6.1. Regolith Mitigation: Tenant acknowledges that fine-particulate Martian rego"]
+# Observed: 2 occurrence(s); dg:structure: section(1), li(1)
+HazardousMaterialsCovenant = element HazardousMaterialsCovenant {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Name of the economic index or freight benchmark used to calculate index-linked rent escalations"
+# Kind: inline
+# Parent: RentEscalationFormula
+# Example: "Mars-Earth Trade Index (METI) cargo freight tariff rates"
+# Examples: ["Mars-Earth Trade Index (METI) cargo freight tariff rates", "Martian Consumer Price Index (MCPI)"]
+# Observed: 2 occurrence(s)
+IndexOrBenchmarkName = element IndexOrBenchmarkName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Legal entity form of the landlord (e.g., Martian limited partnership)"
+# Kind: inline
+# Parent: Recital
+# Example: "Martian limited partnership"
+# Examples: ["Martian limited partnership", "By: Ares Yield GP LLC, its general partner"]
+# Observed: 11 occurrence(s); dg:structure: p(1)
+LandlordEntityType = element LandlordEntityType {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Legal name and entity type of the landlord party"
+# Kind: inline
+# Parent: Recital
+# Example: "Ares Prime Yield Fund I, LP"
+# Examples: ["Ares Prime Yield Fund I, LP"]
+# Observed: 15 occurrence(s); dg:structure: p(5)
+LandlordName = element LandlordName {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Named type of lease instrument (e.g., 'Commercial Pressurized Space Lease Agreement')"
+# Kind: section
+# Parent: PropertyPortfolioLabel
+# Example: "Commercial Pressurized Space Lease Agreement"
+# Examples: ["Commercial Pressurized Space Lease Agreement", "COMMERCIAL PRESSURIZED SPACE LEASE AGREEMENT"]
+# Observed: 10 occurrence(s); dg:structure: section(8), p(2)
+# Children (from schema hierarchy): PersonalGuaranty, Recital, TenantRegistrationNumber
+LeaseAgreementType = element LeaseAgreementType {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Total duration of the initial lease term"
+# Kind: inline
+# Parent: PremisesDescription
+# Example: "Twenty (20) Martian Years"
+# Examples: ["Twenty (20) Martian Years", "Ten (10) Martian Years", "Twelve (12) Martian Years"]
+# Observed: 5 occurrence(s)
+LeaseTerm = element LeaseTerm {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Non-exclusive license or right granted to tenant to use space beyond the defined premises"
+# Kind: section
+# Parent: SideLetter
+# Example: "Side Letter No. 1: Pursuant to Side Letter No. 1, executed concurrently herewith"
+# Examples: ["Side Letter No. 1: Pursuant to Side Letter No. 1, executed concurrently herewith"]
+# Observed: 1 occurrence(s); dg:structure: li(1)
+# Children (from schema hierarchy): LicensedAdditionalArea
+LicenseGrantToAdditionalSpace = element LicenseGrantToAdditionalSpace {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Measured area of space covered by an ancillary license grant to the tenant"
+# Kind: inline
+# Parent: LicenseGrantToAdditionalSpace
+# Example: "5,000 square meters"
+# Examples: ["5,000 square meters"]
+# Observed: 1 occurrence(s)
+LicensedAdditionalArea = element LicensedAdditionalArea {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Responsibility for pressurization, atmospheric, and life-support infrastructure serving the premises"
+# Kind: section
+# Example: "ARTICLE 4: LIFE SUPPORT SYSTEMS AND BASE YEAR EXPENSE STOPS"
+# Examples: ["ARTICLE 4: LIFE SUPPORT SYSTEMS AND BASE YEAR EXPENSE STOPS", "ARTICLE 4: LIFE SUPPORT SYSTEMS AND OPERATING EXPENSES", "4.2. Recovery of ACAM/LSS Expenses: Tenant shall pay to Landlord as Additional R"]
+# Observed: 3 occurrence(s); dg:structure: section(2), li(1)
+LifeSupportAndAtmosphericSystemsObligation = element LifeSupportAndAtmosphericSystemsObligation {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The fixed periodic rent amount due each month, expressed in the applicable currency."
+# Kind: inline
+# Parent: BaseRent
+# Example: "Two Hundred Twelve Thousand Five Hundred Martian Credits (M$ 212,500.00)"
+# Examples: ["Two Hundred Twelve Thousand Five Hundred Martian Credits (M$ 212,500.00)", "Twenty-Four Thousand Three Hundred Seventy-Five Martian Credits (M$ 24,375.00)", "Two Hundred Sixty-Eight Thousand Six Hundred Sixty-Six and 67/100 Martian Credit"]
+# Observed: 5 occurrence(s)
+MonthlyRentInstallment = element MonthlyRentInstallment {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Rent component calculated as a percentage of tenant's gross sales or revenue above a breakpoint"
+# Kind: section
+# Parent: RentEscalationFormula
+# Example: "2.2. Percentage Rent: In addition to the Base Rent, Tenant shall pay to Landlord"
+# Examples: ["2.2. Percentage Rent: In addition to the Base Rent, Tenant shall pay to Landlord"]
+# Observed: 1 occurrence(s); dg:structure: li(1)
+# Children (from schema hierarchy): PercentageRentBreakpoint, PercentageRentRate, ReportingDeadline
+PercentageRent = element PercentageRent {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The sales threshold above which percentage rent becomes payable."
+# Kind: inline
+# Parent: PercentageRent
+# Example: "Four Million Eight Hundred Seventy-Five Thousand Martian Credits (M$ 4,875,000.0"
+# Examples: ["Four Million Eight Hundred Seventy-Five Thousand Martian Credits (M$ 4,875,000.0"]
+# Observed: 1 occurrence(s)
+PercentageRentBreakpoint = element PercentageRentBreakpoint {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The percentage of tenant sales above the breakpoint owed as additional percentage rent."
+# Kind: inline
+# Parent: PercentageRent
+# Example: "six percent (6.0%)"
+# Examples: ["six percent (6.0%)"]
+# Observed: 1 occurrence(s)
+PercentageRentRate = element PercentageRentRate {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Personal guarantee of lease obligations by named individual guarantors"
+# Kind: section
+# Parent: LeaseAgreementType
+# Example: "ARTICLE 5: PERSONAL GUARANTY AND SIDE LETTERS"
+# Examples: ["ARTICLE 5: PERSONAL GUARANTY AND SIDE LETTERS", "5.1. Personal Guaranty: This Lease is unconditionally guaranteed by the personal", "1.5. Security Deposit: One Million Martian Credits (M$ 1,000,000.00) held in the"]
+# Observed: 4 occurrence(s); dg:structure: li(3), section(1)
+# Children (from schema hierarchy): GuarantorName, SideLetter
+PersonalGuaranty = element PersonalGuaranty {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Measured area of the leased premises in square meters"
+# Kind: inline
+# Parent: PremisesDescription
+# Example: "8,500 square meters"
+# Examples: ["8,500 square meters", "450 square meters", "6,200 square meters"]
+# Observed: 5 occurrence(s)
+PremisesArea = element PremisesArea {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Physical description and address of the leased space, including dome, zone, and suite/sector identifiers"
+# Kind: section
+# Parent: PropertyPortfolioLabel
+# Example: "ARTICLE 1: PREMISES AND TERM"
+# Examples: ["ARTICLE 1: PREMISES AND TERM", "Premises: Suite 100, Dome 2 (Olympus Mall), Zone 1, Ares Prime, consisting of ap", "ARTICLE 1: PREMISES, TERM, AND RENT"]
+# Observed: 10 occurrence(s); dg:structure: li(5), section(4)
+# Children (from schema hierarchy): CommencementDate, ExpirationDate, LeaseTerm, PremisesArea, SuiteOrSectorIdentifier
+PremisesDescription = element PremisesDescription {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Classification of the space by permitted use (e.g., retail, laboratory, industrial, office)"
+# Kind: inline
+# Parent: PropertyPortfolioLabel
+# Example: "Retail Center Anchor"
+# Examples: ["Retail Center Anchor", "pressurized retail space", "inline retail space"]
+# Observed: 7 occurrence(s)
+PremisesUseType = element PremisesUseType {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Portfolio-level identifier and descriptor for the property (e.g., 'Property 2: Olympus Plaza, Zone 1')"
+# Kind: section
+# Example: "Property 2: Olympus Plaza, Zone 1 (Retail Center Anchor)"
+# Examples: ["Property 2: Olympus Plaza, Zone 1 (Retail Center Anchor)", "Property 5: Olympus Plaza, Zone 2 (In-line Retail Annex)", "Property 4: Arcadia Biotech Park, Module 4 (Research & Development)"]
+# Observed: 6 occurrence(s); dg:structure: section(3), p(2)
+# Children (from schema hierarchy): BaseRent, CoTenancyRequirement, DomeFacilityIdentifier, LeaseAgreementType, PremisesDescription, PremisesUseType, TenantImprovementAllowance, UtilityAndOperatingExpenseResponsibility, ZoneIdentifier
+PropertyPortfolioLabel = element PropertyPortfolioLabel {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Witnesseth or recital clause introducing the operative terms of the lease agreement"
+# Kind: section
+# Parent: LeaseAgreementType
+# Example: "THIS COMMERCIAL PRESSURIZED SPACE LEASE AGREEMENT (this \"Lease\") is entered into"
+# Examples: ["THIS COMMERCIAL PRESSURIZED SPACE LEASE AGREEMENT (this \"Lease\") is entered into", "WITNESSETH:", "THIS COMMERCIAL PRESSURIZED SPACE LEASE AGREEMENT (this \"Lease\") is made and ent"]
+# Observed: 9 occurrence(s); dg:structure: p(8), section(1)
+# Children (from schema hierarchy): EffectiveDate, LandlordEntityType, LandlordName, TenantEntityType, TenantName
+Recital = element Recital {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The maximum percentage by which recoverable expense billings may increase in a given period."
+# Kind: inline
+# Parent: UtilityAndOperatingExpenseResponsibility
+# Example: "three percent (3.0%)"
+# Examples: ["three percent (3.0%)", "five percent (5.0%)"]
+# Observed: 2 occurrence(s)
+RecoveryBillingCap = element RecoveryBillingCap {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Tenant's right to extend the lease term, including number and duration of option periods"
+# Kind: section
+# Example: "ARTICLE 5: RENEWAL AND EXPANSION OPTIONS"
+# Examples: ["ARTICLE 5: RENEWAL AND EXPANSION OPTIONS", "5.1. Renewal Option: Tenant shall have two (2) consecutive options to extend the"]
+# Observed: 2 occurrence(s); dg:structure: section(1), li(1)
+# Children (from schema hierarchy): ExpansionOption, RenewalOptionCount, RenewalOptionDuration
+RenewalOption = element RenewalOption {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Number of consecutive renewal or extension options available to tenant"
+# Kind: inline
+# Parent: RenewalOption
+# Example: "two (2)"
+# Examples: ["two (2)"]
+# Observed: 1 occurrence(s)
+RenewalOptionCount = element RenewalOptionCount {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Length of each individual renewal or extension option period"
+# Kind: inline
+# Parent: RenewalOption
+# Example: "five (5) Martian Years"
+# Examples: ["five (5) Martian Years"]
+# Observed: 1 occurrence(s)
+RenewalOptionDuration = element RenewalOptionDuration {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Free-rent period or other monetary concession granted to tenant at or near lease commencement"
+# Kind: section
+# Parent: TenantImprovementAllowance
+# Example: "Rent Abatement: Tenant shall receive a full abatement of Base Rent for the first"
+# Examples: ["Rent Abatement: Tenant shall receive a full abatement of Base Rent for the first", "Solar Storm Abatement: Due to a verified Class-X Solar Storm causing severe atmo", "3.2. Free Rent Period: Tenant shall receive a full abatement of Base Rent for th"]
+# Observed: 3 occurrence(s); dg:structure: li(3)
+# Children (from schema hierarchy): RentConcessionPeriod
+RentConcession = element RentConcession {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The specified period during which the tenant receives a rent abatement or reduced rent."
+# Kind: inline
+# Parent: RentConcession
+# Example: "first three (3) months of the second (2nd) Lease Year"
+# Examples: ["first three (3) months of the second (2nd) Lease Year", "first (1st) Martian month of the Term", "first six (6) consecutive Martian months"]
+# Observed: 3 occurrence(s)
+RentConcessionPeriod = element RentConcessionPeriod {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Method or formula by which base rent adjusts over time (fixed percentage, index-linked, etc.)"
+# Kind: section
+# Parent: BaseRent
+# Example: "Escalation Schedule: Base Rent shall remain flat for Lease Years 1 through 5. On"
+# Examples: ["Escalation Schedule: Base Rent shall remain flat for Lease Years 1 through 5. On", "ARTICLE 2: RENT ESCALATIONS AND PERCENTAGE RENT", "2.1. Fixed Annual Escalations: On each anniversary of the Commencement Date, the"]
+# Observed: 8 occurrence(s); dg:structure: li(4), section(3), p(1)
+# Children (from schema hierarchy): IndexOrBenchmarkName, PercentageRent, RentEscalationInterval, RentEscalationRate
+RentEscalationFormula = element RentEscalationFormula {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Frequency at which rent escalation is applied (annual, biennial, etc.)"
+# Kind: inline
+# Parent: RentEscalationFormula
+# Example: "every fifth (5th) lease year anniversary"
+# Examples: ["every fifth (5th) lease year anniversary", "twelve (12) month period", "each anniversary of the Commencement Date"]
+# Observed: 6 occurrence(s)
+RentEscalationInterval = element RentEscalationInterval {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Specific percentage or multiplier applied at each rent adjustment interval"
+# Kind: inline
+# Parent: RentEscalationFormula
+# Example: "five percent (5.0%)"
+# Examples: ["five percent (5.0%)", "four percent (4.0%)", "three percent (3.0%)"]
+# Observed: 7 occurrence(s); dg:structure: li(1)
+RentEscalationRate = element RentEscalationRate {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The number of days or periods within which a required report or notice must be submitted."
+# Kind: inline
+# Parent: PercentageRent
+# Example: "thirty (30) Sols"
+# Examples: ["thirty (30) Sols", "ninety (90) Sols"]
+# Observed: 2 occurrence(s)
+ReportingDeadline = element ReportingDeadline {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Tenant's preferential right to lease additional or adjacent space before third-party offers"
+# Kind: section
+# Example: "ARTICLE 5: RIGHTS OF FIRST REFUSAL AND DECOMMISSIONING COVENANTS"
+# Examples: ["ARTICLE 5: RIGHTS OF FIRST REFUSAL AND DECOMMISSIONING COVENANTS", "Right of First Refusal (ROFR): Tenant shall have a Right of First Refusal to lea"]
+# Observed: 2 occurrence(s); dg:structure: section(1), li(1)
+# Children (from schema hierarchy): DecommissioningCovenant
+RightOfFirstRefusal = element RightOfFirstRefusal {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Ancillary side agreement executed concurrently with or supplementing the lease"
+# Kind: section
+# Parent: PersonalGuaranty
+# Example: "5.2. Side Letter No. 1 (Aromas and Ventilation): Pursuant to Side Letter No. 1, "
+# Examples: ["5.2. Side Letter No. 1 (Aromas and Ventilation): Pursuant to Side Letter No. 1, ", "ARTICLE 6: AMENDMENTS AND SIDE LETTERS"]
+# Observed: 2 occurrence(s); dg:structure: li(1), section(1)
+# Children (from schema hierarchy): LicenseGrantToAdditionalSpace, SideLetterIdentifier
+SideLetter = element SideLetter {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The designation or label distinguishing a particular side letter agreement from others."
+# Kind: inline
+# Parent: SideLetter
+# Example: "Side Letter No. 1"
+# Examples: ["Side Letter No. 1"]
+# Observed: 2 occurrence(s)
+SideLetterIdentifier = element SideLetterIdentifier {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The title or role of the person signing the document on behalf of a party."
+# Kind: inline
+# Parent: Execution
+# Example: "Managing Director of Asset Management"
+# Examples: ["Managing Director of Asset Management", "Under-Secretary of Civilian Supply, UNMA", "By: /s/ Michael Chen"]
+# Observed: 14 occurrence(s); dg:structure: p(10)
+Signatory = element Signatory {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The name of the individual executing the document on behalf of a party."
+# Kind: inline
+# Parent: Execution
+# Example: "Michael Chen"
+# Examples: ["Michael Chen", "Arthur Pendelton", "Name: Michael Chen"]
+# Observed: 10 occurrence(s); dg:structure: p(5)
+SignatoryName = element SignatoryName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Specific suite, sector, module, or warehouse unit number identifying the premises within its dome or facility"
+# Kind: inline
+# Parent: PremisesDescription
+# Example: "Suite 100"
+# Examples: ["Suite 100", "Suite 142", "Module 4"]
+# Observed: 6 occurrence(s)
+SuiteOrSectorIdentifier = element SuiteOrSectorIdentifier {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Description of the permitted or intended use of the tenant improvement allowance funds"
+# Kind: inline
+# Parent: TenantImprovementAllowance
+# Example: "installation of heavy-duty refrigeration systems, airlock retail entry points, a"
+# Examples: ["installation of heavy-duty refrigeration systems, airlock retail entry points, a", "grease traps, localized vapor hoods, and carbon dioxide lines", "installation of Class-10 pressurized biosafety isolation barriers and independen"]
+# Observed: 5 occurrence(s)
+TIAllowanceUseDescription = element TIAllowanceUseDescription {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Legal entity form of the tenant (e.g., Martian limited liability company, public limited company, administrative agency)"
+# Kind: inline
+# Parent: Recital
+# Example: "administrative agency of the United Nations Martian Administration (UNMA)"
+# Examples: ["administrative agency of the United Nations Martian Administration (UNMA)", "Martian limited liability company", "Martian corporation"]
+# Observed: 11 occurrence(s)
+TenantEntityType = element TenantEntityType {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Total monetary allowance provided by landlord for tenant build-out or improvements"
+# Kind: section
+# Parent: PropertyPortfolioLabel
+# Example: "ARTICLE 3: RENT CONCESSIONS AND TENANT IMPROVEMENTS"
+# Examples: ["ARTICLE 3: RENT CONCESSIONS AND TENANT IMPROVEMENTS", "Six Hundred Eighty Thousand Martian Credits (M$ 680,000.00)", "ARTICLE 3: TENANT IMPROVEMENTS AND RECOVERY CAPS"]
+# Observed: 10 occurrence(s); dg:structure: section(5)
+# Children (from schema hierarchy): RentConcession, TIAllowanceUseDescription, TenantImprovementAllowancePerSquareMeter
+TenantImprovementAllowance = element TenantImprovementAllowance {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Per-square-meter rate of the tenant improvement allowance"
+# Kind: inline
+# Parent: TenantImprovementAllowance
+# Example: "M$ 80.00 per sq.m."
+# Examples: ["M$ 80.00 per sq.m.", "M$ 100.00 per sq.m.", "M$ 150.00 per sq.m."]
+# Observed: 5 occurrence(s)
+TenantImprovementAllowancePerSquareMeter = element TenantImprovementAllowancePerSquareMeter {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Legal name and entity type of the tenant party"
+# Kind: inline
+# Parent: Recital
+# Example: "United Colonies Commissary"
+# Examples: ["United Colonies Commissary", "The Rusty Rover Diner & Hydro-Brewery LLC", "Martian Biotech Synthetics Inc."]
+# Observed: 15 occurrence(s); dg:structure: p(5)
+TenantName = element TenantName {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The official registration or identification number assigned to the tenant entity."
+# Kind: inline
+# Parent: LeaseAgreementType
+# Example: "MC-88301-R"
+# Examples: ["MC-88301-R", "MC-30291-B", "MP-44021-I"]
+# Observed: 5 occurrence(s)
+TenantRegistrationNumber = element TenantRegistrationNumber {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Allocation of utility, maintenance, and operating expense obligations between landlord and tenant"
+# Kind: section
+# Parent: PropertyPortfolioLabel
+# Example: "ARTICLE 4: UTILITIES AND EXPENSE RECOVERIES"
+# Examples: ["ARTICLE 4: UTILITIES AND EXPENSE RECOVERIES", "Recovery Excess: Tenant shall pay as Additional Rent its proportionate share of ", "3.2. Triple-Net (NNN) Recoveries and LSS Cap: Tenant shall pay its proportionate"]
+# Observed: 8 occurrence(s); dg:structure: li(7), section(1)
+# Children (from schema hierarchy): BaseYear, BaseYearExpenseStop, ExpenseStructure, RecoveryBillingCap, WastewaterRecyclingLimit
+UtilityAndOperatingExpenseResponsibility = element UtilityAndOperatingExpenseResponsibility {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The maximum volume of wastewater the tenant is permitted to recycle or discharge."
+# Kind: inline
+# Parent: UtilityAndOperatingExpenseResponsibility
+# Example: "10,000 liters"
+# Examples: ["10,000 liters"]
+# Observed: 1 occurrence(s)
+WastewaterRecyclingLimit = element WastewaterRecyclingLimit {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Zone designation within the broader development in which the premises sit"
+# Kind: inline
+# Parent: PropertyPortfolioLabel
+# Example: "Zone 1"
+# Examples: ["Zone 1", "Zone 2", "Sector F"]
+# Observed: 5 occurrence(s)
+ZoneIdentifier = element ZoneIdentifier {
+  common.atts,
+  text
+}
+

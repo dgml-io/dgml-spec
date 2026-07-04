@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/CommercialLeaseAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 122 120 2352 3307; 2 122 120 603 245">
+  <docset:PropertyPortfolioLabel dg:structure="section" dg:origin="1 122 120 2352 3307; 2 122 120 603 245">
+    <dg:chunk dg:structure="header" dg:origin="1 122 120 1251 153" dg:style="font-weight: bold">Property 3: Hellas Basin Logistics Complex, Depot Gamma (Industrial)</dg:chunk>
+    <docset:LeaseAgreementType dg:structure="section" dg:origin="1 122 213 1216 377">
+      <dg:chunk dg:structure="header" dg:origin="1 122 213 857 244" dg:style="font-weight: bold">Commercial Pressurized Space Lease Agreement</dg:chunk>
+      <dg:chunk dg:structure="ul" dg:origin="1 122 299 1216 377">
+        <dg:chunk dg:structure="li" dg:origin="1 122 299 1114 330">
+          <dg:chunk dg:structure="header" dg:origin="1 122 299 308 330" dg:style="font-weight: bold; text-transform: uppercase">LANDLORD:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="1 317 299 1114 330">
+            <docset:LandlordName dg:origin="1 317 299 1114 330">Ares Prime Yield Fund I, LP, a <docset:LandlordEntityType dg:origin="1 746 299 1114 330">Martian limited partnership</docset:LandlordEntityType>
+            </docset:LandlordName>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="1 122 346 1216 377">
+          <dg:chunk dg:structure="header" dg:origin="1 122 346 259 377" dg:style="font-weight: bold; text-transform: uppercase">TENANT:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="1 268 346 1216 377">
+            <docset:TenantName dg:origin="1 268 346 1216 377">Phobos Minerals Extraction Group, a <docset:TenantEntityType dg:origin="1 787 346 1216 377">Martian public limited company</docset:TenantEntityType>
+            </docset:TenantName>
+          </dg:chunk>
+        </dg:chunk>
+      </dg:chunk>
+    </docset:LeaseAgreementType>
+    <docset:LeaseAgreementType dg:structure="section" dg:origin="1 122 468 2311 766">
+      <dg:chunk dg:structure="header" dg:origin="1 122 468 1006 499" dg:style="font-weight: bold; text-transform: uppercase">COMMERCIAL PRESSURIZED SPACE LEASE AGREEMENT</dg:chunk>
+      <docset:Recital dg:structure="p" dg:origin="1 122 554 2311 586; 1 122 601 2243 632; 1 122 648 1361 679">THIS COMMERCIAL PRESSURIZED SPACE LEASE AGREEMENT (this "Lease") is made and entered into this <docset:EffectiveDate xsi:type="date" dg:value="2084-03-01" dg:origin="1 1699 554 1908 586">March 1, 2084</docset:EffectiveDate>, by and between <docset:LandlordName dg:origin="1 2146 554 2311 586; 1 122 601 365 632" dg:style="font-weight: bold">Ares Prime Yield Fund I, LP</docset:LandlordName>, a <docset:LandlordEntityType dg:origin="1 400 601 768 632">Martian limited partnership</docset:LandlordEntityType> (hereinafter referred to as "Landlord"), and <docset:TenantName dg:origin="1 1392 601 1915 632" dg:style="font-weight: bold">Phobos Minerals Extraction Group</docset:TenantName>, a <docset:TenantEntityType dg:origin="1 1949 601 2243 632; 1 122 648 249 679">Martian public limited company</docset:TenantEntityType> registered under Registry No. <docset:TenantRegistrationNumber dg:origin="1 675 648 838 679">MP-44021-I</docset:TenantRegistrationNumber> (hereinafter referred to as "Tenant").</docset:Recital>
+      <docset:Recital dg:structure="p" dg:origin="1 122 735 338 766" dg:style="font-weight: bold; text-transform: uppercase">WITNESSETH:</docset:Recital>
+    </docset:LeaseAgreementType>
+    <docset:PremisesDescription dg:structure="section" dg:origin="1 122 821 2307 1190">
+      <dg:chunk dg:structure="header" dg:origin="1 122 821 749 852" dg:style="font-weight: bold; text-transform: uppercase">ARTICLE 1: PREMISES, TERM, AND RENT</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="1 169 907 2307 1190">
+        <docset:PremisesDescription dg:structure="li" dg:origin="1 169 907 2307 939; 1 169 954 1185 986">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 907 221 939" dg:style="font-weight: bold">1.1.</dg:chunk> Premises: <docset:SuiteOrSectorIdentifier dg:origin="1 388 907 588 939">Warehouse C</docset:SuiteOrSectorIdentifier>, <docset:DomeFacilityIdentifier dg:origin="1 596 907 1041 939">Hellas Basin Logistics Complex</docset:DomeFacilityIdentifier>, <docset:ZoneIdentifier dg:origin="1 1050 907 1168 939">Dome 3</docset:ZoneIdentifier>, Ares Prime, containing approximately <docset:PremisesArea dg:origin="1 1703 907 2007 939">25,000 square meters</docset:PremisesArea> of <docset:PremisesUseType dg:origin="1 2050 907 2307 939; 1 169 954 926 986">unpressurized and partially pressurized heavy industrial warehouse space</docset:PremisesUseType> (the "Premises").</docset:PremisesDescription>
+        <dg:chunk dg:structure="li" dg:origin="1 169 1010 2258 1041; 1 169 1056 271 1088">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 1010 221 1041" dg:style="font-weight: bold">1.2.</dg:chunk> Term: <docset:LeaseTerm dg:origin="1 325 1010 655 1041">Ten (10) Martian Years</docset:LeaseTerm>, commencing on <docset:CommencementDate xsi:type="date" dg:value="2084-03-01" dg:origin="1 893 1010 1093 1041" xml:id="commencementdate">March 1, 2084</docset:CommencementDate> (the "Commencement Date"), and expiring on <docset:ExpirationDate xsi:type="date" dg:value="2094-02-28" dg:origin="1 1764 1010 2019 1041" xml:id="expirationdate" dg:itemprop="relativeTo" dg:href="#commencementdate">February 28, 2094</docset:ExpirationDate> (the "Expiration Date").</dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="1 169 1112 2305 1143; 1 169 1158 1767 1190">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 1112 221 1143" dg:style="font-weight: bold">1.3.</dg:chunk> Base Rent: Initial Base Rent shall be <docset:BaseRent dg:origin="1 754 1112 1744 1143" xml:id="baserent" dg:itemprop="valueFrom" dg:href="#baserentpersquaremeter">Four Million Five Hundred Thousand Martian Credits (M$ 4,500,000.00)</docset:BaseRent> per annum (representing <docset:BaseRentPerSquareMeter dg:origin="1 2104 1112 2305 1143; 1 169 1158 237 1190" xml:id="baserentpersquaremeter">M$ 180.00 per sq.m.</docset:BaseRentPerSquareMeter>), payable in monthly installments of <docset:MonthlyRentInstallment dg:origin="1 751 1158 1767 1190" xml:id="monthlyrentinstallment" dg:itemprop="valueFrom" dg:href="#baserent">Three Hundred Seventy-Five Thousand Martian Credits (M$ 375,000.00)</docset:MonthlyRentInstallment>.</dg:chunk>
+      </dg:chunk>
+    </docset:PremisesDescription>
+    <docset:RentEscalationFormula dg:structure="section" dg:origin="1 122 1245 2342 1456">
+      <dg:chunk dg:structure="header" dg:origin="1 122 1245 1070 1276" dg:style="font-weight: bold; text-transform: uppercase">ARTICLE 2: INTERPLANETARY FREIGHT INDEX ESCALATIONS</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="1 169 1331 2342 1456">
+        <docset:RentEscalationFormula dg:structure="li" dg:origin="1 169 1331 2342 1363; 1 169 1378 2314 1410; 1 169 1425 1847 1456">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 1331 221 1363" dg:style="font-weight: bold">2.1.</dg:chunk> Escalation Formula: On each <docset:RentEscalationInterval dg:origin="1 664 1331 1350 1363" xml:id="rentescalationinterval" dg:itemprop="relativeTo" dg:href="#commencementdate" dg:value="P2Y">biennial anniversary of the Commencement Date</docset:RentEscalationInterval>, the Base Rent shall escalate based on the average percentage change in the <docset:IndexOrBenchmarkName dg:origin="1 254 1378 1018 1410">Mars-Earth Trade Index (METI) cargo freight tariff rates</docset:IndexOrBenchmarkName> over the preceding <docset:RentEscalationInterval dg:origin="1 1295 1378 1737 1410">twenty-four (24) Martian months</docset:RentEscalationInterval>; provided, however, that in no event shall any such biennial escalation be less than <docset:RentEscalationRate dg:origin="1 746 1425 1008 1456" xml:id="rentescalationrate" dg:itemprop="escalates" dg:href="#baserent" dg:value="0.02">two percent (2.0%)</docset:RentEscalationRate> or greater than <docset:RentEscalationRate dg:origin="1 1230 1425 1482 1456" xml:id="rentescalationrate-2" dg:itemprop="escalates" dg:href="#baserent" dg:value="0.06">six percent (6.0%)</docset:RentEscalationRate> per annum, compounded.</docset:RentEscalationFormula>
+      </dg:chunk>
+    </docset:RentEscalationFormula>
+    <docset:TenantImprovementAllowance dg:structure="section" dg:origin="1 122 1512 2352 1825">
+      <dg:chunk dg:structure="header" dg:origin="1 122 1512 1008 1543" dg:style="font-weight: bold; text-transform: uppercase">ARTICLE 3: TENANT IMPROVEMENTS AND CONCESSIONS</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="1 169 1598 2352 1825">
+        <dg:chunk dg:structure="li" dg:origin="1 169 1598 2232 1629; 1 169 1645 2352 1676; 1 169 1692 716 1723">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 1598 221 1629" dg:style="font-weight: bold">3.1.</dg:chunk> Structural Retrofit TI Allowance: Landlord shall provide Tenant with a TI Allowance of <docset:TenantImprovementAllowance dg:origin="1 1449 1598 2232 1629; 1 169 1645 362 1676">One Million Five Hundred Thousand Martian Credits (M$ 1,500,000.00)</docset:TenantImprovementAllowance> (<docset:TenantImprovementAllowancePerSquareMeter dg:origin="1 381 1645 642 1676">M$ 60.00 per sq.m.</docset:TenantImprovementAllowancePerSquareMeter>) for <docset:TIAllowanceUseDescription dg:origin="1 715 1645 2352 1676; 1 169 1692 716 1723">structural flooring reinforcement to support heavy vibrating ore crushers and the installation of secondary high-capacity electrostatic dust-containment systems</docset:TIAllowanceUseDescription>.</dg:chunk>
+        <docset:RentConcession dg:structure="li" dg:origin="1 169 1747 2326 1778; 1 169 1794 1944 1825">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 1747 221 1778" dg:style="font-weight: bold">3.2.</dg:chunk> Solar Storm Abatement: Due to a verified Class-X Solar Storm causing severe atmospheric ionization and construction delays at the Hellas Basin site, Landlord grants Tenant a one-time deferral and full abatement of the Base Rent due for the <docset:RentConcessionPeriod dg:origin="1 1437 1794 1944 1825" xml:id="rentconcessionperiod" dg:itemprop="relativeTo" dg:href="#commencementdate" dg:value="P1M">first (1st) Martian month of the Term</docset:RentConcessionPeriod>.</docset:RentConcession>
+      </dg:chunk>
+    </docset:TenantImprovementAllowance>
+    <docset:ExpenseStructure dg:structure="section" dg:origin="1 122 1880 2338 2194">
+      <dg:chunk dg:structure="header" dg:origin="1 122 1880 996 1912" dg:style="font-weight: bold; text-transform: uppercase">ARTICLE 4: TRIPLE-NET (NNN) INDUSTRIAL RECOVERIES</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="1 169 1967 2338 2194">
+        <docset:UtilityAndOperatingExpenseResponsibility dg:structure="li" dg:origin="1 169 1967 2285 1998; 1 169 2014 2302 2045; 1 169 2061 900 2092">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 1967 221 1998" dg:style="font-weight: bold">4.1.</dg:chunk> Heavy Filtration and Power Draw: Tenant shall pay <dg:chunk dg:structure="span" xsi:type="decimal" dg:value="100" dg:origin="1 973 1967 1053 1998">100%</dg:chunk> of all utility and maintenance costs for its manufacturing operations. This includes the full costs of maintaining industrial-grade particulate filtration systems required by the Martian Environmental Protection Council and the heavy-draw fusion-grid power consumption of Tenant's ore processing units.</docset:UtilityAndOperatingExpenseResponsibility>
+        <docset:UtilityAndOperatingExpenseResponsibility dg:structure="li" dg:origin="1 169 2116 2338 2147; 1 169 2163 1969 2194">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 2116 221 2147" dg:style="font-weight: bold">4.2.</dg:chunk> Base Building Maintenance Exclusions: Landlord shall maintain the structural integrity of the outer basalt foundation slabs and primary anchor cables. Any damage to the anchor structures caused by internal mining machinery vibration shall be remediated by Tenant at its sole cost.</docset:UtilityAndOperatingExpenseResponsibility>
+      </dg:chunk>
+    </docset:ExpenseStructure>
+    <docset:EarlyTerminationOption dg:structure="section" dg:origin="1 122 2249 2337 2507">
+      <dg:chunk dg:structure="header" dg:origin="1 122 2249 763 2280" dg:style="font-weight: bold; text-transform: uppercase">ARTICLE 5: EARLY TERMINATION OPTION</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="1 169 2336 2337 2507">
+        <docset:EarlyTerminationOption dg:structure="li" dg:origin="1 169 2336 2337 2367; 1 169 2382 2332 2414; 1 169 2429 2202 2461; 1 169 2476 998 2507">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 2336 221 2367" dg:style="font-weight: bold">5.1.</dg:chunk> Orbital Window Termination Option: If the Interplanetary Aviation Authority reduces commercial launch window capacities between Mars and Earth by more than <docset:EarlyTerminationNoticePeriod dg:origin="1 319 2382 572 2414">fifty percent (50%)</docset:EarlyTerminationNoticePeriod> over any consecutive <docset:EarlyTerminationNoticePeriod dg:origin="1 883 2382 1414 2414">twenty-four (24) Martian month period</docset:EarlyTerminationNoticePeriod>, Tenant shall have a one-time option to terminate this Lease at the end of Lease Year 5. Tenant must provide <docset:EarlyTerminationNoticePeriod dg:origin="1 761 2429 1091 2461">nine (9) Martian months</docset:EarlyTerminationNoticePeriod>' prior written notice and pay a termination fee equal to twelve (12) months of the unamortized TI Allowance plus six (6) months of Base Rent.</docset:EarlyTerminationOption>
+      </dg:chunk>
+    </docset:EarlyTerminationOption>
+    <docset:SideLetter dg:structure="section" dg:origin="1 122 2563 2339 3307; 2 122 120 603 245">
+      <dg:chunk dg:structure="header" dg:origin="1 122 2563 836 2594" dg:style="font-weight: bold; text-transform: uppercase">ARTICLE 6: AMENDMENTS AND SIDE LETTERS</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="1 169 2649 2339 2774">
+        <dg:LicenseGrantToAdditionalSpace dg:structure="li" dg:origin="1 169 2649 2309 2680; 1 169 2696 2339 2727; 1 169 2743 937 2774" xml:id="licensegranttoadditionalspace" dg:itemprop="references" dg:href="#sideletteridentifier">
+          <dg:chunk dg:structure="lim" dg:origin="1 169 2649 221 2680" dg:style="font-weight: bold">6.1.</dg:chunk>
+          <docset:SideLetterIdentifier dg:origin="1 230 2649 477 2680" dg:style="font-weight: bold" xml:id="sideletteridentifier">Side Letter No. 1</docset:SideLetterIdentifier>: Pursuant to Side Letter No. 1, executed concurrently herewith, Landlord grants Tenant a non-exclusive license to utilize up to <dg:LicensedAdditionalArea dg:origin="1 2231 2649 2309 2680; 1 169 2696 369 2727">5,000 square meters</dg:LicensedAdditionalArea> of unpressurized surface easement adjacent to Warehouse C for the storage of unrefined regolith tailings, provided such tailings are anchored beneath approved magnetic dust containment blankets.</dg:LicenseGrantToAdditionalSpace>
+      </dg:chunk>
+      <docset:Execution dg:structure="p" dg:origin="1 122 2829 1460 2861">IN WITNESS WHEREOF, the parties have executed this Lease as of the date first above written.</docset:Execution>
+      <docset:Execution dg:structure="p" dg:origin="1 122 2916 308 2947" dg:style="font-weight: bold; text-transform: uppercase">LANDLORD:</docset:Execution>
+      <docset:LandlordName dg:structure="p" dg:origin="1 122 2963 508 2994" dg:style="font-style: italic" xml:id="landlordname">Ares Prime Yield Fund I, LP</docset:LandlordName>
+      <docset:Execution dg:structure="p" dg:origin="1 122 3049 476 3080">By: /s/ Michael Chen</docset:Execution>
+      <docset:SignatoryName dg:structure="p" dg:origin="1 122 3096 414 3127" xml:id="signatoryname" dg:itemprop="signatoryOf" dg:href="#landlordname">Name: Michael Chen</docset:SignatoryName>
+      <docset:Signatory dg:structure="p" dg:origin="1 122 3143 767 3174">Title: Managing Director of Asset Management</docset:Signatory>
+      <docset:Execution dg:structure="p" dg:origin="1 122 3229 259 3261" dg:style="font-weight: bold; text-transform: uppercase">TENANT:</docset:Execution>
+      <docset:TenantName dg:structure="p" dg:origin="1 122 3276 598 3307" dg:style="font-style: italic" xml:id="tenantname">Phobos Minerals Extraction Group</docset:TenantName>
+      <docset:Execution dg:structure="p" dg:origin="2 122 120 457 151">By: /s/ Roger Vance</docset:Execution>
+      <dg:chunk dg:structure="p" dg:origin="2 122 167 405 198">Name: <docset:SignatoryName dg:origin="2 223 167 405 198" xml:id="signatoryname-2" dg:itemprop="signatoryOf" dg:href="#tenantname">Roger Vance</docset:SignatoryName>
+      </dg:chunk>
+      <docset:Signatory dg:structure="p" dg:origin="2 122 214 603 245">Title: VP of Industrial Infrastructure</docset:Signatory>
+    </docset:SideLetter>
+  </docset:PropertyPortfolioLabel>
+</dg:chunk>

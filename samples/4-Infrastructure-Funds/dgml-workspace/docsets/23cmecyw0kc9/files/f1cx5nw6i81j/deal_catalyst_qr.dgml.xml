@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/PeriodicFinancialReportingPackage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2287 1963">
+  <docset:ReportingPackage dg:structure="section" dg:origin="1 193 258 2287 1963" xml:id="reportingpackage" dg:itemprop="references" dg:href="#reportingperiod">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 2028 311" dg:style="font-weight: bold; font-size: 2em">
+      <docset:ReportingEntityName dg:origin="1 262 258 938 311" xml:id="reportingentityname">Macula Hospitality Group</docset:ReportingEntityName> - <docset:ReportingPeriod dg:origin="1 992 258 1205 311" xml:id="reportingperiod">Q2 2026</docset:ReportingPeriod> Balance &amp; Revenue Statement</dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 262 567 654 599">
+      <dg:chunk dg:structure="li" dg:origin="1 262 567 654 599">
+        <dg:chunk dg:structure="header" dg:origin="1 262 567 526 599" dg:style="font-weight: bold; font-size: 1.25em; color: darkslategray">Reporting Period:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 534 567 654 599">
+          <docset:ReportingPeriod dg:origin="1 534 567 654 599" dg:style="font-size: 1.25em; color: darkslategray">Q2 2026</docset:ReportingPeriod>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:IndustrialOutput dg:structure="section" dg:origin="1 193 1010 2287 1963">
+      <dg:chunk dg:structure="header" dg:origin="1 262 1010 722 1050" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="1 262 1010 294 1050">1.</dg:chunk> Operational Statement</dg:chunk>
+      <dg:SegmentOperational dg:structure="table" dg:origin="1 193 1211 2287 1657">
+        <dg:chunk dg:structure="tr" dg:origin="1 193 1211 2230 1237">
+          <dg:chunk dg:structure="td" dg:origin="1 193 1211 355 1237" dg:style="font-weight: bold">Product Line</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 642 1211 844 1237" dg:style="font-weight: bold">Hectoliters Sold</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1091 1211 1349 1237" dg:style="font-weight: bold">Gross Income (ECU)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1540 1211 1792 1237" dg:style="font-weight: bold">Siphon Costs (ECU)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1988 1211 2230 1237" dg:style="font-weight: bold">Net Revenue (ECU)</dg:chunk>
+        </dg:chunk>
+        <docset:IndustrialOutput dg:structure="tr" dg:origin="1 193 1350 2287 1377">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1350 412 1377" dg:style="color: darkslategray">Europa Dark Stout</docset:OperationalSegmentName>
+          <docset:PhysicalOutputVolume dg:structure="td" dg:origin="1 642 1350 745 1377" dg:style="color: darkslategray">4,500 hL</docset:PhysicalOutputVolume>
+          <docset:GrossRevenue dg:structure="td" xsi:type="integer" dg:value="9200000" dg:origin="1 1271 1350 1390 1377" dg:style="color: darkslategray" xml:id="grossrevenue">9,200,000</docset:GrossRevenue>
+          <docset:ShieldingOrContainmentCost dg:structure="td" dg:origin="1 1703 1350 1838 1377" dg:style="color: darkslategray">(2,450,000)</docset:ShieldingOrContainmentCost>
+          <docset:NetSegmentMargin dg:structure="td" xsi:type="integer" dg:value="6750000" dg:origin="1 2169 1350 2287 1377" dg:style="color: darkslategray">6,750,000</docset:NetSegmentMargin>
+        </docset:IndustrialOutput>
+        <docset:IndustrialOutput dg:structure="tr" dg:origin="1 193 1490 2287 1517">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1490 449 1517" dg:style="color: darkslategray">Methane-Aged Spirits</docset:OperationalSegmentName>
+          <docset:PhysicalOutputVolume dg:structure="td" dg:origin="1 642 1490 745 1517" dg:style="color: darkslategray">1,200 hL</docset:PhysicalOutputVolume>
+          <docset:GrossRevenue dg:structure="td" xsi:type="integer" dg:value="5100000" dg:origin="1 1271 1490 1390 1517" dg:style="color: darkslategray" xml:id="grossrevenue-2">5,100,000</docset:GrossRevenue>
+          <docset:ShieldingOrContainmentCost dg:structure="td" dg:origin="1 1703 1490 1838 1517" dg:style="color: darkslategray">(1,500,000)</docset:ShieldingOrContainmentCost>
+          <docset:NetSegmentMargin dg:structure="td" xsi:type="integer" dg:value="3600000" dg:origin="1 2169 1490 2287 1517" dg:style="color: darkslategray">3,600,000</docset:NetSegmentMargin>
+        </docset:IndustrialOutput>
+        <docset:IndustrialOutput dg:structure="tr" dg:origin="1 193 1630 2287 1657">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1630 257 1657" dg:style="font-weight: bold; color: darkslategray">Total</docset:OperationalSegmentName>
+          <docset:TotalPhysicalVolume dg:structure="td" dg:origin="1 642 1630 748 1657" dg:style="font-weight: bold; color: darkslategray">5,700 hL</docset:TotalPhysicalVolume>
+          <docset:TotalRevenue dg:structure="td" xsi:type="integer" dg:value="14300000" dg:origin="1 1257 1630 1390 1657" dg:style="font-weight: bold; color: darkslategray" xml:id="totalrevenue" dg:itemprop="greaterOf" dg:href="#grossrevenue #grossrevenue-2">14,300,000</docset:TotalRevenue>
+          <docset:TotalCost dg:structure="td" dg:origin="1 1703 1630 1838 1657" dg:style="font-weight: bold; color: darkslategray">(3,950,000)</docset:TotalCost>
+          <docset:TotalNetIncome dg:structure="td" xsi:type="integer" dg:value="10350000" dg:origin="1 2154 1630 2287 1657" dg:style="font-weight: bold; color: darkslategray">10,350,000</docset:TotalNetIncome>
+        </docset:IndustrialOutput>
+      </dg:SegmentOperational>
+      <docset:CovenantComplianceNarrative dg:structure="p" dg:origin="1 262 1932 2195 1963" dg:style="font-size: 1.25em; color: darkslategray">Compliance Status: The bio-scrubbing systems in the fermentation vaults are working at specified ratings. Leverage metrics are compliant.</docset:CovenantComplianceNarrative>
+    </docset:IndustrialOutput>
+  </docset:ReportingPackage>
+</dg:chunk>

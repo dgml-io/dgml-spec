@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/ManagerValuationMemorandum" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 206 258 2077 875">
+  <docset:ValuationDocumentType dg:structure="section" dg:origin="1 206 258 2077 875">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 1352 311" dg:style="font-weight: bold; font-size: 1.5em">Valuation Statement - <docset:PropertyName dg:origin="1 854 258 1352 311">Scientific Property</docset:PropertyName>
+    </dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 206 502 664 530">
+      <dg:chunk dg:structure="li" dg:origin="1 206 502 664 530">
+        <dg:chunk dg:structure="header" dg:origin="1 206 502 370 530" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">PROPERTY:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 378 502 664 530">
+          <docset:PropertyName dg:origin="1 378 502 664 530" dg:style="color: darkslategray" xml:id="propertyname">Oyam Research Depot</docset:PropertyName>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:ValuationSummaryAndParameters dg:structure="p" dg:origin="1 262 797 2077 828; 1 262 844 1773 875" dg:style="color: darkslategray" xml:id="valuationsummaryandparameters" dg:itemprop="describes" dg:href="#propertyname">Applying a <docset:ValuationMethodology dg:origin="1 416 797 894 828" xml:id="valuationmethodology">replacement-cost appraisal model</docset:ValuationMethodology>, we value the <docset:PropertyName dg:origin="1 1087 797 1405 828">Oyam Research Depot</docset:PropertyName> structures and physical deep-sea instruments at <docset:AppraisedValue dg:origin="1 262 844 519 875" dg:style="font-weight: bold" xml:id="appraisedvalue" dg:itemprop="valuationOf" dg:href="#propertyname">115,000,000 ECU</docset:AppraisedValue>. Standard cash flow metrics are not utilized due to the unique scientific nature of the depot.</docset:ValuationSummaryAndParameters>
+  </docset:ValuationDocumentType>
+</dg:chunk>

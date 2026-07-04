@@ -1,0 +1,732 @@
+# ==========================================================================
+# DGML docset schema — Borrower Periodic Operating Statement
+# RELAX NG Compact.  Data types observed in 3 .dgml.xml file(s):
+#   element text is the RAW page text; the normalized, typed value is
+#   carried by @dg:value, described by @xsi:type (XSD built-in names).
+# `# Field: value` comments are the LOSSLESS schema.json serialization;
+#   regenerate the JSON via dgml_core.generation.rnc.rnc_to_schema_dict.
+# ==========================================================================
+
+default namespace docset = "http://dgml.io/dgml-io/BorrowerPeriodicOperatingStatement"
+namespace dg = "http://dgml.io/ns/dg#"
+namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = dg.chunk
+
+# --- attributes common to every DGML element ------------------------
+# dg:origin  = grounding bbox: "page x1 y1 x2 y2"
+# dg:itemprop / dg:href = semantic link (predicate + '#id' target(s))
+common.atts =
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  attribute dg:value { text }?,
+  attribute xsi:type { text }?
+
+# --- generic structural chunk (unlabeled scaffolding) ----------------
+dg.chunk = element dg:chunk { common.atts, mixed { any.docset* } }
+
+# a concept private to ONE document renders in the dg: namespace instead
+# of docset: (the shared-tag rule) — same shape, unshared vocabulary
+dg.private = element dg:* { common.atts, mixed { any.docset* } }
+
+# any docset element may appear where structure allows it
+any.docset = dg.chunk
+  | dg.private
+  | BorrowerName
+  | CalendarMonth
+  | ComplianceMetricLabel
+  | ComplianceMetricValue
+  | CompliancePerformance
+  | ConsolidatedOperatingPerformance
+  | DebtServiceAmount
+  | DebtServiceCalculation
+  | DebtServiceLineLabel
+  | ExpenseSubcategoryGroup
+  | ExpenseSubcategorySubtotal
+  | FirstMonthOfQuarter
+  | GrossRevenueSubtotal
+  | MonthlyExpenseAmount
+  | MonthlyExpenseSubcategoryAmount
+  | MonthlyGrossRevenueAmount
+  | MonthlyNOIAmount
+  | MonthlyRevenueAmount
+  | MonthlyRevenueSubcategoryAmount
+  | MonthlyTotalExpenseAmount
+  | NetOperatingIncome
+  | NetResidualCashFlow
+  | NetResidualCashFlowMonthly
+  | NetResidualCashFlowQuarterly
+  | OperatingExpense
+  | OperatingExpenseBreakdown
+  | OperatingStatementDocument
+  | QuarterlyExpenseAmount
+  | QuarterlyExpenseSubcategoryAmount
+  | QuarterlyGrossRevenueAmount
+  | QuarterlyNOIAmount
+  | QuarterlyRevenueAmount
+  | QuarterlyRevenueSubcategoryAmount
+  | QuarterlyTotalExpenseAmount
+  | ReportingCurrency
+  | ReportingPeriod
+  | Revenue
+  | RevenueBreakdown
+  | RevenueSubcategoryGroup
+  | RevenueSubcategorySubtotal
+  | SecondMonthOfQuarter
+  | TableColumnHeader
+  | ThirdMonthOfQuarter
+  | TotalOperatingExpenses
+
+# ------------------------------------------------------------------
+# Description: "Name of the borrowing entity submitting the operating statement"
+# Kind: inline
+# Parent: OperatingStatementDocument
+# Example: "Hephaestus Regolith Refinery"
+# Examples: ["Hephaestus Regolith Refinery", "Artemis Data Systems & Deep-Space Relay", "Selene-V Resort & Casino"]
+# Observed: 3 occurrence(s)
+BorrowerName = element BorrowerName {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "A specific month within the reporting quarter used as a column period for financial figures"
+# Kind: inline
+CalendarMonth = element CalendarMonth {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The name or descriptor of the compliance or performance benchmark being reported (e.g. Required DSCR, Base SOFR Index Rate, TPV Index)"
+# Kind: inline
+# Parent: DebtServiceCalculation
+# Example: "Required DSCR"
+# Examples: ["Required DSCR", "Section 5.01", "Actual DSCR Achieved"]
+# Observed: 12 occurrence(s)
+ComplianceMetricLabel = element ComplianceMetricLabel {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Atomic value of a compliance or performance benchmark indicator (e.g. required ratio, index rate, throughput figure)"
+# Kind: inline
+# Parent: DebtServiceCalculation
+# Example: "June 26, 2026"
+# Examples: ["June 26, 2026", "1.25x", "1.56x"]
+# Observed: 13 occurrence(s); dg:structure: li(4)
+# Data type (from DGML): date(4) of 13 occurrence(s)
+ComplianceMetricValue = element ComplianceMetricValue {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "date" },
+    attribute dg:value { xsd:date })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Section summarising key compliance metrics and covenant benchmarks for the period"
+# Kind: section
+# Parent: OperatingStatementDocument
+# Example: "Compliance & Performance Summary"
+# Examples: ["Compliance & Performance Summary", "Required DSCR: 1.25x", "Actual DSCR Achieved: 1.56x (In Compliance)"]
+# Observed: 9 occurrence(s); dg:structure: li(6), section(3)
+# Children (from schema hierarchy): NetOperatingIncome
+CompliancePerformance = element CompliancePerformance {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Section presenting aggregated revenue and expense figures for the reporting period"
+# Kind: section
+# Parent: OperatingStatementDocument
+# Example: "Consolidated Operating Performance"
+# Examples: ["Consolidated Operating Performance", "Granular Performance & Operating Sub-Tables"]
+# Observed: 6 occurrence(s); dg:structure: section(3), table(2), tr(1)
+# Children (from schema hierarchy): FirstMonthOfQuarter, GrossRevenueSubtotal, OperatingExpenseBreakdown, Revenue, RevenueBreakdown, SecondMonthOfQuarter, TableColumnHeader, ThirdMonthOfQuarter, TotalOperatingExpenses
+ConsolidatedOperatingPerformance = element ConsolidatedOperatingPerformance {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Total principal and interest draw applied against net operating income in the period"
+# Kind: row
+# Parent: DebtServiceCalculation
+# Example: "(31,050,000)"
+# Examples: ["(31,050,000)"]
+# Observed: 2 occurrence(s); dg:structure: tr(1), td(1)
+# Children (from schema hierarchy): DebtServiceLineLabel
+DebtServiceAmount = element DebtServiceAmount {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Section reconciling net operating income against debt service obligations to derive residual cash flow"
+# Kind: section
+# Parent: OperatingStatementDocument
+# Example: "Cross-Reference Note: The target ratio referenced herein as the \"Required DSCR\" "
+# Examples: ["Cross-Reference Note: The target ratio referenced herein as the \"Required DSCR\" ", "Cross-Reference Note: Financial reports herein calculate dynamic debt coverage l", "Sub-Table C: Consolidated Debt Service Calculation"]
+# Observed: 5 occurrence(s); dg:structure: p(3), section(1), table(1)
+# Children (from schema hierarchy): ComplianceMetricLabel, ComplianceMetricValue, DebtServiceAmount, NetResidualCashFlow
+DebtServiceCalculation = element DebtServiceCalculation {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The descriptive label identifying the debt service draw row within the reconciliation table"
+# Kind: inline
+# Parent: DebtServiceAmount
+# Example: "Debt Service Draw (Principal & Interest)"
+# Examples: ["Debt Service Draw (Principal & Interest)"]
+# Observed: 1 occurrence(s); dg:structure: td(1)
+DebtServiceLineLabel = element DebtServiceLineLabel {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "A named grouping of related expense line items within the expense breakdown that carries its own subtotal"
+# Kind: row
+# Parent: OperatingExpenseBreakdown
+# Example: "1. Thermal Control Infrastructure"
+# Examples: ["1. Thermal Control Infrastructure", "Thermal Systems Subtotal", "2. Power, Compliance & Technical Staff"]
+# Observed: 6 occurrence(s); dg:structure: td(4), tr(2)
+# Children (from schema hierarchy): MonthlyExpenseSubcategoryAmount, QuarterlyExpenseSubcategoryAmount
+ExpenseSubcategoryGroup = element ExpenseSubcategoryGroup {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Aggregate monetary amount for a named group of related expense line items"
+# Kind: row
+# Parent: OperatingExpenseBreakdown
+# Observed: 2 occurrence(s); dg:structure: tr(2)
+ExpenseSubcategorySubtotal = element ExpenseSubcategorySubtotal {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The first calendar month (July) of the three-month reporting quarter"
+# Kind: inline
+# Parent: ConsolidatedOperatingPerformance
+# Example: "July 2026 (LC)"
+# Examples: ["July 2026 (LC)"]
+# Observed: 5 occurrence(s); dg:structure: td(5)
+FirstMonthOfQuarter = element FirstMonthOfQuarter {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Aggregate of all revenue line items before deduction of operating expenses"
+# Kind: row
+# Parent: ConsolidatedOperatingPerformance
+# Example: "Gross Revenue Subtotal"
+# Examples: ["Gross Revenue Subtotal", "Consolidated Gross Revenue", "Consolidated Gross Revenue (Sub-Table A)"]
+# Observed: 8 occurrence(s); dg:structure: tr(4), td(4)
+# Children (from schema hierarchy): MonthlyGrossRevenueAmount, QuarterlyGrossRevenueAmount
+GrossRevenueSubtotal = element GrossRevenueSubtotal {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The monetary amount recorded for an expense line item in a single calendar month"
+# Kind: inline
+# Parent: RevenueBreakdown
+# Example: "(450,000)"
+# Examples: ["(450,000)", "(470,000)", "(460,000)"]
+# Observed: 51 occurrence(s); dg:structure: td(51)
+# Data type (from DGML): integer(15) of 51 occurrence(s)
+MonthlyExpenseAmount = element MonthlyExpenseAmount {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The subtotal amount for an expense subcategory group in a single calendar month"
+# Kind: inline
+# Parent: ExpenseSubcategoryGroup
+# Example: "(3,200,000)"
+# Examples: ["(3,200,000)", "(3,250,000)", "(3,400,000)"]
+# Observed: 12 occurrence(s); dg:structure: td(12)
+MonthlyExpenseSubcategoryAmount = element MonthlyExpenseSubcategoryAmount {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The gross revenue subtotal for a single calendar month"
+# Kind: inline
+# Parent: GrossRevenueSubtotal
+# Example: "14,450,000"
+# Examples: ["14,450,000", "14,700,000", "14,800,000"]
+# Observed: 12 occurrence(s); dg:structure: td(12)
+# Data type (from DGML): integer(12) of 12 occurrence(s)
+MonthlyGrossRevenueAmount = element MonthlyGrossRevenueAmount {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The net operating income figure for a single calendar month"
+# Kind: inline
+# Parent: NetOperatingIncome
+# Example: "4,650,000"
+# Examples: ["4,650,000", "4,520,000", "5,020,000"]
+# Observed: 12 occurrence(s); dg:structure: td(12)
+# Data type (from DGML): integer(9) of 12 occurrence(s)
+MonthlyNOIAmount = element MonthlyNOIAmount {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The monetary amount recorded for a revenue line item in a single calendar month"
+# Kind: inline
+# Parent: Revenue
+# Example: "8,200,000"
+# Examples: ["8,200,000", "8,550,000", "8,100,000"]
+# Observed: 36 occurrence(s); dg:structure: td(36)
+# Data type (from DGML): integer(33) of 36 occurrence(s)
+MonthlyRevenueAmount = element MonthlyRevenueAmount {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The subtotal amount for a revenue subcategory group in a single calendar month"
+# Kind: inline
+# Parent: RevenueSubcategoryGroup
+# Example: "12,500,000"
+# Examples: ["12,500,000", "12,300,000", "12,650,000"]
+# Observed: 12 occurrence(s); dg:structure: td(12)
+# Data type (from DGML): integer(6) of 12 occurrence(s)
+MonthlyRevenueSubcategoryAmount = element MonthlyRevenueSubcategoryAmount {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The total operating expenses figure for a single calendar month"
+# Kind: inline
+# Parent: TotalOperatingExpenses
+# Example: "(9,800,000)"
+# Examples: ["(9,800,000)", "(10,180,000)", "(9,780,000)"]
+# Observed: 12 occurrence(s); dg:structure: td(12)
+# Data type (from DGML): integer(3) of 12 occurrence(s)
+MonthlyTotalExpenseAmount = element MonthlyTotalExpenseAmount {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Residual income after total operating expenses are deducted from gross revenue"
+# Kind: section
+# Parent: CompliancePerformance
+# Example: "Net Operating Income (NOI): LC 14,190,000 (Detailed below)"
+# Examples: ["Net Operating Income (NOI): LC 14,190,000 (Detailed below)", "Net Operating Income (NOI)"]
+# Observed: 7 occurrence(s); dg:structure: tr(3), td(3), li(1)
+# Children (from schema hierarchy): MonthlyNOIAmount, QuarterlyNOIAmount
+NetOperatingIncome = element NetOperatingIncome {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Cash remaining after debt service obligations are met from net operating income"
+# Kind: row
+# Parent: DebtServiceCalculation
+# Example: "Net Residual Operating Cash Flow"
+# Examples: ["Net Residual Operating Cash Flow"]
+# Observed: 2 occurrence(s); dg:structure: tr(1), td(1)
+# Children (from schema hierarchy): NetResidualCashFlowMonthly, NetResidualCashFlowQuarterly
+NetResidualCashFlow = element NetResidualCashFlow {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The net residual operating cash flow figure for a single calendar month"
+# Kind: inline
+# Parent: NetResidualCashFlow
+# Example: "17,450,000"
+# Examples: ["17,450,000", "17,700,000", "(13,000,000)"]
+# Observed: 3 occurrence(s); dg:structure: td(3)
+# Data type (from DGML): integer(2) of 3 occurrence(s)
+NetResidualCashFlowMonthly = element NetResidualCashFlowMonthly {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The net residual operating cash flow figure for the full quarter"
+# Kind: inline
+# Parent: NetResidualCashFlow
+# Example: "22,150,000"
+# Examples: ["22,150,000"]
+# Observed: 1 occurrence(s); dg:structure: td(1)
+# Data type (from DGML): integer(1) of 1 occurrence(s)
+NetResidualCashFlowQuarterly = element NetResidualCashFlowQuarterly {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "A named individual category of operating expenditure"
+# Kind: inline
+# Parent: RevenueBreakdown
+# Example: "Revenue"
+# Examples: ["Revenue", "Operating Expenses (OpEx)", "Oxygen & Nitrogen Replacement"]
+# Observed: 30 occurrence(s); dg:structure: td(16), tr(14)
+OperatingExpense = element OperatingExpense {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Sub-section detailing individual operating expense line items"
+# Kind: row
+# Parent: ConsolidatedOperatingPerformance
+# Example: "Sub-Table B: Segmented Cryogenic & Environmental Expenses"
+# Examples: ["Sub-Table B: Segmented Cryogenic & Environmental Expenses", "Operating Expenses (OpEx)"]
+# Observed: 5 occurrence(s); dg:structure: tr(2), section(1), table(1)
+# Children (from schema hierarchy): ExpenseSubcategoryGroup, ExpenseSubcategorySubtotal
+OperatingExpenseBreakdown = element OperatingExpenseBreakdown {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The periodic financial reporting document submitted by a borrower covering operating results for a defined period"
+# Kind: section
+# Example: "Borrower's Periodic Operating Statement"
+# Examples: ["Borrower's Periodic Operating Statement"]
+# Observed: 3 occurrence(s); dg:structure: section(3)
+# Children (from schema hierarchy): BorrowerName, CompliancePerformance, ConsolidatedOperatingPerformance, DebtServiceCalculation, ReportingPeriod
+OperatingStatementDocument = element OperatingStatementDocument {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The cumulative monetary amount recorded for an expense line item across the full quarter"
+# Kind: inline
+# Parent: RevenueBreakdown
+# Example: "(1,380,000)"
+# Examples: ["(1,380,000)", "(3,370,000)", "(6,750,000)"]
+# Observed: 17 occurrence(s); dg:structure: td(17)
+# Data type (from DGML): integer(5) of 17 occurrence(s)
+QuarterlyExpenseAmount = element QuarterlyExpenseAmount {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The subtotal amount for an expense subcategory group across the full quarter"
+# Kind: inline
+# Parent: ExpenseSubcategoryGroup
+# Example: "(9,850,000)"
+# Examples: ["(9,850,000)", "(12,650,000)"]
+# Observed: 4 occurrence(s); dg:structure: td(4)
+QuarterlyExpenseSubcategoryAmount = element QuarterlyExpenseSubcategoryAmount {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The gross revenue subtotal for the full quarter"
+# Kind: inline
+# Parent: GrossRevenueSubtotal
+# Example: "43,950,000"
+# Examples: ["43,950,000", "75,700,000", "60,800,000"]
+# Observed: 4 occurrence(s); dg:structure: td(4)
+# Data type (from DGML): integer(4) of 4 occurrence(s)
+QuarterlyGrossRevenueAmount = element QuarterlyGrossRevenueAmount {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The net operating income figure for the full quarter"
+# Kind: inline
+# Parent: NetOperatingIncome
+# Example: "LC 14,190,000"
+# Examples: ["LC 14,190,000", "14,190,000", "53,200,000"]
+# Observed: 4 occurrence(s); dg:structure: td(3)
+# Data type (from DGML): integer(3) of 4 occurrence(s)
+QuarterlyNOIAmount = element QuarterlyNOIAmount {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The cumulative monetary amount recorded for a revenue line item across the full quarter"
+# Kind: inline
+# Parent: Revenue
+# Example: "24,850,000"
+# Examples: ["24,850,000", "12,650,000", "6,450,000"]
+# Observed: 12 occurrence(s); dg:structure: td(12)
+# Data type (from DGML): integer(11) of 12 occurrence(s)
+QuarterlyRevenueAmount = element QuarterlyRevenueAmount {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The cumulative subtotal amount for a revenue subcategory group across the full quarter"
+# Kind: inline
+# Parent: RevenueSubcategoryGroup
+# Example: "37,500,000"
+# Examples: ["37,500,000", "38,200,000"]
+# Observed: 4 occurrence(s); dg:structure: td(4)
+# Data type (from DGML): integer(2) of 4 occurrence(s)
+QuarterlyRevenueSubcategoryAmount = element QuarterlyRevenueSubcategoryAmount {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The total operating expenses figure for the full quarter"
+# Kind: inline
+# Parent: TotalOperatingExpenses
+# Example: "(29,760,000)"
+# Examples: ["(29,760,000)", "(22,500,000)", "36,680,000"]
+# Observed: 4 occurrence(s); dg:structure: td(4)
+# Data type (from DGML): integer(1) of 4 occurrence(s)
+QuarterlyTotalExpenseAmount = element QuarterlyTotalExpenseAmount {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The currency denomination (local currency) in which all monetary values are expressed"
+# Kind: inline
+ReportingCurrency = element ReportingCurrency {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The quarter and year covered by the operating statement"
+# Kind: inline
+# Parent: OperatingStatementDocument
+# Example: "Q3 2026"
+# Examples: ["Q3 2026", "Q3 Total (LC)"]
+# Observed: 8 occurrence(s); dg:structure: td(5)
+ReportingPeriod = element ReportingPeriod {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "A named individual source of revenue contributing to gross revenue"
+# Kind: row
+# Parent: ConsolidatedOperatingPerformance
+# Example: "Regolith Ore Sales"
+# Examples: ["Regolith Ore Sales", "Geothermal Grid Power Export", "Helium-3 By-Product Refinement"]
+# Observed: 22 occurrence(s); dg:structure: tr(11), td(11)
+# Children (from schema hierarchy): MonthlyRevenueAmount, QuarterlyRevenueAmount
+Revenue = element Revenue {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Sub-section detailing individual revenue stream line items"
+# Kind: row
+# Parent: ConsolidatedOperatingPerformance
+# Example: "Sub-Table A: Detailed Breakdown of Revenue Streams"
+# Examples: ["Sub-Table A: Detailed Breakdown of Revenue Streams", "Revenue"]
+# Observed: 5 occurrence(s); dg:structure: tr(2), section(1), table(1)
+# Children (from schema hierarchy): MonthlyExpenseAmount, OperatingExpense, QuarterlyExpenseAmount, RevenueSubcategoryGroup, RevenueSubcategorySubtotal
+RevenueBreakdown = element RevenueBreakdown {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "A named grouping of related revenue line items within the revenue breakdown that carries its own subtotal"
+# Kind: row
+# Parent: RevenueBreakdown
+# Example: "1. Sovereign Data Storage Services"
+# Examples: ["1. Sovereign Data Storage Services", "Sovereign Storage Subtotal", "2. Commercial & Relay Accounts"]
+# Observed: 6 occurrence(s); dg:structure: td(4), tr(2)
+# Children (from schema hierarchy): MonthlyRevenueSubcategoryAmount, QuarterlyRevenueSubcategoryAmount
+RevenueSubcategoryGroup = element RevenueSubcategoryGroup {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "Aggregate monetary amount for a named group of related revenue line items"
+# Kind: row
+# Parent: RevenueBreakdown
+# Observed: 2 occurrence(s); dg:structure: tr(2)
+RevenueSubcategorySubtotal = element RevenueSubcategorySubtotal {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The second calendar month (August) of the three-month reporting quarter"
+# Kind: inline
+# Parent: ConsolidatedOperatingPerformance
+# Example: "August 2026 (LC)"
+# Examples: ["August 2026 (LC)"]
+# Observed: 5 occurrence(s); dg:structure: td(5)
+SecondMonthOfQuarter = element SecondMonthOfQuarter {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The label identifying the category or line item descriptor column in a financial performance table"
+# Kind: inline
+# Parent: ConsolidatedOperatingPerformance
+# Example: "Category / Line Item"
+# Examples: ["Category / Line Item", "Category & Specific Tier Accounts", "Expense Center & Sub-Systems"]
+# Observed: 9 occurrence(s); dg:structure: td(5), tr(4)
+TableColumnHeader = element TableColumnHeader {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The third calendar month (September) of the three-month reporting quarter"
+# Kind: inline
+# Parent: ConsolidatedOperatingPerformance
+# Example: "September 2026 (LC)"
+# Examples: ["September 2026 (LC)"]
+# Observed: 5 occurrence(s); dg:structure: td(5)
+ThirdMonthOfQuarter = element ThirdMonthOfQuarter {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "Aggregate of all operating expense line items for the period"
+# Kind: row
+# Parent: ConsolidatedOperatingPerformance
+# Example: "Total Operating Expenses"
+# Examples: ["Total Operating Expenses", "Total Net Operating Expenses", "Total Net Operating Expenses (Sub-Table B)"]
+# Observed: 8 occurrence(s); dg:structure: tr(4), td(4)
+# Children (from schema hierarchy): MonthlyTotalExpenseAmount, QuarterlyTotalExpenseAmount
+TotalOperatingExpenses = element TotalOperatingExpenses {
+  common.atts,
+  mixed { any.docset* }
+}
+

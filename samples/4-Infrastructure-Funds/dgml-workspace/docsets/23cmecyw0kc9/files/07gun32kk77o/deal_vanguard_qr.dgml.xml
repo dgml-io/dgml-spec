@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/PeriodicFinancialReportingPackage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2287 2050">
+  <docset:ReportingPackage dg:structure="section" dg:origin="1 193 258 2287 2050">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 2167 311" dg:style="font-weight: bold; font-size: 2em">
+      <docset:ReportingEntityName dg:origin="1 262 258 932 311">Carthage Resources PLC</docset:ReportingEntityName> - <docset:ReportingPeriod dg:origin="1 986 258 1199 311">Q2 2026</docset:ReportingPeriod> Production &amp; Operations Statement</dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 262 567 654 599">
+      <dg:chunk dg:structure="li" dg:origin="1 262 567 654 599">
+        <dg:chunk dg:structure="header" dg:origin="1 262 567 526 599" dg:style="font-weight: bold; font-size: 1.25em; color: darkslategray">Reporting Period:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 534 567 654 599">
+          <docset:ReportingPeriod dg:origin="1 534 567 654 599" dg:style="font-size: 1.25em; color: darkslategray">Q2 2026</docset:ReportingPeriod>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:IndustrialOutput dg:structure="section" dg:origin="1 193 1010 2287 2050">
+      <dg:chunk dg:structure="header" dg:origin="1 262 1010 809 1050" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="1 262 1010 294 1050">1.</dg:chunk> Industrial Output Summary</dg:chunk>
+      <dg:SegmentProduction dg:structure="table" dg:origin="1 193 1211 2287 1697">
+        <dg:chunk dg:structure="tr" dg:origin="1 193 1211 2213 1277">
+          <dg:chunk dg:structure="td" dg:origin="1 193 1231 462 1257" dg:style="font-weight: bold">Extracted Compound</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 642 1231 794 1257" dg:style="font-weight: bold">Volume (kg)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1091 1231 1387 1257" dg:style="font-weight: bold">Average Price (ECU/kg)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1540 1211 1836 1237; 1 1540 1250 1613 1277" dg:style="font-weight: bold">Processing Surcharges (ECU)</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="1 1988 1231 2213 1257" dg:style="font-weight: bold">Net Income (ECU)</dg:chunk>
+        </dg:chunk>
+        <docset:IndustrialOutput dg:structure="tr" dg:origin="1 193 1390 2287 1417">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1390 426 1417" dg:style="color: darkslategray">Heavy Water (D2O)</docset:OperationalSegmentName>
+          <docset:PhysicalOutputVolume dg:structure="td" dg:origin="1 642 1390 759 1417" dg:style="color: darkslategray" xml:id="physicaloutputvolume">50,000 kg</docset:PhysicalOutputVolume>
+          <dg:UnitPrice dg:structure="td" xsi:type="integer" dg:value="2500" dg:origin="1 1323 1390 1390 1417" dg:style="color: darkslategray">2,500</dg:UnitPrice>
+          <dg:ProcessingSurcharge dg:structure="td" dg:origin="1 1688 1390 1838 1417" dg:style="color: darkslategray" xml:id="processingsurcharge">(15,000,000)</dg:ProcessingSurcharge>
+          <docset:NetSegmentMargin dg:structure="td" xsi:type="integer" dg:value="110000000" dg:origin="1 2140 1390 2287 1417" dg:style="color: darkslategray" xml:id="netsegmentmargin">110,000,000</docset:NetSegmentMargin>
+        </docset:IndustrialOutput>
+        <docset:IndustrialOutput dg:structure="tr" dg:origin="1 193 1530 2287 1557">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1530 462 1557" dg:style="color: darkslategray">Trace Lithium Isotopes</docset:OperationalSegmentName>
+          <docset:PhysicalOutputVolume dg:structure="td" dg:origin="1 642 1530 759 1557" dg:style="color: darkslategray" xml:id="physicaloutputvolume-2">15,000 kg</docset:PhysicalOutputVolume>
+          <dg:UnitPrice dg:structure="td" xsi:type="integer" dg:value="1200" dg:origin="1 1323 1530 1390 1557" dg:style="color: darkslategray">1,200</dg:UnitPrice>
+          <dg:ProcessingSurcharge dg:structure="td" dg:origin="1 1703 1530 1838 1557" dg:style="color: darkslategray" xml:id="processingsurcharge-2">(5,000,000)</dg:ProcessingSurcharge>
+          <docset:NetSegmentMargin dg:structure="td" xsi:type="integer" dg:value="13000000" dg:origin="1 2154 1530 2287 1557" dg:style="color: darkslategray" xml:id="netsegmentmargin-2">13,000,000</docset:NetSegmentMargin>
+        </docset:IndustrialOutput>
+        <docset:IndustrialOutput dg:structure="tr" dg:origin="1 193 1670 2287 1697">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1670 257 1697" dg:style="font-weight: bold; color: darkslategray">Total</docset:OperationalSegmentName>
+          <docset:TotalPhysicalVolume dg:structure="td" dg:origin="1 642 1670 762 1697" dg:style="font-weight: bold; color: darkslategray" xml:id="totalphysicalvolume" dg:itemprop="aggregates" dg:href="#physicaloutputvolume #physicaloutputvolume-2">65,000 kg</docset:TotalPhysicalVolume>
+          <dg:UnitPrice dg:structure="td" dg:origin="1 1091 1670 1100 1697" dg:style="font-weight: bold; color: darkslategray">-</dg:UnitPrice>
+          <dg:ProcessingSurcharge dg:structure="td" dg:origin="1 1688 1670 1838 1697" dg:style="font-weight: bold; color: darkslategray" xml:id="processingsurcharge-3" dg:itemprop="aggregates" dg:href="#processingsurcharge #processingsurcharge-2">(20,000,000)</dg:ProcessingSurcharge>
+          <docset:TotalNetIncome dg:structure="td" xsi:type="integer" dg:value="123000000" dg:origin="1 2140 1670 2287 1697" dg:style="font-weight: bold; color: darkslategray" xml:id="totalnetincome" dg:itemprop="aggregates" dg:href="#netsegmentmargin #netsegmentmargin-2">123,000,000</docset:TotalNetIncome>
+        </docset:IndustrialOutput>
+      </dg:SegmentProduction>
+      <docset:CovenantComplianceNarrative dg:structure="p" dg:origin="1 262 1972 2051 2003; 1 262 2019 436 2050" dg:style="font-size: 1.25em; color: darkslategray" xml:id="covenantcompliancenarrative">Compliance Status: The planetary remediation fund is currently capitalized at <docset:ReserveAccountBalance dg:origin="1 1354 1972 1594 2003" xml:id="reserveaccountbalance" dg:itemprop="valueFrom" dg:href="#covenantcompliancenarrative">18,500,000 ECU</docset:ReserveAccountBalance>. Net debt ratios conform to target agreements.</docset:CovenantComplianceNarrative>
+    </docset:IndustrialOutput>
+  </docset:ReportingPackage>
+</dg:chunk>

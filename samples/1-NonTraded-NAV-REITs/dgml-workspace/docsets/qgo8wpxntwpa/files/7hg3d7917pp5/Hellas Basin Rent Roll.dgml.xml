@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/PropertyRentRollReport" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 118 120 2349 742">
+  <docset:RentRoll dg:structure="section" dg:origin="1 118 120 2349 742">
+    <dg:chunk dg:structure="header" dg:origin="1 122 120 259 151" dg:style="font-weight: bold">Rent Roll</dg:chunk>
+    <dg:chunk dg:structure="p" dg:origin="1 122 206 980 238" dg:style="font-weight: bold; text-transform: uppercase">PROPERTY: <docset:PropertyIdentifier dg:origin="1 313 206 980 238" dg:style="font-weight: normal; text-transform: none">Hellas Basin Logistics Complex - Depot Gamma</docset:PropertyIdentifier>
+    </dg:chunk>
+    <dg:chunk dg:structure="p" dg:origin="1 122 253 563 285" dg:style="font-weight: bold; text-transform: uppercase">REPORT DATE: <docset:ReportDate xsi:type="date" dg:value="2026-06-25" dg:origin="1 365 253 563 285" dg:style="font-weight: normal; text-transform: none">June 25, 2026</docset:ReportDate>
+    </dg:chunk>
+    <dg:chunk dg:structure="p" dg:origin="1 122 300 711 331" dg:style="font-weight: bold; text-transform: uppercase">PORTFOLIO STATUS: <docset:PortfolioStatus dg:origin="1 457 300 711 331" dg:style="font-weight: normal; text-transform: none">100% Pressurized</docset:PortfolioStatus>
+    </dg:chunk>
+    <docset:RentRoll dg:structure="table" dg:origin="1 118 382 2349 742">
+      <dg:chunk dg:structure="tr" dg:origin="1 118 382 2327 507">
+        <dg:chunk dg:structure="td" dg:origin="1 118 429 281 461" dg:style="font-weight: bold">Unit / Suite</dg:chunk>
+        <dg:chunk dg:structure="td" dg:origin="1 322 429 518 461" dg:style="font-weight: bold">Tenant Name</dg:chunk>
+        <dg:chunk dg:structure="td" dg:origin="1 526 406 655 437; 1 526 453 629 484" dg:style="font-weight: bold">Net Area (sq.m.)</dg:chunk>
+        <dg:chunk dg:structure="td" dg:origin="1 730 429 899 461" dg:style="font-weight: bold">Lease Start</dg:chunk>
+        <dg:chunk dg:structure="td" dg:origin="1 934 429 1090 461" dg:style="font-weight: bold">Lease End</dg:chunk>
+        <dg:chunk dg:structure="td" dg:origin="1 1138 406 1341 437; 1 1138 453 1280 484" dg:style="font-weight: bold">Monthly Base Rent (M$)</dg:chunk>
+        <dg:chunk dg:structure="td" dg:origin="1 1342 406 1531 437; 1 1342 453 1485 484" dg:style="font-weight: bold">Annual Base Rent (M$)</dg:chunk>
+        <dg:chunk dg:structure="td" dg:origin="1 1546 406 1702 437; 1 1546 453 1685 484" dg:style="font-weight: bold">Escalation Schedule</dg:chunk>
+        <dg:chunk dg:structure="td" dg:origin="1 1750 406 1891 437; 1 1750 453 1823 484" dg:style="font-weight: bold">Recovery Type</dg:chunk>
+        <dg:chunk dg:structure="td" dg:origin="1 1954 406 2114 437; 1 1954 453 2149 484" dg:style="font-weight: bold">Remaining Concessions</dg:chunk>
+        <dg:chunk dg:structure="td" dg:origin="1 2158 382 2327 414; 1 2158 429 2248 461; 1 2158 476 2264 507" dg:style="font-weight: bold">Guarantor / Credit Quality</dg:chunk>
+      </dg:chunk>
+      <docset:RentRoll dg:structure="tr" dg:origin="1 118 523 2349 648">
+        <docset:UnitSuite dg:structure="td" dg:origin="1 118 570 318 601" dg:style="font-weight: bold">Warehouse C</docset:UnitSuite>
+        <docset:TenantName dg:structure="td" dg:origin="1 322 523 428 554; 1 322 570 440 601; 1 322 617 461 648" xml:id="tenantname">Phobos Minerals Extraction</docset:TenantName>
+        <docset:NetArea dg:structure="td" xsi:type="integer" dg:value="25000" dg:origin="1 526 570 622 601">25,000</docset:NetArea>
+        <docset:LeaseStartDate dg:structure="td" xsi:type="date" dg:value="2084-01-03" dg:origin="1 730 570 887 601" xml:id="leasestartdate">03/01/2084</docset:LeaseStartDate>
+        <docset:LeaseEndDate dg:structure="td" dg:origin="1 934 570 1091 601" xml:id="leaseenddate" dg:itemprop="relativeTo" dg:href="#leasestartdate" dg:value="P10Y">02/28/2094</docset:LeaseEndDate>
+        <docset:MonthlyBaseRent dg:structure="td" dg:origin="1 1138 546 1182 578; 1 1138 593 1295 625" xml:id="monthlybaserent">M$ 375,000.00</docset:MonthlyBaseRent>
+        <docset:AnnualBaseRent dg:structure="td" dg:origin="1 1342 546 1386 578; 1 1342 593 1525 625" xml:id="annualbaserent" dg:itemprop="derivedFrom" dg:href="#monthlybaserent" dg:value="12">M$ 4,500,000.00</docset:AnnualBaseRent>
+        <docset:EscalationSchedule dg:structure="td" dg:origin="1 1546 523 1741 554; 1 1546 570 1623 601; 1 1546 617 1675 648" xml:id="escalationschedule" dg:itemprop="accruesFrom" dg:href="#leasestartdate" dg:value="P2Y">Biennial METI Index (2%–6%)</docset:EscalationSchedule>
+        <docset:RecoveryType dg:structure="td" dg:origin="1 1750 546 1926 578; 1 1750 593 1880 625">NNN (Heavy Filtration)</docset:RecoveryType>
+        <docset:RemainingConcession dg:structure="td" dg:origin="1 1954 523 2140 554; 1 1954 570 2124 601; 1 1954 617 2039 648">1 Month Free (Solar storm delay)</docset:RemainingConcession>
+        <docset:GuarantorOrRelatedParty dg:structure="td" dg:origin="1 2158 523 2264 554; 1 2158 570 2349 601; 1 2158 617 2341 648" xml:id="guarantororrelatedparty" dg:itemprop="guarantorOf" dg:href="#tenantname">Phobos Holdings PLC / BBB- Rated</docset:GuarantorOrRelatedParty>
+      </docset:RentRoll>
+      <docset:PortfolioTotals dg:structure="tr" dg:origin="1 118 664 1525 742">
+        <docset:UnitSuite dg:structure="td" dg:origin="1 118 687 243 718" dg:style="font-weight: bold; text-transform: uppercase">TOTALS</docset:UnitSuite>
+        <docset:TenantName dg:structure="td"/>
+        <docset:TotalNetArea dg:structure="td" xsi:type="integer" dg:value="25000" dg:origin="1 526 687 622 718" dg:style="font-weight: bold">25,000</docset:TotalNetArea>
+        <docset:LeaseStartDate dg:structure="td"/>
+        <docset:LeaseEndDate dg:structure="td"/>
+        <docset:TotalMonthlyBaseRent dg:structure="td" dg:origin="1 1138 664 1182 695; 1 1138 711 1295 742" dg:style="font-weight: bold">M$ 375,000.00</docset:TotalMonthlyBaseRent>
+        <docset:TotalAnnualBaseRent dg:structure="td" dg:origin="1 1342 664 1386 695; 1 1342 711 1525 742" dg:style="font-weight: bold">M$ 4,500,000.00</docset:TotalAnnualBaseRent>
+        <docset:EscalationSchedule dg:structure="td"/>
+        <docset:RecoveryType dg:structure="td"/>
+        <docset:RemainingConcession dg:structure="td"/>
+        <docset:GuarantorOrRelatedParty dg:structure="td"/>
+      </docset:PortfolioTotals>
+    </docset:RentRoll>
+  </docset:RentRoll>
+</dg:chunk>

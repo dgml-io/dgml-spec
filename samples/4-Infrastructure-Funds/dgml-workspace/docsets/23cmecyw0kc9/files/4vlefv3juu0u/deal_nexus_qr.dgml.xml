@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/PeriodicFinancialReportingPackage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2287 2772">
+  <docset:ReportingPackage dg:structure="section" dg:origin="1 193 258 2287 2772">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 2000 311" dg:style="font-weight: bold; font-size: 2em">
+      <docset:ReportingEntityName dg:origin="1 262 258 947 311" xml:id="reportingentityname">Conamara Biosphere LLC</docset:ReportingEntityName> - <docset:ReportingPeriod dg:origin="1 1001 258 1214 311">Q2 2026</docset:ReportingPeriod> Financial &amp; Yield Statements</dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 262 567 654 599">
+      <dg:chunk dg:structure="li" dg:origin="1 262 567 654 599">
+        <dg:chunk dg:structure="header" dg:origin="1 262 567 526 599" dg:style="font-weight: bold; font-size: 1.25em; color: darkslategray">Reporting Period:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 534 567 654 599" dg:style="font-size: 1.25em; color: darkslategray">Q2 2026</dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:IndustrialOutput dg:structure="section" dg:origin="1 193 1010 2287 2116">
+      <dg:chunk dg:structure="header" dg:origin="1 262 1010 759 1050" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="1 262 1010 294 1050">1.</dg:chunk> Statement of Operations</dg:chunk>
+      <dg:StatementOfOperations dg:structure="table" dg:origin="1 193 1211 2287 2116" xml:id="statementofoperations" dg:itemprop="references" dg:href="#reportingentityname">
+        <docset:SegmentRevenueActual dg:structure="tr" dg:origin="1 193 1211 2068 1237">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1211 536 1237" dg:style="font-weight: bold">Revenue &amp; Cost Line Items</docset:OperationalSegmentName>
+          <docset:SegmentRevenueActual dg:structure="td" dg:origin="1 754 1211 959 1237" dg:style="font-weight: bold">Q2 Actual (ECU)</docset:SegmentRevenueActual>
+          <docset:SegmentRevenueBudget dg:structure="td" dg:origin="1 1315 1211 1531 1237" dg:style="font-weight: bold">Q2 Budget (ECU)</docset:SegmentRevenueBudget>
+          <docset:RevenueVariance dg:structure="td" dg:origin="1 1876 1211 2068 1237" dg:style="font-weight: bold">Variance (ECU)</docset:RevenueVariance>
+        </docset:SegmentRevenueActual>
+        <docset:SegmentRevenueActual dg:structure="tr" dg:origin="1 193 1350 2287 1377">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1350 469 1377" dg:style="color: darkslategray">Organic Biomass Sales</docset:OperationalSegmentName>
+          <docset:SegmentRevenueActual dg:structure="td" xsi:type="integer" dg:value="24500000" dg:origin="1 1032 1350 1165 1377" dg:style="color: darkslategray" xml:id="segmentrevenueactual">24,500,000</docset:SegmentRevenueActual>
+          <docset:SegmentRevenueBudget dg:structure="td" xsi:type="integer" dg:value="22000000" dg:origin="1 1593 1350 1726 1377" dg:style="color: darkslategray" xml:id="segmentrevenuebudget">22,000,000</docset:SegmentRevenueBudget>
+          <docset:RevenueVariance dg:structure="td" xsi:type="integer" dg:value="2500000" dg:origin="1 2169 1350 2287 1377" dg:style="color: darkslategray" xml:id="revenuevariance">2,500,000</docset:RevenueVariance>
+        </docset:SegmentRevenueActual>
+        <docset:LicenseFeeRevenue dg:structure="tr" dg:origin="1 193 1490 2287 1517">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1490 589 1517" dg:style="color: darkslategray">Biomedical Splicing License Fees</docset:OperationalSegmentName>
+          <docset:SegmentRevenueActual dg:structure="td" xsi:type="integer" dg:value="12200000" dg:origin="1 1032 1490 1165 1517" dg:style="color: darkslategray" xml:id="segmentrevenueactual-2">12,200,000</docset:SegmentRevenueActual>
+          <docset:SegmentRevenueBudget dg:structure="td" xsi:type="integer" dg:value="13000000" dg:origin="1 1593 1490 1726 1517" dg:style="color: darkslategray" xml:id="segmentrevenuebudget-2">13,000,000</docset:SegmentRevenueBudget>
+          <docset:RevenueVariance dg:structure="td" dg:origin="1 2174 1490 2287 1517" dg:style="color: darkslategray" xml:id="revenuevariance-2">(800,000)</docset:RevenueVariance>
+        </docset:LicenseFeeRevenue>
+        <docset:TotalRevenue dg:structure="tr" dg:origin="1 193 1630 2287 1657">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1630 375 1657" dg:style="font-weight: bold; color: darkslategray">Total Revenue</docset:OperationalSegmentName>
+          <docset:SegmentRevenueActual dg:structure="td" xsi:type="integer" dg:value="36700000" dg:origin="1 1032 1630 1165 1657" dg:style="font-weight: bold; color: darkslategray" xml:id="segmentrevenueactual-3" dg:itemprop="derivedFrom" dg:href="#segmentrevenueactual #segmentrevenueactual-2">36,700,000</docset:SegmentRevenueActual>
+          <docset:SegmentRevenueBudget dg:structure="td" xsi:type="integer" dg:value="35000000" dg:origin="1 1593 1630 1726 1657" dg:style="font-weight: bold; color: darkslategray" xml:id="segmentrevenuebudget-3" dg:itemprop="derivedFrom" dg:href="#segmentrevenuebudget #segmentrevenuebudget-2">35,000,000</docset:SegmentRevenueBudget>
+          <docset:RevenueVariance dg:structure="td" xsi:type="integer" dg:value="1700000" dg:origin="1 2169 1630 2287 1657" dg:style="font-weight: bold; color: darkslategray" xml:id="revenuevariance-3" dg:itemprop="derivedFrom" dg:href="#revenuevariance #revenuevariance-2">1,700,000</docset:RevenueVariance>
+        </docset:TotalRevenue>
+        <docset:ShieldingOrContainmentCost dg:structure="tr" dg:origin="1 193 1770 2287 1836">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1770 593 1797; 1 193 1810 261 1836" dg:style="color: darkslategray">Bio-Containment &amp; Environmental Costs</docset:OperationalSegmentName>
+          <docset:SegmentCostActual dg:structure="td" dg:origin="1 1029 1790 1165 1817" dg:style="color: darkslategray">(9,100,000)</docset:SegmentCostActual>
+          <docset:SegmentCostBudget dg:structure="td" dg:origin="1 1590 1790 1726 1817" dg:style="color: darkslategray">(9,000,000)</docset:SegmentCostBudget>
+          <docset:CostVariance dg:structure="td" dg:origin="1 2174 1790 2287 1817" dg:style="color: darkslategray">(100,000)</docset:CostVariance>
+        </docset:ShieldingOrContainmentCost>
+        <docset:DirectCost dg:structure="tr" dg:origin="1 193 1950 2287 1976">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 1950 537 1976" dg:style="color: darkslategray">Water Purifying Power Inputs</docset:OperationalSegmentName>
+          <docset:SegmentCostActual dg:structure="td" dg:origin="1 1015 1950 1165 1976" dg:style="color: darkslategray">(11,400,000)</docset:SegmentCostActual>
+          <docset:SegmentCostBudget dg:structure="td" dg:origin="1 1576 1950 1726 1976" dg:style="color: darkslategray">(12,000,000)</docset:SegmentCostBudget>
+          <docset:CostVariance dg:structure="td" xsi:type="integer" dg:value="600000" dg:origin="1 2191 1950 2287 1976" dg:style="color: darkslategray">600,000</docset:CostVariance>
+        </docset:DirectCost>
+        <docset:NetOperatingIncome dg:structure="tr" dg:origin="1 193 2090 2287 2116">
+          <docset:OperationalSegmentName dg:structure="td" dg:origin="1 193 2090 469 2116" dg:style="font-weight: bold; color: darkslategray">Net Operating Income</docset:OperationalSegmentName>
+          <docset:SegmentRevenueActual dg:structure="td" xsi:type="integer" dg:value="16200000" dg:origin="1 1032 2090 1165 2116" dg:style="font-weight: bold; color: darkslategray">16,200,000</docset:SegmentRevenueActual>
+          <docset:SegmentRevenueBudget dg:structure="td" xsi:type="integer" dg:value="14000000" dg:origin="1 1593 2090 1726 2116" dg:style="font-weight: bold; color: darkslategray">14,000,000</docset:SegmentRevenueBudget>
+          <docset:RevenueVariance dg:structure="td" xsi:type="integer" dg:value="2200000" dg:origin="1 2169 2090 2287 2116" dg:style="font-weight: bold; color: darkslategray">2,200,000</docset:RevenueVariance>
+        </docset:NetOperatingIncome>
+      </dg:StatementOfOperations>
+    </docset:IndustrialOutput>
+    <docset:DebtCovenant dg:structure="section" dg:origin="1 262 2432 2129 2772" xml:id="debtcovenant" dg:itemprop="references" dg:href="#reportingentityname">
+      <dg:chunk dg:structure="header" dg:origin="1 262 2432 770 2471" dg:style="font-weight: bold; font-size: 1.5em; color: darkslateblue">
+        <dg:chunk dg:structure="lim" dg:origin="1 262 2432 294 2471">2.</dg:chunk> Debt Covenant Summary</dg:chunk>
+      <docset:CovenantComplianceNarrative dg:structure="p" dg:origin="1 262 2694 2129 2725; 1 262 2741 559 2772" dg:style="font-size: 1.25em; color: darkslategray" xml:id="covenantcompliancenarrative" dg:itemprop="references" dg:href="#dscrcovenantfloor">The DSCR stands at <docset:DebtServiceCoverageRatio xsi:type="date" dg:value="1982-10-01" dg:origin="1 557 2694 634 2725" xml:id="debtservicecoverageratio" dg:itemprop="greaterOf" dg:href="#dscrcovenantfloor">1.82x</docset:DebtServiceCoverageRatio> (compared to the covenant floor of <dg:DSCRCovenantFloor dg:origin="1 1127 2694 1203 2725" xml:id="dscrcovenantfloor">1.30x</dg:DSCRCovenantFloor>). Organic output targets are met with zero bio-containment failures recorded this quarter.</docset:CovenantComplianceNarrative>
+    </docset:DebtCovenant>
+  </docset:ReportingPackage>
+</dg:chunk>

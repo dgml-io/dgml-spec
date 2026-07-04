@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/SecuredCreditAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 229 221 2321 2898; 2 229 224 2321 1813">
+  <docset:SecuredCreditAgreement dg:structure="section" dg:origin="1 229 221 2321 693">
+    <dg:chunk dg:structure="header" dg:origin="1 846 221 1704 296" dg:style="font-weight: bold; font-size: 1.5em">Secured Credit Agreement</dg:chunk>
+    <docset:IntroductoryRecital dg:structure="p" dg:origin="1 229 452 2321 496; 1 229 518 2321 561; 1 229 583 2321 627; 1 229 649 871 693">This SECURED CREDIT AGREEMENT (this "Agreement") is entered into as of the Effective Date (as defined in Section 1.01 below) by and between <docset:BorrowerName dg:origin="1 880 518 1768 561" dg:style="font-weight: bold; text-transform: uppercase" xml:id="borrowername">HEPHAESTUS LUNAR EXTRACTORS LLC</docset:BorrowerName>, a <docset:BorrowerJurisdiction dg:origin="1 1810 518 2321 561; 1 229 583 696 627">Copernicus Crater Free Zone limited liability company</docset:BorrowerJurisdiction> (the "Borrower"), and <docset:LenderName dg:origin="1 1177 583 2053 627" dg:style="font-weight: bold; text-transform: uppercase" xml:id="lendername">ORBITAL DEVELOPMENT BANK (ODB)</docset:LenderName>, a multilateral financial institution (the "Lender").</docset:IntroductoryRecital>
+  </docset:SecuredCreditAgreement>
+  <docset:DefinedTerms dg:structure="section" dg:origin="1 229 806 2270 1458">
+    <dg:chunk dg:structure="header" dg:origin="1 229 806 1034 849" dg:style="font-weight: bold">Article I: Definitions and Cross-References</dg:chunk>
+    <docset:DefinedTerms dg:structure="section" dg:origin="1 229 891 2270 1458">
+      <dg:chunk dg:structure="header" dg:origin="1 229 891 764 935" dg:style="font-weight: bold">Section 1.01. Defined Terms.</dg:chunk>
+      <dg:chunk dg:structure="p" dg:origin="1 775 891 2239 935">As used in this Agreement, the following terms have the meanings specified below:</dg:chunk>
+      <dg:chunk dg:structure="ol" dg:origin="1 378 999 2270 1458">
+        <docset:EffectiveDateDefinition dg:structure="li" dg:origin="1 378 999 2196 1043; 1 378 1064 2270 1108" xml:id="effectivedatedefinition" dg:itemprop="effectiveOn" dg:href="#signaturedate">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Effective Date": The contract becomes legally binding on the date the last party signs this instrument, hereinafter explicitly identified as the "Signature Date" in the execution block at the end of this document.</docset:EffectiveDateDefinition>
+        <docset:CollateralDescription dg:structure="li" dg:origin="1 378 1159 1712 1203" xml:id="collateraldescription-2" dg:itemprop="references" dg:href="#collateraldescription" dg:value="Section 3.01">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Collateral": Has the meaning specified in Section 3.01 of this Agreement.</docset:CollateralDescription>
+        <docset:OperationalCovenantName dg:structure="li" dg:origin="1 378 1254 2226 1298; 1 378 1320 466 1363" xml:id="operationalcovenantname" dg:itemprop="references" dg:href="#operationalstandards" dg:value="Section 3.02">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Minimum Pressurization Standard": The mandatory micro-atmospheric parameter defined in Section 3.02.</docset:OperationalCovenantName>
+        <docset:FinancialCovenantName dg:structure="li" dg:origin="1 378 1414 1683 1458" xml:id="financialcovenantname" dg:itemprop="references" dg:href="#financialcovenant" dg:value="Section 5.01">
+          <dg:chunk dg:structure="lim">•</dg:chunk> "Required DSCR": The target ratio of <docset:FinancialCovenantThreshold dg:origin="1 1083 1414 1181 1458">1.25x</docset:FinancialCovenantThreshold> as specified in Section 5.01.</docset:FinancialCovenantName>
+      </dg:chunk>
+    </docset:DefinedTerms>
+  </docset:DefinedTerms>
+  <docset:CreditFacility dg:structure="section" dg:origin="1 229 1609 2321 1977">
+    <dg:chunk dg:structure="header" dg:origin="1 229 1609 786 1653" dg:style="font-weight: bold">Article II: The Credit Facility</dg:chunk>
+    <docset:CreditFacilityCommitment dg:structure="section" dg:origin="1 229 1695 2321 1804">
+      <dg:chunk dg:structure="header" dg:origin="1 229 1695 744 1738" dg:style="font-weight: bold">Section 2.01. Commitment.</dg:chunk>
+      <docset:CreditFacilityCommitment dg:structure="p" dg:origin="1 760 1695 2321 1738; 1 229 1760 1348 1804">Lender agrees to lend to Borrower a principal sum of <docset:PrincipalAmount dg:origin="1 1752 1695 2048 1738" dg:style="font-weight: bold">LC 150,000,000</docset:PrincipalAmount> (One Hundred Fifty Million Lunar Credits) subject to terms established herein.</docset:CreditFacilityCommitment>
+    </docset:CreditFacilityCommitment>
+    <docset:CreditFacilityInterest dg:structure="section" dg:origin="1 229 1868 2321 1977">
+      <dg:chunk dg:structure="header" dg:origin="1 229 1868 641 1911" dg:style="font-weight: bold">Section 2.02. Interest.</dg:chunk>
+      <docset:CreditFacilityInterest dg:structure="p" dg:origin="1 657 1868 2321 1911; 1 229 1933 1758 1977">The Loan shall bear interest at the <docset:InterestIndex dg:origin="1 1298 1868 2032 1911">Earth-Lunar Transit Index Rate (ELTIR)</docset:InterestIndex> plus <docset:InterestSpread xsi:type="decimal" dg:value="1.20" dg:origin="1 2136 1868 2249 1911">1.20%</docset:InterestSpread> per annum, subject to adjustment terms detailed in the accompanying Operating Statement.</docset:CreditFacilityInterest>
+    </docset:CreditFacilityInterest>
+  </docset:CreditFacility>
+  <docset:OperationalStandards dg:structure="section" dg:origin="1 229 2090 2321 2589">
+    <dg:chunk dg:structure="header" dg:origin="1 229 2090 1261 2134" dg:style="font-weight: bold">Article III: Collateral and Environmental Maintenance</dg:chunk>
+    <docset:CollateralDescription dg:structure="section" dg:origin="1 229 2176 2321 2351">
+      <dg:chunk dg:structure="header" dg:origin="1 229 2176 1203 2220" dg:style="font-weight: bold">Section 3.01. Grant of Security Interest (Collateral).</dg:chunk>
+      <docset:CollateralDescription dg:structure="p" dg:origin="1 1215 2176 2321 2220; 1 229 2241 2321 2285; 1 229 2307 555 2351" xml:id="collateraldescription">To secure the Obligations, Borrower hereby grants to Lender a first-priority security interest in the Geothermal Tap Turbine #3 and associated regolith extraction fleets (collectively, the "Collateral").</docset:CollateralDescription>
+    </docset:CollateralDescription>
+    <docset:OperationalCovenantName dg:structure="section" dg:origin="1 229 2414 2321 2589">
+      <dg:chunk dg:structure="header" dg:origin="1 229 2414 1169 2458" dg:style="font-weight: bold">Section 3.02. Minimum Pressurization Standard.</dg:chunk>
+      <docset:OperationalStandards dg:structure="p" dg:origin="1 1188 2414 2321 2458; 1 244 2480 2321 2524; 1 229 2546 907 2589" xml:id="operationalstandards">The Borrower shall maintain continuous atmospheric pressure (<docset:OperationalThreshold dg:origin="1 244 2480 796 2524">101.3 kPa, 21% O2, 79% N2</docset:OperationalThreshold>) inside all human-habitable maintenance chambers. This operational metric is the "<docset:OperationalCovenantName dg:origin="1 253 2546 907 2589" dg:style="font-weight: bold">Minimum Pressurization Standard</docset:OperationalCovenantName>".</docset:OperationalStandards>
+    </docset:OperationalCovenantName>
+  </docset:OperationalStandards>
+  <dg:FinancialCovenant dg:structure="section" dg:origin="1 229 2703 2321 2898">
+    <dg:chunk dg:structure="header" dg:origin="1 229 2703 826 2746" dg:style="font-weight: bold">Article IV: Financial Covenants</dg:chunk>
+    <docset:FinancialCovenantName dg:structure="section" dg:origin="1 229 2788 2321 2898">
+      <dg:chunk dg:structure="header" dg:origin="1 229 2788 1202 2832" dg:style="font-weight: bold">Section 5.01. Debt Service Coverage Ratio (DSCR).</dg:chunk>
+      <dg:FinancialCovenant dg:structure="p" dg:origin="1 1216 2788 2321 2832; 1 229 2854 1383 2898" xml:id="financialcovenant">The Borrower covenants to maintain a DSCR of not less than <docset:FinancialCovenantThreshold dg:origin="1 229 2854 328 2898">1.25x</docset:FinancialCovenantThreshold> (the "<docset:FinancialCovenantName dg:origin="1 442 2854 747 2898" dg:style="font-weight: bold">Required DSCR</docset:FinancialCovenantName>") at the close of each fiscal quarter.</dg:FinancialCovenant>
+    </docset:FinancialCovenantName>
+  </dg:FinancialCovenant>
+  <docset:EventsOfDefault dg:structure="section" dg:origin="2 229 224 2321 1813">
+    <dg:chunk dg:structure="header" dg:origin="2 229 224 749 268" dg:style="font-weight: bold">Article V: Events of Default</dg:chunk>
+    <docset:EventsOfDefault dg:structure="section" dg:origin="2 229 310 2321 1813">
+      <dg:chunk dg:structure="header" dg:origin="2 229 310 918 354" dg:style="font-weight: bold">Section 6.01. Environmental Default.</dg:chunk>
+      <docset:DefaultTriggerDescription dg:structure="p" dg:origin="2 929 310 2321 354; 2 229 376 2321 420; 2 229 441 2321 485; 2 229 507 473 551" xml:id="defaulttriggerdescription" dg:itemprop="references" dg:href="#defaultcureperiod" dg:value="Section 3.02">Any failure to maintain the "Minimum Pressurization Standard" (defined in Section 3.02) for a continuous period exceeding <docset:DefaultCurePeriod dg:origin="2 1137 376 1673 420" xml:id="defaultcureperiod">seventy-two (72) Earth hours</docset:DefaultCurePeriod> constitutes an immediate Event of Default under this Agreement, allowing <docset:LenderRemedyOnDefault dg:origin="2 978 441 2102 485" xml:id="lenderremedyondefault" dg:itemprop="references" dg:href="#collateraldescription">full acceleration of the loan and seizure of the "Collateral"</docset:LenderRemedyOnDefault> (defined in Section 3.01).</docset:DefaultTriggerDescription>
+      <dg:chunk dg:structure="p" dg:origin="2 229 655 2295 699">IN WITNESS WHEREOF, the parties hereto have caused this Agreement to be executed as of the date written below.</dg:chunk>
+      <dg:chunk dg:structure="ul" dg:origin="2 229 894 1036 1813">
+        <dg:chunk dg:structure="li" dg:origin="2 229 894 831 1004">
+          <dg:chunk dg:structure="header" dg:origin="2 229 894 509 938" dg:style="font-weight: bold; text-transform: uppercase">BORROWER:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="2 229 960 831 1004">
+            <docset:BorrowerExecution dg:origin="2 229 960 831 1004" xml:id="borrowerexecution" dg:itemprop="signatoryOf" dg:href="#borrowername">Hephaestus Lunar Extractors LLC</docset:BorrowerExecution>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="2 229 1091 292 1135">
+          <dg:chunk dg:structure="header" dg:origin="2 229 1091 292 1135">By:</dg:chunk>
+          <dg:chunk dg:structure="p">___________________________</dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="2 229 1157 611 1201">
+          <dg:chunk dg:structure="header" dg:origin="2 229 1157 346 1201">Name:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="2 357 1157 611 1201">
+            <docset:BorrowerExecution dg:origin="2 357 1157 611 1201">Marcus Vance</docset:BorrowerExecution>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="2 229 1222 828 1266">
+          <dg:chunk dg:structure="header" dg:origin="2 229 1222 324 1266">Title:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="2 335 1222 828 1266">
+            <docset:BorrowerExecution dg:origin="2 335 1222 828 1266">Chief Mining Administrator</docset:BorrowerExecution>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="2 229 1222 1036 1332">
+          <dg:chunk dg:structure="header" dg:origin="2 839 1222 1036 1266" dg:style="font-weight: bold; text-transform: uppercase">LENDER:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="2 229 1288 703 1332">
+            <docset:LenderExecution dg:origin="2 229 1288 703 1332" xml:id="lenderexecution" dg:itemprop="signatoryOf" dg:href="#lendername">Orbital Development Bank</docset:LenderExecution>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="2 229 1091 894 1463">
+          <dg:chunk dg:structure="header" dg:origin="2 229 1419 292 1463">By:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="2 303 1091 894 1135">___________________________</dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="2 229 1485 718 1529">
+          <dg:chunk dg:structure="header" dg:origin="2 229 1485 346 1529">Name:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="2 357 1485 718 1529">
+            <docset:LenderExecution dg:origin="2 357 1485 718 1529">Elara Vance-Kovacs</docset:LenderExecution>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="2 229 1551 967 1594">
+          <dg:chunk dg:structure="header" dg:origin="2 229 1551 324 1594">Title:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="2 335 1551 967 1594">
+            <docset:LenderExecution dg:origin="2 335 1551 967 1594">Director of Lunar Credit Operations</docset:LenderExecution>
+          </dg:chunk>
+        </dg:chunk>
+        <dg:chunk dg:structure="li" dg:origin="2 229 1770 780 1813">
+          <dg:chunk dg:structure="header" dg:origin="2 229 1770 524 1813" dg:style="font-weight: bold">Signature Date:</dg:chunk>
+          <dg:chunk dg:structure="p" dg:origin="2 535 1770 780 1813">
+            <docset:SignatureDate xsi:type="date" dg:value="2026-06-26" dg:origin="2 535 1770 780 1813" xml:id="signaturedate">June 26, 2026</docset:SignatureDate>
+          </dg:chunk>
+        </dg:chunk>
+      </dg:chunk>
+    </docset:EventsOfDefault>
+  </docset:EventsOfDefault>
+</dg:chunk>

@@ -1,0 +1,12 @@
+{
+  "id": "ezr2ye26kqao",
+  "name": "Secured Credit Agreement",
+  "description": "A legal contract outlining the terms and conditions under which a lender provides credit to a borrower.",
+  "key_questions": [
+    "Who is the Borrower?",
+    "Who is the Lender?",
+    "What is the principal amount of the loan?",
+    "What is the signature date of the agreement?",
+    "What is the collateral provided for the loan?"
+  ]
+}

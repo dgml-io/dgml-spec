@@ -1,0 +1,12 @@
+{
+  "id": "2bl2bjtyupmt",
+  "name": "Manager Valuation Memorandum",
+  "description": "A document providing an independent valuation of a real estate asset, outlining methodology, key assumptions, and appraised value.",
+  "key_questions": [
+    "What is the name of the property being valued?",
+    "What valuation methodology was used (e.g., DCF)?",
+    "What is the appraised capitalization value?",
+    "What are the key valuation assumptions (e.g., base discount rate, terminal cap rate, holding period)?",
+    "What is the resulting Loan-to-Value (LTV) ratio for the asset?"
+  ]
+}

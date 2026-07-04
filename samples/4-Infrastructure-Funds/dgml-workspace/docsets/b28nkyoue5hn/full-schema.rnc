@@ -1,0 +1,484 @@
+# ==========================================================================
+# DGML docset schema — Credit and Security Agreement
+# RELAX NG Compact.  Data types observed in 10 .dgml.xml file(s):
+#   element text is the RAW page text; the normalized, typed value is
+#   carried by @dg:value, described by @xsi:type (XSD built-in names).
+# `# Field: value` comments are the LOSSLESS schema.json serialization;
+#   regenerate the JSON via dgml_core.generation.rnc.rnc_to_schema_dict.
+# ==========================================================================
+
+default namespace docset = "http://dgml.io/dgml-io/CreditAndSecurityAgreement"
+namespace dg = "http://dgml.io/ns/dg#"
+namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = dg.chunk
+
+# --- attributes common to every DGML element ------------------------
+# dg:origin  = grounding bbox: "page x1 y1 x2 y2"
+# dg:itemprop / dg:href = semantic link (predicate + '#id' target(s))
+common.atts =
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  attribute dg:value { text }?,
+  attribute xsi:type { text }?
+
+# --- generic structural chunk (unlabeled scaffolding) ----------------
+dg.chunk = element dg:chunk { common.atts, mixed { any.docset* } }
+
+# a concept private to ONE document renders in the dg: namespace instead
+# of docset: (the shared-tag rule) — same shape, unshared vocabulary
+dg.private = element dg:* { common.atts, mixed { any.docset* } }
+
+# any docset element may appear where structure allows it
+any.docset = dg.chunk
+  | dg.private
+  | AgreementDate
+  | BiologicalContainmentCovenant
+  | BorrowerParty
+  | CollateralOrSecurityDescription
+  | CreditAgreementName
+  | CreditCommitment
+  | CreditCurrency
+  | CreditFacilityTerms
+  | CreditLineType
+  | CreditPrincipalAmount
+  | DebtServiceReserve
+  | EnvironmentalOrRemediationCovenant
+  | EquipmentDepreciationCovenants
+  | EventOfDefaultRemedies
+  | FinancialReportingCovenants
+  | FundedPurpose
+  | GeographicLocation
+  | InterestRateBenchmark
+  | InterestRateSpread
+  | InterestRateStructure
+  | LenderParty
+  | OperationalRiskCovenants
+  | RemediationEscrowRate
+  | ReserveMinimumBalance
+  | ReserveOrEscrowRequirement
+  | RevenueAssignmentCovenant
+  | RevenueAssignmentPercentage
+  | RiskMitigationObligation
+  | SeismicRiskCovenant
+  | StructuralIntegrityCovenant
+
+# ------------------------------------------------------------------
+# Description: "The date on which the agreement is executed or dated"
+# Kind: inline
+# Parent: CreditAgreementName
+# Example: "June 26, 2026"
+# Examples: ["June 26, 2026"]
+# Observed: 10 occurrence(s)
+# Data type (from DGML): date(10) of 10 occurrence(s)
+AgreementDate = element AgreementDate {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "date" },
+    attribute dg:value { xsd:date })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "A covenant requiring the borrower to maintain containment standards for biological or microbial materials"
+# Kind: section
+# Parent: OperationalRiskCovenants
+# Example: "Magnetic Deflector Upkeep"
+# Examples: ["Magnetic Deflector Upkeep", "ARTICLE II: CONTAINMENT & SAFETY CONSTRAINTS", "Microbiological Containment & Liabilities"]
+# Observed: 6 occurrence(s); dg:structure: section(5), p(1)
+# Children (from schema hierarchy): RiskMitigationObligation
+BiologicalContainmentCovenant = element BiologicalContainmentCovenant {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The entity receiving credit and assuming repayment obligations under the agreement"
+# Kind: inline
+# Parent: CreditCommitment
+# Example: "Minos Vista Properties"
+# Examples: ["Minos Vista Properties", "Conamara Biosphere LLC", "Carthage Resources PLC"]
+# Observed: 10 occurrence(s)
+BorrowerParty = element BorrowerParty {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The assets or collateral pledged to secure the credit facility"
+# Kind: inline
+# Parent: EventOfDefaultRemedies
+# Example: "collateralized sub-ice lease rights"
+# Examples: ["collateralized sub-ice lease rights"]
+# Observed: 1 occurrence(s)
+CollateralOrSecurityDescription = element CollateralOrSecurityDescription {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The formal title of the credit or loan agreement document"
+# Kind: section
+# Example: "Acquisition Credit Deed"
+# Examples: ["Acquisition Credit Deed", "Credit and Security Agreement", "Industrial Infrastructure Credit Agreement"]
+# Observed: 10 occurrence(s); dg:structure: section(10)
+# Children (from schema hierarchy): AgreementDate, CreditCommitment, RevenueAssignmentCovenant
+CreditAgreementName = element CreditAgreementName {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The section formally stating the lender's commitment to extend credit to the borrower"
+# Kind: section
+# Parent: CreditAgreementName
+# Example: "BETWEEN: Minos Vista Properties (the \"Borrower\"), and Sol System Luxury Real Est"
+# Examples: ["BETWEEN: Minos Vista Properties (the \"Borrower\"), and Sol System Luxury Real Est", "Credit Limit", "Lender provides 280,000,000 ECU to fund high-strength diamondoid viewing galleri"]
+# Observed: 23 occurrence(s); dg:structure: p(14), section(9)
+# Children (from schema hierarchy): BorrowerParty, CreditCurrency, CreditLineType, CreditPrincipalAmount, FundedPurpose, GeographicLocation, LenderParty
+CreditCommitment = element CreditCommitment {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The currency unit in which the credit facility is denominated"
+# Kind: inline
+# Parent: CreditCommitment
+# Example: "ECU"
+# Examples: ["ECU", "Europa Credit Units (ECU)"]
+# Observed: 5 occurrence(s)
+CreditCurrency = element CreditCurrency {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The section establishing the structure, type, and conditions of the credit facility or loan"
+# Kind: section
+# Example: "ARTICLE I: LOAN PROVISIONS"
+# Examples: ["ARTICLE I: LOAN PROVISIONS", "ARTICLE I: CREDIT FACILITY", "BETWEEN: Carthage Resources PLC (the \"Borrower\"), and Asteroid Belt Mining Trust"]
+# Observed: 13 occurrence(s); dg:structure: section(9), p(4)
+# Children (from schema hierarchy): InterestRateStructure
+CreditFacilityTerms = element CreditFacilityTerms {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The classification or structural type of the credit facility such as term loan, revolving line, or mezzanine"
+# Kind: inline
+# Parent: CreditCommitment
+# Example: "secured credit line"
+# Examples: ["secured credit line", "Credit Line", "term loan facility"]
+# Observed: 8 occurrence(s); dg:structure: section(2)
+CreditLineType = element CreditLineType {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The principal monetary amount of the credit facility or loan extended to the borrower"
+# Kind: inline
+# Parent: CreditCommitment
+# Example: "280,000,000"
+# Examples: ["280,000,000", "120,000,000 ECU", "620,000,000 ECU"]
+# Observed: 10 occurrence(s)
+# Data type (from DGML): integer(5) of 10 occurrence(s)
+CreditPrincipalAmount = element CreditPrincipalAmount {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "integer" },
+    attribute dg:value { xsd:integer })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "A dedicated account funded to cover debt service obligations in the event of borrower shortfall"
+# Kind: section
+# Parent: OperationalRiskCovenants
+# Example: "Restricted Payments and Debt Service Reserve Account (DSRA)"
+# Examples: ["Restricted Payments and Debt Service Reserve Account (DSRA)", "Borrower shall establish and maintain a DSRA with Lender. At all times, the DSRA"]
+# Observed: 2 occurrence(s); dg:structure: section(1), p(1)
+DebtServiceReserve = element DebtServiceReserve {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The section imposing obligations on the borrower related to environmental remediation or planetary impact"
+# Kind: section
+# Example: "ENVIRONMENTAL EXPENDITURES"
+# Examples: ["ENVIRONMENTAL EXPENDITURES", "Planetary Remediation Allocations"]
+# Observed: 2 occurrence(s); dg:structure: section(2)
+# Children (from schema hierarchy): ReserveOrEscrowRequirement
+EnvironmentalOrRemediationCovenant = element EnvironmentalOrRemediationCovenant {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The section governing reserve funding obligations tied to equipment degradation or replacement"
+# Kind: section
+# Example: "INFRASTRUCTURE REPAIR ESCROWS"
+# Examples: ["INFRASTRUCTURE REPAIR ESCROWS", "Geothermal Turbine Reserves.", "SINKING FUND COVENANTS"]
+# Observed: 4 occurrence(s); dg:structure: section(4)
+# Children (from schema hierarchy): SeismicRiskCovenant
+EquipmentDepreciationCovenants = element EquipmentDepreciationCovenants {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The section describing lender remedies triggered upon an event of default"
+# Kind: section
+# Parent: FinancialReportingCovenants
+# Example: "Remedies"
+# Examples: ["Remedies", "Upon the occurrence of an Event of Default (including pressure breaches, biologi"]
+# Observed: 2 occurrence(s); dg:structure: section(1), p(1)
+# Children (from schema hierarchy): CollateralOrSecurityDescription
+EventOfDefaultRemedies = element EventOfDefaultRemedies {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The section governing borrower obligations to deliver financial reports or meet financial maintenance tests"
+# Kind: section
+# Example: "ARTICLE III: FINANCIAL REPORTING & DEFAULT REMEDIES"
+# Examples: ["ARTICLE III: FINANCIAL REPORTING & DEFAULT REMEDIES"]
+# Observed: 1 occurrence(s); dg:structure: section(1)
+# Children (from schema hierarchy): EventOfDefaultRemedies
+FinancialReportingCovenants = element FinancialReportingCovenants {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The specific infrastructure, project, or operational use for which loan proceeds are designated"
+# Kind: inline
+# Parent: CreditCommitment
+# Example: "high-strength diamondoid viewing galleries, guest villas, and associated radiati"
+# Examples: ["high-strength diamondoid viewing galleries, guest villas, and associated radiati", "expand high-yield algae agricultural cells and bio-fuel generation domes in the ", "high-pressure water extraction rigs, water-splitting infrastructure, and liquefi"]
+# Observed: 11 occurrence(s)
+FundedPurpose = element FundedPurpose {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The physical location, region, or installation where the financed project or collateral is situated"
+# Kind: inline
+# Parent: CreditCommitment
+# Example: "Jovian Maritime Authority"
+# Examples: ["Jovian Maritime Authority", "Lunar-Jovian Banking Accord", "Io, Europa, and Ganymede"]
+# Observed: 5 occurrence(s)
+GeographicLocation = element GeographicLocation {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The reference rate index used as the basis for floating interest rate calculations"
+# Kind: inline
+# Parent: InterestRateStructure
+# Example: "Ganymede Interbank Offered Rate (GIBOR)"
+# Examples: ["Ganymede Interbank Offered Rate (GIBOR)", "GIBOR"]
+# Observed: 2 occurrence(s)
+InterestRateBenchmark = element InterestRateBenchmark {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The margin or spread added to the benchmark rate to determine the applicable interest rate"
+# Kind: inline
+# Parent: InterestRateStructure
+# Example: "3.50% per annum"
+# Examples: ["3.50% per annum", "5.75%"]
+# Observed: 2 occurrence(s)
+# Data type (from DGML): decimal(1) of 2 occurrence(s)
+InterestRateSpread = element InterestRateSpread {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The interest rate, index, or spread applicable to the outstanding principal balance"
+# Kind: section
+# Parent: CreditFacilityTerms
+# Example: "Interest Rate & Calculations"
+# Examples: ["Interest Rate & Calculations", "360-day Jovian standard orbital year"]
+# Observed: 2 occurrence(s); dg:structure: section(1)
+# Children (from schema hierarchy): InterestRateBenchmark, InterestRateSpread
+InterestRateStructure = element InterestRateStructure {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The financial institution or entity extending credit under the agreement"
+# Kind: inline
+# Parent: CreditCommitment
+# Example: "Sol System Luxury Real Estate Trust"
+# Examples: ["Sol System Luxury Real Estate Trust", "Ganymede Agrifinance Corp.", "Asteroid Belt Mining Trust"]
+# Observed: 10 occurrence(s)
+LenderParty = element LenderParty {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The section imposing borrower obligations to manage a domain-specific operational or safety risk"
+# Kind: section
+# Example: "ARTICLE II: SOLAR STORM RISK COVENANTS"
+# Examples: ["ARTICLE II: SOLAR STORM RISK COVENANTS", "ARTICLE II: SPECIALIZED OPERATIONAL & FINANCIAL COVENANTS"]
+# Observed: 2 occurrence(s); dg:structure: section(2)
+# Children (from schema hierarchy): BiologicalContainmentCovenant, DebtServiceReserve, StructuralIntegrityCovenant
+OperationalRiskCovenants = element OperationalRiskCovenants {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The per-unit monetary contribution rate required for environmental remediation escrow funding"
+# Kind: inline
+# Parent: ReserveOrEscrowRequirement
+# Example: "500,000 ECU per gigaliter processed"
+# Examples: ["500,000 ECU per gigaliter processed"]
+# Observed: 1 occurrence(s)
+RemediationEscrowRate = element RemediationEscrowRate {
+  common.atts,
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The minimum monetary amount the borrower must maintain in a reserve or escrow account"
+# Kind: inline
+# Parent: RiskMitigationObligation
+# Example: "50 millisieverts per standard year"
+# Examples: ["50 millisieverts per standard year", "500,000,000 ECU", "50,000,000 ECU"]
+# Observed: 12 occurrence(s)
+# Data type (from DGML): decimal(1) of 12 occurrence(s)
+ReserveMinimumBalance = element ReserveMinimumBalance {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "A covenant requiring the borrower to fund and maintain a dedicated reserve or escrow account"
+# Kind: section
+# Parent: EnvironmentalOrRemediationCovenant
+# Example: "Borrower covenants to fund an Environmental Remediation escrow of 500,000 ECU pe"
+# Examples: ["Borrower covenants to fund an Environmental Remediation escrow of 500,000 ECU pe", "Borrower must fund a CapEx reserve account with a minimum balance of 80,000,000 ", "Radiation Glass & Structural Escrow"]
+# Observed: 6 occurrence(s); dg:structure: p(4), section(2)
+# Children (from schema hierarchy): RemediationEscrowRate
+ReserveOrEscrowRequirement = element ReserveOrEscrowRequirement {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "A covenant requiring the borrower to assign a specified share of revenues or IP proceeds to the lender"
+# Kind: section
+# Parent: CreditAgreementName
+# Example: "ARTICLE II: INTELLECTUAL PROPERTY REVENUES"
+# Examples: ["ARTICLE II: INTELLECTUAL PROPERTY REVENUES", "License Fee Assignment.", "Borrower agrees to assign 20% of all intellectual property license revenues gene"]
+# Observed: 3 occurrence(s); dg:structure: section(2), p(1)
+# Children (from schema hierarchy): RevenueAssignmentPercentage
+RevenueAssignmentCovenant = element RevenueAssignmentCovenant {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "The percentage of revenues or license fees assigned to the lender under a revenue assignment covenant"
+# Kind: inline
+# Parent: RevenueAssignmentCovenant
+# Example: "20%"
+# Examples: ["20%"]
+# Observed: 1 occurrence(s)
+# Data type (from DGML): decimal(1) of 1 occurrence(s)
+RevenueAssignmentPercentage = element RevenueAssignmentPercentage {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  text
+}
+
+# ------------------------------------------------------------------
+# Description: "The specific covenant or maintenance requirement the borrower must fulfill to address the primary operational risk"
+# Kind: section
+# Parent: BiologicalContainmentCovenant
+# Example: "Borrower covenants to preserve magnetic deflector fields at full operational sta"
+# Examples: ["Borrower covenants to preserve magnetic deflector fields at full operational sta", "Borrower shall verify that all methanogen-derived yeast strains are kept in vacu"]
+# Observed: 2 occurrence(s); dg:structure: p(2)
+# Children (from schema hierarchy): ReserveMinimumBalance
+RiskMitigationObligation = element RiskMitigationObligation {
+  common.atts,
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "A covenant addressing borrower obligations arising from seismic or tectonic activity affecting the financed infrastructure"
+# Kind: section
+# Parent: EquipmentDepreciationCovenants
+# Example: "Tectonic Track Displacement"
+# Examples: ["Tectonic Track Displacement", "Borrower must fund a rolling reserve account with at least 50,000,000 ECU. This ", "Financial Covenant Adjustments for Lunar Alignment"]
+# Observed: 5 occurrence(s); dg:structure: section(3), p(1)
+# Data type (from DGML): decimal(1) of 5 occurrence(s)
+SeismicRiskCovenant = element SeismicRiskCovenant {
+  attribute dg:structure { text }?,
+  attribute dg:origin { text }?,
+  attribute xml:id { xsd:ID }?,
+  attribute dg:itemprop { text }?,
+  attribute dg:href { text }?,
+  ((attribute xsi:type { "decimal" },
+    attribute dg:value { xsd:decimal })
+   | attribute dg:value { text })?,  # bare dg:value = link payload
+  mixed { any.docset* }
+}
+
+# ------------------------------------------------------------------
+# Description: "A covenant requiring the borrower to maintain a minimum structural or pressure integrity standard"
+# Kind: section
+# Parent: OperationalRiskCovenants
+# Example: "Pressure Hull Maintenance & Reporting"
+# Examples: ["Pressure Hull Maintenance & Reporting", "twelve (12) consecutive hours"]
+# Observed: 2 occurrence(s); dg:structure: section(1)
+StructuralIntegrityCovenant = element StructuralIntegrityCovenant {
+  common.atts,
+  mixed { any.docset* }
+}
+

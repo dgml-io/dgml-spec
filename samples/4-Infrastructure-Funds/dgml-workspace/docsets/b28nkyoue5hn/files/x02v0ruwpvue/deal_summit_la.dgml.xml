@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/CreditAndSecurityAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2297 2267">
+  <docset:CreditAgreementName dg:structure="section" dg:origin="1 193 258 2297 2267" xml:id="creditagreementname" dg:itemprop="effectiveOn" dg:href="#agreementdate">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 1183 311" dg:style="font-weight: bold; font-size: 2em">Specialist Research Credit Facility</dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 262 567 587 599">
+      <dg:chunk dg:structure="li" dg:origin="1 262 567 587 599">
+        <dg:chunk dg:structure="header" dg:origin="1 262 567 380 599" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">DATED:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 389 567 587 599">
+          <docset:AgreementDate xsi:type="date" dg:value="2026-06-26" dg:origin="1 389 567 587 599" dg:style="font-size: 1.25em; color: darkslategray" xml:id="agreementdate">June 26, 2026</docset:AgreementDate>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:CreditFacilityTerms dg:structure="p" dg:origin="1 262 933 1899 964" dg:style="font-size: 1.25em; color: darkslategray" xml:id="creditfacilityterms">BETWEEN: <docset:BorrowerParty dg:origin="1 437 933 856 964" dg:style="font-weight: bold" xml:id="borrowerparty" dg:itemprop="references" dg:href="#creditfacilityterms" dg:value="Borrower">Oyam Scientific Consortium</docset:BorrowerParty> (the "Borrower"), and <docset:LenderParty dg:origin="1 1164 933 1689 964" dg:style="font-weight: bold" xml:id="lenderparty" dg:itemprop="references" dg:href="#creditfacilityterms" dg:value="Lender">Lunar-Jovian Research Foundation</docset:LenderParty> (the "Lender").</docset:CreditFacilityTerms>
+    <docset:CreditFacilityTerms dg:structure="section" dg:origin="1 193 1376 2297 1655">
+      <dg:chunk dg:structure="header" dg:origin="1 262 1376 939 1415" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslateblue">ARTICLE I: RESEARCH TERM LOAN</dg:chunk>
+      <docset:CreditCommitment dg:structure="section" dg:origin="1 193 1586 2297 1655" xml:id="creditcommitment" dg:itemprop="references" dg:href="#borrowerparty" dg:value="Borrower">
+        <dg:chunk dg:structure="header" dg:origin="1 193 1586 620 1612" dg:style="font-weight: bold; color: darkslategray">
+          <dg:chunk dg:structure="lim" dg:origin="1 193 1586 357 1612">Section 1.01.</dg:chunk> Credit Commitment.</dg:chunk>
+        <docset:CreditCommitment dg:structure="p" dg:origin="1 628 1586 2297 1612; 1 193 1628 376 1655" dg:style="color: darkslategray" xml:id="creditcommitment-2" dg:itemprop="valueFrom" dg:href="#creditcurrency" dg:value="ECU">Lender agrees to advance <docset:CreditPrincipalAmount xsi:type="integer" dg:value="95000000" dg:origin="1 948 1586 1081 1612" dg:style="font-weight: bold" xml:id="creditprincipalamount">95,000,000</docset:CreditPrincipalAmount>
+          <docset:CreditCurrency dg:origin="1 1089 1586 1145 1612" dg:style="font-weight: bold" xml:id="creditcurrency">ECU</docset:CreditCurrency> for the <docset:FundedPurpose dg:origin="1 1238 1586 2297 1612; 1 193 1628 376 1655">integration of deep-sea exploration hubs, quantum sensor systems, and marine telemetry collection grids</docset:FundedPurpose>.</docset:CreditCommitment>
+      </docset:CreditCommitment>
+    </docset:CreditFacilityTerms>
+    <dg:RevenueAssignmentCovenant dg:structure="section" dg:origin="1 193 1988 2297 2267">
+      <dg:chunk dg:structure="header" dg:origin="1 262 1988 1234 2028" dg:style="font-weight: bold; font-size: 1.5em; text-transform: uppercase; color: darkslateblue">ARTICLE II: INTELLECTUAL PROPERTY REVENUES</dg:chunk>
+      <dg:RevenueAssignmentCovenant dg:structure="section" dg:origin="1 193 2198 2297 2267">
+        <dg:chunk dg:structure="header" dg:origin="1 193 2198 686 2225" dg:style="font-weight: bold; color: darkslategray">
+          <dg:chunk dg:structure="lim" dg:origin="1 193 2198 357 2225">Section 2.01.</dg:chunk> License Fee Assignment.</dg:chunk>
+        <dg:RevenueAssignmentCovenant dg:structure="p" dg:origin="1 695 2198 2297 2225; 1 193 2240 698 2267" dg:style="color: darkslategray" xml:id="revenueassignmentcovenant" dg:itemprop="valueFrom" dg:href="#revenueassignmentpercentage" dg:value="20%">Borrower agrees to assign <dg:RevenueAssignmentPercentage xsi:type="decimal" dg:value="20" dg:origin="1 1017 2198 1070 2225" xml:id="revenueassignmentpercentage">20%</dg:RevenueAssignmentPercentage> of all intellectual property license revenues generated from oceanographic discovery records to Lender as an additional credit support mechanism.</dg:RevenueAssignmentCovenant>
+      </dg:RevenueAssignmentCovenant>
+    </dg:RevenueAssignmentCovenant>
+  </docset:CreditAgreementName>
+</dg:chunk>

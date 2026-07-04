@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/ManagerValuationMemorandum" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 206 258 2158 1092">
+  <docset:ValuationDocumentType dg:structure="section" dg:origin="1 206 258 2158 1092" xml:id="valuationdocumenttype" dg:itemprop="describes" dg:href="#propertyname">
+    <dg:chunk dg:structure="header" dg:origin="1 262 258 1156 311" dg:style="font-weight: bold; font-size: 1.5em">Refinery Valuation Reconciliation</dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 206 502 781 747">
+      <dg:chunk dg:structure="li" dg:origin="1 206 502 667 530">
+        <dg:chunk dg:structure="header" dg:origin="1 206 502 254 530" dg:style="font-weight: bold; color: darkslategray">TO:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 262 502 667 530">
+          <docset:RecipientOrganization dg:origin="1 262 502 667 530" dg:style="color: darkslategray" xml:id="recipientorganization">Asteroid Belt Mining Trust Board</docset:RecipientOrganization>
+        </dg:chunk>
+      </dg:chunk>
+      <dg:chunk dg:structure="li" dg:origin="1 206 719 781 747">
+        <dg:chunk dg:structure="header" dg:origin="1 206 719 370 747" dg:style="font-weight: bold; text-transform: uppercase; color: darkslategray">PROPERTY:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 378 719 781 747">
+          <docset:PropertyName dg:origin="1 378 719 781 747" dg:style="color: darkslategray" xml:id="propertyname">Carthage Hydro-Mining Refinery</docset:PropertyName>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:ValuationSummaryAndParameters dg:structure="p" dg:origin="1 262 1014 2158 1045; 1 262 1061 1254 1092" dg:style="color: darkslategray" xml:id="valuationsummaryandparameters" dg:itemprop="valueFrom" dg:href="#appraisedvalue" dg:value="810,000,000 ECU">The Carthage Hydro-Mining Refinery has an appraised asset value of <docset:AppraisedValue dg:origin="1 1231 1014 1488 1045" dg:style="font-weight: bold" xml:id="appraisedvalue" dg:itemprop="describes" dg:href="#propertyname">810,000,000 ECU</docset:AppraisedValue>. Capital calculations reflect current global pricing curves for deuterium fuel rods used in outer-planetary deep-space craft.</docset:ValuationSummaryAndParameters>
+  </docset:ValuationDocumentType>
+</dg:chunk>

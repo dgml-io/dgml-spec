@@ -1,0 +1,420 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/QuarterlyComplianceReport" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 240 235 2310 1852; 2 240 237 2255 2894; 3 240 272 2255 655; 4 240 238 2255 2494; 5 240 237 2310 2385; 6 240 237 2310 2979">
+  <docset:FacilityName dg:structure="section" dg:origin="1 240 235 2259 402">
+    <dg:chunk dg:structure="header" dg:origin="1 240 235 2259 302; 1 240 335 1492 402" dg:style="font-weight: bold; font-size: 2em">SET 8: <docset:FacilityName dg:origin="1 466 235 2259 302; 1 240 335 1492 402" dg:style="text-transform: uppercase">THE HOTEI REGIO CRYOVOLCANIC GEOTHERMAL TAP &amp; HEAVY WATER EXTRACTION PLANT</docset:FacilityName>
+    </dg:chunk>
+  </docset:FacilityName>
+  <docset:ReportingPeriodSubject dg:structure="section" dg:origin="1 240 557 2310 1852; 2 240 237 2255 2894; 3 240 272 2255 655; 4 240 238 2255 2494; 5 240 237 2310 2385; 6 240 237 2310 2979">
+    <dg:chunk dg:structure="header" dg:origin="1 240 557 2141 607; 1 240 632 701 682" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">
+      <docset:DocumentIdentifier dg:origin="1 240 557 607 607">DOCUMENT 8B</docset:DocumentIdentifier>: BORROWER'S <docset:ReportingDate dg:origin="1 999 557 1191 607" dg:style="text-transform: none">Q3 2146</docset:ReportingDate> QUARTERLY REPORTING PACKAGE &amp; VALUATION MEMO</dg:chunk>
+    <dg:chunk dg:structure="ul" dg:origin="1 240 774 1630 1130">
+      <dg:chunk dg:structure="li" dg:origin="1 240 774 1630 812">
+        <dg:chunk dg:structure="header" dg:origin="1 240 774 299 812" dg:style="font-weight: bold">To:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 309 774 1630 812">
+          <docset:AdministrativeAgent dg:origin="1 309 774 1630 812">Sol-System Interplanetary Development Bank (SSIDB), as Administrative Agent</docset:AdministrativeAgent>
+        </dg:chunk>
+      </dg:chunk>
+      <dg:chunk dg:structure="li" dg:origin="1 240 880 1351 918">
+        <dg:chunk dg:structure="header" dg:origin="1 240 880 347 918" dg:style="font-weight: bold">From:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 357 880 1351 918">
+          <docset:BorrowerEntity dg:origin="1 357 880 1351 918">Hotei Geothermal Energy &amp; Isotopic Partners LP (Borrower)</docset:BorrowerEntity>
+        </dg:chunk>
+      </dg:chunk>
+      <dg:chunk dg:structure="li" dg:origin="1 240 987 634 1024">
+        <dg:chunk dg:structure="header" dg:origin="1 240 987 334 1024" dg:style="font-weight: bold">Date:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 345 987 634 1024">
+          <docset:ReportingDate xsi:type="date" dg:value="2146-10-20" dg:origin="1 345 987 634 1024">October 20, 2146</docset:ReportingDate>
+        </dg:chunk>
+      </dg:chunk>
+      <dg:chunk dg:structure="li" dg:origin="1 240 1093 1491 1130">
+        <dg:chunk dg:structure="header" dg:origin="1 240 1093 388 1130" dg:style="font-weight: bold">Subject:</dg:chunk>
+        <dg:chunk dg:structure="p" dg:origin="1 399 1093 1491 1130">
+          <docset:ReportingPeriodSubject dg:origin="1 399 1093 1491 1130">Q3 2146 Financial Compliance Report &amp; Asset Valuation Analysis</docset:ReportingPeriodSubject>
+        </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <docset:OperationalNarrative dg:structure="section" dg:origin="1 240 1215 2310 1852">
+      <dg:chunk dg:structure="header" dg:origin="1 240 1215 1026 1259" dg:style="font-weight: bold; font-size: 1.25em; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="1 240 1215 277 1259">1.</dg:chunk> Financial and Operational Narrative</dg:chunk>
+      <docset:CovenantCompliance dg:structure="p" dg:origin="1 240 1315 2310 1352; 1 240 1371 2310 1408; 1 240 1427 2310 1465; 1 240 1483 1777 1521">Throughout the third quarter of 2146, the Hotei Regio facility operated in complete compliance with all covenants and technical metrics detailed in the Secured Credit Agreement (Document 8A). The cryovolcanic borehole casings maintained exceptional structural and thermal performance, posting a quarterly average Cryovolcanic Tap Stability Rating (CTSR) of <docset:CurrentPeriodValue xsi:type="decimal" dg:value="95.8" dg:origin="1 240 1483 357 1521">95.8%</docset:CurrentPeriodValue>, which comfortably exceeds the <docset:CovenantThreshold xsi:type="decimal" dg:value="91.0" dg:origin="1 891 1483 997 1521">91.0%</docset:CovenantThreshold> baseline standard specified in Section 4.01(1).</docset:CovenantCompliance>
+      <docset:OperationalThroughputNarrative dg:structure="p" dg:origin="1 240 1590 2310 1627; 1 240 1646 2310 1683; 1 240 1702 2310 1740; 1 240 1758 2310 1796; 1 240 1815 1103 1852">Deuterium oxide extraction volumes averaged <docset:CurrentPeriodValue dg:origin="1 1039 1590 1330 1627">17,950 kilograms</docset:CurrentPeriodValue> of pure heavy water per Titan sidereal day, successfully achieving the Heavy Water Yield Target of <docset:CovenantThreshold dg:origin="1 992 1646 1280 1683">17,500 kilograms</docset:CovenantThreshold> outlined in Section 4.01(2). Consequently, the Facility Loans accrued interest at the baseline floating rate of <docset:InterestRate dg:origin="1 1056 1702 1595 1740" dg:style="font-weight: bold">TIDOR plus 7.75% per annum</docset:InterestRate>, with no triggers of the Thermal Runaway Containment Risk Premium. Additionally, our escrow balances in the Localized Seismic Escrow were fully maintained at the required <docset:RestrictedEscrowReserve dg:origin="1 451 1815 722 1852" xml:id="restrictedescrowreserve">SC 500,000,000</docset:RestrictedEscrowReserve> under Section 4.01(3).</docset:OperationalThroughputNarrative>
+    </docset:OperationalNarrative>
+    <docset:ConsolidatedBalanceSheet dg:structure="section" dg:origin="2 240 237 2255 2894; 3 240 272 2255 655; 4 240 238 2255 2494">
+      <dg:chunk dg:structure="header" dg:origin="2 240 237 1125 281" dg:style="font-weight: bold; font-size: 1.25em; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="2 240 237 277 281">2.</dg:chunk> Financial Statements (SSIAS Compliant)</dg:chunk>
+      <docset:ConsolidatedBalanceSheet dg:structure="p" dg:origin="2 240 337 1478 374" dg:style="font-weight: bold">Table 8.1: Consolidated Balance Sheet &amp; Income Statement (Q3 2146)</docset:ConsolidatedBalanceSheet>
+      <dg:chunk dg:structure="p" dg:origin="2 240 443 829 476" dg:style="color: darkslategray">All figures in <docset:ReportingCurrency dg:origin="2 431 443 829 476">Millions of Sol Credits (SC)</docset:ReportingCurrency>
+      </dg:chunk>
+      <docset:ConsolidatedBalanceSheet dg:structure="table" dg:origin="2 295 610 2255 2894; 3 295 272 2255 305">
+        <dg:chunk dg:structure="tr" dg:origin="2 815 610 1735 644">
+          <dg:chunk dg:structure="td" dg:origin="2 815 610 1735 644" dg:style="font-weight: bold; text-transform: uppercase; color: white">BALANCE SHEET &amp; INCOME STATEMENT CONSOLIDATION</dg:chunk>
+          <dg:chunk dg:structure="td"/>
+          <dg:chunk dg:structure="td"/>
+          <dg:chunk dg:structure="td"/>
+        </dg:chunk>
+        <docset:BalanceSheetColumnHeader dg:structure="tr" dg:origin="2 295 744 2255 777">
+          <docset:Account dg:structure="td" dg:origin="2 295 744 755 777" dg:style="font-weight: bold; color: white">Category / Account Item</docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td" dg:origin="2 1284 744 1424 777" dg:style="font-weight: bold; color: white">Q3 2146</docset:CurrentPeriodValue>
+          <docset:PriorPeriodValue dg:structure="td" dg:origin="2 1700 744 1840 777" dg:style="font-weight: bold; color: white">Q2 2146</docset:PriorPeriodValue>
+          <docset:PeriodVariancePercent dg:structure="td" dg:origin="2 2015 744 2255 777" dg:style="font-weight: bold; color: white">Variance (%)</docset:PeriodVariancePercent>
+        </docset:BalanceSheetColumnHeader>
+        <docset:BalanceSheetColumnHeader dg:structure="tr" dg:origin="2 295 877 415 910">
+          <docset:Account dg:structure="td" dg:origin="2 295 877 415 910" dg:style="font-weight: bold; text-transform: uppercase">ASSETS</docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td"/>
+          <docset:PriorPeriodValue dg:structure="td"/>
+          <docset:PeriodVariancePercent dg:structure="td"/>
+        </docset:BalanceSheetColumnHeader>
+        <docset:Account dg:structure="tr" dg:origin="2 295 1011 2255 1044">
+          <docset:Account dg:structure="td" dg:origin="2 295 1011 755 1044">Cash &amp; Cash Equivalents</docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="612.50" dg:origin="2 1304 1011 1424 1044">612.50</docset:CurrentPeriodValue>
+          <docset:PriorPeriodValue dg:structure="td" xsi:type="decimal" dg:value="585.20" dg:origin="2 1720 1011 1840 1044">585.20</docset:PriorPeriodValue>
+          <docset:PeriodVariancePercent dg:structure="td" xsi:type="decimal" dg:value="4.66" dg:origin="2 2135 1011 2255 1044">+4.66%</docset:PeriodVariancePercent>
+        </docset:Account>
+        <docset:Account dg:structure="tr" dg:origin="2 295 1137 2255 1177">
+          <docset:Account dg:structure="td" dg:origin="2 295 1137 820 1177" xml:id="account">Localized Seismic Escrow[1]</docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="500.00" dg:origin="2 1304 1144 1424 1177">500.00</docset:CurrentPeriodValue>
+          <docset:PriorPeriodValue dg:structure="td" xsi:type="decimal" dg:value="500.00" dg:origin="2 1720 1144 1840 1177">500.00</docset:PriorPeriodValue>
+          <docset:PeriodVariancePercent dg:structure="td" xsi:type="decimal" dg:value="0.00" dg:origin="2 2135 1144 2255 1177">+0.00%</docset:PeriodVariancePercent>
+        </docset:Account>
+        <docset:Account dg:structure="tr" dg:origin="2 295 1277 2255 1361">
+          <docset:Account dg:structure="td" dg:origin="2 295 1277 835 1311; 2 295 1327 515 1361">Heavy Water &amp; Cryogenic Gas Inventories</docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="820.10" dg:origin="2 1304 1302 1424 1336">820.10</docset:CurrentPeriodValue>
+          <docset:PriorPeriodValue dg:structure="td" xsi:type="decimal" dg:value="775.00" dg:origin="2 1720 1302 1840 1336">775.00</docset:PriorPeriodValue>
+          <docset:PeriodVariancePercent dg:structure="td" xsi:type="decimal" dg:value="5.82" dg:origin="2 2135 1302 2255 1336">+5.82%</docset:PeriodVariancePercent>
+        </docset:Account>
+        <docset:Account dg:structure="tr" dg:origin="2 295 1461 2255 1544">
+          <docset:Account dg:structure="td" dg:origin="2 295 1461 895 1494; 2 295 1504 440 1544" xml:id="account-2">Cryovolcanic Plant &amp; Equipment (Net)<docset:FootnoteReference dg:origin="2 410 1504 440 1529" dg:style="font-size: 0.75em">[2]</docset:FootnoteReference>
+          </docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="6800.00" dg:origin="2 1264 1486 1424 1519" xml:id="currentperiodvalue" dg:itemprop="valueFrom" dg:href="#ppenetbookvalue">6,800.00</docset:CurrentPeriodValue>
+          <docset:PriorPeriodValue dg:structure="td" xsi:type="decimal" dg:value="6920.00" dg:origin="2 1680 1486 1840 1519">6,920.00</docset:PriorPeriodValue>
+          <docset:PeriodVariancePercent dg:structure="td" xsi:type="decimal" dg:value="1.73" dg:origin="2 2135 1486 2255 1519">-1.73%</docset:PeriodVariancePercent>
+        </docset:Account>
+        <docset:TotalAssets dg:structure="tr" dg:origin="2 295 1644 2255 1677">
+          <docset:Account dg:structure="td" dg:origin="2 295 1644 535 1677" dg:style="font-weight: bold; text-transform: uppercase">TOTAL ASSETS</docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="8732.60" dg:origin="2 1264 1644 1424 1677" dg:style="font-weight: bold">8,732.60</docset:CurrentPeriodValue>
+          <docset:PriorPeriodValue dg:structure="td" xsi:type="decimal" dg:value="8780.20" dg:origin="2 1680 1644 1840 1677" dg:style="font-weight: bold">8,780.20</docset:PriorPeriodValue>
+          <docset:PeriodVariancePercent dg:structure="td" xsi:type="decimal" dg:value="0.54" dg:origin="2 2135 1644 2255 1677" dg:style="font-weight: bold">-0.54%</docset:PeriodVariancePercent>
+        </docset:TotalAssets>
+        <docset:BalanceSheetColumnHeader dg:structure="tr" dg:origin="2 295 1777 915 1810">
+          <docset:Account dg:structure="td" dg:origin="2 295 1777 915 1810" dg:style="font-weight: bold; text-transform: uppercase">LIABILITIES &amp; PARTNERS' CAPITAL</docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td"/>
+          <docset:PriorPeriodValue dg:structure="td"/>
+          <docset:PeriodVariancePercent dg:structure="td"/>
+        </docset:BalanceSheetColumnHeader>
+        <docset:Account dg:structure="tr" dg:origin="2 295 1911 2255 1994">
+          <docset:Account dg:structure="td" dg:origin="2 295 1911 795 1944; 2 295 1954 520 1994" xml:id="account-3">Secured Term Loans (SSIDB Facility)<docset:FootnoteReference dg:origin="2 490 1954 520 1979" dg:style="font-size: 0.75em">[3]</docset:FootnoteReference>
+          </docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="5500.00" dg:origin="2 1264 1936 1424 1969" xml:id="currentperiodvalue-2" dg:itemprop="valueFrom" dg:href="#facilitydebtoutstanding">5,500.00</docset:CurrentPeriodValue>
+          <docset:PriorPeriodValue dg:structure="td" xsi:type="decimal" dg:value="5650.00" dg:origin="2 1680 1936 1840 1969">5,650.00</docset:PriorPeriodValue>
+          <docset:PeriodVariancePercent dg:structure="td" xsi:type="decimal" dg:value="2.65" dg:origin="2 2135 1936 2255 1969">-2.65%</docset:PeriodVariancePercent>
+        </docset:Account>
+        <docset:Account dg:structure="tr" dg:origin="2 295 2094 2255 2127">
+          <docset:Account dg:structure="td" dg:origin="2 295 2094 955 2127">Lithosphere Restoration Provision</docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="950.00" dg:origin="2 1304 2094 1424 2127">950.00</docset:CurrentPeriodValue>
+          <docset:PriorPeriodValue dg:structure="td" xsi:type="decimal" dg:value="945.00" dg:origin="2 1720 2094 1840 2127">945.00</docset:PriorPeriodValue>
+          <docset:PeriodVariancePercent dg:structure="td" xsi:type="decimal" dg:value="0.53" dg:origin="2 2135 2094 2255 2127">+0.53%</docset:PeriodVariancePercent>
+        </docset:Account>
+        <docset:Account dg:structure="tr" dg:origin="2 295 2227 2255 2261">
+          <docset:Account dg:structure="td" dg:origin="2 295 2227 775 2261">Partners' Equity Capital</docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="2282.60" dg:origin="2 1264 2227 1424 2261">2,282.60</docset:CurrentPeriodValue>
+          <docset:PriorPeriodValue dg:structure="td" xsi:type="decimal" dg:value="2185.20" dg:origin="2 1680 2227 1840 2261">2,185.20</docset:PriorPeriodValue>
+          <docset:PeriodVariancePercent dg:structure="td" xsi:type="decimal" dg:value="4.46" dg:origin="2 2135 2227 2255 2261">+4.46%</docset:PeriodVariancePercent>
+        </docset:Account>
+        <docset:TotalLiabilitiesAndCapital dg:structure="tr" dg:origin="2 295 2360 2255 2394">
+          <docset:Account dg:structure="td" dg:origin="2 295 2360 835 2394" dg:style="font-weight: bold; text-transform: uppercase">TOTAL LIABILITIES &amp; CAPITAL</docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="8732.60" dg:origin="2 1264 2360 1424 2394" dg:style="font-weight: bold">8,732.60</docset:CurrentPeriodValue>
+          <docset:PriorPeriodValue dg:structure="td" xsi:type="decimal" dg:value="8780.20" dg:origin="2 1680 2360 1840 2394" dg:style="font-weight: bold">8,780.20</docset:PriorPeriodValue>
+          <docset:PeriodVariancePercent dg:structure="td" xsi:type="decimal" dg:value="0.54" dg:origin="2 2135 2360 2255 2394" dg:style="font-weight: bold">-0.54%</docset:PeriodVariancePercent>
+        </docset:TotalLiabilitiesAndCapital>
+        <docset:BalanceSheetColumnHeader dg:structure="tr" dg:origin="2 295 2494 815 2527">
+          <docset:Account dg:structure="td" dg:origin="2 295 2494 815 2527" dg:style="font-weight: bold; text-transform: uppercase">OPERATING INCOME STATEMENT</docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td"/>
+          <docset:PriorPeriodValue dg:structure="td"/>
+          <docset:PeriodVariancePercent dg:structure="td"/>
+        </docset:BalanceSheetColumnHeader>
+        <docset:Account dg:structure="tr" dg:origin="2 295 2627 2255 2711">
+          <docset:Account dg:structure="td" dg:origin="2 295 2627 895 2661; 2 295 2671 440 2711" xml:id="account-4">Gross Heavy Water &amp; Geothermal Sales[4]</docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="915.20" dg:origin="2 1304 2652 1424 2686" xml:id="currentperiodvalue-3">915.20</docset:CurrentPeriodValue>
+          <docset:PriorPeriodValue dg:structure="td" xsi:type="decimal" dg:value="885.10" dg:origin="2 1720 2652 1840 2686">885.10</docset:PriorPeriodValue>
+          <docset:PeriodVariancePercent dg:structure="td" xsi:type="decimal" dg:value="3.40" dg:origin="2 2135 2652 2255 2686">+3.40%</docset:PeriodVariancePercent>
+        </docset:Account>
+        <docset:Account dg:structure="tr" dg:origin="2 295 2811 2255 2894">
+          <docset:Account dg:structure="td" dg:origin="2 295 2811 955 2844; 2 295 2854 420 2894">Borehole Thermal Ops &amp; Centrifuge OpEx[5]</docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td" dg:origin="2 1264 2836 1424 2869">(395.10)</docset:CurrentPeriodValue>
+          <docset:PriorPeriodValue dg:structure="td" dg:origin="2 1680 2836 1840 2869">(391.00)</docset:PriorPeriodValue>
+          <docset:PeriodVariancePercent dg:structure="td" xsi:type="decimal" dg:value="1.05" dg:origin="2 2135 2836 2255 2869">+1.05%</docset:PeriodVariancePercent>
+        </docset:Account>
+        <docset:NetOperatingIncome dg:structure="tr" dg:origin="3 295 272 2255 305">
+          <docset:Account dg:structure="td" dg:origin="3 295 272 815 305" dg:style="font-weight: bold">Net Operating Income (NOI)</docset:Account>
+          <docset:CurrentPeriodValue dg:structure="td" xsi:type="decimal" dg:value="520.10" dg:origin="3 1304 272 1424 305" dg:style="font-weight: bold">520.10</docset:CurrentPeriodValue>
+          <docset:PriorPeriodValue dg:structure="td" xsi:type="decimal" dg:value="494.10" dg:origin="3 1720 272 1840 305" dg:style="font-weight: bold">494.10</docset:PriorPeriodValue>
+          <docset:PeriodVariancePercent dg:structure="td" xsi:type="decimal" dg:value="5.26" dg:origin="3 2135 272 2255 305" dg:style="font-weight: bold">+5.26%</docset:PeriodVariancePercent>
+        </docset:NetOperatingIncome>
+      </docset:ConsolidatedBalanceSheet>
+      <docset:Footnote dg:structure="p" dg:origin="3 240 421 1809 455" dg:style="color: darkslategray" xml:id="footnote" dg:itemprop="references" dg:href="#restrictedescrowreserve">
+        <docset:FootnoteReference dg:origin="3 240 421 277 455">[1]</docset:FootnoteReference> Reconciles directly to the mandatory localized seismic containment escrow specified in Section 4.01(3).</docset:Footnote>
+      <docset:Footnote dg:structure="p" dg:origin="3 240 471 2037 505" dg:style="color: darkslategray" xml:id="footnote-2" dg:itemprop="references" dg:href="#ppetotalnetbookvalue">
+        <docset:FootnoteReference dg:origin="3 240 471 277 505">[2]</docset:FootnoteReference> Detailed asset class values are reconciled directly to the subtotal summation of Net Book Values reported in Table 8.2.</docset:Footnote>
+      <docset:Footnote dg:structure="p" dg:origin="3 240 521 1734 555" dg:style="color: darkslategray" xml:id="footnote-3" dg:itemprop="describes" dg:href="#account-3">
+        <docset:FootnoteReference dg:origin="3 240 521 277 555">[3]</docset:FootnoteReference> Reconciles directly to the outstanding Facility Loan principal balance specified under Section 2.01.</docset:Footnote>
+      <docset:Footnote dg:structure="p" dg:origin="3 240 571 1700 605" dg:style="color: darkslategray" xml:id="footnote-4" dg:itemprop="references" dg:href="#navmodeling">
+        <docset:FootnoteReference dg:origin="3 240 571 277 605">[4]</docset:FootnoteReference> Annualized heavy water sales correlate directly with the Base Case model outlined in Table 8.3.</docset:Footnote>
+      <docset:Footnote dg:structure="p" dg:origin="3 240 621 1739 655" dg:style="color: darkslategray">
+        <docset:FootnoteReference dg:origin="3 240 621 277 655">[5]</docset:FootnoteReference> Includes high-pressure valve testing, subsurface vibration monitoring, and centrifuge maintenance.</docset:Footnote>
+      <docset:PPESchedule dg:structure="p" dg:origin="4 240 238 1441 275" dg:style="font-weight: bold">Table 8.2: Detailed Subsurface Property, Plant &amp; Equipment (PP&amp;E)</docset:PPESchedule>
+      <dg:chunk dg:structure="p" dg:origin="4 240 344 829 377" dg:style="color: darkslategray">All figures in <docset:ReportingCurrency dg:origin="4 431 344 829 377">Millions of Sol Credits (SC)</docset:ReportingCurrency>
+      </dg:chunk>
+      <docset:PPESchedule dg:structure="table" dg:origin="4 240 511 2255 2494">
+        <dg:chunk dg:structure="tr" dg:origin="4 295 511 2255 595">
+          <dg:chunk dg:structure="td" dg:origin="4 295 536 575 570" dg:style="font-weight: bold; color: white">Asset Category</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="4 918 536 1218 570" dg:style="font-weight: bold; color: white">Sub-Asset Class</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="4 1532 511 1632 545; 4 1552 561 1632 595" dg:style="font-weight: bold; color: white">Gross Cost</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="4 1724 511 1944 545; 4 1844 561 1944 595" dg:style="font-weight: bold; color: white">Accumulated Depr.</dg:chunk>
+          <dg:chunk dg:structure="td" dg:origin="4 2095 511 2255 545; 4 2155 561 2255 595" dg:style="font-weight: bold; color: white">Net Book Value</dg:chunk>
+        </dg:chunk>
+        <docset:PPESubAssetClass dg:structure="tr" dg:origin="4 295 695 2255 828">
+          <docset:PPEAssetCategory dg:structure="td" dg:origin="4 295 695 775 728" dg:style="font-weight: bold">1. Cryovolcanic Borehole</docset:PPEAssetCategory>
+          <docset:PPESubAssetClass dg:structure="td" dg:origin="4 918 695 1238 728; 4 918 745 1238 778; 4 918 795 1038 828">Titanium-Carbide Extraction Shaft Casing</docset:PPESubAssetClass>
+          <docset:PPEGrossCost dg:structure="td" xsi:type="decimal" dg:value="2800.00" dg:origin="4 1472 745 1632 778">2,800.00</docset:PPEGrossCost>
+          <docset:PPEAccumulatedDepreciation dg:structure="td" dg:origin="4 1784 745 1944 778">(600.00)</docset:PPEAccumulatedDepreciation>
+          <docset:PPENetBookValue dg:structure="td" xsi:type="decimal" dg:value="2200.00" dg:origin="4 2095 745 2255 778">2,200.00</docset:PPENetBookValue>
+        </docset:PPESubAssetClass>
+        <docset:PPESubAssetClass dg:structure="tr" dg:origin="4 918 928 2255 1012">
+          <docset:PPEAssetCategory dg:structure="td"/>
+          <docset:PPESubAssetClass dg:structure="td" dg:origin="4 918 928 1278 962; 4 918 978 1278 1012">Acoustic-Resonance Monitoring Dampers</docset:PPESubAssetClass>
+          <docset:PPEGrossCost dg:structure="td" xsi:type="decimal" dg:value="1400.00" dg:origin="4 1472 953 1632 987">1,400.00</docset:PPEGrossCost>
+          <docset:PPEAccumulatedDepreciation dg:structure="td" dg:origin="4 1784 953 1944 987">(320.00)</docset:PPEAccumulatedDepreciation>
+          <docset:PPENetBookValue dg:structure="td" xsi:type="decimal" dg:value="1080.00" dg:origin="4 2095 953 2255 987">1,080.00</docset:PPENetBookValue>
+        </docset:PPESubAssetClass>
+        <docset:PPECategorySubtotal dg:structure="tr" dg:origin="4 918 1111 2255 1195">
+          <docset:PPEAssetCategory dg:structure="td"/>
+          <docset:PPESubAssetClass dg:structure="td" dg:origin="4 918 1111 1298 1145; 4 918 1161 1078 1195" dg:style="font-weight: bold">Subtotal Geothermal Borehole</docset:PPESubAssetClass>
+          <docset:PPEGrossCost dg:structure="td" xsi:type="decimal" dg:value="4200.00" dg:origin="4 1472 1136 1632 1170" dg:style="font-weight: bold">4,200.00</docset:PPEGrossCost>
+          <docset:PPEAccumulatedDepreciation dg:structure="td" dg:origin="4 1784 1136 1944 1170" dg:style="font-weight: bold">(920.00)</docset:PPEAccumulatedDepreciation>
+          <docset:PPENetBookValue dg:structure="td" xsi:type="decimal" dg:value="3280.00" dg:origin="4 2095 1136 2255 1170" dg:style="font-weight: bold">3,280.00</docset:PPENetBookValue>
+        </docset:PPECategorySubtotal>
+        <docset:PPESubAssetClass dg:structure="tr" dg:origin="4 295 1295 2255 1428">
+          <docset:PPEAssetCategory dg:structure="td" dg:origin="4 295 1295 735 1328" dg:style="font-weight: bold">2. Isotopic separation</docset:PPEAssetCategory>
+          <docset:PPESubAssetClass dg:structure="td" dg:origin="4 918 1295 1218 1328; 4 918 1345 1118 1378; 4 918 1395 1138 1428">Deuterium Oxide Separation Centrifuges</docset:PPESubAssetClass>
+          <docset:PPEGrossCost dg:structure="td" xsi:type="decimal" dg:value="1550.00" dg:origin="4 1472 1345 1632 1378">1,550.00</docset:PPEGrossCost>
+          <docset:PPEAccumulatedDepreciation dg:structure="td" dg:origin="4 1784 1345 1944 1378">(290.00)</docset:PPEAccumulatedDepreciation>
+          <docset:PPENetBookValue dg:structure="td" xsi:type="decimal" dg:value="1260.00" dg:origin="4 2095 1345 2255 1378">1,260.00</docset:PPENetBookValue>
+        </docset:PPESubAssetClass>
+        <docset:PPESubAssetClass dg:structure="tr" dg:origin="4 918 1528 2255 1612">
+          <docset:PPEAssetCategory dg:structure="td"/>
+          <docset:PPESubAssetClass dg:structure="td" dg:origin="4 918 1528 1298 1562; 4 918 1578 1058 1612">Cryogenic Condenser Columns</docset:PPESubAssetClass>
+          <docset:PPEGrossCost dg:structure="td" xsi:type="decimal" dg:value="950.00" dg:origin="4 1512 1553 1632 1587">950.00</docset:PPEGrossCost>
+          <docset:PPEAccumulatedDepreciation dg:structure="td" dg:origin="4 1784 1553 1944 1587">(250.00)</docset:PPEAccumulatedDepreciation>
+          <docset:PPENetBookValue dg:structure="td" xsi:type="decimal" dg:value="700.00" dg:origin="4 2135 1553 2255 1587">700.00</docset:PPENetBookValue>
+        </docset:PPESubAssetClass>
+        <docset:PPECategorySubtotal dg:structure="tr" dg:origin="4 918 1711 2255 1795">
+          <docset:PPEAssetCategory dg:structure="td"/>
+          <docset:PPESubAssetClass dg:structure="td" dg:origin="4 918 1711 1258 1745; 4 918 1761 1018 1795" dg:style="font-weight: bold">Subtotal Isotopic Plant</docset:PPESubAssetClass>
+          <docset:PPEGrossCost dg:structure="td" xsi:type="decimal" dg:value="2500.00" dg:origin="4 1472 1736 1632 1770" dg:style="font-weight: bold">2,500.00</docset:PPEGrossCost>
+          <docset:PPEAccumulatedDepreciation dg:structure="td" dg:origin="4 1784 1736 1944 1770" dg:style="font-weight: bold">(540.00)</docset:PPEAccumulatedDepreciation>
+          <docset:PPENetBookValue dg:structure="td" xsi:type="decimal" dg:value="1960.00" dg:origin="4 2095 1736 2255 1770" dg:style="font-weight: bold">1,960.00</docset:PPENetBookValue>
+        </docset:PPECategorySubtotal>
+        <docset:PPESubAssetClass dg:structure="tr" dg:origin="4 295 1895 2255 2028">
+          <docset:PPEAssetCategory dg:structure="td" dg:origin="4 295 1895 595 1928" dg:style="font-weight: bold">3. Thermal Grid</docset:PPEAssetCategory>
+          <docset:PPESubAssetClass dg:structure="td" dg:origin="4 918 1895 1178 1928; 4 918 1945 1158 1978; 4 918 1995 1098 2028">High-Pressure Transmission Pipelines</docset:PPESubAssetClass>
+          <docset:PPEGrossCost dg:structure="td" xsi:type="decimal" dg:value="1900.00" dg:origin="4 1472 1945 1632 1978">1,900.00</docset:PPEGrossCost>
+          <docset:PPEAccumulatedDepreciation dg:structure="td" dg:origin="4 1784 1945 1944 1978">(340.00)</docset:PPEAccumulatedDepreciation>
+          <docset:PPENetBookValue dg:structure="td" xsi:type="decimal" dg:value="1560.00" dg:origin="4 2095 1945 2255 1978">1,560.00</docset:PPENetBookValue>
+        </docset:PPESubAssetClass>
+        <docset:PPECategorySubtotal dg:structure="tr" dg:origin="4 918 2128 2255 2211">
+          <docset:PPEAssetCategory dg:structure="td"/>
+          <docset:PPESubAssetClass dg:structure="td" dg:origin="4 918 2128 1238 2161; 4 918 2178 998 2211" dg:style="font-weight: bold">Subtotal Thermal Grid</docset:PPESubAssetClass>
+          <docset:PPEGrossCost dg:structure="td" xsi:type="decimal" dg:value="1900.00" dg:origin="4 1472 2153 1632 2186" dg:style="font-weight: bold">1,900.00</docset:PPEGrossCost>
+          <docset:PPEAccumulatedDepreciation dg:structure="td" dg:origin="4 1784 2153 1944 2186" dg:style="font-weight: bold">(340.00)</docset:PPEAccumulatedDepreciation>
+          <docset:PPENetBookValue dg:structure="td" xsi:type="decimal" dg:value="1560.00" dg:origin="4 2095 2153 2255 2186" dg:style="font-weight: bold">1,560.00</docset:PPENetBookValue>
+        </docset:PPECategorySubtotal>
+        <docset:PPETotalNetBookValue dg:structure="tr" dg:origin="4 240 2311 2255 2494" xml:id="ppetotalnetbookvalue">
+          <docset:PPEAssetCategory dg:structure="td" dg:origin="4 295 2311 715 2345; 4 240 2461 272 2494" dg:style="color: darkslategray">
+            <docset:PPEAssetCategory dg:origin="4 295 2311 715 2345" dg:style="font-weight: bold; text-transform: uppercase">TOTAL GEOTHERMAL PP&amp;E</docset:PPEAssetCategory>[*]</docset:PPEAssetCategory>
+          <docset:PPESubAssetClass dg:structure="td"/>
+          <docset:PPEGrossCost dg:structure="td" xsi:type="decimal" dg:value="8600.00" dg:origin="4 1472 2311 1632 2345" dg:style="font-weight: bold">8,600.00</docset:PPEGrossCost>
+          <docset:PPEAccumulatedDepreciation dg:structure="td" dg:origin="4 1744 2311 1944 2345" dg:style="font-weight: bold">(1,800.00)</docset:PPEAccumulatedDepreciation>
+          <docset:PPENetBookValue dg:structure="td" xsi:type="decimal" dg:value="6800.00" dg:origin="4 2095 2311 2255 2345" dg:style="font-weight: bold" xml:id="ppenetbookvalue">6,800.00</docset:PPENetBookValue>
+        </docset:PPETotalNetBookValue>
+      </docset:PPESchedule>
+      <docset:PPEReconciliation dg:structure="p" dg:origin="4 240 2461 1919 2494" dg:style="color: darkslategray" xml:id="ppereconciliation" dg:itemprop="describes" dg:href="#ppetotalnetbookvalue">
+        <docset:FootnoteReference dg:origin="4 240 2461 272 2494">[*]</docset:FootnoteReference> Reconciles directly to the Cryovolcanic Plant &amp; Equipment (Net) line item on the Balance Sheet in Table 8.1.</docset:PPEReconciliation>
+    </docset:ConsolidatedBalanceSheet>
+    <docset:ValuationMemo dg:structure="section" dg:origin="5 240 237 2310 2385">
+      <dg:chunk dg:structure="header" dg:origin="5 240 237 851 281" dg:style="font-weight: bold; font-size: 1.25em; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="5 240 237 277 281">3.</dg:chunk> Manager's Valuation Memo</dg:chunk>
+      <docset:ValuationMethodologyDescription dg:structure="p" dg:origin="5 240 337 2310 374; 5 240 393 2310 430; 5 240 449 2310 487; 5 240 505 878 543">Valuation Methodology: The Hotei Regio Cryovolcanic facility is valued utilizing a Discounted Cash Flow (DCF) model reflecting specific geothermal pressure variables and localized sub-surface safety risk parameters. Key structural assumptions include a Weighted Average Cost of Capital (WACC) of <docset:DiscountRate xsi:type="decimal" dg:value="12.50" dg:origin="5 1445 449 1572 487">12.50%</docset:DiscountRate> and extraction column wear cycles over a <docset:ProjectionLifespan dg:origin="5 240 505 368 543">20-year</docset:ProjectionLifespan> projected operational lifespan.</docset:ValuationMethodologyDescription>
+      <docset:NAVModeling dg:structure="p" dg:origin="5 240 612 1612 649" dg:style="font-weight: bold">Table 8.3: Net Asset Value (NAV) Modeling under Alternate Pricing Scenarios</docset:NAVModeling>
+      <docset:ReportingCurrency dg:structure="p" dg:origin="5 240 718 1076 751" dg:style="color: darkslategray">All figures in Millions of Sol Credits (SC) unless specified</docset:ReportingCurrency>
+      <docset:NAVModeling dg:structure="table" dg:origin="5 295 885 2246 2135" xml:id="navmodeling">
+        <docset:ValuationScenarioParameter dg:structure="tr" dg:origin="5 295 885 2246 1019">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="5 295 935 675 969" dg:style="font-weight: bold; color: white">Valuation Parameter</docset:ValuationScenarioParameter>
+          <docset:NAVColumnBaseCaseLabel dg:structure="td" dg:origin="5 1185 885 1365 919; 5 1135 935 1415 969; 5 1175 985 1375 1019" dg:style="font-weight: bold; color: white">Base Case (Heavy Water @ SC 520/kg)</docset:NAVColumnBaseCaseLabel>
+          <docset:NAVColumnBearCaseLabel dg:structure="td" dg:origin="5 1601 885 1781 919; 5 1551 935 1831 969; 5 1591 985 1791 1019" dg:style="font-weight: bold; color: white">Bear Case (Heavy Water @ SC 390/kg)</docset:NAVColumnBearCaseLabel>
+          <docset:NAVColumnBullCaseLabel dg:structure="td" dg:origin="5 2016 885 2196 919; 5 1966 935 2246 969; 5 2006 985 2206 1019" dg:style="font-weight: bold; color: white">Bull Case (Heavy Water @ SC 650/kg)</docset:NAVColumnBullCaseLabel>
+        </docset:ValuationScenarioParameter>
+        <docset:ValuationScenarioParameter dg:structure="tr" dg:origin="5 295 1119 2146 1152">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="5 295 1119 935 1152" dg:style="font-weight: bold">Annual Heavy Water Output (M kg)</docset:ValuationScenarioParameter>
+          <docset:BaseCaseCommodityYield dg:structure="td" xsi:type="decimal" dg:value="7.04" dg:origin="5 1235 1119 1315 1152" xml:id="basecasecommodityyield">7.04</docset:BaseCaseCommodityYield>
+          <docset:BearCaseCommodityYield dg:structure="td" xsi:type="decimal" dg:value="6.50" dg:origin="5 1651 1119 1731 1152">6.50</docset:BearCaseCommodityYield>
+          <docset:BullCaseCommodityYield dg:structure="td" xsi:type="decimal" dg:value="7.50" dg:origin="5 2066 1119 2146 1152">7.50</docset:BullCaseCommodityYield>
+        </docset:ValuationScenarioParameter>
+        <docset:ValuationScenarioParameter dg:structure="tr" dg:origin="5 295 1252 2186 1286">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="5 295 1252 695 1286">Gross Revenue (SC/yr)<docset:FootnoteReference>[#]</docset:FootnoteReference>
+          </docset:ValuationScenarioParameter>
+          <docset:BaseCaseGrossRevenue dg:structure="td" xsi:type="decimal" dg:value="3660.80" dg:origin="5 1195 1252 1355 1286" xml:id="basecasegrossrevenue">3,660.80</docset:BaseCaseGrossRevenue>
+          <docset:BearCaseGrossRevenue dg:structure="td" xsi:type="decimal" dg:value="2535.00" dg:origin="5 1611 1252 1771 1286">2,535.00</docset:BearCaseGrossRevenue>
+          <docset:BullCaseGrossRevenue dg:structure="td" xsi:type="decimal" dg:value="4875.00" dg:origin="5 2026 1252 2186 1286">4,875.00</docset:BullCaseGrossRevenue>
+        </docset:ValuationScenarioParameter>
+        <docset:ValuationScenarioParameter dg:structure="tr" dg:origin="5 295 1386 2206 1419">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="5 295 1386 995 1419">Borehole Operations &amp; Utility Costs</docset:ValuationScenarioParameter>
+          <docset:AnnualizedOperatingCost dg:structure="td" dg:origin="5 1175 1386 1375 1419" xml:id="annualizedoperatingcost">(1,580.40)</docset:AnnualizedOperatingCost>
+          <docset:AnnualizedOperatingCost dg:structure="td" dg:origin="5 1591 1386 1771 1419">(1,620.00)</docset:AnnualizedOperatingCost>
+          <docset:AnnualizedOperatingCost dg:structure="td" dg:origin="5 2006 1386 2206 1419">(1,540.00)</docset:AnnualizedOperatingCost>
+        </docset:ValuationScenarioParameter>
+        <docset:ValuationScenarioParameter dg:structure="tr" dg:origin="5 295 1519 2186 1552">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="5 295 1519 955 1552">Acoustic-Resonance Recalibrations</docset:ValuationScenarioParameter>
+          <docset:AnnualizedMaintenanceCost dg:structure="td" dg:origin="5 1195 1519 1355 1552" xml:id="annualizedmaintenancecost">(500.00)</docset:AnnualizedMaintenanceCost>
+          <docset:AnnualizedMaintenanceCost dg:structure="td" dg:origin="5 1611 1519 1771 1552">(500.00)</docset:AnnualizedMaintenanceCost>
+          <docset:AnnualizedMaintenanceCost dg:structure="td" dg:origin="5 2026 1519 2186 1552">(500.00)</docset:AnnualizedMaintenanceCost>
+        </docset:ValuationScenarioParameter>
+        <docset:ValuationScenarioParameter dg:structure="tr" dg:origin="5 295 1652 2186 1685">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="5 295 1652 815 1685" dg:style="font-weight: bold">Net Operating Income (NOI)</docset:ValuationScenarioParameter>
+          <docset:BaseCaseAnnualizedNOI dg:structure="td" xsi:type="decimal" dg:value="1580.40" dg:origin="5 1195 1652 1355 1685" dg:style="font-weight: bold" xml:id="basecaseannualizednoi">1,580.40</docset:BaseCaseAnnualizedNOI>
+          <docset:BearCaseAnnualizedNOI dg:structure="td" xsi:type="decimal" dg:value="415.00" dg:origin="5 1631 1652 1751 1685" dg:style="font-weight: bold">415.00</docset:BearCaseAnnualizedNOI>
+          <docset:BullCaseAnnualizedNOI dg:structure="td" xsi:type="decimal" dg:value="2835.00" dg:origin="5 2026 1652 2186 1685" dg:style="font-weight: bold">2,835.00</docset:BullCaseAnnualizedNOI>
+        </docset:ValuationScenarioParameter>
+        <docset:ValuationScenarioParameter dg:structure="tr" dg:origin="5 295 1785 2196 1869">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="5 295 1785 755 1819; 5 295 1835 695 1869" dg:style="font-weight: bold">Capitalized Value (<docset:CapitalizationRate xsi:type="decimal" dg:value="8.5" dg:origin="5 675 1785 755 1819" xml:id="capitalizationrate">8.5%</docset:CapitalizationRate> Capitalization Rate)</docset:ValuationScenarioParameter>
+          <docset:BaseCaseCapitalizedValue dg:structure="td" xsi:type="decimal" dg:value="18592.94" dg:origin="5 1185 1810 1365 1844" dg:style="font-weight: bold">18,592.94</docset:BaseCaseCapitalizedValue>
+          <docset:BearCaseCapitalizedValue dg:structure="td" xsi:type="decimal" dg:value="4882.35" dg:origin="5 1611 1810 1771 1844" dg:style="font-weight: bold">4,882.35</docset:BearCaseCapitalizedValue>
+          <docset:BullCaseCapitalizedValue dg:structure="td" xsi:type="decimal" dg:value="33352.94" dg:origin="5 2016 1810 2196 1844" dg:style="font-weight: bold">33,352.94</docset:BullCaseCapitalizedValue>
+        </docset:ValuationScenarioParameter>
+        <docset:ValuationScenarioParameter dg:structure="tr" dg:origin="5 295 1969 2206 2002">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="5 295 1969 935 2002">Debt Outstanding (SSIDB Facility)<docset:FootnoteReference>[^]</docset:FootnoteReference>
+          </docset:ValuationScenarioParameter>
+          <docset:FacilityDebtOutstanding dg:structure="td" dg:origin="5 1175 1969 1375 2002" xml:id="facilitydebtoutstanding">(5,500.00)</docset:FacilityDebtOutstanding>
+          <docset:FacilityDebtOutstanding dg:structure="td" dg:origin="5 1591 1969 1791 2002">(5,500.00)</docset:FacilityDebtOutstanding>
+          <docset:FacilityDebtOutstanding dg:structure="td" dg:origin="5 2006 1969 2206 2002">(5,500.00)</docset:FacilityDebtOutstanding>
+        </docset:ValuationScenarioParameter>
+        <docset:ValuationScenarioParameter dg:structure="tr" dg:origin="5 295 2102 2196 2135">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="5 295 2102 875 2135" dg:style="font-weight: bold">Implied Net Asset Value (NAV)</docset:ValuationScenarioParameter>
+          <docset:BaseCaseNAV dg:structure="td" xsi:type="decimal" dg:value="13092.94" dg:origin="5 1185 2102 1365 2135" dg:style="font-weight: bold" xml:id="basecasenav">13,092.94</docset:BaseCaseNAV>
+          <docset:BearCaseNAV dg:structure="td" dg:origin="5 1611 2102 1771 2135" dg:style="font-weight: bold">(617.65)</docset:BearCaseNAV>
+          <docset:BullCaseNAV dg:structure="td" xsi:type="decimal" dg:value="27852.94" dg:origin="5 2016 2102 2196 2135" dg:style="font-weight: bold">27,852.94</docset:BullCaseNAV>
+        </docset:ValuationScenarioParameter>
+      </docset:NAVModeling>
+      <docset:QuarterlyRevenueReconciliation dg:structure="p" dg:origin="5 1771 1386 1791 1419; 5 240 2251 2225 2285; 5 240 2301 1384 2335" dg:style="color: darkslategray" xml:id="quarterlyrevenuereconciliation" dg:itemprop="references" dg:href="#basecasegrossrevenue">
+        <docset:FootnoteReference dg:origin="5 240 2251 277 2285">[#]</docset:FootnoteReference> Pro-rata Q3 Gross Revenue matches the Gross Heavy Water &amp; Geothermal Sales reported in Table 8.1 (<docset:GrossRevenue dg:origin="5 1873 2251 2058 2285" xml:id="grossrevenue" dg:itemprop="valueFrom" dg:href="#currentperiodvalue-3">SC 915.20m</docset:GrossRevenue> represents exactly <docset:RevenueProRataPercent xsi:type="decimal" dg:value="25.0" dg:origin="5 353 2301 448 2335">25.0%</docset:RevenueProRataPercent> of the annualized Base Case Gross Revenue of <docset:AnnualizedGrossRevenue dg:origin="5 1170 2301 1384 2335" xml:id="annualizedgrossrevenue" dg:itemprop="valueFrom" dg:href="#basecasegrossrevenue">SC 3,660.80m</docset:AnnualizedGrossRevenue>).</docset:QuarterlyRevenueReconciliation>
+      <docset:CreditAgreementReference dg:structure="p" dg:origin="5 240 2351 1962 2385" dg:style="color: darkslategray" xml:id="creditagreementreference" dg:itemprop="references" dg:href="#account-3">
+        <docset:FootnoteReference dg:origin="5 240 2351 275 2385">[^]</docset:FootnoteReference> Corresponds to the Secured Term Loans (SSIDB Facility) balance reported in the liabilities section of Table 8.1.</docset:CreditAgreementReference>
+    </docset:ValuationMemo>
+    <docset:DCFSchedule dg:structure="section" dg:origin="6 240 237 2310 2979">
+      <dg:chunk dg:structure="header" dg:origin="6 240 237 1305 281" dg:style="font-weight: bold; font-size: 1.25em; color: darkslategray">
+        <dg:chunk dg:structure="lim" dg:origin="6 240 237 277 281">4.</dg:chunk> Five-Year Discounted Cash Flow (DCF) Schedule</dg:chunk>
+      <docset:DCFProjectionSummaryNarrative dg:structure="p" dg:origin="6 240 337 2310 374; 6 240 393 2310 430; 6 240 449 515 487">Projection Summary: Below is the detailed 5-year financial model for Hotei Geothermal. It incorporates inflation-linked operation cost growth of <dg:InflationGrowthRate xsi:type="decimal" dg:value="3.0" dg:origin="6 658 393 744 430" xml:id="inflationgrowthrate" dg:itemprop="describes" dg:href="#projectedoperatingexpenses-2">3.0%</dg:InflationGrowthRate> annually, a discount rate of <docset:DiscountRate xsi:type="decimal" dg:value="12.50" dg:origin="6 1224 393 1362 430">12.50%</docset:DiscountRate>, and an exit capitalization rate of <docset:ExitCapitalizationRate xsi:type="decimal" dg:value="8.5" dg:origin="6 1923 393 2008 430" xml:id="exitcapitalizationrate" dg:itemprop="valueFrom" dg:href="#capitalizationrate">8.5%</docset:ExitCapitalizationRate> applied to Year 5 Free Cash Flow.</docset:DCFProjectionSummaryNarrative>
+      <docset:DCFSchedule dg:structure="p" dg:origin="6 240 555 1230 593" dg:style="font-weight: bold">Table 8.4: Detailed Five-Year Free Cash Flow Projection</docset:DCFSchedule>
+      <docset:ReportingCurrency dg:structure="p" dg:origin="6 240 662 1076 695" dg:style="color: darkslategray">All figures in Millions of Sol Credits (SC) unless specified</docset:ReportingCurrency>
+      <docset:DCFSchedule dg:structure="table" dg:origin="6 295 829 2268 2779">
+        <docset:ProjectionYear dg:structure="tr" dg:origin="6 295 829 2228 863">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="6 295 829 675 863" dg:style="font-weight: bold; color: white">Financial Parameter</docset:ValuationScenarioParameter>
+          <docset:ProjectionYear dg:structure="td" dg:origin="6 945 829 1065 863" dg:style="font-weight: bold; color: white">Year 1</docset:ProjectionYear>
+          <docset:ProjectionYear dg:structure="td" dg:origin="6 1236 829 1356 863" dg:style="font-weight: bold; color: white">Year 2</docset:ProjectionYear>
+          <docset:ProjectionYear dg:structure="td" dg:origin="6 1527 829 1647 863" dg:style="font-weight: bold; color: white">Year 3</docset:ProjectionYear>
+          <docset:ProjectionYear dg:structure="td" dg:origin="6 1817 829 1937 863" dg:style="font-weight: bold; color: white">Year 4</docset:ProjectionYear>
+          <docset:ProjectionYear dg:structure="td" dg:origin="6 2108 829 2228 863" dg:style="font-weight: bold; color: white">Year 5</docset:ProjectionYear>
+        </docset:ProjectionYear>
+        <docset:ProjectedCommodityYield dg:structure="tr" dg:origin="6 295 963 2208 1046">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="6 295 963 715 996; 6 295 1013 535 1046" dg:style="font-weight: bold">Estimated Heavy Water Yield (M kg)</docset:ValuationScenarioParameter>
+          <docset:ProjectedCommodityYield dg:structure="td" xsi:type="decimal" dg:value="7.04" dg:origin="6 965 988 1045 1021" xml:id="projectedcommodityyield" dg:itemprop="valueFrom" dg:href="#basecasecommodityyield">7.04</docset:ProjectedCommodityYield>
+          <docset:ProjectedCommodityYield dg:structure="td" xsi:type="decimal" dg:value="7.25" dg:origin="6 1256 988 1336 1021">7.25</docset:ProjectedCommodityYield>
+          <docset:ProjectedCommodityYield dg:structure="td" xsi:type="decimal" dg:value="7.47" dg:origin="6 1547 988 1627 1021">7.47</docset:ProjectedCommodityYield>
+          <docset:ProjectedCommodityYield dg:structure="td" xsi:type="decimal" dg:value="7.69" dg:origin="6 1837 988 1917 1021">7.69</docset:ProjectedCommodityYield>
+          <docset:ProjectedCommodityYield dg:structure="td" xsi:type="decimal" dg:value="7.92" dg:origin="6 2128 988 2208 1021">7.92</docset:ProjectedCommodityYield>
+        </docset:ProjectedCommodityYield>
+        <docset:ProjectedGrossSalesRevenue dg:structure="tr" dg:origin="6 295 1146 2248 1179">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="6 295 1146 675 1179">Gross Sales Revenue</docset:ValuationScenarioParameter>
+          <docset:ProjectedGrossSalesRevenue dg:structure="td" xsi:type="decimal" dg:value="3660.80" dg:origin="6 925 1146 1085 1179" xml:id="projectedgrosssalesrevenue" dg:itemprop="valueFrom" dg:href="#basecasegrossrevenue">3,660.80</docset:ProjectedGrossSalesRevenue>
+          <docset:ProjectedGrossSalesRevenue dg:structure="td" xsi:type="decimal" dg:value="3770.00" dg:origin="6 1216 1146 1376 1179">3,770.00</docset:ProjectedGrossSalesRevenue>
+          <docset:ProjectedGrossSalesRevenue dg:structure="td" xsi:type="decimal" dg:value="3884.40" dg:origin="6 1507 1146 1667 1179">3,884.40</docset:ProjectedGrossSalesRevenue>
+          <docset:ProjectedGrossSalesRevenue dg:structure="td" xsi:type="decimal" dg:value="4001.00" dg:origin="6 1797 1146 1957 1179">4,001.00</docset:ProjectedGrossSalesRevenue>
+          <docset:ProjectedGrossSalesRevenue dg:structure="td" xsi:type="decimal" dg:value="4118.40" dg:origin="6 2088 1146 2248 1179">4,118.40</docset:ProjectedGrossSalesRevenue>
+        </docset:ProjectedGrossSalesRevenue>
+        <docset:ProjectedOperatingExpenses dg:structure="tr" dg:origin="6 295 1279 2268 1363" xml:id="projectedoperatingexpenses-2">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="6 295 1279 715 1313; 6 295 1329 455 1363">Operating and Utility Expenses</docset:ValuationScenarioParameter>
+          <docset:ProjectedOperatingExpenses dg:structure="td" dg:origin="6 905 1304 1105 1338" xml:id="projectedoperatingexpenses" dg:itemprop="valueFrom" dg:href="#annualizedoperatingcost">(1,580.40)</docset:ProjectedOperatingExpenses>
+          <docset:ProjectedOperatingExpenses dg:structure="td" dg:origin="6 1196 1304 1396 1338">(1,627.80)</docset:ProjectedOperatingExpenses>
+          <docset:ProjectedOperatingExpenses dg:structure="td" dg:origin="6 1487 1304 1687 1338">(1,676.60)</docset:ProjectedOperatingExpenses>
+          <docset:ProjectedOperatingExpenses dg:structure="td" dg:origin="6 1777 1304 1977 1338">(1,726.90)</docset:ProjectedOperatingExpenses>
+          <docset:ProjectedOperatingExpenses dg:structure="td" dg:origin="6 2068 1304 2268 1338">(1,778.70)</docset:ProjectedOperatingExpenses>
+        </docset:ProjectedOperatingExpenses>
+        <docset:ProjectedMaintenanceCost dg:structure="tr" dg:origin="6 295 1463 2248 1496">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="6 295 1463 795 1496">Acoustic-Resonance Audits</docset:ValuationScenarioParameter>
+          <docset:ProjectedMaintenanceCost dg:structure="td" dg:origin="6 925 1463 1085 1496" xml:id="projectedmaintenancecost" dg:itemprop="valueFrom" dg:href="#annualizedmaintenancecost">(500.00)</docset:ProjectedMaintenanceCost>
+          <docset:ProjectedMaintenanceCost dg:structure="td" dg:origin="6 1216 1463 1376 1496">(515.00)</docset:ProjectedMaintenanceCost>
+          <docset:ProjectedMaintenanceCost dg:structure="td" dg:origin="6 1507 1463 1667 1496">(530.50)</docset:ProjectedMaintenanceCost>
+          <docset:ProjectedMaintenanceCost dg:structure="td" dg:origin="6 1797 1463 1957 1496">(546.40)</docset:ProjectedMaintenanceCost>
+          <docset:ProjectedMaintenanceCost dg:structure="td" dg:origin="6 2088 1463 2248 1496">(562.80)</docset:ProjectedMaintenanceCost>
+        </docset:ProjectedMaintenanceCost>
+        <docset:ProjectedNOI dg:structure="tr" dg:origin="6 295 1596 2248 1679">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="6 295 1596 695 1629; 6 295 1646 395 1679" dg:style="font-weight: bold">Net Operating Income (NOI)</docset:ValuationScenarioParameter>
+          <docset:ProjectedNOI dg:structure="td" xsi:type="decimal" dg:value="1580.40" dg:origin="6 925 1621 1085 1654" dg:style="font-weight: bold" xml:id="projectednoi" dg:itemprop="valueFrom" dg:href="#basecaseannualizednoi">1,580.40</docset:ProjectedNOI>
+          <docset:ProjectedNOI dg:structure="td" xsi:type="decimal" dg:value="1627.20" dg:origin="6 1216 1621 1376 1654" dg:style="font-weight: bold">1,627.20</docset:ProjectedNOI>
+          <docset:ProjectedNOI dg:structure="td" xsi:type="decimal" dg:value="1677.30" dg:origin="6 1507 1621 1667 1654" dg:style="font-weight: bold">1,677.30</docset:ProjectedNOI>
+          <docset:ProjectedNOI dg:structure="td" xsi:type="decimal" dg:value="1727.70" dg:origin="6 1797 1621 1957 1654" dg:style="font-weight: bold">1,727.70</docset:ProjectedNOI>
+          <docset:ProjectedNOI dg:structure="td" xsi:type="decimal" dg:value="1776.90" dg:origin="6 2088 1621 2248 1654" dg:style="font-weight: bold">1,776.90</docset:ProjectedNOI>
+        </docset:ProjectedNOI>
+        <docset:MaintenanceCapitalExpenditures dg:structure="tr" dg:origin="6 295 1779 2248 1863">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="6 295 1779 795 1813; 6 295 1829 535 1863">Less: Maintenance Capital Expenditures</docset:ValuationScenarioParameter>
+          <docset:MaintenanceCapitalExpenditures dg:structure="td" dg:origin="6 925 1804 1085 1838">(250.00)</docset:MaintenanceCapitalExpenditures>
+          <docset:MaintenanceCapitalExpenditures dg:structure="td" dg:origin="6 1216 1804 1376 1838">(257.50)</docset:MaintenanceCapitalExpenditures>
+          <docset:MaintenanceCapitalExpenditures dg:structure="td" dg:origin="6 1507 1804 1667 1838">(265.20)</docset:MaintenanceCapitalExpenditures>
+          <docset:MaintenanceCapitalExpenditures dg:structure="td" dg:origin="6 1797 1804 1957 1838">(273.20)</docset:MaintenanceCapitalExpenditures>
+          <docset:MaintenanceCapitalExpenditures dg:structure="td" dg:origin="6 2088 1804 2248 1838">(281.40)</docset:MaintenanceCapitalExpenditures>
+        </docset:MaintenanceCapitalExpenditures>
+        <docset:FreeCashFlowToFirm dg:structure="tr" dg:origin="6 295 1963 2248 2046">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="6 295 1963 735 1996; 6 295 2013 415 2046" dg:style="font-weight: bold">Free Cash Flow to Firm (FCFF)</docset:ValuationScenarioParameter>
+          <docset:FreeCashFlowToFirm dg:structure="td" xsi:type="decimal" dg:value="1330.40" dg:origin="6 925 1988 1085 2021" dg:style="font-weight: bold">1,330.40</docset:FreeCashFlowToFirm>
+          <docset:FreeCashFlowToFirm dg:structure="td" xsi:type="decimal" dg:value="1369.70" dg:origin="6 1216 1988 1376 2021" dg:style="font-weight: bold">1,369.70</docset:FreeCashFlowToFirm>
+          <docset:FreeCashFlowToFirm dg:structure="td" xsi:type="decimal" dg:value="1412.10" dg:origin="6 1507 1988 1667 2021" dg:style="font-weight: bold">1,412.10</docset:FreeCashFlowToFirm>
+          <docset:FreeCashFlowToFirm dg:structure="td" xsi:type="decimal" dg:value="1454.50" dg:origin="6 1797 1988 1957 2021" dg:style="font-weight: bold">1,454.50</docset:FreeCashFlowToFirm>
+          <docset:FreeCashFlowToFirm dg:structure="td" xsi:type="decimal" dg:value="1495.50" dg:origin="6 2088 1988 2248 2021" dg:style="font-weight: bold">1,495.50</docset:FreeCashFlowToFirm>
+        </docset:FreeCashFlowToFirm>
+        <docset:DiscountFactor dg:structure="tr" dg:origin="6 295 2146 2228 2363">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="6 295 2146 675 2179; 6 295 2196 395 2229; 6 635 2329 655 2363">Discount Factor (at <docset:DiscountRate xsi:type="decimal" dg:value="12.50" dg:origin="6 295 2196 395 2229">12.50%</docset:DiscountRate>)</docset:ValuationScenarioParameter>
+          <docset:DiscountFactor dg:structure="td" xsi:type="decimal" dg:value="0.8889" dg:origin="6 945 2171 1065 2204">0.8889</docset:DiscountFactor>
+          <docset:DiscountFactor dg:structure="td" xsi:type="decimal" dg:value="0.7901" dg:origin="6 1236 2171 1356 2204">0.7901</docset:DiscountFactor>
+          <docset:DiscountFactor dg:structure="td" xsi:type="decimal" dg:value="0.7023" dg:origin="6 1527 2171 1647 2204">0.7023</docset:DiscountFactor>
+          <docset:DiscountFactor dg:structure="td" xsi:type="decimal" dg:value="0.6243" dg:origin="6 1817 2171 1937 2204">0.6243</docset:DiscountFactor>
+          <docset:DiscountFactor dg:structure="td" xsi:type="decimal" dg:value="0.5549" dg:origin="6 2108 2171 2228 2204">0.5549</docset:DiscountFactor>
+        </docset:DiscountFactor>
+        <docset:PresentValueOfFCFF dg:structure="tr" dg:origin="6 295 2329 2228 2413">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="6 295 2329 715 2363; 6 295 2379 375 2413" dg:style="font-weight: bold">Present Value (PV) of FCFF</docset:ValuationScenarioParameter>
+          <docset:PresentValueOfFCFF dg:structure="td" xsi:type="decimal" dg:value="1182.59" dg:origin="6 925 2354 1085 2388" dg:style="font-weight: bold">1,182.59</docset:PresentValueOfFCFF>
+          <docset:PresentValueOfFCFF dg:structure="td" xsi:type="decimal" dg:value="1082.20" dg:origin="6 1216 2354 1376 2388" dg:style="font-weight: bold">1,082.20</docset:PresentValueOfFCFF>
+          <docset:PresentValueOfFCFF dg:structure="td" xsi:type="decimal" dg:value="991.72" dg:origin="6 1527 2354 1647 2388" dg:style="font-weight: bold">991.72</docset:PresentValueOfFCFF>
+          <docset:PresentValueOfFCFF dg:structure="td" xsi:type="decimal" dg:value="908.04" dg:origin="6 1817 2354 1937 2388" dg:style="font-weight: bold">908.04</docset:PresentValueOfFCFF>
+          <docset:PresentValueOfFCFF dg:structure="td" xsi:type="decimal" dg:value="829.85" dg:origin="6 2108 2354 2228 2388" dg:style="font-weight: bold">829.85</docset:PresentValueOfFCFF>
+        </docset:PresentValueOfFCFF>
+        <docset:TerminalValue dg:structure="tr" dg:origin="6 295 2513 2258 2596">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="6 295 2513 695 2546; 6 295 2563 695 2596">Terminal Value (exit capitalization @ <docset:ExitCapitalizationRate xsi:type="decimal" dg:value="8.5" dg:origin="6 635 2563 695 2596">8.5%</docset:ExitCapitalizationRate>)</docset:ValuationScenarioParameter>
+          <docset:TerminalValue dg:structure="td" dg:origin="6 995 2538 1015 2571">—</docset:TerminalValue>
+          <docset:TerminalValue dg:structure="td" dg:origin="6 1286 2538 1306 2571">—</docset:TerminalValue>
+          <docset:TerminalValue dg:structure="td" dg:origin="6 1577 2538 1597 2571">—</docset:TerminalValue>
+          <docset:TerminalValue dg:structure="td" dg:origin="6 1867 2538 1887 2571">—</docset:TerminalValue>
+          <docset:TerminalValue dg:structure="td" xsi:type="decimal" dg:value="17594.12" dg:origin="6 2078 2538 2258 2571">17,594.12</docset:TerminalValue>
+        </docset:TerminalValue>
+        <docset:PresentValueOfTerminalValue dg:structure="tr" dg:origin="6 295 2696 2248 2779">
+          <docset:ValuationScenarioParameter dg:structure="td" dg:origin="6 295 2696 795 2729; 6 295 2746 395 2779" dg:style="font-weight: bold">Present Value of Terminal Value</docset:ValuationScenarioParameter>
+          <docset:PresentValueOfTerminalValue dg:structure="td" dg:origin="6 1577 2721 1597 2754" dg:style="font-weight: bold">—</docset:PresentValueOfTerminalValue>
+          <docset:PresentValueOfTerminalValue dg:structure="td" dg:origin="6 1286 2721 1306 2754" dg:style="font-weight: bold">—</docset:PresentValueOfTerminalValue>
+          <docset:PresentValueOfTerminalValue dg:structure="td" dg:origin="6 1867 2721 1887 2754" dg:style="font-weight: bold">—</docset:PresentValueOfTerminalValue>
+          <docset:PresentValueOfTerminalValue dg:structure="td" dg:origin="6 995 2721 1015 2754" dg:style="font-weight: bold">—</docset:PresentValueOfTerminalValue>
+          <docset:PresentValueOfTerminalValue dg:structure="td" xsi:type="decimal" dg:value="9762.98" dg:origin="6 2088 2721 2248 2754" dg:style="font-weight: bold">9,762.98</docset:PresentValueOfTerminalValue>
+        </docset:PresentValueOfTerminalValue>
+      </docset:DCFSchedule>
+      <docset:CumulativeNetEnterpriseValue dg:structure="p" dg:origin="6 240 2895 2223 2929; 6 240 2945 2215 2979" dg:style="color: darkslategray" xml:id="cumulativenetenterprisevalue" dg:itemprop="references" dg:href="#basecasenav">
+        <docset:FootnoteReference dg:origin="6 240 2895 272 2929">[*]</docset:FootnoteReference> Cumulative Net Enterprise Value sum of Year 1-5 cash flows and present value of terminal value translates directly to <docset:TotalEnterpriseValue dg:origin="6 2019 2895 2223 2929; 6 240 2945 357 2979" dg:style="font-weight: bold">SC 14,757.38 million</docset:TotalEnterpriseValue>. Reconciling this against outstanding debt yields robust mezzanine and equity value coverage under the specified parameters.</docset:CumulativeNetEnterpriseValue>
+    </docset:DCFSchedule>
+  </docset:ReportingPeriodSubject>
+</dg:chunk>
