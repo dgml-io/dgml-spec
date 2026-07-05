@@ -1,7 +1,6 @@
 # DGML: the Domain Native Document Format
 
 **Version:** 0.7  
-**Status:** Draft  
 **Specification prepared by:**
 
 | Name | Company |
@@ -1722,4 +1721,4 @@ page_images/page_2.png
 
 ---
 
-*End of DGML Format Specification v1.0*
+*End of DGML Format Specification*
