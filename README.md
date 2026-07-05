@@ -12,8 +12,9 @@ A third fundamental property is document order with graph semantics. Most graph 
 
 ## Contents
 
-- [`spec.md`](spec.md) — The DGML format specification
-- [`spec.html`](spec.html) — The DGML format specification, rendered as HTML
+- [`spec.md`](spec.md) — The DGML format specification, the reference source
+- [`spec.html`](spec.html) — The DGML format specification, derived from `spec.md`, rendered as HTML
+- [`spec.pdf`](spec.pdf) — The DGML format specification, derived from `spec.md`, rendered as PDF
 - [`samples/`](samples/) — Samples of DGML files
 - [`scripts/`](scripts/) — Maintenance utilities (e.g. regenerating `samples/file-list.json`)
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) — How to contribute
