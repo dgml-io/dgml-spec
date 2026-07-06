@@ -1,4 +1,4 @@
-# DGML: the Domain Native Document Format
+# DGML: the Domain Native Document Format for Agents
 
 **Version:** 0.7  
 **Specification prepared by:**
