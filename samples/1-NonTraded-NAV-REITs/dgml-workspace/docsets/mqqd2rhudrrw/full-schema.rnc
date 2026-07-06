@@ -7,7 +7,7 @@
 #   regenerate the JSON via dgml_core.generation.rnc.rnc_to_schema_dict.
 # ==========================================================================
 
-default namespace docset = "http://dgml.io/dgml-io/CommercialLeaseAgreement"
+default namespace docset = "http://dgml.io/acme-inc/CommercialLeaseAgreement"
 namespace dg = "http://dgml.io/ns/dg#"
 namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"

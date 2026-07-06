@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/PeriodicFinancialReportingPackage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2287 2130">
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/acme-inc/PeriodicFinancialReportingPackage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2287 2130">
   <docset:ReportingPackage dg:structure="section" dg:origin="1 193 258 2287 2130" xml:id="reportingpackage" dg:itemprop="describes" dg:href="#reportingentityname">
     <dg:chunk dg:structure="header" dg:origin="1 262 258 1626 311" dg:style="font-weight: bold; font-size: 2em">
       <docset:ReportingEntityName dg:origin="1 262 258 835 311" xml:id="reportingentityname">Lineae Express Corp.</docset:ReportingEntityName> - Operating Package <docset:ReportingPeriod dg:origin="1 1412 258 1626 311">Q2 2026</docset:ReportingPeriod>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/CommercialLeaseAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 122 120 2352 3307; 2 122 120 603 245">
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/acme-inc/CommercialLeaseAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 122 120 2352 3307; 2 122 120 603 245">
   <docset:PropertyPortfolioLabel dg:structure="section" dg:origin="1 122 120 2352 3307; 2 122 120 603 245">
     <dg:chunk dg:structure="header" dg:origin="1 122 120 1251 153" dg:style="font-weight: bold">Property 3: Hellas Basin Logistics Complex, Depot Gamma (Industrial)</dg:chunk>
     <docset:LeaseAgreementType dg:structure="section" dg:origin="1 122 213 1216 377">

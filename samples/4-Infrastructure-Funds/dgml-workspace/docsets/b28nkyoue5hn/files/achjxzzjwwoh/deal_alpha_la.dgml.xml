@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/dgml-io/CreditAndSecurityAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2297 3266; 2 193 182 2297 570">
+<dg:chunk xmlns:dg="http://dgml.io/ns/dg#" xmlns:docset="http://dgml.io/acme-inc/CreditAndSecurityAgreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" dg:origin="1 193 258 2297 3266; 2 193 182 2297 570">
   <docset:CreditAgreementName dg:structure="section" dg:origin="1 262 258 2207 1011">
     <dg:chunk dg:structure="header" dg:origin="1 262 258 1085 311" dg:style="font-weight: bold; font-size: 2em">Credit and Security Agreement</dg:chunk>
     <dg:chunk dg:structure="p" dg:origin="1 262 567 587 599" dg:style="font-weight: bold; font-size: 1.25em; text-transform: uppercase; color: darkslategray">DATED: <docset:AgreementDate xsi:type="date" dg:value="2026-06-26" dg:origin="1 389 567 587 599" dg:style="font-weight: normal; text-transform: none">June 26, 2026</docset:AgreementDate>
