@@ -15,14 +15,18 @@ datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 start = dg.chunk
 
 # --- attributes common to every DGML element ------------------------
-# dg:origin  = grounding bbox: "page x1 y1 x2 y2"
+# dg:origin  = boxes of the element's own printed text: "page x1 y1 x2 y2"
 # dg:itemprop / dg:href = semantic link (predicate + '#id' target(s))
+# dg:inputs  = elements the dg:value used ('#id' / 'fileid#id', '; '-joined)
+# dg:method  = how a value the page doesn't print was produced
 common.atts =
   attribute dg:structure { text }?,
   attribute dg:origin { text }?,
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   attribute dg:value { text }?,
   attribute xsi:type { text }?
 
@@ -324,6 +328,8 @@ BaseCaseAnnualizedNOI = element BaseCaseAnnualizedNOI {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -356,6 +362,8 @@ BaseCaseCapitalizedValue = element BaseCaseCapitalizedValue {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -388,6 +396,8 @@ BaseCaseCommodityYield = element BaseCaseCommodityYield {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -432,6 +442,8 @@ BaseCaseGrossRevenue = element BaseCaseGrossRevenue {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -464,6 +476,8 @@ BaseCaseNAV = element BaseCaseNAV {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -508,6 +522,8 @@ BearCaseAnnualizedNOI = element BearCaseAnnualizedNOI {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -540,6 +556,8 @@ BearCaseCapitalizedValue = element BearCaseCapitalizedValue {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -572,6 +590,8 @@ BearCaseCommodityYield = element BearCaseCommodityYield {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -616,6 +636,8 @@ BearCaseGrossRevenue = element BearCaseGrossRevenue {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -648,6 +670,8 @@ BearCaseNAV = element BearCaseNAV {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -701,6 +725,8 @@ BullCaseAnnualizedNOI = element BullCaseAnnualizedNOI {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -733,6 +759,8 @@ BullCaseCapitalizedValue = element BullCaseCapitalizedValue {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -765,6 +793,8 @@ BullCaseCommodityYield = element BullCaseCommodityYield {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -809,6 +839,8 @@ BullCaseGrossRevenue = element BullCaseGrossRevenue {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -841,6 +873,8 @@ BullCaseNAV = element BullCaseNAV {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -870,6 +904,8 @@ CapitalizationRate = element CapitalizationRate {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -937,6 +973,8 @@ CovenantCompliance = element CovenantCompliance {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -957,6 +995,8 @@ CovenantThreshold = element CovenantThreshold {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1002,6 +1042,8 @@ CurrentPeriodValue = element CurrentPeriodValue {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1069,6 +1111,8 @@ DiscountFactor = element DiscountFactor {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1089,6 +1133,8 @@ DiscountRate = element DiscountRate {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1132,6 +1178,8 @@ ExitCapitalizationRate = element ExitCapitalizationRate {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1214,6 +1262,8 @@ FreeCashFlowToFirm = element FreeCashFlowToFirm {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1258,6 +1308,8 @@ InflationGrowthRate = element InflationGrowthRate {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1519,6 +1571,8 @@ PPEGrossCost = element PPEGrossCost {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1539,6 +1593,8 @@ PPENetBookValue = element PPENetBookValue {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1610,6 +1666,8 @@ PPETotalGrossCost = element PPETotalGrossCost {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1631,6 +1689,8 @@ PPETotalNetBookValue = element PPETotalNetBookValue {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1662,6 +1722,8 @@ PeriodVariancePercent = element PeriodVariancePercent {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1682,6 +1744,8 @@ PresentValueOfFCFF = element PresentValueOfFCFF {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1702,6 +1766,8 @@ PresentValueOfTerminalValue = element PresentValueOfTerminalValue {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1730,6 +1796,8 @@ PriorPeriodCashAndLiquidAssets = element PriorPeriodCashAndLiquidAssets {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1750,6 +1818,8 @@ PriorPeriodDebtOutstanding = element PriorPeriodDebtOutstanding {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1770,6 +1840,8 @@ PriorPeriodEnvironmentalRemediationProvision = element PriorPeriodEnvironmentalR
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1790,6 +1862,8 @@ PriorPeriodGrossRevenue = element PriorPeriodGrossRevenue {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1810,6 +1884,8 @@ PriorPeriodNOI = element PriorPeriodNOI {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1842,6 +1918,8 @@ PriorPeriodPartnersCapital = element PriorPeriodPartnersCapital {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1862,6 +1940,8 @@ PriorPeriodProductInventoryValue = element PriorPeriodProductInventoryValue {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1882,6 +1962,8 @@ PriorPeriodPropertyPlantEquipmentNet = element PriorPeriodPropertyPlantEquipment
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1902,6 +1984,8 @@ PriorPeriodRestrictedEscrowReserve = element PriorPeriodRestrictedEscrowReserve 
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1922,6 +2006,8 @@ PriorPeriodTotalAssets = element PriorPeriodTotalAssets {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1942,6 +2028,8 @@ PriorPeriodTotalLiabilitiesAndCapital = element PriorPeriodTotalLiabilitiesAndCa
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1962,6 +2050,8 @@ PriorPeriodValue = element PriorPeriodValue {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -1993,6 +2083,8 @@ ProjectedCommodityYield = element ProjectedCommodityYield {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -2013,6 +2105,8 @@ ProjectedGrossSalesRevenue = element ProjectedGrossSalesRevenue {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -2045,6 +2139,8 @@ ProjectedNOI = element ProjectedNOI {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -2137,6 +2233,8 @@ ReportingDate = element ReportingDate {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "date" },
     attribute dg:value { xsd:date })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -2192,6 +2290,8 @@ RevenueProRataPercent = element RevenueProRataPercent {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -2339,6 +2439,8 @@ TerminalValue = element TerminalValue {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload

@@ -22,7 +22,7 @@ h1 + p + table th, h1 ~ table:first-of-type th {color:#888;font-weight:600;}
 </head>
 <body>
 <h1 id="dgml-the-domain-native-document-format-for-agents">DGML: the Domain Native Document Format for Agents</h1>
-<p><strong>Version:</strong> 0.7<br />
+<p><strong>Version:</strong> 0.71<br />
 <strong>Specification prepared by:</strong></p>
 <table>
 <thead>
@@ -162,7 +162,7 @@ h1 + p + table th, h1 ~ table:first-of-type th {color:#888;font-weight:600;}
 </tr>
 <tr>
 <td><code>dg:origin</code></td>
-<td>Pixel bounding box: <code>"&lt;page&gt; &lt;x1&gt; &lt;y1&gt; &lt;x2&gt; &lt;y2&gt;"</code> — traces every element back to its source page image. Reserved value <code>"computed"</code> signals a derived field. See §7, §13.</td>
+<td>Pixel bounding box(es) of the element's own printed text: <code>"&lt;page&gt; &lt;x1&gt; &lt;y1&gt; &lt;x2&gt; &lt;y2&gt;"</code> — traces every element back to its source page image. Boxes only; no reserved values. See §7.</td>
 </tr>
 <tr>
 <td><code>dg:value</code></td>
@@ -174,7 +174,15 @@ h1 + p + table th, h1 ~ table:first-of-type th {color:#888;font-weight:600;}
 </tr>
 <tr>
 <td><code>dg:href</code></td>
-<td>Relationship target: <code>#id</code> (same file), <code>fileid#id</code> (cross-file), or semicolon-separated list of targets. See §8, §13.</td>
+<td>Relationship target: <code>#id</code> (same file), <code>fileid#id</code> (cross-file), or semicolon-separated list of targets. Semantic links only. See §8.</td>
+</tr>
+<tr>
+<td><code>dg:inputs</code></td>
+<td>The elements a <code>dg:value</code> used: <code>#id</code> or <code>fileid#id</code>, semicolon-separated. See §13.</td>
+</tr>
+<tr>
+<td><code>dg:method</code></td>
+<td>How a value the page doesn't print was produced: <code>calculated</code>, <code>inferred</code>, or <code>defaulted</code>. See §13.</td>
 </tr>
 </tbody>
 </table>
@@ -207,7 +215,7 @@ h1 + p + table th, h1 ~ table:first-of-type th {color:#888;font-weight:600;}
 </table>
 <p><strong>Docsets.</strong> A docset is a named collection of same-type documents sharing one schema. Namespace: <code>http://www.dgml.io/{org}/{docset-name}#</code>. Schema defined in RELAX NG Compact Syntax (<code>schema.rnc</code>). Tag names mean the same thing in every document in the docset.</p>
 <p><strong>Packaging (DGMLX).</strong> <code>.dgmlx</code> is a ZIP (OPC convention) containing: source document, <code>dgml.xml</code>, <code>page_images/page_N.png</code>, <code>schema.rnc</code>, <code>META-INF/dgml-attestation.xml</code>, <code>[Content_Types].xml</code>, <code>_rels/.rels</code>.</p>
-<p><strong>LLM workflow (summary).</strong> (1) Classify into existing docset or create a new one. (2) Read a document sample; identify key concepts. (3) Write <code>schema.rnc</code>. (4) Tag documents, applying <code>dg:origin</code>, <code>xsi:type</code>/<code>dg:value</code>, and <code>dg:itemprop</code>/<code>dg:href</code>.</p>
+<p><strong>LLM workflow (summary).</strong> (1) Classify into existing docset or create a new one. (2) Read a document sample; identify key concepts. (3) Write <code>schema.rnc</code>. (4) Tag documents, applying <code>dg:origin</code>, <code>xsi:type</code>/<code>dg:value</code>, <code>dg:itemprop</code>/<code>dg:href</code>, and — for values the page doesn't print in full — <code>dg:inputs</code>/<code>dg:method</code>.</p>
 <hr />
 <h1 id="part-i-dgml">Part I — DGML</h1>
 <h2 id="2-what-dgml-is">2. What DGML Is</h2>
@@ -316,7 +324,7 @@ h1 + p + table th, h1 ~ table:first-of-type th {color:#888;font-weight:600;}
 <li><strong>Document root</strong> — the outermost element of every DGML file.</li>
 <li><strong>Anonymous structural container</strong> — used at any depth when a grouping of content has a clear structural role but no domain-specific semantic name applies.</li>
 </ol>
-<p>Using <code>dg:chunk</code> at an inner level signals "this boundary is real, the name is not." A wrong tag is worse than an honest <code>dg:chunk</code>.</p>
+<p>Using <code>dg:chunk</code> at an inner level signals "this boundary is real, the name is not." A wrong tag is worse than an honest <code>dg:chunk</code>. Inside <code>dg:extraction</code>, the same reading lets an anonymous <code>dg:chunk</code> carry printed text a value used that no schema field extracts (§13).</p>
 <p>The root element of a DGML document is <code>&lt;dg:chunk&gt;</code> — a generic structural element, not a docset element. All document content is nested inside it. The root carries the namespace declarations.</p>
 <pre><code class="language-xml">&lt;?xml version='1.0' encoding='utf-8'?&gt;
 &lt;dg:chunk xmlns:dg=&quot;http://www.dgml.io/ns/dg#&quot;
@@ -507,7 +515,7 @@ h1 + p + table th, h1 ~ table:first-of-type th {color:#888;font-weight:600;}
 <li><code>xsi:type</code> uses standard XSD type names: <code>date</code>, <code>integer</code>, <code>decimal</code>, <code>boolean</code>, plus any standard XSD type.</li>
 </ul>
 <h2 id="7-the-dgorigin-attribute">7. The <code>dg:origin</code> Attribute</h2>
-<p><code>dg:origin</code> records where in the page images an element's content can be found. It may appear on any element — leaf or non-leaf. On a leaf it pins a single value; on a parent it spans the full visual extent of the XML element subtree, enabling viewers to highlight an entire clause, table, or section as well as individual fields.</p>
+<p><code>dg:origin</code> records where in the page images an element's own printed text can be found — boxes only. It may appear on any element — leaf or non-leaf. On a leaf it pins a single value; on a parent it spans the full visual extent of the XML element subtree, enabling viewers to highlight an entire clause, table, or section as well as individual fields.</p>
 <h3 id="format">Format</h3>
 <pre><code>dg:origin=&quot;&lt;page&gt; &lt;x1&gt; &lt;y1&gt; &lt;x2&gt; &lt;y2&gt;&quot;
 </code></pre>
@@ -591,11 +599,9 @@ pixel_height = round(page_height_inches × page-image-dpi)
 xml_for_llm = re.sub(r'\s+dg:origin=&quot;[^&quot;]*&quot;', '', dgml_xml)
 </code></pre>
 <p>The original file (with <code>dg:origin</code>) is kept for verification; the stripped version is sent to the model. This alone reduces token count by 20–40% on typical documents.</p>
-<h3 id="reserved-value-computed">Reserved value: <code>"computed"</code></h3>
-<p>Any element whose value is <strong>derived from other elements</strong> rather than sourced directly from the document carries:</p>
-<pre><code class="language-xml">dg:origin=&quot;computed&quot;
-</code></pre>
-<p>This is unambiguous: valid spatial values are always numeric; <code>"computed"</code> is never a valid bounding box. A computed field always pairs <code>dg:origin="computed"</code> with <code>dg:itemprop</code>/<code>dg:href</code> pointing to the source elements it derives from (see §8 for multi-target <code>dg:href</code> syntax), and always carries <code>dg:value</code> with the result. See §13 for usage in user-directed extraction.</p>
+<h3 id="values-the-page-doesnt-print-in-full">Values the page doesn't print in full</h3>
+<p><code>dg:origin</code> holds nothing but boxes: valid values are always numeric, and there are no reserved values. A value the page prints only in part keeps the boxes of the printed part; a value the page doesn't print at all has no <code>dg:origin</code>. Either way, what the value was produced from is recorded by <code>dg:inputs</code>, and how by <code>dg:method</code> — see §13. (DGML 0.7's reserved value <code>"computed"</code> is retired; Appendix C covers reading 0.7 files.)</p>
+<p>A <strong>born-digital</strong> document — one generated from system state, with no page images — has no boxes to record: its values simply omit <code>dg:origin</code>, and <code>dg:inputs</code>/<code>dg:method</code> work unchanged (§13).</p>
 <h3 id="rules">Rules</h3>
 <ul>
 <li>Elements for which no source match exists (synthesised labels, empty containers) omit <code>dg:origin</code>.</li>
@@ -636,7 +642,8 @@ object    = dg:href value
 dg:href=&quot;fileid#id&quot;        ← element in the file whose attestation file-id is &quot;fileid&quot;
 dg:href=&quot;#id1; #id2&quot;       ← semicolon-separated list of targets
 </code></pre>
-<p>Cross-file references are stable regardless of filename or path. The semicolon-separated form is valid in any context — semantic links, computed fields, and sourced fields in <code>dg:extraction</code> — whenever an element has a meaningful relationship to more than one target. See §13 for usage in extraction.</p>
+<p>Cross-file references are stable regardless of filename or path. The semicolon-separated form is valid wherever an element relates to more than one target. Writers join references with <code>"; "</code>; readers split a reference list on semicolons or whitespace. The same syntax serves <code>dg:inputs</code> (§13).</p>
+<p><code>dg:itemprop</code>/<code>dg:href</code> express <strong>semantic links only</strong>: a relationship between two elements in the document's domain. They never record provenance — what a value was produced from is <code>dg:inputs</code> (§13) — so an element may carry both a link and <code>dg:inputs</code>.</p>
 <h3 id="example">Example</h3>
 <pre><code class="language-xml">&lt;docset:VendorName xml:id=&quot;vendor-co&quot;
     dg:origin=&quot;1 220 150 680 200&quot;&gt;MagicSoft, Inc.&lt;/docset:VendorName&gt;
@@ -687,7 +694,7 @@ dg:href=&quot;#id1; #id2&quot;       ← semicolon-separated list of targets
 <tr>
 <td><code>dg:origin</code></td>
 <td>Any element</td>
-<td>Pixel bounding box(es) in page images (Section 7)</td>
+<td>Pixel bounding box(es) of the element's printed text (Section 7)</td>
 </tr>
 <tr>
 <td><code>dg:value</code></td>
@@ -712,7 +719,17 @@ dg:href=&quot;#id1; #id2&quot;       ← semicolon-separated list of targets
 <tr>
 <td><code>dg:href</code></td>
 <td>Any element</td>
-<td>Target of a semantic link; <code>#id</code> or <code>fileid#id</code></td>
+<td>Target(s) of a semantic link; <code>#id</code> or <code>fileid#id</code></td>
+</tr>
+<tr>
+<td><code>dg:inputs</code></td>
+<td>Elements with <code>dg:value</code></td>
+<td>The elements the value used; <code>#id</code> or <code>fileid#id</code> list (Section 13)</td>
+</tr>
+<tr>
+<td><code>dg:method</code></td>
+<td>Elements with <code>dg:value</code> and no <code>dg:origin</code></td>
+<td><code>calculated</code>, <code>inferred</code>, or <code>defaulted</code> (Section 13)</td>
 </tr>
 </tbody>
 </table>
@@ -1004,6 +1021,7 @@ return current == root_hash
 <li>Assign <code>dg:origin</code> to every element where the source location is known.</li>
 <li>Assign <code>xsi:type</code> and <code>dg:value</code> to every element whose content can be normalized.</li>
 <li>Use <code>dg:itemprop</code> / <code>dg:href</code> to express relationships between elements.</li>
+<li>For a value the page doesn't print in full, record what it used in <code>dg:inputs</code> and, when the page doesn't print it at all, how it was produced in <code>dg:method</code> (§13).</li>
 <li>Use <code>dg:chunk</code> wherever a structural boundary is real but no schema tag applies.</li>
 </ul>
 <h2 id="12-schema-schemarnc">12. Schema — <code>schema.rnc</code></h2>
@@ -1036,7 +1054,7 @@ AnyTag = ContractLevelTag | ClauseItemTag | InlineTag
 </tr>
 <tr>
 <td><code>## Prompt: …</code></td>
-<td>For sourced fields: guides the LLM where to find the value. For computed fields: describes the derivation rule. See §13.</td>
+<td>For values read off the page: guides the LLM where to find the value. For values the page doesn't print in full — printed in part, calculated, inferred, or defaulted — describes the derivation rule. See §13.</td>
 </tr>
 </tbody>
 </table>
@@ -1059,7 +1077,7 @@ LiabilityCap =
 <h3 id="always-a-proper-docset">Always a Proper Docset</h3>
 <p>Even for pure targeted extraction, the user defines a namespace URI following <code>http://www.dgml.io/{org}/{docset-name}#</code>. There are no shortcuts. The named docset is what guarantees cross-document consistency at scale: an extraction schema used against a thousand invoices produces a thousand <code>dg:extraction</code> elements with identical tag names and structure.</p>
 <h3 id="the-input-schema">The Input Schema</h3>
-<p>The input schema is a standard <code>schema.rnc</code> (§12) extended with <code>## Prompt:</code> annotations and explicit content models. For sourced fields, <code>## Prompt:</code> guides the LLM where to find the value. For computed fields, it describes the derivation rule.</p>
+<p>The input schema is a standard <code>schema.rnc</code> (§12) extended with <code>## Prompt:</code> annotations and explicit content models. For values read off the page, <code>## Prompt:</code> guides the LLM where to find the value. For values the page doesn't print in full, it describes the derivation rule — the rule a verifier reapplies (see Value Provenance below).</p>
 <p><strong>RNC invoice example:</strong></p>
 <pre><code class="language-rnc">namespace docset = &quot;http://www.dgml.io/acme/invoices#&quot;
 
@@ -1118,7 +1136,7 @@ UnitPrice =
     text
   }
 
-## Total invoice amount — computed as sum of (Quantity × UnitPrice) across all LineItems
+## Total invoice amount — calculated as the sum of (Quantity × UnitPrice) across all LineItems
 ## Prompt: Compute as sum of Quantity × UnitPrice for each LineItem; verify against any printed total
 InvoiceTotal =
   element docset:InvoiceTotal {
@@ -1230,22 +1248,102 @@ InvoiceTotal =
 </tr>
 </tbody>
 </table>
-<p>In mode <code>full-extraction</code>, sourced fields inside <code>dg:extraction</code> carry both <code>dg:origin</code> (pointing to the page) and <code>dg:href</code> (pointing to the corresponding element in the main document tree). In mode <code>extraction</code>, <code>dg:origin</code> is the only link to the source.</p>
+<p>In mode <code>full-extraction</code>, values inside <code>dg:extraction</code> carry <code>dg:origin</code> (pointing to the page) and may also link to the corresponding element in the main document tree with <code>dg:itemprop</code>/<code>dg:href</code> (§8). In mode <code>extraction</code>, <code>dg:origin</code> is the only link to the page.</p>
 <h3 id="dgextraction-placement-and-rules"><code>dg:extraction</code> Placement and Rules</h3>
 <ul>
 <li>Always a <strong>direct child</strong> of the root <code>dg:chunk</code> — never nested inside the document tree.</li>
 <li>Never carries its own <code>xmlns:docset</code> declaration — inherits from the root <code>dg:chunk</code>.</li>
-<li>Content is 100% standard DGML: <code>docset:</code> elements, <code>xsi:type</code>/<code>dg:value</code>, <code>dg:origin</code>, <code>dg:itemprop</code>/<code>dg:href</code>.</li>
+<li>Content is 100% standard DGML: <code>docset:</code> elements, <code>xsi:type</code>/<code>dg:value</code>, <code>dg:origin</code>, <code>dg:inputs</code>/<code>dg:method</code>, <code>dg:itemprop</code>/<code>dg:href</code>.</li>
 <li>Nesting inside <code>dg:extraction</code> follows the user's schema, not the document's physical structure.</li>
+<li>Anonymous <code>dg:chunk</code> elements may appear next to the fields that use them, carrying printed text a value used that no schema field extracts (see Value Provenance below).</li>
 </ul>
-<h3 id="computed-fields">Computed Fields</h3>
-<p>A computed field (§7) is one whose value is derived from other elements rather than read directly from the page. Rules:</p>
-<ul>
-<li>Always carries <code>dg:origin="computed"</code> (defined in §7).</li>
-<li>Always carries <code>dg:value</code> with the computed result.</li>
-<li>Always carries <code>dg:itemprop</code>/<code>dg:href</code> identifying the source elements (§8). Use semicolon-separated <code>dg:href</code> (§8) when the derivation draws from multiple elements — the same multi-target syntax that is valid in any <code>dg:href</code> context.</li>
-<li>The <code>## Prompt:</code> annotation in the schema (§12) is the authoritative description of the derivation rule.</li>
+<h3 id="value-provenance-dgorigin-dginputs-dgmethod">Value Provenance — <code>dg:origin</code>, <code>dg:inputs</code>, <code>dg:method</code></h3>
+<p>Every extracted value says where it came from, with up to three attributes, each answering one question:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dg:origin</code> (§7)</td>
+<td>Where is the element's own text printed? Boxes only.</td>
+</tr>
+<tr>
+<td><code>dg:inputs</code></td>
+<td>Which elements did the value use?</td>
+</tr>
+<tr>
+<td><code>dg:method</code></td>
+<td>How was a value the page doesn't print produced? <code>calculated</code>, <code>inferred</code>, or <code>defaulted</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Rules:</p>
+<ol>
+<li><strong><code>dg:origin</code></strong> holds the boxes of the element's own printed text, nothing else.</li>
+<li><strong><code>dg:inputs</code></strong> lists the elements that fed <code>dg:value</code>, as <code>#id</code> or <code>fileid#id</code> joined with <code>"; "</code> (§8). It appears only on elements with a <code>dg:value</code>. Every target must exist; no self-references or cycles.</li>
+<li><strong><code>dg:method</code></strong> (optional) says how a value the page doesn't print was produced. It is allowed only on elements with a <code>dg:value</code> and no <code>dg:origin</code>. <code>calculated</code> and <code>inferred</code> require <code>dg:inputs</code>; <code>defaulted</code> forbids it:<ul>
+<li><code>calculated</code> — a deterministic calculation over <code>dg:inputs</code>, which a verifier can redo.</li>
+<li><code>inferred</code> — a classification or judgment from <code>dg:inputs</code>; the inputs can be checked, the reasoning can't.</li>
+<li><code>defaulted</code> — a producer default, such as a value the field's <code>## Prompt:</code> names for when the document says nothing (a sum over no line items is 0 by default).</li>
 </ul>
+</li>
+<li><strong>When <code>dg:method</code> is absent</strong>, readers treat a value with <code>dg:inputs</code> as <code>inferred</code> — the safe reading — and a value without it as unsupported.</li>
+<li><strong>The derivation rule lives in the schema</strong>, in the field's <code>## Prompt:</code> annotation (§12). For example: "Printed as month/day only. Take the year from CommencementDate, using the next year when the month is earlier than the commencement month."</li>
+<li><strong><code>dg:itemprop</code>/<code>dg:href</code> are semantic links only</strong> (§8). They never carry provenance, so an element can have both a link and <code>dg:inputs</code>.</li>
+<li><strong>A producer emits every element it uses as an input.</strong> When an input is already an element in the file, as in full-tree output, the producer references it, adding an <code>xml:id</code> if it has none. When it isn't, as in extraction-only output, the producer emits it as an anonymous <code>dg:chunk</code> with an <code>xml:id</code>, its <code>dg:origin</code>, and its printed text, next to the field that uses it.</li>
+</ol>
+<p>A producer should not write a value it read off the page but could not locate: without <code>dg:origin</code> it would read as unsupported, or — with <code>dg:inputs</code> — as an inferred judgment. Boxed values never need <code>dg:method</code>: the boxes and <code>dg:inputs</code> already say how they were read.</p>
+<p><strong>Reading an element.</strong> Two attributes give four cases; <code>dg:method</code> refines only the bottom row, where the page prints nothing.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>No <code>dg:inputs</code></th>
+<th>Has <code>dg:inputs</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Has <code>dg:origin</code></strong></td>
+<td>Read from its printed text ("$4,200.00" → 4200.00)</td>
+<td>Printed in part, completed from the inputs ("3/1" + the commencement date)</td>
+</tr>
+<tr>
+<td><strong>No <code>dg:origin</code></strong></td>
+<td><code>dg:method="defaulted"</code>: a producer default. Without it: unsupported</td>
+<td><code>dg:method="calculated"</code> or <code>"inferred"</code>. Without it: read as <code>inferred</code></td>
+</tr>
+</tbody>
+</table>
+<p>A value printed only in part is one element: its boxes cover the printed part, and <code>dg:inputs</code> names what completed it.</p>
+<pre><code class="language-xml">&lt;docset:PeriodStart xml:id=&quot;period-start&quot; xsi:type=&quot;date&quot; dg:value=&quot;2026-03-01&quot;
+    dg:origin=&quot;2 410 980 520 1025&quot; dg:inputs=&quot;#commencement-date&quot;&gt;3/1&lt;/docset:PeriodStart&gt;
+
+&lt;docset:PeriodMonths xsi:type=&quot;integer&quot; dg:value=&quot;12&quot;
+    dg:inputs=&quot;#period-start; #period-end&quot; dg:method=&quot;calculated&quot;&gt;12&lt;/docset:PeriodMonths&gt;
+
+&lt;docset:LateFeeGraceDays xsi:type=&quot;integer&quot; dg:value=&quot;0&quot;
+    dg:method=&quot;defaulted&quot;&gt;0&lt;/docset:LateFeeGraceDays&gt;
+</code></pre>
+<p>A currency printed only as "$" is the same case: <code>dg:origin</code> boxes the symbol wherever it appears (several boxes mean the same text printed more than once), and <code>dg:inputs</code> names what settles which dollar it is. If no symbol is printed, the currency is <code>inferred</code> from the element that decides it — an address, the issuer, a tax line — or <code>defaulted</code> when nothing in the document decides it. <code>dg:inputs</code> never points at the whole document, because that gives a verifier nothing to check.</p>
+<pre><code class="language-xml">&lt;docset:Currency dg:value=&quot;CAD&quot;
+    dg:origin=&quot;2 1510 880 1528 915; 2 1510 1240 1528 1275&quot;
+    dg:inputs=&quot;#premises-address&quot;&gt;$&lt;/docset:Currency&gt;
+</code></pre>
+<p><strong>Inputs that aren't schema fields (rule 7).</strong> A schema that extracts only <code>EndDate</code> meets a contract that prints a start date and a term, but no end date. <code>EndDate</code> is calculated, and its inputs become anonymous chunks — so the schema stays clean, and the field reads the same across documents: boxed where a contract prints it, calculated from chunks where it doesn't.</p>
+<pre><code class="language-xml">&lt;dg:chunk xml:id=&quot;start&quot; dg:origin=&quot;1 300 410 620 450&quot;&gt;January 15, 2026&lt;/dg:chunk&gt;
+&lt;dg:chunk xml:id=&quot;term&quot; dg:origin=&quot;1 300 520 980 560&quot;&gt;a term of twenty-four (24) months&lt;/dg:chunk&gt;
+
+&lt;docset:EndDate xsi:type=&quot;date&quot; dg:value=&quot;2028-01-14&quot;
+    dg:inputs=&quot;#start; #term&quot; dg:method=&quot;calculated&quot;&gt;2028-01-14&lt;/docset:EndDate&gt;
+</code></pre>
+<p>Chunks are needed only in extraction-only output; with the full document tree, the inputs already exist there.</p>
+<p><strong>Born-digital documents.</strong> A value in a document generated from system state, with no page images, omits <code>dg:origin</code>; <code>dg:inputs</code> and <code>dg:method</code> work unchanged. The one difference from a paged document is the bottom-left case: with page images, a value with no boxes and no inputs is unsupported; without them, it is source data. A reader therefore needs to know, per file, whether page images exist — in a DGMLX package, the package says so. Verification relies on the attestation hash instead of cropping, plus recomputing <code>calculated</code> values.</p>
+<p><strong>Verifying an element.</strong> A verifier crops the boxes and compares the crop with the element's text (§20), then follows <code>dg:inputs</code> and reapplies the schema's <code>## Prompt:</code> rule. It recomputes <code>calculated</code> values, checks only that the inputs of <code>inferred</code> values exist, and flags <code>defaulted</code> and unsupported values.</p>
 <h3 id="full-example-mode-3-extraction-only">Full Example — Mode 3 (Extraction Only)</h3>
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;dg:chunk xmlns:dg=&quot;http://dgml.io/ns/dg#&quot;
@@ -1289,15 +1387,14 @@ InvoiceTotal =
       &lt;/docset:LineItems&gt;
       &lt;docset:InvoiceTotal
           xsi:type=&quot;decimal&quot; dg:value=&quot;349.85&quot;
-          dg:origin=&quot;computed&quot;
-          dg:itemprop=&quot;computedFrom&quot;
-          dg:href=&quot;#ln1-qty; #ln1-price; #ln2-qty; #ln2-price&quot;&gt;$349.85&lt;/docset:InvoiceTotal&gt;
+          dg:inputs=&quot;#ln1-qty; #ln1-price; #ln2-qty; #ln2-price&quot;
+          dg:method=&quot;calculated&quot;&gt;$349.85&lt;/docset:InvoiceTotal&gt;
     &lt;/docset:Invoice&gt;
   &lt;/dg:extraction&gt;
 
 &lt;/dg:chunk&gt;
 </code></pre>
-<p><code>InvoiceTotal</code> carries <code>dg:origin="computed"</code> (§7) because its value is derived — <code>(3 × $49.95) + (1 × $200.00) = $349.85</code>. The <code>dg:href</code> (§8) lists all four source elements. The derivation rule is defined by <code>## Prompt:</code> in the schema (§12).</p>
+<p><code>InvoiceTotal</code> has no <code>dg:origin</code> — this invoice doesn't print a total — and carries <code>dg:method="calculated"</code> because its value is calculated: <code>(3 × $49.95) + (1 × $200.00) = $349.85</code>. <code>dg:inputs</code> lists all four elements it used, and the derivation rule is the field's <code>## Prompt:</code> in the schema (§12), so a verifier can redo the calculation.</p>
 <p><strong>Equivalent JSON-LD:</strong></p>
 <pre><code class="language-json">{
   &quot;@context&quot;: {
@@ -1337,9 +1434,11 @@ InvoiceTotal =
     &quot;docset:InvoiceTotal&quot;: {
       &quot;@type&quot;: &quot;xsd:decimal&quot;,
       &quot;@value&quot;: &quot;349.85&quot;,
-      &quot;dg:origin&quot;: &quot;computed&quot;,
-      &quot;dg:itemprop&quot;: &quot;computedFrom&quot;,
-      &quot;dg:href&quot;: &quot;#ln1-qty; #ln1-price; #ln2-qty; #ln2-price&quot;
+      &quot;dg:method&quot;: &quot;calculated&quot;,
+      &quot;dg:inputs&quot;: [
+        { &quot;@id&quot;: &quot;#ln1-qty&quot; }, { &quot;@id&quot;: &quot;#ln1-price&quot; },
+        { &quot;@id&quot;: &quot;#ln2-qty&quot; }, { &quot;@id&quot;: &quot;#ln2-price&quot; }
+      ]
     }
   }
 }
@@ -1571,6 +1670,7 @@ Provenance chain ─────────────────────
 <li><strong>Integrity</strong> — re-render at declared DPI with declared renderer, recompute Merkle root, compare to attestation.</li>
 <li><strong>Origin accuracy</strong> — crop <code>dg:origin</code> rectangle from <code>page_images/page_N.png</code>, confirm it shows the element's text.</li>
 <li><strong>Schema conformance</strong> — validate <code>.dgml.xml</code> against <code>schema.rnc</code> with any RELAX NG validator (e.g., Jing).</li>
+<li><strong>Provenance</strong> — for each value with <code>dg:inputs</code>, confirm every target exists, reapply the field's <code>## Prompt:</code> rule, and recompute <code>calculated</code> values (§13).</li>
 <li><strong>Chain integrity</strong> — if <code>&lt;prior-merkle-root&gt;</code> is present, verify the predecessor package and confirm its <code>&lt;merkle-root&gt;</code> matches.</li>
 </ol>
 <hr />
@@ -1618,9 +1718,10 @@ Provenance chain ─────────────────────
 <li><code>"nodeType": "xast:element"</code> — always present, fixed string; distinguishes element nodes from text nodes for JSON-LD processors.</li>
 <li><code>"@type": "&lt;curie&gt;"</code> — the element tag as a CURIE (e.g. <code>"docset:LiabilityCap"</code>, <code>"dg:chunk"</code>)</li>
 <li><code>"@id": "..."</code> — only present if the element has an <code>id</code> or <code>xml:id</code> attribute. Plain local ids (no colon, slash, or leading <code>#</code>) are prefixed with <code>#</code>; URNs and full URIs are left unchanged.</li>
-<li><code>"attributes": { ... }</code> — all XML attributes except <code>id</code>/<code>xml:id</code>, <code>dg:itemprop</code>, and <code>dg:href</code>, keyed by their CURIE name, values as strings. <code>dg:origin</code>, <code>dg:structure</code>, and <code>dg:style</code> are included here as regular attributes. Omit key entirely if no attributes remain.</li>
+<li><code>"attributes": { ... }</code> — all XML attributes except <code>id</code>/<code>xml:id</code>, <code>dg:itemprop</code>, <code>dg:href</code>, and <code>dg:inputs</code>, keyed by their CURIE name, values as strings. <code>dg:origin</code>, <code>dg:method</code>, <code>dg:structure</code>, and <code>dg:style</code> are included here as regular attributes. Omit key entirely if no attributes remain.</li>
 <li><code>"children": [ ... ]</code> — ordered array of child nodes (element nodes and text nodes), always present, always in document order, may be empty.</li>
 <li>Named link property — if the element itself carries <code>dg:itemprop</code> and <code>dg:href</code>, those become a named property on this node: <code>{ "&lt;dg:itemprop_value&gt;": {"@id": "&lt;dg:href_value&gt;"} }</code>. <code>dg:itemprop</code> and <code>dg:href</code> are never included in <code>"attributes"</code>. The element still appears in <code>children</code> normally — nothing is consumed or hidden.</li>
+<li>Inputs property — if the element carries <code>dg:inputs</code>, it becomes <code>"dg:inputs": [ {"@id": "&lt;ref&gt;"}, ... ]</code>, one object per reference in order (§13). <code>dg:inputs</code> is never included in <code>"attributes"</code>.</li>
 </ul>
 <p><strong>Text node shape:</strong></p>
 <pre><code class="language-json">{&quot;nodeType&quot;: &quot;xast:text&quot;, &quot;value&quot;: &quot;...&quot;}
@@ -1942,6 +2043,48 @@ page_images/page_2.png
   &lt;/docset:PaymentTerms&gt;
 &lt;/dg:chunk&gt;
 </code></pre>
+<hr />
+<h2 id="appendix-c-changes-in-071">Appendix C — Changes in 0.71</h2>
+<p>0.71 changes how DGML records values a page prints only in part, values it doesn't print at all, and values in born-digital documents. It is a <strong>breaking change for readers</strong>: a 0.7 reader would take a value printed in part for a fully printed one.</p>
+<table>
+<thead>
+<tr>
+<th>0.7</th>
+<th>0.71</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dg:origin="computed"</code> marks a derived value</td>
+<td><code>dg:origin</code> holds boxes only; a value the page doesn't print has none, and <code>dg:method</code> says how it was produced (§7, §13)</td>
+</tr>
+<tr>
+<td><code>dg:itemprop="computedFrom"</code> + <code>dg:href</code> name a derived value's sources</td>
+<td><code>dg:inputs</code> names the elements any value used; <code>dg:itemprop</code>/<code>dg:href</code> are semantic links only (§8, §13)</td>
+</tr>
+<tr>
+<td>A value printed in part needs a raw companion element plus a computed one</td>
+<td>One element: boxes for the printed part, <code>dg:inputs</code> for what completed it</td>
+</tr>
+<tr>
+<td>No answer for born-digital values</td>
+<td>They omit <code>dg:origin</code> (§7, §13)</td>
+</tr>
+<tr>
+<td>Inputs that aren't schema fields can't be recorded</td>
+<td>Anonymous <code>dg:chunk</code> elements carry them (§13 rule 7)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading 0.7 files.</strong> When an element has <code>dg:origin="computed"</code>, ignore that origin and read its <code>dg:href</code> targets as <code>dg:inputs</code>. Every other 0.7 element reads the same in 0.71.</p>
+<p><strong>Migration</strong>, readers first:</p>
+<ol>
+<li>Readers apply the rule above, split reference lists on semicolons or whitespace, and treat a missing <code>dg:method</code> as described in §13 rule 4.</li>
+<li>Producers stop writing <code>"computed"</code>, emit <code>dg:inputs</code>, fold each raw companion into its value element, write <code>dg:method</code> on every value the page doesn't print, and emit a <code>dg:chunk</code> for each input that isn't a schema field.</li>
+<li>Schemas that list allowed attributes add <code>dg:inputs</code> and <code>dg:method</code>; schemas that list allowed elements also allow <code>dg:chunk</code> next to the fields.</li>
+<li>JSON-LD exports <code>dg:inputs</code> as an array of <code>{"@id"}</code> objects; <code>dg:method</code> stays a plain attribute (Appendix A.2).</li>
+</ol>
+<p>Rewriting an element changes its hash and the file's Merkle root, so anchored files (§10) must be re-anchored, or left in the 0.7 form.</p>
 <hr />
 <p><em>End of DGML Format Specification</em></p>
 </body>

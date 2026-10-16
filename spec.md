@@ -1,6 +1,6 @@
 # DGML: the Domain Native Document Format for Agents
 
-**Version:** 0.7  
+**Version:** 0.71  
 **Specification prepared by:**
 
 | Name | Company |
@@ -106,10 +106,12 @@ Every other element is a `docset:` semantic tag. A wrong semantic tag is worse t
 |----------------|-------------------------------------------------------------------------------|
 | `dg:structure` | Visual/layout role: `section`, `header`, `p`, `ol`, `ul`, `li`, `table`, `tr`, `td`, `lim`, `span` |
 | `dg:style`     | Inline CSS declarations observed in the source (semicolon-separated; verbatim into HTML `style`) |
-| `dg:origin`    | Pixel bounding box: `"<page> <x1> <y1> <x2> <y2>"` — traces every element back to its source page image. Reserved value `"computed"` signals a derived field. See §7, §13. |
+| `dg:origin`    | Pixel bounding box(es) of the element's own printed text: `"<page> <x1> <y1> <x2> <y2>"` — traces every element back to its source page image. Boxes only; no reserved values. See §7. |
 | `dg:value`     | Normalized machine-readable value (accompanies `xsi:type`)                    |
 | `dg:itemprop`  | Named relationship predicate (JSON-LD-compatible)                             |
-| `dg:href`      | Relationship target: `#id` (same file), `fileid#id` (cross-file), or semicolon-separated list of targets. See §8, §13. |
+| `dg:href`      | Relationship target: `#id` (same file), `fileid#id` (cross-file), or semicolon-separated list of targets. Semantic links only. See §8. |
+| `dg:inputs`    | The elements a `dg:value` used: `#id` or `fileid#id`, semicolon-separated. See §13. |
+| `dg:method`    | How a value the page doesn't print was produced: `calculated`, `inferred`, or `defaulted`. See §13. |
 
 **Four-layer architecture.**
 
@@ -124,7 +126,7 @@ Every other element is a `docset:` semantic tag. A wrong semantic tag is worse t
 
 **Packaging (DGMLX).** `.dgmlx` is a ZIP (OPC convention) containing: source document, `dgml.xml`, `page_images/page_N.png`, `schema.rnc`, `META-INF/dgml-attestation.xml`, `[Content_Types].xml`, `_rels/.rels`.
 
-**LLM workflow (summary).** (1) Classify into existing docset or create a new one. (2) Read a document sample; identify key concepts. (3) Write `schema.rnc`. (4) Tag documents, applying `dg:origin`, `xsi:type`/`dg:value`, and `dg:itemprop`/`dg:href`.
+**LLM workflow (summary).** (1) Classify into existing docset or create a new one. (2) Read a document sample; identify key concepts. (3) Write `schema.rnc`. (4) Tag documents, applying `dg:origin`, `xsi:type`/`dg:value`, `dg:itemprop`/`dg:href`, and — for values the page doesn't print in full — `dg:inputs`/`dg:method`.
 
 ---
 
@@ -200,7 +202,7 @@ A structural element (concept or generic) carries exactly one `dg:structure` val
 1. **Document root** — the outermost element of every DGML file.
 2. **Anonymous structural container** — used at any depth when a grouping of content has a clear structural role but no domain-specific semantic name applies.
 
-Using `dg:chunk` at an inner level signals "this boundary is real, the name is not." A wrong tag is worse than an honest `dg:chunk`.
+Using `dg:chunk` at an inner level signals "this boundary is real, the name is not." A wrong tag is worse than an honest `dg:chunk`. Inside `dg:extraction`, the same reading lets an anonymous `dg:chunk` carry printed text a value used that no schema field extracts (§13).
 
 The root element of a DGML document is `<dg:chunk>` — a generic structural element, not a docset element. All document content is nested inside it. The root carries the namespace declarations.
 
@@ -330,7 +332,7 @@ Elements that carry a canonical machine-readable value alongside their display t
 
 ## 7. The `dg:origin` Attribute
 
-`dg:origin` records where in the page images an element's content can be found. It may appear on any element — leaf or non-leaf. On a leaf it pins a single value; on a parent it spans the full visual extent of the XML element subtree, enabling viewers to highlight an entire clause, table, or section as well as individual fields.
+`dg:origin` records where in the page images an element's own printed text can be found — boxes only. It may appear on any element — leaf or non-leaf. On a leaf it pins a single value; on a parent it spans the full visual extent of the XML element subtree, enabling viewers to highlight an entire clause, table, or section as well as individual fields.
 
 ### Format
 
@@ -418,15 +420,11 @@ xml_for_llm = re.sub(r'\s+dg:origin="[^"]*"', '', dgml_xml)
 
 The original file (with `dg:origin`) is kept for verification; the stripped version is sent to the model. This alone reduces token count by 20–40% on typical documents.
 
-### Reserved value: `"computed"`
+### Values the page doesn't print in full
 
-Any element whose value is **derived from other elements** rather than sourced directly from the document carries:
+`dg:origin` holds nothing but boxes: valid values are always numeric, and there are no reserved values. A value the page prints only in part keeps the boxes of the printed part; a value the page doesn't print at all has no `dg:origin`. Either way, what the value was produced from is recorded by `dg:inputs`, and how by `dg:method` — see §13. (DGML 0.7's reserved value `"computed"` is retired; Appendix C covers reading 0.7 files.)
 
-```xml
-dg:origin="computed"
-```
-
-This is unambiguous: valid spatial values are always numeric; `"computed"` is never a valid bounding box. A computed field always pairs `dg:origin="computed"` with `dg:itemprop`/`dg:href` pointing to the source elements it derives from (see §8 for multi-target `dg:href` syntax), and always carries `dg:value` with the result. See §13 for usage in user-directed extraction.
+A **born-digital** document — one generated from system state, with no page images — has no boxes to record: its values simply omit `dg:origin`, and `dg:inputs`/`dg:method` work unchanged (§13).
 
 ### Rules
 
@@ -461,7 +459,9 @@ dg:href="fileid#id"        ← element in the file whose attestation file-id is 
 dg:href="#id1; #id2"       ← semicolon-separated list of targets
 ```
 
-Cross-file references are stable regardless of filename or path. The semicolon-separated form is valid in any context — semantic links, computed fields, and sourced fields in `dg:extraction` — whenever an element has a meaningful relationship to more than one target. See §13 for usage in extraction.
+Cross-file references are stable regardless of filename or path. The semicolon-separated form is valid wherever an element relates to more than one target. Writers join references with `"; "`; readers split a reference list on semicolons or whitespace. The same syntax serves `dg:inputs` (§13).
+
+`dg:itemprop`/`dg:href` express **semantic links only**: a relationship between two elements in the document's domain. They never record provenance — what a value was produced from is `dg:inputs` (§13) — so an element may carry both a link and `dg:inputs`.
 
 ### Example
 
@@ -520,12 +520,14 @@ Cross-file references resolve using the target `file-id` as the URI base. A coll
 
 | Attribute     | Applies to  | Meaning                                                  |
 |---------------|-------------|----------------------------------------------------------|
-| `dg:origin`    | Any element | Pixel bounding box(es) in page images (Section 7)        |
+| `dg:origin`    | Any element | Pixel bounding box(es) of the element's printed text (Section 7) |
 | `dg:value`     | Any element | Canonical machine-readable value                         |
 | `dg:structure` | Any element | Visual/layout role (Section 5); see approved value set   |
 | `dg:style`     | Any element | Inline CSS styling observed in the source (Section 5)    |
 | `dg:itemprop`  | Any element | Property name for a semantic link (Section 8)            |
-| `dg:href`      | Any element | Target of a semantic link; `#id` or `fileid#id`          |
+| `dg:href`      | Any element | Target(s) of a semantic link; `#id` or `fileid#id`       |
+| `dg:inputs`    | Elements with `dg:value` | The elements the value used; `#id` or `fileid#id` list (Section 13) |
+| `dg:method`    | Elements with `dg:value` and no `dg:origin` | `calculated`, `inferred`, or `defaulted` (Section 13) |
 
 Examples:
 
@@ -786,6 +788,7 @@ Apply the schema to each document, producing a DGML XML file. At this stage:
 - Assign `dg:origin` to every element where the source location is known.
 - Assign `xsi:type` and `dg:value` to every element whose content can be normalized.
 - Use `dg:itemprop` / `dg:href` to express relationships between elements.
+- For a value the page doesn't print in full, record what it used in `dg:inputs` and, when the page doesn't print it at all, how it was produced in `dg:method` (§13).
 - Use `dg:chunk` wherever a structural boundary is real but no schema tag applies.
 
 ## 12. Schema — `schema.rnc`
@@ -812,7 +815,7 @@ Element definitions carry `##` doc comments. Three annotations are defined:
 |---|---|
 | `## <description>` | Human-readable description of the element |
 | `## Example: …` | Representative value |
-| `## Prompt: …` | For sourced fields: guides the LLM where to find the value. For computed fields: describes the derivation rule. See §13. |
+| `## Prompt: …` | For values read off the page: guides the LLM where to find the value. For values the page doesn't print in full — printed in part, calculated, inferred, or defaulted — describes the derivation rule. See §13. |
 
 ```rnc
 ## Agreed maximum liability exposure under the contract
@@ -846,7 +849,7 @@ Even for pure targeted extraction, the user defines a namespace URI following `h
 
 ### The Input Schema
 
-The input schema is a standard `schema.rnc` (§12) extended with `## Prompt:` annotations and explicit content models. For sourced fields, `## Prompt:` guides the LLM where to find the value. For computed fields, it describes the derivation rule.
+The input schema is a standard `schema.rnc` (§12) extended with `## Prompt:` annotations and explicit content models. For values read off the page, `## Prompt:` guides the LLM where to find the value. For values the page doesn't print in full, it describes the derivation rule — the rule a verifier reapplies (see Value Provenance below).
 
 **RNC invoice example:**
 
@@ -908,7 +911,7 @@ UnitPrice =
     text
   }
 
-## Total invoice amount — computed as sum of (Quantity × UnitPrice) across all LineItems
+## Total invoice amount — calculated as the sum of (Quantity × UnitPrice) across all LineItems
 ## Prompt: Compute as sum of Quantity × UnitPrice for each LineItem; verify against any printed total
 InvoiceTotal =
   element docset:InvoiceTotal {
@@ -1002,23 +1005,84 @@ Three output modes are defined. Implementations must use these canonical identif
 | 2 | `full-extraction` | Document tree in root `dg:chunk` + `dg:extraction` as sibling | Tree follows document; extraction follows user schema |
 | 3 | `extraction` | `dg:extraction` inside root `dg:chunk` | Follows user schema |
 
-In mode `full-extraction`, sourced fields inside `dg:extraction` carry both `dg:origin` (pointing to the page) and `dg:href` (pointing to the corresponding element in the main document tree). In mode `extraction`, `dg:origin` is the only link to the source.
+In mode `full-extraction`, values inside `dg:extraction` carry `dg:origin` (pointing to the page) and may also link to the corresponding element in the main document tree with `dg:itemprop`/`dg:href` (§8). In mode `extraction`, `dg:origin` is the only link to the page.
 
 ### `dg:extraction` Placement and Rules
 
 - Always a **direct child** of the root `dg:chunk` — never nested inside the document tree.
 - Never carries its own `xmlns:docset` declaration — inherits from the root `dg:chunk`.
-- Content is 100% standard DGML: `docset:` elements, `xsi:type`/`dg:value`, `dg:origin`, `dg:itemprop`/`dg:href`.
+- Content is 100% standard DGML: `docset:` elements, `xsi:type`/`dg:value`, `dg:origin`, `dg:inputs`/`dg:method`, `dg:itemprop`/`dg:href`.
 - Nesting inside `dg:extraction` follows the user's schema, not the document's physical structure.
+- Anonymous `dg:chunk` elements may appear next to the fields that use them, carrying printed text a value used that no schema field extracts (see Value Provenance below).
 
-### Computed Fields
+### Value Provenance — `dg:origin`, `dg:inputs`, `dg:method`
 
-A computed field (§7) is one whose value is derived from other elements rather than read directly from the page. Rules:
+Every extracted value says where it came from, with up to three attributes, each answering one question:
 
-- Always carries `dg:origin="computed"` (defined in §7).
-- Always carries `dg:value` with the computed result.
-- Always carries `dg:itemprop`/`dg:href` identifying the source elements (§8). Use semicolon-separated `dg:href` (§8) when the derivation draws from multiple elements — the same multi-target syntax that is valid in any `dg:href` context.
-- The `## Prompt:` annotation in the schema (§12) is the authoritative description of the derivation rule.
+| Attribute | Question it answers |
+|---|---|
+| `dg:origin` (§7) | Where is the element's own text printed? Boxes only. |
+| `dg:inputs` | Which elements did the value use? |
+| `dg:method` | How was a value the page doesn't print produced? `calculated`, `inferred`, or `defaulted`. |
+
+Rules:
+
+1. **`dg:origin`** holds the boxes of the element's own printed text, nothing else.
+2. **`dg:inputs`** lists the elements that fed `dg:value`, as `#id` or `fileid#id` joined with `"; "` (§8). It appears only on elements with a `dg:value`. Every target must exist; no self-references or cycles.
+3. **`dg:method`** (optional) says how a value the page doesn't print was produced. It is allowed only on elements with a `dg:value` and no `dg:origin`. `calculated` and `inferred` require `dg:inputs`; `defaulted` forbids it:
+    - `calculated` — a deterministic calculation over `dg:inputs`, which a verifier can redo.
+    - `inferred` — a classification or judgment from `dg:inputs`; the inputs can be checked, the reasoning can't.
+    - `defaulted` — a producer default, such as a value the field's `## Prompt:` names for when the document says nothing (a sum over no line items is 0 by default).
+4. **When `dg:method` is absent**, readers treat a value with `dg:inputs` as `inferred` — the safe reading — and a value without it as unsupported.
+5. **The derivation rule lives in the schema**, in the field's `## Prompt:` annotation (§12). For example: "Printed as month/day only. Take the year from CommencementDate, using the next year when the month is earlier than the commencement month."
+6. **`dg:itemprop`/`dg:href` are semantic links only** (§8). They never carry provenance, so an element can have both a link and `dg:inputs`.
+7. **A producer emits every element it uses as an input.** When an input is already an element in the file, as in full-tree output, the producer references it, adding an `xml:id` if it has none. When it isn't, as in extraction-only output, the producer emits it as an anonymous `dg:chunk` with an `xml:id`, its `dg:origin`, and its printed text, next to the field that uses it.
+
+A producer should not write a value it read off the page but could not locate: without `dg:origin` it would read as unsupported, or — with `dg:inputs` — as an inferred judgment. Boxed values never need `dg:method`: the boxes and `dg:inputs` already say how they were read.
+
+**Reading an element.** Two attributes give four cases; `dg:method` refines only the bottom row, where the page prints nothing.
+
+| | No `dg:inputs` | Has `dg:inputs` |
+|---|---|---|
+| **Has `dg:origin`** | Read from its printed text ("$4,200.00" → 4200.00) | Printed in part, completed from the inputs ("3/1" + the commencement date) |
+| **No `dg:origin`** | `dg:method="defaulted"`: a producer default. Without it: unsupported | `dg:method="calculated"` or `"inferred"`. Without it: read as `inferred` |
+
+A value printed only in part is one element: its boxes cover the printed part, and `dg:inputs` names what completed it.
+
+```xml
+<docset:PeriodStart xml:id="period-start" xsi:type="date" dg:value="2026-03-01"
+    dg:origin="2 410 980 520 1025" dg:inputs="#commencement-date">3/1</docset:PeriodStart>
+
+<docset:PeriodMonths xsi:type="integer" dg:value="12"
+    dg:inputs="#period-start; #period-end" dg:method="calculated">12</docset:PeriodMonths>
+
+<docset:LateFeeGraceDays xsi:type="integer" dg:value="0"
+    dg:method="defaulted">0</docset:LateFeeGraceDays>
+```
+
+A currency printed only as "$" is the same case: `dg:origin` boxes the symbol wherever it appears (several boxes mean the same text printed more than once), and `dg:inputs` names what settles which dollar it is. If no symbol is printed, the currency is `inferred` from the element that decides it — an address, the issuer, a tax line — or `defaulted` when nothing in the document decides it. `dg:inputs` never points at the whole document, because that gives a verifier nothing to check.
+
+```xml
+<docset:Currency dg:value="CAD"
+    dg:origin="2 1510 880 1528 915; 2 1510 1240 1528 1275"
+    dg:inputs="#premises-address">$</docset:Currency>
+```
+
+**Inputs that aren't schema fields (rule 7).** A schema that extracts only `EndDate` meets a contract that prints a start date and a term, but no end date. `EndDate` is calculated, and its inputs become anonymous chunks — so the schema stays clean, and the field reads the same across documents: boxed where a contract prints it, calculated from chunks where it doesn't.
+
+```xml
+<dg:chunk xml:id="start" dg:origin="1 300 410 620 450">January 15, 2026</dg:chunk>
+<dg:chunk xml:id="term" dg:origin="1 300 520 980 560">a term of twenty-four (24) months</dg:chunk>
+
+<docset:EndDate xsi:type="date" dg:value="2028-01-14"
+    dg:inputs="#start; #term" dg:method="calculated">2028-01-14</docset:EndDate>
+```
+
+Chunks are needed only in extraction-only output; with the full document tree, the inputs already exist there.
+
+**Born-digital documents.** A value in a document generated from system state, with no page images, omits `dg:origin`; `dg:inputs` and `dg:method` work unchanged. The one difference from a paged document is the bottom-left case: with page images, a value with no boxes and no inputs is unsupported; without them, it is source data. A reader therefore needs to know, per file, whether page images exist — in a DGMLX package, the package says so. Verification relies on the attestation hash instead of cropping, plus recomputing `calculated` values.
+
+**Verifying an element.** A verifier crops the boxes and compares the crop with the element's text (§20), then follows `dg:inputs` and reapplies the schema's `## Prompt:` rule. It recomputes `calculated` values, checks only that the inputs of `inferred` values exist, and flags `defaulted` and unsupported values.
 
 ### Full Example — Mode 3 (Extraction Only)
 
@@ -1065,16 +1129,15 @@ A computed field (§7) is one whose value is derived from other elements rather 
       </docset:LineItems>
       <docset:InvoiceTotal
           xsi:type="decimal" dg:value="349.85"
-          dg:origin="computed"
-          dg:itemprop="computedFrom"
-          dg:href="#ln1-qty; #ln1-price; #ln2-qty; #ln2-price">$349.85</docset:InvoiceTotal>
+          dg:inputs="#ln1-qty; #ln1-price; #ln2-qty; #ln2-price"
+          dg:method="calculated">$349.85</docset:InvoiceTotal>
     </docset:Invoice>
   </dg:extraction>
 
 </dg:chunk>
 ```
 
-`InvoiceTotal` carries `dg:origin="computed"` (§7) because its value is derived — `(3 × $49.95) + (1 × $200.00) = $349.85`. The `dg:href` (§8) lists all four source elements. The derivation rule is defined by `## Prompt:` in the schema (§12).
+`InvoiceTotal` has no `dg:origin` — this invoice doesn't print a total — and carries `dg:method="calculated"` because its value is calculated: `(3 × $49.95) + (1 × $200.00) = $349.85`. `dg:inputs` lists all four elements it used, and the derivation rule is the field's `## Prompt:` in the schema (§12), so a verifier can redo the calculation.
 
 **Equivalent JSON-LD:**
 
@@ -1117,9 +1180,11 @@ A computed field (§7) is one whose value is derived from other elements rather 
     "docset:InvoiceTotal": {
       "@type": "xsd:decimal",
       "@value": "349.85",
-      "dg:origin": "computed",
-      "dg:itemprop": "computedFrom",
-      "dg:href": "#ln1-qty; #ln1-price; #ln2-qty; #ln2-price"
+      "dg:method": "calculated",
+      "dg:inputs": [
+        { "@id": "#ln1-qty" }, { "@id": "#ln1-price" },
+        { "@id": "#ln2-qty" }, { "@id": "#ln2-price" }
+      ]
     }
   }
 }
@@ -1292,7 +1357,8 @@ Provenance chain ─────────────────────
 1. **Integrity** — re-render at declared DPI with declared renderer, recompute Merkle root, compare to attestation.
 2. **Origin accuracy** — crop `dg:origin` rectangle from `page_images/page_N.png`, confirm it shows the element's text.
 3. **Schema conformance** — validate `.dgml.xml` against `schema.rnc` with any RELAX NG validator (e.g., Jing).
-4. **Chain integrity** — if `<prior-merkle-root>` is present, verify the predecessor package and confirm its `<merkle-root>` matches.
+4. **Provenance** — for each value with `dg:inputs`, confirm every target exists, reapply the field's `## Prompt:` rule, and recompute `calculated` values (§13).
+5. **Chain integrity** — if `<prior-merkle-root>` is present, verify the predecessor package and confirm its `<merkle-root>` matches.
 
 ---
 
@@ -1358,9 +1424,10 @@ The `xast:` terms are always present, defined inline — no external fetch requi
 - `"nodeType": "xast:element"` — always present, fixed string; distinguishes element nodes from text nodes for JSON-LD processors.
 - `"@type": "<curie>"` — the element tag as a CURIE (e.g. `"docset:LiabilityCap"`, `"dg:chunk"`)
 - `"@id": "..."` — only present if the element has an `id` or `xml:id` attribute. Plain local ids (no colon, slash, or leading `#`) are prefixed with `#`; URNs and full URIs are left unchanged.
-- `"attributes": { ... }` — all XML attributes except `id`/`xml:id`, `dg:itemprop`, and `dg:href`, keyed by their CURIE name, values as strings. `dg:origin`, `dg:structure`, and `dg:style` are included here as regular attributes. Omit key entirely if no attributes remain.
+- `"attributes": { ... }` — all XML attributes except `id`/`xml:id`, `dg:itemprop`, `dg:href`, and `dg:inputs`, keyed by their CURIE name, values as strings. `dg:origin`, `dg:method`, `dg:structure`, and `dg:style` are included here as regular attributes. Omit key entirely if no attributes remain.
 - `"children": [ ... ]` — ordered array of child nodes (element nodes and text nodes), always present, always in document order, may be empty.
 - Named link property — if the element itself carries `dg:itemprop` and `dg:href`, those become a named property on this node: `{ "<dg:itemprop_value>": {"@id": "<dg:href_value>"} }`. `dg:itemprop` and `dg:href` are never included in `"attributes"`. The element still appears in `children` normally — nothing is consumed or hidden.
+- Inputs property — if the element carries `dg:inputs`, it becomes `"dg:inputs": [ {"@id": "<ref>"}, ... ]`, one object per reference in order (§13). `dg:inputs` is never included in `"attributes"`.
 
 **Text node shape:**
 
@@ -1693,6 +1760,31 @@ page_images/page_2.png
   </docset:PaymentTerms>
 </dg:chunk>
 ```
+
+---
+
+## Appendix C — Changes in 0.71
+
+0.71 changes how DGML records values a page prints only in part, values it doesn't print at all, and values in born-digital documents. It is a **breaking change for readers**: a 0.7 reader would take a value printed in part for a fully printed one.
+
+| 0.7 | 0.71 |
+|---|---|
+| `dg:origin="computed"` marks a derived value | `dg:origin` holds boxes only; a value the page doesn't print has none, and `dg:method` says how it was produced (§7, §13) |
+| `dg:itemprop="computedFrom"` + `dg:href` name a derived value's sources | `dg:inputs` names the elements any value used; `dg:itemprop`/`dg:href` are semantic links only (§8, §13) |
+| A value printed in part needs a raw companion element plus a computed one | One element: boxes for the printed part, `dg:inputs` for what completed it |
+| No answer for born-digital values | They omit `dg:origin` (§7, §13) |
+| Inputs that aren't schema fields can't be recorded | Anonymous `dg:chunk` elements carry them (§13 rule 7) |
+
+**Reading 0.7 files.** When an element has `dg:origin="computed"`, ignore that origin and read its `dg:href` targets as `dg:inputs`. Every other 0.7 element reads the same in 0.71.
+
+**Migration**, readers first:
+
+1. Readers apply the rule above, split reference lists on semicolons or whitespace, and treat a missing `dg:method` as described in §13 rule 4.
+2. Producers stop writing `"computed"`, emit `dg:inputs`, fold each raw companion into its value element, write `dg:method` on every value the page doesn't print, and emit a `dg:chunk` for each input that isn't a schema field.
+3. Schemas that list allowed attributes add `dg:inputs` and `dg:method`; schemas that list allowed elements also allow `dg:chunk` next to the fields.
+4. JSON-LD exports `dg:inputs` as an array of `{"@id"}` objects; `dg:method` stays a plain attribute (Appendix A.2).
+
+Rewriting an element changes its hash and the file's Merkle root, so anchored files (§10) must be re-anchored, or left in the 0.7 form.
 
 ---
 

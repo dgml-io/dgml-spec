@@ -31,7 +31,7 @@ Define what a version number means for this spec, and what has to be true before
 Note: this is about the spec's own version, distinct from the per-document/per-anchor versioning already defined for blockchain anchoring in spec.md §10 ("Each URI is versioned...") — that mechanism is unrelated and already shipped.
 
 - [ ] Adopt a versioning policy for the spec (what changes warrant a major/minor bump, where it's recorded)
-- [ ] Decide the public release numbering scheme going forward (the spec is currently at `0.7` internally; no public releases have been tagged yet)
+- [ ] Decide the public release numbering scheme going forward (the spec is currently at `0.71` internally; no public releases have been tagged yet)
 - [ ] Define the criteria for locking `v1.0` (e.g., independent implementations, real-world document types validated beyond the founding organizations, a quiet period with no open breaking-change proposals)
 
 Tracked in [#8](https://github.com/dgml-io/dgml-spec/issues/8).

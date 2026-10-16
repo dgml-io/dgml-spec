@@ -15,14 +15,18 @@ datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 start = dg.chunk
 
 # --- attributes common to every DGML element ------------------------
-# dg:origin  = grounding bbox: "page x1 y1 x2 y2"
+# dg:origin  = boxes of the element's own printed text: "page x1 y1 x2 y2"
 # dg:itemprop / dg:href = semantic link (predicate + '#id' target(s))
+# dg:inputs  = elements the dg:value used ('#id' / 'fileid#id', '; '-joined)
+# dg:method  = how a value the page doesn't print was produced
 common.atts =
   attribute dg:structure { text }?,
   attribute dg:origin { text }?,
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   attribute dg:value { text }?,
   attribute xsi:type { text }?
 
@@ -282,6 +286,8 @@ FinancialCovenantThreshold = element FinancialCovenantThreshold {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -326,6 +332,8 @@ InterestSpread = element InterestSpread {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "decimal" },
     attribute dg:value { xsd:decimal })
    | attribute dg:value { text })?,  # bare dg:value = link payload
@@ -504,6 +512,8 @@ SignatureDate = element SignatureDate {
   attribute xml:id { xsd:ID }?,
   attribute dg:itemprop { text }?,
   attribute dg:href { text }?,
+  attribute dg:inputs { text }?,
+  attribute dg:method { "calculated" | "inferred" | "defaulted" }?,
   ((attribute xsi:type { "date" },
     attribute dg:value { xsd:date })
    | attribute dg:value { text })?,  # bare dg:value = link payload

@@ -13,7 +13,7 @@ v1.0 means we stop making breaking changes without a major version bump. We're n
 
 ## Current version
 
-The spec is currently at `0.7` (see the header in [`spec.md`](spec.md)). We haven't adopted a formal public versioning policy yet — see the Format versioning theme in [ROADMAP.md](ROADMAP.md) for how we'll decide that, and what has to be true before we call something `v1.0`.
+The spec is currently at `0.71` (see the header in [`spec.md`](spec.md)). 0.71 changes how values a page prints only in part, values it doesn't print, and born-digital values are recorded (`dg:inputs`, `dg:method`; `dg:origin` holds boxes only). It is a breaking change for readers; [Appendix C of the spec](spec.md#appendix-c-changes-in-071) is its migration note. We haven't adopted a formal public versioning policy yet — see the Format versioning theme in [ROADMAP.md](ROADMAP.md) for how we'll decide that, and what has to be true before we call something `v1.0`.
 
 ## How to give feedback
 
